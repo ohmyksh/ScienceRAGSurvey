@@ -70,7 +70,81 @@ def year_sort(p):
 
 
 # ---------- Common HTML pieces ----------
-def page_head(title, base='', desc='Scientific RAG Hub — a curated catalog of retrieval-augmented generation systems for scientific discovery.'):
+def sidebar(base='', current=''):
+    """Render the left sidebar with sticky nav. `current` matches page identifiers like
+    'home', 'about', 'insights', 'browse', 'cell/K1.O1', 'domain/bio', 'topics/method'."""
+
+    def cls(key):
+        return ' active' if current == key else ''
+
+    # K×O 12 cells
+    cell_items = ''
+    for K in ['K1', 'K2', 'K3', 'K4']:
+        for O in ['O1', 'O2', 'O3']:
+            c = f'{K}.{O}'
+            n = len(by_cell.get(c, []))
+            cell_items += f'<a href="{base}cell/{c}.html" class="sb-sub{cls(f"cell/{c}")}">[{c}] <span class="sb-count">{n}</span></a>\n'
+
+    # Domain items
+    dom_items = ''
+    for d in DOMAIN_LABELS:
+        if d not in by_dom:
+            continue
+        dom_items += f'<a href="{base}domain/{d}.html" class="sb-sub{cls(f"domain/{d}")}">{DOMAIN_EMOJI.get(d,"")} {esc(DOMAIN_LABELS[d])} <span class="sb-count">{len(by_dom[d])}</span></a>\n'
+
+    # Determine if K×O / Domains sections should auto-open
+    cell_open = ' open' if current.startswith('cell/') else ''
+    dom_open = ' open' if current.startswith('domain/') else ''
+
+    return f'''
+<aside class="sidebar" id="sidebar">
+  <a href="{base}index.html" class="sb-logo">
+    <span class="sb-logo-mark">🔬</span>
+    <div class="sb-logo-text">
+      <div class="sb-logo-title">Scientific RAG</div>
+      <div class="sb-logo-sub">by Vision Lab · SNU</div>
+    </div>
+  </a>
+  <nav class="sb-nav">
+    <a href="{base}index.html" class="sb-item{cls("home")}"><span class="sb-icon">🏠</span> Home</a>
+    <a href="{base}about.html" class="sb-item{cls("about")}"><span class="sb-icon">🚀</span> Getting Started</a>
+
+    <details class="sb-group"{cell_open}>
+      <summary class="sb-item"><span class="sb-icon">▦</span> K×O Grid <span class="sb-caret">▾</span></summary>
+      <div class="sb-subs">
+        <a href="{base}index.html#grid" class="sb-sub sb-sub-overview">All 12 cells →</a>
+        {cell_items}
+      </div>
+    </details>
+
+    <details class="sb-group"{dom_open}>
+      <summary class="sb-item"><span class="sb-icon">△</span> Domains <span class="sb-caret">▾</span></summary>
+      <div class="sb-subs">
+        <a href="{base}index.html#domains" class="sb-sub sb-sub-overview">All domains →</a>
+        {dom_items}
+      </div>
+    </details>
+
+    <a href="{base}topics/method.html" class="sb-item{cls("topics/method")}"><span class="sb-icon">⚙</span> Methods <span class="sb-count">{len(by_type.get("Method", []))}</span></a>
+    <a href="{base}topics/benchmark.html" class="sb-item{cls("topics/benchmark")}"><span class="sb-icon">📊</span> Benchmarks <span class="sb-count">{len(by_type.get("benchmark", []))}</span></a>
+    <a href="{base}topics/dataset.html" class="sb-item{cls("topics/dataset")}"><span class="sb-icon">○</span> Datasets <span class="sb-count">{len(by_type.get("dataset", []))}</span></a>
+    <a href="{base}topics/summary.html" class="sb-item{cls("topics/summary")}"><span class="sb-icon">📖</span> Surveys <span class="sb-count">{len(by_type.get("summary", []))}</span></a>
+
+    <hr class="sb-rule">
+
+    <a href="{base}insights.html" class="sb-item{cls("insights")}"><span class="sb-icon">💡</span> Insights</a>
+    <a href="{base}browse.html" class="sb-item{cls("browse")}"><span class="sb-icon">🔍</span> Browse all</a>
+
+    <hr class="sb-rule">
+
+    <a href="{base}llms.txt" class="sb-item sb-quiet" title="LLM-friendly index"><span class="sb-icon">📄</span> llms.txt</a>
+    <a href="https://github.com/yerimoh/ScienceRAGServey" class="sb-item sb-quiet" target="_blank" rel="noopener"><span class="sb-icon">⌥</span> GitHub ↗</a>
+  </nav>
+</aside>
+'''
+
+
+def page_head(title, base='', desc='Scientific RAG Hub — a curated catalog of retrieval-augmented generation systems for scientific discovery.', current=''):
     return f'''<!doctype html>
 <html lang="en">
 <head>
@@ -82,24 +156,10 @@ def page_head(title, base='', desc='Scientific RAG Hub — a curated catalog of 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E%F0%9F%94%AC%3C/text%3E%3C/svg%3E">
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap">
-    <a href="{base}index.html" class="logo">
-      <span class="logo-mark">🔬</span>
-      <span class="logo-text">Scientific RAG Hub</span>
-    </a>
-    <nav class="nav">
-      <a href="{base}index.html">Home</a>
-      <a href="{base}browse.html">Browse</a>
-      <a href="{base}insights.html">Insights</a>
-      <a href="{base}index.html#grid">K×O Grid</a>
-      <a href="{base}index.html#domains">Domains</a>
-      <a href="{base}about.html">About</a>
-      <a href="{base}llms.txt" title="LLM-friendly index">llms.txt</a>
-    </nav>
-  </div>
-</header>
-<main>
+<button class="sb-toggle" aria-label="Open navigation" onclick="document.body.classList.toggle('sb-open')">☰</button>
+{sidebar(base=base, current=current)}
+<div class="sb-backdrop" onclick="document.body.classList.remove('sb-open')"></div>
+<main class="with-sidebar">
 '''
 
 
@@ -173,7 +233,7 @@ def paper_card(p, base=''):
 
 # ---------- index.html ----------
 def render_index():
-    parts = [page_head('Home', base='')]
+    parts = [page_head('Home', base='', current='home')]
     parts.append(f'''
 <section class="hero">
   <div class="wrap">
@@ -428,7 +488,7 @@ def render_about():
   </div>
 </section>
 '''
-    (ROOT / 'about.html').write_text(page_head('About') + body + PAGE_FOOT)
+    (ROOT / 'about.html').write_text(page_head('About', current='about') + body + PAGE_FOOT)
 
 
 # ---------- browse.html (client-side filter) ----------
@@ -469,7 +529,7 @@ def render_browse():
 
 <script src="static/search.js"></script>
 '''
-    (ROOT / 'browse.html').write_text(page_head('Browse', base='') + body + PAGE_FOOT)
+    (ROOT / 'browse.html').write_text(page_head('Browse', base='', current='browse') + body + PAGE_FOOT)
 
 
 # ---------- cell/<K>.<O>.html ----------
@@ -516,7 +576,7 @@ def render_cell_pages():
   </div>
 </section>
 '''
-            (ROOT / 'cell' / f'{cell}.html').write_text(page_head(f'[{cell}] {kn} × {on}', base='../') + body + PAGE_FOOT)
+            (ROOT / 'cell' / f'{cell}.html').write_text(page_head(f'[{cell}] {kn} × {on}', base='../', current=f'cell/{cell}') + body + PAGE_FOOT)
 
 
 # ---------- domain/<d>.html ----------
@@ -551,7 +611,7 @@ def render_domain_pages():
   </div>
 </section>
 '''
-        (ROOT / 'domain' / f'{d}.html').write_text(page_head(label, base='../') + body + PAGE_FOOT)
+        (ROOT / 'domain' / f'{d}.html').write_text(page_head(label, base='../', current=f'domain/{d}') + body + PAGE_FOOT)
 
 
 # ---------- topics/<type>.html ----------
@@ -576,7 +636,7 @@ def render_type_pages():
   </div>
 </section>
 '''
-        (ROOT / 'topics' / f'{t.lower()}.html').write_text(page_head(label, base='../') + body + PAGE_FOOT)
+        (ROOT / 'topics' / f'{t.lower()}.html').write_text(page_head(label, base='../', current=f'topics/{t.lower()}') + body + PAGE_FOOT)
 
 
 # ---------- insights.html ----------
@@ -869,7 +929,7 @@ def render_insights():
   </div>
 </section>
 '''
-    (ROOT / 'insights.html').write_text(page_head('Insights', base='', desc='The five requirements of scientific RAG, K×Domain coverage map, paper growth timeline, cross-source bridges, and frontier opportunities.') + body + PAGE_FOOT)
+    (ROOT / 'insights.html').write_text(page_head('Insights', base='', desc='The five requirements of scientific RAG, K×Domain coverage map, paper growth timeline, cross-source bridges, and frontier opportunities.', current='insights') + body + PAGE_FOOT)
 
 
 if __name__ == '__main__':

@@ -9,24 +9,75 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E%F0%9F%94%AC%3C/text%3E%3C/svg%3E">
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap">
-    <a href="../index.html" class="logo">
-      <span class="logo-mark">🔬</span>
-      <span class="logo-text">Scientific RAG Hub</span>
-    </a>
-    <nav class="nav">
-      <a href="../index.html">Home</a>
-      <a href="../browse.html">Browse</a>
-      <a href="../insights.html">Insights</a>
-      <a href="../index.html#grid">K×O Grid</a>
-      <a href="../index.html#domains">Domains</a>
-      <a href="../about.html">About</a>
-      <a href="../llms.txt" title="LLM-friendly index">llms.txt</a>
-    </nav>
-  </div>
-</header>
-<main>
+<button class="sb-toggle" aria-label="Open navigation" onclick="document.body.classList.toggle('sb-open')">☰</button>
+
+<aside class="sidebar" id="sidebar">
+  <a href="../index.html" class="sb-logo">
+    <span class="sb-logo-mark">🔬</span>
+    <div class="sb-logo-text">
+      <div class="sb-logo-title">Scientific RAG</div>
+      <div class="sb-logo-sub">by Vision Lab · SNU</div>
+    </div>
+  </a>
+  <nav class="sb-nav">
+    <a href="../index.html" class="sb-item"><span class="sb-icon">🏠</span> Home</a>
+    <a href="../about.html" class="sb-item"><span class="sb-icon">🚀</span> Getting Started</a>
+
+    <details class="sb-group" open>
+      <summary class="sb-item"><span class="sb-icon">▦</span> K×O Grid <span class="sb-caret">▾</span></summary>
+      <div class="sb-subs">
+        <a href="../index.html#grid" class="sb-sub sb-sub-overview">All 12 cells →</a>
+        <a href="../cell/K1.O1.html" class="sb-sub active">[K1.O1] <span class="sb-count">52</span></a>
+<a href="../cell/K1.O2.html" class="sb-sub">[K1.O2] <span class="sb-count">22</span></a>
+<a href="../cell/K1.O3.html" class="sb-sub">[K1.O3] <span class="sb-count">5</span></a>
+<a href="../cell/K2.O1.html" class="sb-sub">[K2.O1] <span class="sb-count">12</span></a>
+<a href="../cell/K2.O2.html" class="sb-sub">[K2.O2] <span class="sb-count">6</span></a>
+<a href="../cell/K2.O3.html" class="sb-sub">[K2.O3] <span class="sb-count">13</span></a>
+<a href="../cell/K3.O1.html" class="sb-sub">[K3.O1] <span class="sb-count">22</span></a>
+<a href="../cell/K3.O2.html" class="sb-sub">[K3.O2] <span class="sb-count">4</span></a>
+<a href="../cell/K3.O3.html" class="sb-sub">[K3.O3] <span class="sb-count">1</span></a>
+<a href="../cell/K4.O1.html" class="sb-sub">[K4.O1] <span class="sb-count">3</span></a>
+<a href="../cell/K4.O2.html" class="sb-sub">[K4.O2] <span class="sb-count">4</span></a>
+<a href="../cell/K4.O3.html" class="sb-sub">[K4.O3] <span class="sb-count">2</span></a>
+
+      </div>
+    </details>
+
+    <details class="sb-group">
+      <summary class="sb-item"><span class="sb-icon">△</span> Domains <span class="sb-caret">▾</span></summary>
+      <div class="sb-subs">
+        <a href="../index.html#domains" class="sb-sub sb-sub-overview">All domains →</a>
+        <a href="../domain/bio.html" class="sb-sub">🧬 Biology <span class="sb-count">47</span></a>
+<a href="../domain/chem.html" class="sb-sub">⚗️ Chemistry <span class="sb-count">36</span></a>
+<a href="../domain/medical.html" class="sb-sub">🩺 Medicine <span class="sb-count">89</span></a>
+<a href="../domain/material.html" class="sb-sub">🪨 Materials Science <span class="sb-count">14</span></a>
+<a href="../domain/physics.html" class="sb-sub">⚛️ Physics <span class="sb-count">26</span></a>
+<a href="../domain/earth.html" class="sb-sub">🌍 Earth Science <span class="sb-count">23</span></a>
+<a href="../domain/astronomy.html" class="sb-sub">🔭 Astronomy <span class="sb-count">9</span></a>
+<a href="../domain/Quantum.html" class="sb-sub">🌀 Quantum <span class="sb-count">2</span></a>
+
+      </div>
+    </details>
+
+    <a href="../topics/method.html" class="sb-item"><span class="sb-icon">⚙</span> Methods <span class="sb-count">88</span></a>
+    <a href="../topics/benchmark.html" class="sb-item"><span class="sb-icon">📊</span> Benchmarks <span class="sb-count">87</span></a>
+    <a href="../topics/dataset.html" class="sb-item"><span class="sb-icon">○</span> Datasets <span class="sb-count">5</span></a>
+    <a href="../topics/summary.html" class="sb-item"><span class="sb-icon">📖</span> Surveys <span class="sb-count">2</span></a>
+
+    <hr class="sb-rule">
+
+    <a href="../insights.html" class="sb-item"><span class="sb-icon">💡</span> Insights</a>
+    <a href="../browse.html" class="sb-item"><span class="sb-icon">🔍</span> Browse all</a>
+
+    <hr class="sb-rule">
+
+    <a href="../llms.txt" class="sb-item sb-quiet" title="LLM-friendly index"><span class="sb-icon">📄</span> llms.txt</a>
+    <a href="https://github.com/yerimoh/ScienceRAGServey" class="sb-item sb-quiet" target="_blank" rel="noopener"><span class="sb-icon">⌥</span> GitHub ↗</a>
+  </nav>
+</aside>
+
+<div class="sb-backdrop" onclick="document.body.classList.remove('sb-open')"></div>
+<main class="with-sidebar">
 
 <section class="cell-hero">
   <div class="wrap">
