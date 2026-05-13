@@ -145,6 +145,8 @@ def sidebar(base='', current=''):
 
 
 def page_head(title, base='', desc='Scientific RAG Hub — a curated catalog of retrieval-augmented generation systems for scientific discovery.', current=''):
+    # Cache-bust the CSS using the file's mtime so browsers always pull the latest after a rebuild.
+    css_mtime = int((ROOT / 'static/style.css').stat().st_mtime)
     return f'''<!doctype html>
 <html lang="en">
 <head>
@@ -152,7 +154,7 @@ def page_head(title, base='', desc='Scientific RAG Hub — a curated catalog of 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)} — Scientific RAG Hub</title>
 <meta name="description" content="{esc(desc)}">
-<link rel="stylesheet" href="{base}static/style.css">
+<link rel="stylesheet" href="{base}static/style.css?v={css_mtime}">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E%F0%9F%94%AC%3C/text%3E%3C/svg%3E">
 </head>
 <body>
