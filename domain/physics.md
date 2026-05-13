@@ -1,0 +1,29 @@
+# Physics
+
+_23 entries in the physics domain._
+
+---
+
+- **OpenScholar: Synthesizing Scientific Literature with RAG LMs** — OpenScholar · Nature · 2026 — ★★ K1.O2 FLAGSHIP. Iterative self-feedback. 0% hallucination vs GPT-4o 78-90%. Experts prefer OpenScholar-GPT-4o over human 70%. Public demo 30K users  `[K1.O1, Biology, Medicine, Physics, Methods]`
+- **[Retrieval-Augmented Question Answering over Scientific Literature for the Electron-Ion Collider](https://arxiv.org/abs/2604.02259)** — EIC RAG Q&A application · arXiv · 2026 — EIC 로컬 RAG. 청크 180+Cosine 최적  `[K1.O1, Physics, Methods]`
+- **[Synthesizing Scientific Literature with Retrieval-Augmented Language Models](https://doi.org/10.1038/s41586-025-10072-4)** — ScholarQABench · Nature · 2026 — OpenScholar의 다학제 장문 합성 벤치마크  `[K1.O1, Biology, Medicine, Physics, Benchmarks]`
+- **AI-Powered Assistant for Long-Term Access to RHIC Knowledge** — RHIC DAPP · New York Scientific Data Summit · 2025 — ★ FLAGSHIP K4 EXAMPLE. ~1 ExaByte institutional memory. MCP-RAG. Demonstrates commercial AI's blindness to non-public scientific tacit knowledge  `[K4.O1, Physics, Methods]`
+- **[Benchmarking Foundation Models with Retrieval-Augmented Generation in Olympic-Level Physics Problem Solving](https://aclanthology.org/2025.findings-emnlp.1196/)** — PhoPile RAG Framework · EMNLP (Findings) · 2025 — Physics Olympiad 멀티모달 RAG 첫 벤치마크. 4 retriever × 3 multimodal × 8 모델 비교. retrieval 노이즈 문제 존재  `[K1.O1, Physics, Methods]`
+- **DUNE-GPT (LLM Integration for DUNE Experiment)** — DUNE-GPT · Lepton Photon · 2025 — ★ K4: Private institutional memory. Fermilab/Argonne offline only. ~70% accuracy  `[Physics, Methods]`
+- **HiPerRAG: High-Performance RAG for Scientific Insights** — HiPerRAG · PASC · 2025 — HPC-scale (Polaris/Sunspot/Frontier). Oreo parser 4.5x faster. ProteinInteractionQA/FunctionQA/BioSynthQP self-made  `[Biology, Medicine, Chemistry, Physics, Methods]`
+- **MITRA: AI Assistant for Knowledge Retrieval in Physics Collaborations** — MITRA · ML4PS @ NeurIPS · 2025 — ★ K4: CMS Private. On-prem GPU. Two-tier DB prevents cross-analysis confusion. Set 2 paraphrase: P@1 0.13→0.75 vs BM25  `[Physics, Methods]`
+- **[RAISE: Enhancing Scientific Reasoning in LLMs via Step-by-Step Retrieval](https://openreview.net/forum?id=2Xwa540MzD)** — RAISE · MATH-AI @ NeurIPS · 2025 — 문제 분해+논리적 쿼리로 in-the-wild 코퍼스 검색. Step-by-Step  `[K1.O1, Physics, Chemistry, Biology, Methods]`
+- **[SQuAI: Scientific Question-Answering with Multi-Agent Retrieval-Augmented Generation](https://doi.org/10.1145/3746252.3761471)** — unarXive (Simple, Expert) · CIKM · 2025 — SQuAI Multi-Agent QA (2025, Sci)  `[K1.O2, Biology, Chemistry, Physics, Benchmarks]`
+- **[SciRerankBench: Benchmarking Rerankers Towards Scientific Retrieval-Augmented Generated LLMs](https://arxiv.org/abs/2508.08742)** — SciRerankBench · arXiv · 2025 — 과학 RAG Reranker 첫 평가 벤치마크. Reranker가 Top-10에 정답 올려도 LLM 추론 한계  `[K1.O1, Biology, Physics, Chemistry, Earth Science, Benchmarks]`
+- **[Seeing the Forest Through the Trees: Knowledge Retrieval for Streamlining Particle Physics Analysis](https://arxiv.org/abs/2509.06855)** — HFLAV-QA · ML4PS @ NeurIPS · 2025 — Seeing the Forest Through the Trees: KR for Particle Physics (2025, Phys)  `[K1.O1, K4.O2, Physics, Benchmarks]`
+- **[SuperGPQA: Scaling LLM Evaluation Across 285 Graduate Disciplines](https://arxiv.org/abs/2502.14739)** — SuperGPQA · arXiv · 2025 — 13개 학문, 72개 분야, 285개 대학원 수준 세부 전공. Human-LLM Collaborative Filtering  `[K1.O1, Materials Science, Chemistry, Biology, Medicine, Physics, Earth Science, Astronomy, Quantum, Benchmarks]`
+- **[GPQA: A graduate-level google-proof q&a benchmark](https://arxiv.org/abs/2311.12022)** — GPQA · COLM · 2024 — PhD 수준 물리·화학·생물 MCQ. 비전문가 Google 사용 22.1%. 전문가 81.3%  `[K1.O1, Physics, Chemistry, Biology, Benchmarks]`
+- **[LitSearch: A Retrieval Benchmark for Scientific Literature Search](https://doi.org/10.18653/v1/2024.emnlp-main.840)** — LitSearch · EMNLP · 2024 — LitSearch (2024, Sci)  `[K1.O1, Biology, Chemistry, Physics, Benchmarks]`
+- **[Towards a RAG-based Summarization for the Electron Ion Collider](https://arxiv.org/abs/2403.15729)** — RAGS4EIC · JINST · 2024 — EIC RAG GPT-3.5. CAR 88.9%, HF 2.0%. LaTeX 취약  `[Physics, Methods]`
+- **[Towards a RAG-based Summarization for the Electron-Ion Collider](https://arxiv.org/abs/2403.15729)** — AI4EIC2023_DATASETS · JINST · 2024 — EIC 51 QA pairs. GPT-4 + 인간 전문가  `[Physics, Benchmarks]`
+- **[Domain-specific chatbots for science using embeddings](https://doi.org/10.1039/d3dd00112a)** — Scientific Document Classification & Impact Sorting · Digital Discovery (RSC) · 2023 — 분류 81~99%, 임팩트 정렬 IF 유사  `[K1.O1, Materials Science, Chemistry, Physics, Benchmarks]`
+- **LitQA (PaperQA benchmark)** — LitQA · arXiv · 2023 — ★ Cross-domain (bio+chem+physics+medical). Anti-contamination via post-cutoff papers + 'Insufficient info' option  `[Biology, Chemistry, Physics, Medicine, Benchmarks]`
+- **[SciRepEval: A Multi-Format Benchmark for Scientific Document Representations](https://arxiv.org/abs/2211.13308)** — SciRepEval · EMNLP · 2023 — 4 포맷 24 태스크 SPECTER2  `[K1.O1, Chemistry, Biology, Medicine, Physics, Benchmarks]`
+- **[Measuring Massive Multitask Language Understanding](https://openreview.net/forum?id=d7KBjmI3GmQ)** — MMLU · ICLR · 2021 — 57개 과목 15,908문항 대규모 다중작업 언어 이해. 6.5% Ground-truth 오류  `[K1.O1, Materials Science, Chemistry, Biology, Medicine, Physics, Earth Science, Astronomy, Quantum, Benchmarks]`
+- **[S2ORC: The Semantic Scholar Open Research Corpus](https://arxiv.org/abs/1911.02782)** — S2ORC · ACL · 2020 — 81M 학술 코퍼스. S2ORC-SCIBERT  `[K1.O1, Biology, Medicine, Physics, Datasets]`
+- **[Crowdsourcing Multiple Choice Science Questions](https://aclanthology.org/W17-4413/)** — SciQ · Workshop on Noisy User-generated Text (WNUT) · 2017 — HoneyComb 평가에 사용. 13.7K 크라우드소싱 과학 객관식 (물리, 화학, 생물). AllenAI 오픈 데이터셋  `[K1.O1, Physics, Chemistry, Biology, Benchmarks]`

@@ -1,0 +1,1142 @@
+{
+  "DBLP:conf/acl/Xiong0LZ24": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "MEDRAG (2024, Med). PubMed-grounded medical QA, the canonical K1.O1.",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2312-07559": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "PaperQA (2023, Sci). Paper-grounded retrieval-cite-answer agent.",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2310-16146": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "Clinfo.AI (2023, Med). Open-source RAG for medical literature QA.",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:conf/emnlp/ChiangHCR25": {
+    "cells": [
+      "K1.O1",
+      "K2.O1"
+    ],
+    "note": "LLaMP (2025, Mat). Listed K1.O1 (basic mode); see also K2.O1 for KB mode. Cross-source.",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2403-15729": {
+    "cells": [
+      "K1.O1",
+      "K4.O2"
+    ],
+    "note": "Towards a RAG-based Summarization for the Electron-Ion Collider (2024, Phys).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "jat2026retrieval": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "RAG-QA over Sci Lit for EIC (2026, Phys).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "mcgreivy2025seeing": {
+    "cells": [
+      "K1.O1",
+      "K4.O2"
+    ],
+    "note": "Seeing the Forest Through the Trees: KR for Particle Physics (2025, Phys).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "rafique2025large": {
+    "cells": [
+      "K1.O1",
+      "K4.O1"
+    ],
+    "note": "DUNE Knowledge Retrieval (2025, Phys). Borderline K4 (institutional memory) — primary tag K1, secondary K4.",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:conf/emnlp/ZhengZFZWPC25": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "Olympic-Level Physics RAG benchmark (2025, Phys).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2405-20389": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "Evaluation Framework LLMs Astronomy (2024, Astro).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2507-15715": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "From Queries to Criteria (2025, Astro).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2508-05728": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "CLAPP CLASS Pair Programming (2025, Astro).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2507-07155": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "RAG Agents for Astrophysics Discovery (2025, Astro). Borderline O3.",
+    "K": "K1",
+    "O": "O1"
+  },
+  "sarkar2024multi": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "Multi-Agent Cosmological Parameter Analysis (2024, Astro).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2401-09646": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "ClimateGPT (2024, Earth).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2501-02031": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "CarbonChat (2025, Earth).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2410-23902": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "Responsible RAG for Climate Decision Making (2024, Earth).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2508-03489": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "CF-RAG (Carbon Footprint, 2025, Earth).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "xie2025marsha": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "MARSHA hazard adaptation (2025, Earth).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2509-09686": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "GeoGPT-RAG (2025, Earth). Cross-source.",
+    "cross_source": true,
+    "secondary": "K2",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2508-11246": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "RAG for Geoscience (2025, Earth).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2504-01458": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "GeoRAG (2025, Earth).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/aeog/LiangHJQZSXW25": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "GeoGraphRAG (2025, Earth). Cross-source K1+K2.",
+    "cross_source": true,
+    "secondary": "K2",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2510-05336": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "WeatherArchive-Bench (2025, Earth).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "meyur2025weqa": {
+    "cells": [
+      "K1.O1",
+      "K4.O2"
+    ],
+    "note": "WeQA Wind Energy (2025, Earth).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2306-10067": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "Domain-specific chatbots for science using embeddings (2023, Sci).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "asai2024openscholar": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "OpenScholar (2024, Sci).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "asai2026synthesizing": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "Synthesizing Scientific Literature with RAG-LM (2026, Sci). Borderline O2.",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:conf/icml/LeeLPHKLL23": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "QASA QA on Sci Articles (2023, Sci).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:conf/naacl/BaumgartnerBG25": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "PeerQA dataset (2025, Sci).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:conf/emnlp/SinghSC24": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "SCIDQA (2024, Sci).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:conf/nips/PramanickCV24": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "SPIQA Multimodal QA Sci Papers (2024, Sci). Borderline K3 (figure-based); primary K1.",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:conf/emnlp/AjithXCG0024": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "LitSearch (2024, Sci).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2602-17687": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "IRPapers visual benchmark (2026, Sci).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:conf/kdd/Lin0HSWSWF0025": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "ScIRGen synthetic RAG (2025, Sci).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2506-08625": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "RAISE step-by-step retrieval (2025, Sci).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:conf/aclnut/WelblLG17": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "SciQ Crowdsourcing MCQ (2017, Sci).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-1901-08079": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "Question-Entailment Approach (2019, Sci).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "auer2023sciqa": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "SciQA Scholarly Knowledge (2023, Sci).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2311-12022": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "GPQA (2023, Sci-benchmark).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:conf/iclr/HendrycksBBZMSS21": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "MMLU (2021, Sci-benchmark).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2502-14739": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "SuperGPQA (2025, Sci-benchmark).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:conf/emnlp/SinghDCDF23": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "SciRepEval (2023, Sci-benchmark).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2508-08742": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "SciRerankBench (2025, Sci-benchmark).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:conf/acl/LoWNKW20": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "S2ORC (2020, Sci-corpus).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:conf/aaaifs/TsatsaronisSPAAGGAAZN12": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "BioASQ (2012, Bio-benchmark).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2408-01107": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "BIORAG (2024, Bio).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:conf/medinfo/AbachaMSGSD19": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "MedQuAD bridging consumer questions (2019, Med).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "boteva2016full": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "Full-text learning to rank for medical IR (2016, Med-dataset).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:conf/trec/AbachaAPD17": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "TREC 2017 LiveQA Medical (2017, Med).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "nguyen2023medredqa": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "MedRedQA consumer QA (2023, Med).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:conf/naacl/ChenFSD25": {
+    "cells": [
+      "K1.O1"
+    ],
+    "note": "Benchmark LLM challenging medical Qs (2025, Med).",
+    "K": "K1",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2409-13740": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "Language Agents Achieve Superhuman Synthesis (PaperQA-multi, 2024, Sci). Canonical K1.O2.",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:conf/cikm/BesrourHS025": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "SQuAI Multi-Agent QA (2025, Sci).",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:conf/pasc/GokdemirSBWHHSA25": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "HiPerRAG High-Performance for Sci Insights (2025, Sci).",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:conf/emnlp/LuDC20": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "Multi-XScience extreme multi-doc summarization (2020, Sci-dataset).",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:conf/emnlp/WaddenLLWZCH20": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "SciFact Fact or Fiction (2020, Sci).",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:conf/emnlp/WaddenLKCBWH22": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "SciFact-Open (2022, Med/Sci).",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:conf/bionlp/DeYoungLNMW20": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "Evidence Inference 2.0 (2020, Bio).",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:conf/emnlp/YuLW19": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "Detecting causal language in science findings (2019, Sci).",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:journals/corr/abs-2603-21582": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "TREC 2025 BioGen Track (2026, Bio).",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:conf/emnlp/ZhongCWW25": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "CRAB curation benchmark biomedicine (2025, Bio).",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:journals/corr/abs-2411-09213": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "Comprehensive RAG Eval Medical (2024, Med).",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:journals/corr/abs-2408-00727": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "Iterative Follow-up Questions Medical (2024, Med).",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:conf/naacl/SohnPYPHSKK25": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "Rationale-Guided RAG MedQA (2025, Med).",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:journals/corr/abs-2509-22713": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "RAR2 Thought-Driven Retrieval (2025, Med).",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:journals/corr/abs-2505-15633": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "Listen to Context: Faithful LLMs (2025, Bio).",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:journals/jamia/ZhanWZDZ25": {
+    "cells": [
+      "K1.O2",
+      "K2.O2"
+    ],
+    "note": "MMRAG biomedical (2025, Bio). Cross-source K1+K2.",
+    "cross_source": true,
+    "secondary": "K2",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:journals/corr/abs-2405-00465": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "BiomedRAG (2024, Bio).",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:journals/corr/abs-2512-10996": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "MedBioRAG (2025, Med).",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:journals/npjdm/KeJEALSSTOKWKT25": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "Generalizability of RAG across 10 LLMs (2025, Med).",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:conf/acl/ChenLJWG0025": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "Towards Omni-RAG (2025, Sci).",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:journals/corr/abs-2601-06519": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "MedRAGChecker claim verification (2026, Med). Strong O2.",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:journals/corr/abs-2506-17277": {
+    "cells": [
+      "K1.O2"
+    ],
+    "note": "Chunk Twice Embed Once segmentation (2025, Chem). Borderline K1.O1; methodological.",
+    "K": "K1",
+    "O": "O2"
+  },
+  "DBLP:journals/corr/abs-2603-07233": {
+    "cells": [
+      "K1.O3"
+    ],
+    "note": "RAG for Predicting Cellular Responses to Gene Perturbation (2026, Bio).",
+    "K": "K1",
+    "O": "O3"
+  },
+  "xiao2024repurposing": {
+    "cells": [
+      "K1.O3"
+    ],
+    "note": "Repurposing non-pharma interventions Alzheimer link prediction (2024, Bio/Med).",
+    "K": "K1",
+    "O": "O3"
+  },
+  "krishnan2026biomodelsrag": {
+    "cells": [
+      "K1.O3"
+    ],
+    "note": "BioModelsRAG (2026, Bio). Cross-source K1+K2.",
+    "cross_source": true,
+    "secondary": "K2",
+    "K": "K1",
+    "O": "O3"
+  },
+  "DBLP:journals/corr/abs-2602-16650": {
+    "cells": [
+      "K1.O3"
+    ],
+    "note": "RAG Polymer Knowledge from Literature (2026, Mat). Cross-source.",
+    "K": "K1",
+    "O": "O3"
+  },
+  "taffese2025polymerexpert": {
+    "cells": [
+      "K1.O3"
+    ],
+    "note": "Polymer Expert literature-derived (2025, Mat). Cross-source K1+K2.",
+    "cross_source": true,
+    "secondary": "K2",
+    "K": "K1",
+    "O": "O3"
+  },
+  "DBLP:journals/corr/abs-2408-11793": {
+    "cells": [
+      "K2.O1"
+    ],
+    "note": "Chemistry Foundation Models for Structure-Focused RAG (2024, Chem).",
+    "K": "K2",
+    "O": "O1"
+  },
+  "DBLP:conf/emnlp/ZhangSHML24": {
+    "cells": [
+      "K2.O1"
+    ],
+    "note": "HoneyComb Materials Science Agent (2024, Mat). Cross-source.",
+    "cross_source": true,
+    "secondary": "K1",
+    "K": "K2",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2505-07671": {
+    "cells": [
+      "K2.O1"
+    ],
+    "note": "Benchmarking RAG for Chemistry (2025, Chem-benchmark).",
+    "K": "K2",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2508-01643": {
+    "cells": [
+      "K2.O1"
+    ],
+    "note": "ChEmbed chemical literature embeddings (2025, Chem). Borderline K1.",
+    "K": "K2",
+    "O": "O1"
+  },
+  "jiangchemistrag": {
+    "cells": [
+      "K2.O1"
+    ],
+    "note": "ChemisTRAG table-based RAG (Chem) [needs-fetch — table source ambiguous between K1 paper-tables vs K2 curated tables; provisional K2].",
+    "cross_source": true,
+    "secondary": "K1",
+    "K": "K2",
+    "O": "O1"
+  },
+  "DBLP:conf/enlsp/KasmaeeKSSDMS24": {
+    "cells": [
+      "K2.O1"
+    ],
+    "note": "ChemTEB embedding benchmark (2024, Chem-benchmark).",
+    "K": "K2",
+    "O": "O1"
+  },
+  "DBLP:conf/www/ZhaoLYM25": {
+    "cells": [
+      "K2.O1"
+    ],
+    "note": "MedRAG KG-Elicited Reasoning (2025, Med).",
+    "K": "K2",
+    "O": "O1"
+  },
+  "DBLP:conf/acl/WuZQCXMJG25": {
+    "cells": [
+      "K2.O1"
+    ],
+    "note": "Medical Graph RAG (2025, Med).",
+    "K": "K2",
+    "O": "O1"
+  },
+  "DBLP:journals/nar/TaboureauNAWERKBCJBO11": {
+    "cells": [
+      "K2.O1"
+    ],
+    "note": "ChemProt disease chemical biology DB (2011, Chem-dataset).",
+    "K": "K2",
+    "O": "O1"
+  },
+  "DBLP:conf/semeval/Segura-BedmarMH13": {
+    "cells": [
+      "K2.O1"
+    ],
+    "note": "DDI Drug-Drug Interactions (2013, Chem).",
+    "K": "K2",
+    "O": "O1"
+  },
+  "hou2023geneturing": {
+    "cells": [
+      "K2.O1"
+    ],
+    "note": "GeneTuring genomics tests GPT (2023, Bio).",
+    "K": "K2",
+    "O": "O1"
+  },
+  "DBLP:journals/jcisd/TakaharaYOKHTTKF25": {
+    "cells": [
+      "K2.O2",
+      "K4.O3"
+    ],
+    "note": "Materials Dual-Source RAG (2025, Mat). Cross-source.",
+    "cross_source": true,
+    "secondary": "K1/K4",
+    "K": "K2",
+    "O": "O2"
+  },
+  "zhang2026matclaw": {
+    "cells": [
+      "K2.O2",
+      "K4.O3"
+    ],
+    "note": "MatClaw autonomous code-first agent (2026, Mat). Cross-source K1+K2.",
+    "cross_source": true,
+    "secondary": "K1",
+    "K": "K2",
+    "O": "O2"
+  },
+  "DBLP:journals/corr/abs-2310-18463": {
+    "cells": [
+      "K2.O2"
+    ],
+    "note": "PeTailor biomedical triple extraction (2023, Bio).",
+    "K": "K2",
+    "O": "O2"
+  },
+  "smith2008overview": {
+    "cells": [
+      "K2.O2"
+    ],
+    "note": "BioCreative II gene mention recognition (2008, Bio).",
+    "K": "K2",
+    "O": "O2"
+  },
+  "DBLP:journals/jbi/GurulingappaRRFHT12": {
+    "cells": [
+      "K2.O2"
+    ],
+    "note": "Drug-related adverse events extraction corpus (2012, Chem/Bio).",
+    "K": "K2",
+    "O": "O2"
+  },
+  "DBLP:conf/aaai/LeeBHBPS26": {
+    "cells": [
+      "K2.O3"
+    ],
+    "note": "CLADD RAG-Enhanced Collaborative Drug Discovery (2026, Chem). Cross-source K2+K3.",
+    "cross_source": true,
+    "secondary": "K3",
+    "K": "K2",
+    "O": "O3"
+  },
+  "DBLP:journals/bib/ZhangPHCM25": {
+    "cells": [
+      "K2.O3"
+    ],
+    "note": "Rag2Mol structure-based drug design (2025, Chem).",
+    "K": "K2",
+    "O": "O3"
+  },
+  "nan2026taliragen": {
+    "cells": [
+      "K2.O3"
+    ],
+    "note": "TaLiRAGen target-aware ligand generation (2026, Chem).",
+    "K": "K2",
+    "O": "O3"
+  },
+  "DBLP:conf/nips/LeeKV0RPVN24": {
+    "cells": [
+      "K2.O3"
+    ],
+    "note": "Molecule Generation w/ Fragment Retrieval (2024, Chem).",
+    "K": "K2",
+    "O": "O3"
+  },
+  "DBLP:conf/icml/WangWMC25": {
+    "cells": [
+      "K2.O3"
+    ],
+    "note": "Neural Graph Matching for RAG in Mol ML (2025, Chem).",
+    "K": "K2",
+    "O": "O3"
+  },
+  "DBLP:journals/corr/abs-2603-15712": {
+    "cells": [
+      "K2.O3"
+    ],
+    "note": "High-Entropy Catalysts via RAG (2026, Mat).",
+    "K": "K2",
+    "O": "O3"
+  },
+  "DBLP:journals/jcisd/FrancoeurMSJISK20": {
+    "cells": [
+      "K2.O3"
+    ],
+    "note": "3D CNN Cross-Docked dataset (2020, Chem).",
+    "K": "K2",
+    "O": "O3"
+  },
+  "wang2016admet": {
+    "cells": [
+      "K2.O3"
+    ],
+    "note": "ADMET hERG Blockers (2016, Chem).",
+    "K": "K2",
+    "O": "O3"
+  },
+  "DBLP:journals/jcisd/XuDCGPL15": {
+    "cells": [
+      "K2.O3"
+    ],
+    "note": "Deep Learning Drug-Induced Liver Injury (2015, Chem).",
+    "K": "K2",
+    "O": "O3"
+  },
+  "DBLP:journals/corr/WuRFGGPLP17": {
+    "cells": [
+      "K2.O3"
+    ],
+    "note": "MoleculeNet benchmark (2017, Chem-benchmark).",
+    "K": "K2",
+    "O": "O3"
+  },
+  "DBLP:journals/mlst/WellawatteGLBHBS25": {
+    "cells": [
+      "K2.O3"
+    ],
+    "note": "ChemLit-QA dataset (2025, Chem-dataset). Borderline K1.",
+    "K": "K2",
+    "O": "O3"
+  },
+  "zaki2024mascqa": {
+    "cells": [
+      "K2.O3"
+    ],
+    "note": "MaScQA (2024, Mat-benchmark).",
+    "K": "K2",
+    "O": "O3"
+  },
+  "DBLP:conf/icml/KokD07": {
+    "cells": [
+      "K2.O3"
+    ],
+    "note": "Statistical Predicate Invention (2007, Sci) [needs-fetch — old, fits poorly; tentative K2.O3].",
+    "K": "K2",
+    "O": "O3"
+  },
+  "lau2018dataset": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "VQA-RAD radiology images (2018, Med-dataset).",
+    "K": "K3",
+    "O": "O1"
+  },
+  "DBLP:conf/clef/AbachaHDLDM19": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "VQA-Med 2019 (2019, Med).",
+    "K": "K3",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2003-10286": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "PathVQA pathology VQA (2020, Med).",
+    "K": "K3",
+    "O": "O1"
+  },
+  "DBLP:conf/isbi/LiuZXMYW21": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "SLAKE Knowledge-Enhanced VQA (2021, Med-dataset).",
+    "K": "K3",
+    "O": "O1"
+  },
+  "DBLP:conf/cvpr/HuLLSHQL24": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "OmniMedVQA (2024, Med-benchmark).",
+    "K": "K3",
+    "O": "O1"
+  },
+  "DBLP:conf/eccv/SunWZZCZZWLZLLLY24": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "PathMMU Pathology Benchmark (2024, Med-benchmark).",
+    "K": "K3",
+    "O": "O1"
+  },
+  "DBLP:conf/mm/00050TZYHH23": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "RAMM Biomedical VQA (2023, Bio).",
+    "K": "K3",
+    "O": "O1"
+  },
+  "DBLP:conf/miccai/ShaabanSPY25": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "MOTOR Multimodal Optimal Transport (2025, Med).",
+    "K": "K3",
+    "O": "O1"
+  },
+  "DBLP:conf/miccai/LinZZWZWX23": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "PMC-CLIP biomedical pre-training (2023, Bio).",
+    "K": "K3",
+    "O": "O1"
+  },
+  "DBLP:conf/nips/IkezogwoSGGMAKS23": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "Quilt-1M histopathology (2023, Med).",
+    "K": "K3",
+    "O": "O1"
+  },
+  "DBLP:conf/cvpr/Luo0KA0Y0SKE0024": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "FairCLIP fairness in V-L (2024, Med).",
+    "K": "K3",
+    "O": "O1"
+  },
+  "DBLP:conf/iclr/0005ZLWSWZ0Y25": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "MMed-RAG (2025, Med). Could also be O2.",
+    "K": "K3",
+    "O": "O1"
+  },
+  "chen2025vision": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "Vision-language foundation MM-RAG (2025, Bio).",
+    "K": "K3",
+    "O": "O1"
+  },
+  "DBLP:journals/make/LahiriH25": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "AlzheimerRAG multimodal (2025, Med). Cross-source.",
+    "cross_source": true,
+    "secondary": "K1",
+    "K": "K3",
+    "O": "O1"
+  },
+  "DBLP:conf/aaai/ZhangGZZCZZYB26": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "Patho-AgenticRAG pathology (2026, Med). Cross-source.",
+    "cross_source": true,
+    "secondary": "K2",
+    "K": "K3",
+    "O": "O1"
+  },
+  "DBLP:conf/naacl/SunZHX25": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "Fact-Aware Multimodal Radiology Report Gen (2025, Med).",
+    "K": "K3",
+    "O": "O1"
+  },
+  "mazor2025lvlm": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "LVLM-Aware Multimodal Med Diagnosis (2025, Med).",
+    "K": "K3",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2603-17765": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "Grounded Multimodal Radiology Drafting (2026, Med).",
+    "K": "K3",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2508-12036": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "Q-FSRU Quantum-Augmented Med VQA (2025, Med).",
+    "K": "K3",
+    "O": "O1"
+  },
+  "DBLP:journals/npjdm/WadaTNYAHHKSSKNA25": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "Local LLM Radiology contrast media (2025, Med).",
+    "K": "K3",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2602-22216": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "Anatomical Pathology Lab RAG (2026, Med).",
+    "K": "K3",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2504-04988": {
+    "cells": [
+      "K3.O1"
+    ],
+    "note": "Remote Sensing RAG (2025, Earth).",
+    "K": "K3",
+    "O": "O1"
+  },
+  "hu2023medicaldiff": {
+    "cells": [
+      "K3.O2"
+    ],
+    "note": "MedicalDiff-VQA difference VQA (2023, Med-dataset).",
+    "K": "K3",
+    "O": "O2"
+  },
+  "DBLP:conf/nips/BaeKRCLKO0CKC23": {
+    "cells": [
+      "K3.O2"
+    ],
+    "note": "EHRXQA EHR + chest images (2023, Med-dataset).",
+    "K": "K3",
+    "O": "O2"
+  },
+  "DBLP:conf/bigdataconf/KocbekFLHLS25": {
+    "cells": [
+      "K3.O2"
+    ],
+    "note": "Augmentation Strategies Multi-modal RAG (2025, Bio/Med).",
+    "K": "K3",
+    "O": "O2"
+  },
+  "zhang2025enhancing": {
+    "cells": [
+      "K3.O2"
+    ],
+    "note": "ImageRAG ultrahigh resolution remote sensing (2025, Earth).",
+    "K": "K3",
+    "O": "O2"
+  },
+  "DBLP:conf/nips/BushuievBJYKSHW24": {
+    "cells": [
+      "K3.O3"
+    ],
+    "note": "MassSpecGym discovery & ID of molecules (2024, Chem). Spectra → molecule hypothesis.",
+    "K": "K3",
+    "O": "O3"
+  },
+  "DBLP:journals/corr/abs-2603-09800": {
+    "cells": [
+      "K4.O1"
+    ],
+    "note": "MITRA Physics Collaborations Knowledge Retrieval (2026, Phys). Strongest K4 example.",
+    "cross_source": true,
+    "secondary": "K1",
+    "K": "K4",
+    "O": "O1"
+  },
+  "DBLP:journals/corr/abs-2509-09688": {
+    "cells": [
+      "K4.O1"
+    ],
+    "note": "RHIC AI-Powered Long-Term Access (2025, Phys). [in bib but not in Notion DB; explicit tacit/institutional memory.]",
+    "cross_source": true,
+    "secondary": "K1",
+    "K": "K4",
+    "O": "O1"
+  },
+  "aplabprotocols2025": {
+    "cells": [
+      "K4.O2"
+    ],
+    "note": "AP Lab Protocols benchmark (2025, Sci) [bib only].",
+    "K": "K4",
+    "O": "O2"
+  }
+}

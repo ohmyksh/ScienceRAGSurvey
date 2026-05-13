@@ -1,0 +1,5857 @@
+[
+  {
+    "title": "BioModelsRAG: A Biological Modeling Assistant Using RAG (Retrieval Augmented Generation)",
+    "year": 2026,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "BioModels (EBI)",
+    "db_size": "3개 질의 예시 (계산 모델 기반)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "BioModels Custom QA",
+    "eval_metric": "Token Set Ratio (fuzzy matching), Cosine Similarity",
+    "method": "BioModels Custom QA",
+    "paper_link": "https://arxiv.org/abs/2601.22684",
+    "bib_key": "krishnan2026biomodelsrag",
+    "bib_ver": "v2",
+    "domain": [
+      "bio"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O3"
+    ],
+    "ko_primary": "K1.O3",
+    "ko_note": "BioModelsRAG (2026, Bio). Cross-source K1+K2.",
+    "cross_source": true,
+    "ko_secondary": "K2"
+  },
+  {
+    "title": "BioModelsRAG: Biological Modeling Assistant",
+    "year": 2026,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "BioModels (EBI)",
+    "db_size": "1000+ curated + non-curated SBML models",
+    "db_open": "Open",
+    "chunk": "per-BioModel Llama3 plain summary segments",
+    "retriever": "ChromaDB (all-MiniLM-L6-v2)",
+    "retriever_base": "all-MiniLM-L6-v2",
+    "pre_retrieval": "SBML→Antimony→Llama3 text summary (preprocessing)",
+    "generator": "BioModelsRAG (Llama3.1-8B)",
+    "generator_base": "Llama3.1-8B",
+    "eval_task": "BioModels Custom QA",
+    "eval_metric": "Token Set Ratio, Cosine Sim",
+    "method": "BioModelsRAG",
+    "note": "K2 EXEMPLAR — curated systems-biology DB. SBML→Antimony→LLM-summary→ChromaDB pipeline.",
+    "domain": [
+      "bio"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "evaluated_on": [
+      "BioModels Custom QA"
+    ],
+    "type": "Method",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "CLADD: RAG-Enhanced Collaborative LLM Agents for Drug Discovery",
+    "year": 2026,
+    "venue": "AAAI",
+    "venue_type": "AI",
+    "db_name": "PrimeKG, PubChem, Drug Repurposing Hub, DrugBank, STITCH v5.0",
+    "db_size": "13,688 molecules (drug-target) + MoleculeNet 4 datasets",
+    "db_open": "Open",
+    "chunk": "molecule (PubChem annotation) + KG entity (PrimeKG)",
+    "retriever": "GNN Anchor Drug Search + KG 2-hop Path",
+    "retriever_base": "3D geometry-aware GNN (Liu 2021)",
+    "pre_retrieval": "Planning Team (MolAnn Planner + KG Planner)",
+    "generator": "CLADD Prediction Agent",
+    "generator_base": "GPT-4o mini",
+    "eval_task": "Drug-Target Pred (Prec@5), MoleculeNet (AUROC)",
+    "eval_metric": "Precision@5, AUROC",
+    "method": "CLADD",
+    "note": "★ K2.O3 EXEMPLAR. Multi-agent (Planning/KG/MU/Prediction). Anchor drug technique extends KG to novel molecules. CLADD beats fine-tuned baselines without any fine-tuning.",
+    "domain": [
+      "bio",
+      "medical",
+      "chem"
+    ],
+    "modality": [
+      "Text",
+      "KG",
+      "SMILES"
+    ],
+    "post_retrieval": [
+      "summarization",
+      "fusion"
+    ],
+    "evaluated_on": [
+      "Drug Repurposing Hub",
+      "DrugBank",
+      "STITCH v5.0",
+      "BBBP",
+      "SIDER",
+      "ClinTox",
+      "BACE"
+    ],
+    "type": "Method",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Grounded Multimodal Retrieval-Augmented Drafting of Radiology Impressions Using Case-Based Similarity",
+    "year": 2026,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "MIMIC-CXR subset",
+    "db_size": "2,696 image-impression pairs",
+    "db_open": "Partial",
+    "db_etc": "MIMIC-CXR. FAISS",
+    "chunk": "IMPRESSION 섹션",
+    "retriever": "FAISS Retrieval Index",
+    "retriever_base": "CLIP ViT-B/32",
+    "retriever_train": false,
+    "post_retrieval_detail": "Late Fusion",
+    "generator": "Grounded drafting module",
+    "generator_base": "Lightweight LM",
+    "generator_train": false,
+    "eval_task": "MIMIC-CXR Evaluation Subset",
+    "eval_metric": "Recall@1/5/10, Refusal rate, citation coverage",
+    "method": "Grounded Multimodal RAG",
+    "paper_link": "https://arxiv.org/abs/2603.17765",
+    "note": "이미지+텍스트 Late Fusion (a=0.5). Recall@5 0.975.",
+    "bib_key": "DBLP:journals/corr/abs-2603-17765",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text",
+      "Image"
+    ],
+    "post_retrieval": [
+      "fusion"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "Grounded Multimodal Radiology Drafting (2026, Med).",
+    "cross_source": false
+  },
+  {
+    "title": "IRPAPERS: A VISUAL DOCUMENT BENCHMARK FOR SCIENTIFIC RETRIEVAL AND QUESTION ANSWERING",
+    "year": 2026,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "IRPAPERS",
+    "db_size": "3,230 pages, 180 questions",
+    "db_open": "Open",
+    "db_etc": "GPT-4o OCR",
+    "chunk": "Page 단위",
+    "retriever": "Multimodal Hybrid Search",
+    "retriever_base": "Arctic 2.0 + ColModernVBERT",
+    "retriever_train": false,
+    "post_retrieval_detail": "RSF + RRF",
+    "generator": "ImageRAG, TextRAG",
+    "generator_base": "GPT-4o",
+    "generator_train": false,
+    "eval_task": "IRPAPERS",
+    "eval_metric": "Recall@1/5/20, Alignment Score",
+    "method": "IRPAPERS",
+    "paper_link": "https://arxiv.org/abs/2602.17687",
+    "note": "166 IR 논문 시각 문서 RAG 벤치마크. Hybrid Search Recall@20 95%.",
+    "bib_key": "DBLP:journals/corr/abs-2602-17687",
+    "bib_ver": "v2",
+    "modality": [
+      "Text",
+      "Image"
+    ],
+    "post_retrieval": [
+      "fusion"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "IRPapers visual benchmark (2026, Sci).",
+    "cross_source": false
+  },
+  {
+    "title": "MatClaw RAG Benchmark (pymatgen/atomate2)",
+    "year": 2026,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "pymatgen, atomate2 source code (domain library RAG corpus)",
+    "db_size": "full open-source codebase",
+    "db_open": "Open",
+    "chunk": "function/class (structure-aware) vs fixed-size",
+    "retriever": "BM25 vs dense embedding",
+    "retriever_base": "",
+    "pre_retrieval": "",
+    "generator": "",
+    "generator_base": "Claude, GPT-4, Gemini",
+    "eval_task": "pymatgen/atomate2 API call accuracy",
+    "eval_metric": "API call accuracy %",
+    "method": "MatClaw RAG Benchmark",
+    "note": "Structure-aware chunking 99% accuracy. Code as domain knowledge.",
+    "domain": [
+      "material"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "MedRAGChecker: Claim-Level Verification for Biomedical Retrieval-Augmented Generation",
+    "year": 2026,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "PubMed / MedCorp, DRKG",
+    "db_open": "Open",
+    "db_etc": "DRKG 연결 팩트 체킹",
+    "chunk": "passage/snippet 단위",
+    "retriever": "MedRAGRetriever, CsiroFaiss Retriever, MedQuADRetriever",
+    "retriever_base": "BM25, contriever, specter, medcpt",
+    "retriever_train": false,
+    "post_retrieval_detail": "SPO 트리플 분해, NLI+KG 필터링",
+    "generator": "Student extractors and checkers",
+    "generator_base": "Meditron3-8B, PMC-LLaMA-13B, Med-Qwen2-7B, Med42-Llama3-8B",
+    "generator_train": true,
+    "eval_task": "PubMedQA, MedQuAD, LiveQA, MedRedQA",
+    "eval_metric": "Faithfulness, Hallucination, SafetyErr, CtxPrec, ClaimF1",
+    "method": "MedRAGChecker",
+    "paper_link": "https://arxiv.org/abs/2601.06519v1",
+    "note": "Atomic Claim 분해 + NLI + KG 융합. GPT-4.1 → 소형 모델 distill.",
+    "bib_key": "DBLP:journals/corr/abs-2601-06519",
+    "bib_ver": "v2",
+    "domain": [
+      "medical",
+      "bio"
+    ],
+    "modality": [
+      "Text",
+      "KG"
+    ],
+    "post_retrieval": [
+      "decomposition",
+      "filtering"
+    ],
+    "evaluated_on": [
+      "PubMedQA"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "MedRAGChecker claim verification (2026, Med). Strong O2.",
+    "cross_source": false
+  },
+  {
+    "title": "OER-DFT (HEA) — LLM-Driven Discovery of High-Entropy Catalysts via RAG",
+    "year": 2026,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "DFT verification pipeline (VASP PBE+U)",
+    "db_size": "250+ HEA candidates",
+    "db_open": "Private",
+    "chunk": "",
+    "retriever": "",
+    "retriever_base": "",
+    "pre_retrieval": "",
+    "generator": "",
+    "generator_base": "",
+    "eval_task": "HEA OER catalyst multi-objective DFT",
+    "eval_metric": "ηOER, E_hull, band gap, Pugh ratio, $/kg, d-band",
+    "method": "OER-DFT (HEA)",
+    "note": "★ K2.O3 + Materials. LLM+RAG generates catalysts; VASP PBE+U DFT verifies. Top: Fe0.2Co0.2Ni0.2Ir0.1Ru0.3 ηOER=0.285V (25% improvement over IrO2).",
+    "domain": [
+      "material",
+      "chem"
+    ],
+    "modality": [
+      "Structured Table"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "OpenScholar: Synthesizing Scientific Literature with RAG LMs",
+    "year": 2026,
+    "venue": "Nature",
+    "venue_type": "Science",
+    "db_name": "OpenScholar DataStore (OSDS) — peS2o",
+    "db_size": "45M papers, 236M passages",
+    "db_open": "Open",
+    "chunk": "256-word fixed; title prepended",
+    "retriever": "OpenScholar Retriever (bi-encoder) + Reranker (cross-encoder)",
+    "retriever_base": "Contriever (peS2o pretrained) + BGE",
+    "pre_retrieval": "LM-generated keywords (Semantic Scholar API)",
+    "generator": "OpenScholar-8B/70B/GPT-4o",
+    "generator_base": "Llama 3.1 8B (fine-tuned), 70B, GPT-4o",
+    "eval_task": "ScholarQABench (Scholar-CS/Bio/Neuro/Multi) + PubMedQA, SciFact, QASA",
+    "eval_metric": "Rubric acc, Citation F1, ROUGE-L, Accuracy",
+    "method": "OpenScholar",
+    "note": "★★ K1.O2 FLAGSHIP. Iterative self-feedback. 0% hallucination vs GPT-4o 78-90%. Experts prefer OpenScholar-GPT-4o over human 70%. Public demo 30K users.",
+    "bib_key": "asai2024openscholar",
+    "bib_ver": "v2",
+    "domain": [
+      "bio",
+      "medical",
+      "physics"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "post_retrieval": [
+      "re-ranking"
+    ],
+    "evaluated_on": [
+      "PubMedQA",
+      "SciFact",
+      "QASA",
+      "Scholar-CS",
+      "Scholar-Bio",
+      "Scholar-Neuro",
+      "Scholar-Multi"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "OpenScholar (2024, Sci).",
+    "cross_source": false
+  },
+  {
+    "title": "Overview of TREC 2025 Biomedical Generative Retrieval (BioGen) Track",
+    "year": 2026,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "MEDLINE/PubMed 2024 snapshot, PLABA, CHQ-Summ",
+    "db_size": "Task A 40Q (194 sentences), Task B 30 topics",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "method": "TREC 2025 BioGen",
+    "paper_link": "https://arxiv.org/abs/2603.21582",
+    "bib_key": "DBLP:journals/corr/abs-2603-21582",
+    "bib_ver": "v2",
+    "domain": [
+      "bio",
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "TREC 2025 BioGen Track (2026, Bio).",
+    "cross_source": false
+  },
+  {
+    "title": "Patho-AgenticRAG: Multimodal Agentic RAG for Pathology VLMs via RL",
+    "year": 2026,
+    "venue": "AAAI",
+    "venue_type": "AI",
+    "db_name": "Multimodal Pathology Knowledge Base (600 textbooks)",
+    "db_size": "200,000+ pages",
+    "db_open": "Private",
+    "chunk": "page (text-image pair embed)",
+    "retriever": "Multimodal Image-Text Retrieval (VRAG Agent)",
+    "retriever_base": "ColQwen2",
+    "pre_retrieval": "Agentic Router (task decomposition + query planning)",
+    "generator": "Pathology VLM",
+    "generator_base": "Qwen3-4B (Router), Patho-R1-7B (Inference)",
+    "eval_task": "PathMMU, Path-VQA, Quilt-VQA, MedXpertQA, OmniMedVQA",
+    "eval_metric": "Accuracy (Exact-match)",
+    "method": "Patho-AgenticRAG",
+    "note": "GRPO-trained agentic router. 600 textbooks → 200K page-level multimodal KB. +38pp on MedXpertQA over Patho-R1 baseline. Private DB but textbook-derived.",
+    "domain": [
+      "medical",
+      "bio"
+    ],
+    "modality": [
+      "Text",
+      "Image"
+    ],
+    "post_retrieval": [
+      "re-ranking",
+      "summarization"
+    ],
+    "evaluated_on": [
+      "PathMMU",
+      "Path-VQA",
+      "Quilt-VQA",
+      "MedXpertQA",
+      "OmniMedVQA"
+    ],
+    "type": "Method",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Polymer Literature Scholar (PHA Biodegradable Polymer Expert)",
+    "year": 2026,
+    "venue": "arXiv",
+    "venue_type": "Science",
+    "db_name": "PHA corpus",
+    "db_size": "1,028 papers / 44,609 paragraphs (+ 390K KG tuples)",
+    "db_open": "Partial",
+    "chunk": "section/subsection-merged context-preserving chunks",
+    "retriever": "VectorRAG & GraphRAG (Hybrid)",
+    "retriever_base": "Qwen3-Embedding-4B (Vector), all-MiniLM-L6-v2 (KG normalization)",
+    "pre_retrieval": "",
+    "generator": "Polymer Literature Scholar",
+    "generator_base": "GPT-4o-mini, Llama-3.1-70B",
+    "eval_task": "PHA-related Domain-Expert QA Benchmark (113 expert questions)",
+    "eval_metric": "Recall, Accuracy (chemist eval)",
+    "method": "Polymer Literature Scholar",
+    "note": "Cross-source K1+K2. Vector vs Graph RAG comparison. GraphRAG=0.938 recall, VectorRAG=0.717. Domain chemist eval.",
+    "domain": [
+      "material"
+    ],
+    "modality": [
+      "Text",
+      "KG"
+    ],
+    "post_retrieval": [
+      "re-ranking"
+    ],
+    "type": "Method",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Remote Sensing RAG (RS-RAG)",
+    "year": 2026,
+    "venue": "IEEE GRSM",
+    "venue_type": "AI",
+    "db_name": "RSWK (Remote Sensing World Knowledge)",
+    "db_size": "14,820 landmarks, 184 countries",
+    "db_open": "Open",
+    "chunk": "semantic text chunks",
+    "retriever": "Multi-Modal Knowledge Vector DB (CLIP)",
+    "retriever_base": "CLIP",
+    "pre_retrieval": "",
+    "generator": "RS-RAG (Qwen-2.5-VL-7B + LoRA)",
+    "generator_base": "Qwen-2.5-VL-7B",
+    "eval_task": "RSWK Bench (Captioning/Classification/VQA_C/VQA_RSK/VQA_WK), ChatEarthNet",
+    "eval_metric": "BLEU-1~4, METEOR, ROUGE-L, CIDEr; Overall/Per-class Acc",
+    "method": "RS-RAG",
+    "note": "K3 multimodal exemplar. CLIP-based image retrieval + cross-modal fusion.",
+    "domain": [
+      "earth"
+    ],
+    "modality": [
+      "Text",
+      "Image"
+    ],
+    "post_retrieval": [
+      "re-ranking",
+      "fusion"
+    ],
+    "type": "Method",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Retrieval Augmented Generation of Literature-derived Polymer Knowledge: The Example of a Biodegradable Polymer Expert System",
+    "year": 2026,
+    "venue": "arXiv",
+    "venue_type": "Science",
+    "db_name": "1,028 PHA papers (subset 21 DOIs)",
+    "db_size": "113 questions",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "PHA-related Domain-Expert QA Benchmark",
+    "eval_metric": "Recall, Accuracy",
+    "method": "PHA-related Domain-Expert QA Benchmark",
+    "paper_link": "https://arxiv.org/abs/2602.16650v1",
+    "note": "PHA 도메인 113개 RAG QA. General/Paper-specific/Multi-paper.",
+    "bib_key": "DBLP:journals/corr/abs-2602-16650",
+    "bib_ver": "v2",
+    "domain": [
+      "material"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O3"
+    ],
+    "ko_primary": "K1.O3",
+    "ko_note": "RAG Polymer Knowledge from Literature (2026, Mat). Cross-source.",
+    "cross_source": false
+  },
+  {
+    "title": "Retrieval-Augmented Generation for Predicting Cellular Responses to Gene Perturbation",
+    "year": 2026,
+    "venue": "Gen2 @ ICLR",
+    "venue_type": "AI",
+    "db_name": "Replogle-Nadig Perturb-seq dataset",
+    "db_size": "~0.6M cells, 2,023 perturbations, 4 cell types",
+    "db_open": "Open",
+    "db_etc": "CRISPRi 기반 Perturb-seq 대규모 공개 데이터셋",
+    "chunk": "단일 perturbation 관측 단위 (세포 수준 scRNA-seq 발현 벡터)",
+    "retriever": "PT-RAG Two-stage Retriever",
+    "retriever_base": "GenePT",
+    "retriever_train": true,
+    "pre_retrieval": "GenePT 임베딩 공간",
+    "pre_retrieval_detail": "GenePT embedding 기반 K개 후보 검색",
+    "post_retrieval_detail": "Straight-Through Gumbel-Softmax로 미분 가능 선택",
+    "generator": "PT-RAG",
+    "generator_base": "STATE",
+    "generator_train": true,
+    "eval_task": "Replogle-Nadig Perturb-seq",
+    "eval_metric": "W1, W2, DE-Spearman, Pearson Δ, MSE, MAE, PDS",
+    "method": "PT-RAG",
+    "paper_link": "https://arxiv.org/abs/2603.07233",
+    "note": "PT-RAG: 단일 세포 생물학에 RAG 최초 적용. naive RAG가 성능 저하 (W2: 1189.5 vs STATE 646.1). GenePT + Gumbel-Softmax 2단계 미분 가능 검색.",
+    "bib_key": "DBLP:journals/corr/abs-2603-07233",
+    "bib_ver": "v2",
+    "domain": [
+      "bio"
+    ],
+    "modality": [
+      "Structured Table"
+    ],
+    "post_retrieval": [
+      "re-ranking",
+      "filtering"
+    ],
+    "evaluated_on": [
+      "Replogle-Nadig"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O3"
+    ],
+    "ko_primary": "K1.O3",
+    "ko_note": "RAG for Predicting Cellular Responses to Gene Perturbation (2026, Bio).",
+    "cross_source": false
+  },
+  {
+    "title": "Retrieval-Augmented Question Answering over Scientific Literature for the Electron-Ion Collider",
+    "year": 2026,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "In-house EIC arXiv Database",
+    "db_size": "178 articles",
+    "db_open": "Private",
+    "db_etc": "ChromaDB 로컬 배포",
+    "chunk": "120/180 chars, 20 overlap",
+    "retriever": "ChromaDB Similarity Search",
+    "retriever_base": "mxbai-embed-large",
+    "retriever_train": false,
+    "post_retrieval_detail": "MMR",
+    "generator": "EIC RAG Q&A application",
+    "generator_base": "LLaMA 3.2/3.3",
+    "generator_train": false,
+    "eval_task": "AI4EIC2023_DATASETS",
+    "eval_metric": "RAGAS",
+    "method": "EIC RAG Q&A application",
+    "paper_link": "https://arxiv.org/abs/2604.02259",
+    "note": "EIC 로컬 RAG. 청크 180+Cosine 최적.",
+    "bib_key": "jat2026retrieval",
+    "bib_ver": "v2",
+    "domain": [
+      "physics"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "post_retrieval": [
+      "re-ranking"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "RAG-QA over Sci Lit for EIC (2026, Phys).",
+    "cross_source": false
+  },
+  {
+    "title": "Synthesizing Scientific Literature with Retrieval-Augmented Language Models",
+    "year": 2026,
+    "venue": "Nature",
+    "venue_type": "Science",
+    "db_name": "PhD 전문가 작성 multi-paper QA",
+    "db_size": "2,967 questions, 250 expert answers",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "ScholarQABench",
+    "eval_metric": "Rubric, Citation F1, Prometheus v2, Expert pairwise",
+    "method": "ScholarQABench",
+    "paper_link": "https://doi.org/10.1038/s41586-025-10072-4",
+    "note": "OpenScholar의 다학제 장문 합성 벤치마크.",
+    "bib_key": "asai2026synthesizing",
+    "bib_ver": "v2",
+    "domain": [
+      "bio",
+      "medical",
+      "physics"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "Synthesizing Scientific Literature with RAG-LM (2026, Sci). Borderline O2.",
+    "cross_source": false
+  },
+  {
+    "title": "TaLiRAGen: target-aware ligand generation via RAG LLMs",
+    "year": 2026,
+    "venue": "Molecular Diversity",
+    "venue_type": "Science",
+    "db_name": "CrossDocked2020",
+    "db_size": "969→908 targets, 5 ligands/target",
+    "db_open": "Open",
+    "chunk": "",
+    "retriever": "RAG retriever (TaLiRAGen)",
+    "retriever_base": "",
+    "pre_retrieval": "CoT-augmented multi-turn prompting",
+    "generator": "TaLiRAGen",
+    "generator_base": "",
+    "eval_task": "CrossDocked2020 SBDD",
+    "eval_metric": "Vina dock, QED, SA, evidence-theoretic",
+    "method": "TaLiRAGen",
+    "note": "★ K2.O3 EXEMPLAR. No-training RAG+LLM SBDD. Evidence-theoretic norm metric.",
+    "bib_key": "nan2026taliragen",
+    "bib_ver": "v2",
+    "domain": [
+      "chem",
+      "bio",
+      "medical"
+    ],
+    "modality": [
+      "Text",
+      "SMILES",
+      "3D Structure"
+    ],
+    "post_retrieval": [
+      "filtering"
+    ],
+    "evaluated_on": [
+      "CrossDocked2020"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K2.O3"
+    ],
+    "ko_primary": "K2.O3",
+    "ko_note": "TaLiRAGen target-aware ligand generation (2026, Chem).",
+    "cross_source": false
+  },
+  {
+    "title": "A vision-language foundation model-based multi-modal retrieval-augmented generation framework for remote sensing lithological recognition",
+    "year": 2025,
+    "venue": "ISPRS Journal of Photogrammetry and Remote Sensing",
+    "venue_type": "Science",
+    "db_name": "Multi-GL9 + Geological Text Corpus",
+    "db_size": "1,571 images (GF-2: 783, Landsat-8: 788)",
+    "db_open": "Open",
+    "db_etc": "OpenCLIP+Chroma DB (HNSW)",
+    "chunk": "카테고리/엔티티 단위",
+    "retriever": "MMR (Maximal Marginal Relevance)",
+    "retriever_base": "OpenCLIP (CLIP-ViT-H-14)",
+    "retriever_train": false,
+    "post_retrieval_detail": "검색 후보 확률 분포 + 프롬프트 분포 MI 최대화 Soft pairing",
+    "generator": "Geo-MMRAG",
+    "generator_base": "LLaVA-V1.6-Mistral-7B",
+    "generator_train": false,
+    "eval_task": "Multi-GL9",
+    "eval_metric": "Overall Accuracy (OA), Macro-F1",
+    "method": "Geo-MMRAG",
+    "paper_link": "https://doi.org/10.1016/j.isprsjprs.2025.04.015",
+    "note": "지질 RS 첫 멀티모달 RAG. GF-2 OA 79.7% (+23.9%p).",
+    "bib_key": "chen2025vision",
+    "bib_ver": "v2",
+    "domain": [
+      "earth"
+    ],
+    "modality": [
+      "Text",
+      "Image"
+    ],
+    "post_retrieval": [
+      "fusion"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "Vision-language foundation MM-RAG (2025, Bio).",
+    "cross_source": false
+  },
+  {
+    "title": "AI-Powered Assistant for Long-Term Access to RHIC Knowledge",
+    "year": 2025,
+    "venue": "New York Scientific Data Summit",
+    "venue_type": "AI",
+    "db_name": "RHIC experimental documentation, analysis notes, STAR data",
+    "db_size": "~1 ExaByte (project total)",
+    "db_open": "Partial",
+    "chunk": "Marker library structure-preserving Markdown",
+    "retriever": "ChromaDB Vector Search",
+    "retriever_base": "",
+    "pre_retrieval": "Model Context Protocol (MCP) Orchestration Graph",
+    "generator": "RHIC DAPP AI Assistant",
+    "generator_base": "Llama3.3-70B, Mistral-Large-2411",
+    "eval_task": "RHIC Internal QA",
+    "eval_metric": "Precision, contextual depth (qualitative)",
+    "method": "RHIC DAPP",
+    "note": "★ FLAGSHIP K4 EXAMPLE. ~1 ExaByte institutional memory. MCP-RAG. Demonstrates commercial AI's blindness to non-public scientific tacit knowledge.",
+    "bib_key": "DBLP:journals/corr/abs-2509-09688",
+    "bib_ver": "v2",
+    "domain": [
+      "physics"
+    ],
+    "modality": [
+      "Text",
+      "Structured Table"
+    ],
+    "post_retrieval": [
+      "fusion"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K4.O1"
+    ],
+    "ko_primary": "K4.O1",
+    "ko_note": "RHIC AI-Powered Long-Term Access (2025, Phys). [in bib but not in Notion DB; explicit tacit/institutional memory.]",
+    "cross_source": true,
+    "ko_secondary": "K1"
+  },
+  {
+    "title": "AlzheimerRAG: Multimodal RAG for Clinical Use Cases",
+    "year": 2025,
+    "venue": "Mach. Learn. Knowl. Extr.",
+    "venue_type": "AI",
+    "db_name": "PubMed (Alzheimer's Disease)",
+    "db_size": "2,000 articles",
+    "db_open": "Open",
+    "chunk": "text+table summary; subsection split",
+    "retriever": "LangChain Retrieval + FaissDB + ObjectStore",
+    "retriever_base": "Llama-2-7b-pubmed (text), LLaVA-2 (image)",
+    "pre_retrieval": "",
+    "generator": "AlzheimerRAG",
+    "generator_base": "Llama-2-7b-pubmed",
+    "eval_task": "BioASQ, PubMedQA, AlzheimerRAG Clinical Scenarios",
+    "eval_metric": "P@10, Recall, MAP, Acc, F1, EM, Hallucination",
+    "method": "AlzheimerRAG",
+    "note": "Cross-modal fusion. 84% accuracy in clinical scenarios. 6% hallucination.",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text",
+      "Structured Table",
+      "Image"
+    ],
+    "post_retrieval": [
+      "fusion"
+    ],
+    "evaluated_on": [
+      "BioASQ",
+      "PubMedQA"
+    ],
+    "type": "Method",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Benchmarking Foundation Models with Retrieval-Augmented Generation in Olympic-Level Physics Problem Solving",
+    "year": 2025,
+    "venue": "EMNLP (Findings)",
+    "venue_type": "AI",
+    "db_name": "PhoPile (Physics Olympiad Problems Corpus)",
+    "db_size": "3,052문제 (retrieval 2,662 + test 390)",
+    "db_open": "Open",
+    "db_etc": "7개 대회 공개 문제 + LaTeX 변환",
+    "chunk": "문제 단위. 멀티모달 retrieval 시 이미지 임베딩 별도",
+    "retriever": "BM25, Contriever, DPR, DRAGON + VisualBERT, CLIP, BLIP",
+    "retriever_base": "BM25 / Contriever / DPR / DRAGON / VisualBERT / CLIP / BLIP",
+    "retriever_train": false,
+    "pre_retrieval": "입력 쿼리 = 문제 원문 (변환 없음)",
+    "pre_retrieval_detail": "Few-shot in-context로 검색된 과거 유사 문제 참조",
+    "post_retrieval_detail": "Reflection: 답변을 LLM이 검토·수정",
+    "generator": "PhoPile RAG Framework (8개 모델)",
+    "generator_base": "GPT-3.5/4/4V, Gemini-Pro/Vision, ChatGLM, LLaMA",
+    "generator_train": false,
+    "eval_task": "PhoPile-Test",
+    "eval_metric": "GPT-4 Judge (0/5/10점 step-wise + solution-level)",
+    "method": "PhoPile RAG Framework",
+    "paper_link": "https://aclanthology.org/2025.findings-emnlp.1196/",
+    "note": "Physics Olympiad 멀티모달 RAG 첫 벤치마크. 4 retriever × 3 multimodal × 8 모델 비교. retrieval 노이즈 문제 존재.",
+    "bib_key": "DBLP:conf/emnlp/ZhengZFZWPC25",
+    "bib_ver": "v2",
+    "domain": [
+      "physics"
+    ],
+    "modality": [
+      "Text",
+      "Image"
+    ],
+    "post_retrieval": [
+      "re-ranking"
+    ],
+    "evaluated_on": [
+      "PhoPile-Test"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "Olympic-Level Physics RAG benchmark (2025, Phys).",
+    "cross_source": false
+  },
+  {
+    "title": "Benchmarking Large Language Models on Answering and Explaining Challenging Medical Questions",
+    "year": 2025,
+    "venue": "NAACL",
+    "venue_type": "AI",
+    "db_name": "USMLE Step 2 & 3, JAMA Clinical Challenge",
+    "db_size": "308 문항 (Medbullets), JAMA Challenge 세트 포함",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_metric": "Accuracy, 설명 생성 품질 (LLM-as-a-Judge 및 인간 평가 병행)",
+    "method": "Medbullets",
+    "paper_link": "https://arxiv.org/abs/2402.18060",
+    "bib_key": "DBLP:conf/naacl/ChenFSD25",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "Benchmark LLM challenging medical Qs (2025, Med).",
+    "cross_source": false
+  },
+  {
+    "title": "Benchmarking Retrieval-Augmented Generation for Chemistry",
+    "year": 2025,
+    "venue": "COLM",
+    "venue_type": "AI",
+    "db_name": "ChemRAG-Corpus (PubChem, PubMed, USPTO, Semantic Scholar, OpenStax, Wikipedia)",
+    "db_size": "6 sources",
+    "db_open": "Open",
+    "chunk": "per-paragraph (paper/DB record level)",
+    "retriever": "BM25, Contriever, SPECTER, E5, RRF",
+    "retriever_base": "BM25; Contriever; SPECTER; E5",
+    "pre_retrieval": "N/A",
+    "generator": "ChemRAG (ChemRAG-Toolkit)",
+    "generator_base": "Llama-3.1-8B/70B, Mistral-7B, ChemLLM, GPT-3.5/4o, DeepSeek-R1, o1",
+    "eval_task": "ChemRAG-Bench (MMLU-Chem, SciBench-Chem, ChemBench4K, Mol-Instructions)",
+    "eval_metric": "Accuracy; EM/Validity/MACCS-FTS/RDKit-FTS/Morgan-FTS/BLEU; ROUGE",
+    "method": "ChemRAG (Bench + Toolkit)",
+    "note": "화학 RAG 첫 대규모 벤치마크. 6 corpus × 5 retrievers × 8 LLMs. RAG +17.4% 평균 향상. ChemLLM은 RAG 효과 미미.",
+    "bib_key": "DBLP:journals/corr/abs-2505-07671",
+    "bib_ver": "v2",
+    "domain": [
+      "chem"
+    ],
+    "modality": [
+      "Text",
+      "SMILES"
+    ],
+    "post_retrieval": [
+      "fusion"
+    ],
+    "evaluated_on": [
+      "ChemRAG-Bench"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K2.O1"
+    ],
+    "ko_primary": "K2.O1",
+    "ko_note": "Benchmarking RAG for Chemistry (2025, Chem-benchmark).",
+    "cross_source": false
+  },
+  {
+    "title": "BiomedRAG: A Retrieval Augmented Large Language Model for Biomedicine",
+    "year": 2025,
+    "venue": "Journal of Biomedical Informatics",
+    "venue_type": "AI",
+    "db_name": "Diverse Chunk Database (RKVM 기반)",
+    "db_size": "N/A (각 평가 데이터셋 Validation 기반 동적)",
+    "db_open": "Open",
+    "db_etc": "RKVM 구조. Permutation Diversity",
+    "chunk": "문장 내 연속 단어 청크 (m=3,4,5); Link Prediction (head, tail) 쌍",
+    "retriever": "Tailored Chunk Scorer (Chunk Retriever)",
+    "retriever_base": "MedLLaMA 13B (인코더)",
+    "retriever_train": true,
+    "post_retrieval_detail": "Chunk Scorer 가중치 부여, 최고 청크 Example 선택",
+    "generator": "Information Extractor",
+    "generator_base": "LLaMA2 13B, MedLLaMA 13B, GPT-4",
+    "generator_train": false,
+    "eval_task": "ChemProt, DDI, GIT, GIT-RE, ade-corpus-v2, MTsample, ADInt, UMLS",
+    "eval_metric": "Micro Precision, Recall, F1; Accuracy; F1 (Link Prediction)",
+    "method": "BiomedRAG",
+    "paper_link": "https://arxiv.org/abs/2405.00465",
+    "note": "Tailored Chunk Scorer로 LLM Perplexity 학습. GIT +22.43%p F1.",
+    "bib_key": "DBLP:journals/corr/abs-2405-00465",
+    "bib_ver": "v2",
+    "domain": [
+      "bio",
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "post_retrieval": [
+      "re-ranking"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "BiomedRAG (2024, Bio).",
+    "cross_source": false
+  },
+  {
+    "title": "CF-RAG: A Dataset and Method for Carbon Footprint QA Using Retrieval-Augmented Generation",
+    "year": 2025,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "4개 글로벌 컴퓨팅 회사의 탄소 발자국 리포트 (HP, Dell, Acer, Lenovo)",
+    "db_size": "1,735 파일, 18,126 질문 문항",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "CarbonPDF-QA",
+    "eval_metric": "RMSE, MAE, Exact Match",
+    "method": "CarbonPDF-QA",
+    "paper_link": "https://arxiv.org/abs/2508.03489",
+    "note": "PCF PDF 1,735개 탄소 발자국 QA. 4가지 유형. 4명 학생 검수.",
+    "bib_key": "DBLP:journals/corr/abs-2508-03489",
+    "bib_ver": "v2",
+    "domain": [
+      "earth"
+    ],
+    "modality": [
+      "Text",
+      "Structured Table"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "CF-RAG (Carbon Footprint, 2025, Earth).",
+    "cross_source": false
+  },
+  {
+    "title": "CLAPP: The CLASS LLM Agent for Pair Programming",
+    "year": 2025,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "CLASS Knowledge Base (사용자 매뉴얼, classy 문서, 예제)",
+    "db_size": "미명시",
+    "db_open": "Open",
+    "db_etc": "CLASS 공개 문서 KB. 재훈련 없이 재임베딩.",
+    "chunk": "미명시",
+    "retriever": "FAISS (HuggingFace 임베딩)",
+    "retriever_base": "HuggingFace 임베딩",
+    "retriever_train": false,
+    "pre_retrieval": "없음",
+    "pre_retrieval_detail": "원 쿼리 직접 임베딩",
+    "post_retrieval_detail": "별도 처리 없음",
+    "generator": "CLAPP (CLASS Agent + Review + Formatting + Executor + Debugger)",
+    "generator_base": "GPT-4 또는 Google Gemini",
+    "generator_train": false,
+    "eval_task": "질적 예시 2개 (CMB TT, 중성미자 질량)",
+    "eval_metric": "정량적 메트릭 없음",
+    "method": "CLAPP",
+    "paper_link": "https://arxiv.org/abs/2508.05728",
+    "note": "CLASS 공식 문서 RAG + AG2 멀티에이전트(5개). Streamlit 웹앱.",
+    "bib_key": "DBLP:journals/corr/abs-2508-05728",
+    "bib_ver": "v2",
+    "domain": [
+      "astronomy"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "CLAPP CLASS Pair Programming (2025, Astro).",
+    "cross_source": false
+  },
+  {
+    "title": "CPDD (Chronic Pain Diagnostic Dataset / MedRAG benchmark)",
+    "year": 2025,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "Tan Tock Seng Hospital",
+    "db_size": "551 patients, 33 diagnoses",
+    "db_open": "Private",
+    "chunk": "",
+    "retriever": "",
+    "retriever_base": "",
+    "pre_retrieval": "",
+    "generator": "",
+    "generator_base": "",
+    "eval_task": "Chronic pain diagnosis (text→33 classes)",
+    "eval_metric": "L1/L2/L3 Specificity Accuracy",
+    "method": "CPDD",
+    "note": "★ K4: Private hospital EHR. Used by MedRAG (KG-elicited).",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "CRAB: A Benchmark for Evaluating Curation of Retrieval-Augmented LLMs in Biomedicine",
+    "year": 2025,
+    "venue": "EMNLP (Industry Track)",
+    "venue_type": "AI",
+    "db_name": "CRAB Dataset",
+    "db_size": "~400 questions, 4,321 references",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "CRAB",
+    "eval_metric": "Citation F1 Score (RP/IS/CE)",
+    "method": "CRAB",
+    "paper_link": "https://aclanthology.org/2025.emnlp-industry.3/",
+    "note": "생의학 다국어 큐레이션 벤치마크. 추론특화 LLM에서 과도한 추론 현상 발견.",
+    "bib_key": "DBLP:conf/emnlp/ZhongCWW25",
+    "bib_ver": "v2",
+    "domain": [
+      "medical",
+      "bio"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "CRAB curation benchmark biomedicine (2025, Bio).",
+    "cross_source": false
+  },
+  {
+    "title": "CarbonChat: Large Language Model-Based Corporate Carbon Emission Analysis and Climate Knowledge Q&A System",
+    "year": 2025,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "중국 정부 탄소 배출 정책·규정 문서 (2018~2024)",
+    "db_size": "1,000개 정책 문서 + 1,180 QA 쌍",
+    "db_open": "Private",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_metric": "LLM 관련성 점수 (rqa)",
+    "method": "CarbonChat QA",
+    "paper_link": "https://arxiv.org/abs/2501.02031",
+    "bib_key": "DBLP:journals/corr/abs-2501-02031",
+    "bib_ver": "v2",
+    "domain": [
+      "earth"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "CarbonChat (2025, Earth).",
+    "cross_source": false
+  },
+  {
+    "title": "ChEmbed: Enhancing Chemical Literature Search Through Domain-Specific Text Embeddings",
+    "year": 2025,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "ChemRxiv",
+    "db_size": "69,457 docs / 5,000 queries",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "ChemRxiv Retrieval",
+    "eval_metric": "nDCG@10, MAP@10, MRR@10",
+    "method": "ChemRxiv Retrieval",
+    "paper_link": "https://arxiv.org/abs/2508.01643v1",
+    "note": "ChEmbed_prog 0.911 nDCG@10.",
+    "bib_key": "DBLP:journals/corr/abs-2508-01643",
+    "bib_ver": "v2",
+    "domain": [
+      "chem"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K2.O1"
+    ],
+    "ko_primary": "K2.O1",
+    "ko_note": "ChEmbed chemical literature embeddings (2025, Chem). Borderline K1.",
+    "cross_source": false
+  },
+  {
+    "title": "ChemLit-QA: a human evaluated dataset for chemistry RAG tasks",
+    "year": 2025,
+    "venue": "Mach. Learn.: Sci. Technol.",
+    "venue_type": "Science",
+    "db_name": "ChemRxiv",
+    "db_size": "1,054 (Main), 139 (Negative)",
+    "db_open": "Open",
+    "db_etc": "GPT-4 Turbo + 전문가 4명 검수",
+    "chunk": "2,000 chars",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "ChemLit-QA, neg, multi",
+    "eval_metric": "Answer Correctness, RougeL, BLEU, Meteor, ExactMatch, SE",
+    "method": "ChemLit-QA",
+    "paper_link": "https://doi.org/10.1088/2632-2153/adc2d6",
+    "note": "화학 RAG QAC. 7가지 추론 유형. 환각 탐지용 neg 셋.",
+    "bib_key": "DBLP:journals/mlst/WellawatteGLBHBS25",
+    "bib_ver": "v2",
+    "domain": [
+      "chem"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K2.O3"
+    ],
+    "ko_primary": "K2.O3",
+    "ko_note": "ChemLit-QA dataset (2025, Chem-dataset). Borderline K1.",
+    "cross_source": false
+  },
+  {
+    "title": "ChemisTRAG: Table-based Retrieval-Augmented Generation for Chemistry Question Answering",
+    "year": 2025,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "USPTO 특허 화학 KB (Reaction table + Compound table)",
+    "db_size": "4,800 QA pairs / KB ~38,000+ compounds, ~23,000+ reactions",
+    "db_open": "Private",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "ChemisTRAG-QA",
+    "eval_metric": "Accuracy (overall score), IUPAC vs SMILES 입력 형식별 점수",
+    "method": "ChemisTRAG-QA",
+    "paper_link": "https://openreview.net/forum?id=ctkVFKXDMX",
+    "bib_key": "jiangchemistrag",
+    "bib_ver": "v2",
+    "domain": [
+      "chem"
+    ],
+    "modality": [
+      "Structured Table",
+      "SMILES"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K2.O1"
+    ],
+    "ko_primary": "K2.O1",
+    "ko_note": "ChemisTRAG table-based RAG (Chem) [needs-fetch — table source ambiguous between K1 paper-tables vs K2 curated tables; provisional K2].",
+    "cross_source": true,
+    "ko_secondary": "K1"
+  },
+  {
+    "title": "Chunk Twice, Embed Once: A Systematic Study of Segmentation and Representation Trade-offs in Chemistry-Aware Retrieval-Augmented Generation",
+    "year": 2025,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "ChemRxivQuest",
+    "db_size": "970 QA pairs, 155 preprints",
+    "db_open": "Open",
+    "db_etc": "GPT-4o + 퍼지 매칭 검증",
+    "chunk": "Recursive-Token-Chunker (RT100-0): 100 tokens, 0 overlap. 25개 청킹 평가",
+    "retriever": "48 Dense Embedding Models (Evaluated)",
+    "retriever_base": "OpenAI text-embedding-3-large (기준), Nomic_text_v1.5, BAAI_bge_v1.5, Intfloat_e5L_v2 등 48개",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "FSUChemRxivQuest, ChemHotpotQARetrieval, ChemNQRetrieval",
+    "eval_metric": "nDCG@10, MAP@10, Recall@10, Precision@10, MRR@10, F1, F2, IoU",
+    "method": "RT100-0",
+    "paper_link": "https://arxiv.org/abs/2506.17277",
+    "note": "화학 RAG 청킹·임베딩 가이드라인. RT100-0 + 범용 모델 우수. MTEB 호환 FSUChemRxivQuest 공개.",
+    "bib_key": "DBLP:journals/corr/abs-2506-17277",
+    "bib_ver": "v2",
+    "domain": [
+      "chem"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "Chunk Twice Embed Once segmentation (2025, Chem). Borderline K1.O1; methodological.",
+    "cross_source": false
+  },
+  {
+    "title": "DUNE-GPT (LLM Integration for DUNE Experiment)",
+    "year": 2025,
+    "venue": "Lepton Photon",
+    "venue_type": "Science",
+    "db_name": "DUNE internal docs (DocDB, Indico, internal wikis)",
+    "db_size": "unspecified",
+    "db_open": "Private",
+    "chunk": "token + paragraph",
+    "retriever": "FAISS",
+    "retriever_base": "multi-qa-mpnet-base-dot-v1",
+    "pre_retrieval": "",
+    "generator": "DUNE-GPT",
+    "generator_base": "Argo (Argonne) / Ollama (Fermilab) hosted",
+    "eval_task": "internal queries (detector specs, reconstruction)",
+    "eval_metric": "Accuracy ~70%",
+    "method": "DUNE-GPT",
+    "note": "★ K4: Private institutional memory. Fermilab/Argonne offline only. ~70% accuracy.",
+    "domain": [
+      "physics"
+    ],
+    "modality": [
+      "Text",
+      "Image"
+    ],
+    "type": "Method",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Enhancing Ultrahigh Resolution Remote Sensing Imagery Analysis With ImageRAG: A new framework",
+    "year": 2025,
+    "venue": "IEEE Geoscience and Remote Sensing Magazine",
+    "venue_type": "Science",
+    "db_name": "LRSD, CRSD, Zoom4K, VQA10K",
+    "db_size": "LRSD 1,595,909 / CRSD ~3M / Zoom4K ~4K / VQA10K ~10K",
+    "db_open": "Open",
+    "db_etc": "Chroma 벡터 DB",
+    "chunk": "이미지 패치 (Complete Cover, Cascade Grid, ViT)",
+    "retriever": "ImageRAG Retriever (Fast Path & Slow Path)",
+    "retriever_base": "CLIP, RemoteCLIP, GeoRSCLIP, MCIPCLIP / Sentence-BERT all-MiniLM-L6-v2",
+    "retriever_train": false,
+    "pre_retrieval": "Key phrase extraction",
+    "pre_retrieval_detail": "Qwen2.5-32B / KeyBERT 키워드 추출",
+    "post_retrieval_detail": "신뢰도 ε=0.5 미만 Slow Path 우회. K개 패치 필터",
+    "generator": "InternVL2.5-8B-Infer",
+    "generator_base": "InternVL2.5-8B (Qwen2.5-7B + InternViT-300M)",
+    "generator_train": true,
+    "eval_task": "MME-RealWorld-RS, MME-RealWorld-lite-RS",
+    "eval_metric": "Overall Accuracy, Recall@k, Mean Recall",
+    "method": "ImageRAG",
+    "paper_link": "https://doi.org/10.1109/MGRS.2025.3574742",
+    "note": "UHR RS 이미지 RAG. Fast/Slow Path. 작은 객체 향상. 검색 지연 한계.",
+    "bib_key": "zhang2025enhancing",
+    "bib_ver": "v2",
+    "domain": [
+      "earth"
+    ],
+    "modality": [
+      "Image",
+      "Text"
+    ],
+    "post_retrieval": [
+      "filtering"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K3.O2"
+    ],
+    "ko_primary": "K3.O2",
+    "ko_note": "ImageRAG ultrahigh resolution remote sensing (2025, Earth).",
+    "cross_source": false
+  },
+  {
+    "title": "Evaluating Retrieval-Augmented Generation Agents for Autonomous Scientific Discovery in Astrophysics",
+    "year": 2025,
+    "venue": "ML4Astro @ ICML",
+    "venue_type": "AI",
+    "db_name": "5개 우주론 논문 + 945개 평가",
+    "db_size": "105 QA 쌍; 5 논문",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "우주론 RAG 정확도",
+    "eval_metric": "Accuracy (Correct/Incorrect), LLMaaJ",
+    "method": "CosmoPaperQA",
+    "paper_link": "https://arxiv.org/abs/2507.07155",
+    "bib_key": "DBLP:journals/corr/abs-2507-07155",
+    "bib_ver": "v2",
+    "domain": [
+      "astronomy"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "RAG Agents for Astrophysics Discovery (2025, Astro). Borderline O3.",
+    "cross_source": false
+  },
+  {
+    "title": "Exploration of Augmentation Strategies in Multi-modal Retrieval-Augmented Generation for the Biomedical Domain",
+    "year": 2025,
+    "venue": "IEEE BigData",
+    "venue_type": "AI",
+    "db_name": "Glycobiology Corpus (25 IgG papers)",
+    "db_size": "25 papers, 120 MCQ",
+    "db_open": "Open",
+    "db_etc": "Docling 다중모달 변환",
+    "chunk": "Docling HierarchicalChunker (16K tokens)",
+    "retriever": "ColPali, ColQwen, ColFlor + bge",
+    "retriever_base": "PaliGemma-3B, Qwen2-VL-2B, Florence-2, BAAI/bge-base-en-v1.5",
+    "retriever_train": false,
+    "post_retrieval_detail": "Docling 이미지/표→텍스트",
+    "generator_base": "Gemma-3-27B-IT, GPT-4o, GPT-5",
+    "generator_train": false,
+    "eval_task": "Glycobiology MCQ Benchmark",
+    "eval_metric": "Mean Accuracy, Precision@5, Latency, Cost",
+    "method": "OCR-free vs Text MM-RAG",
+    "paper_link": "https://arxiv.org/abs/2512.16802",
+    "note": "중간모델은 텍스트변환, GPT-5는 OCR-free 우세. ColFlor 174M 5.25배 빠름.",
+    "bib_key": "DBLP:conf/bigdataconf/KocbekFLHLS25",
+    "bib_ver": "v2",
+    "domain": [
+      "bio",
+      "medical"
+    ],
+    "modality": [
+      "Text",
+      "Structured Table",
+      "Image"
+    ],
+    "post_retrieval": [
+      "summarization"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K3.O2"
+    ],
+    "ko_primary": "K3.O2",
+    "ko_note": "Augmentation Strategies Multi-modal RAG (2025, Bio/Med).",
+    "cross_source": false
+  },
+  {
+    "title": "Fact-Aware Multimodal Retrieval Augmentation for Accurate Medical Radiology Report Generation",
+    "year": 2025,
+    "venue": "NAACL",
+    "venue_type": "AI",
+    "db_name": "MIMIC-CXR, CheXpert",
+    "db_size": "MIMIC-CXR: ~128K pairs / CheXpert: 1,000 hidden test",
+    "db_open": "Partial",
+    "db_etc": "방사선 전문의 작성 원본. RadGraph로 Factual Pairs 자동 마이닝",
+    "chunk": "환자/리포트 단위 (Image-Report pair)",
+    "retriever": "FactMM-RAG Retriever (Med-MARVEL 기반)",
+    "retriever_base": "MARVEL (T5-ANCE + ViT)",
+    "retriever_train": true,
+    "post_retrieval_detail": "학습 시 F1RadGraph 기준 Re-ranking Top-2. 추론 시 Top-1",
+    "generator": "FactMM-RAG Generator (LLaVA-based)",
+    "generator_base": "LLaVA-1.5 (vicuna-7b-v1.5)",
+    "generator_train": true,
+    "eval_task": "MIMIC-CXR, CheXpert",
+    "eval_metric": "ROUGE-L, BERTScore, F1CheXbert, F1RadGraph",
+    "method": "FactMM-RAG",
+    "note": "RadGraph 기반 Factual Pair Mining + LLaVA. MIMIC-CXR F1CheXbert +6.5%.",
+    "bib_key": "DBLP:conf/naacl/SunZHX25",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Image",
+      "Text"
+    ],
+    "post_retrieval": [
+      "re-ranking"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "Fact-Aware Multimodal Radiology Report Gen (2025, Med).",
+    "cross_source": false
+  },
+  {
+    "title": "From Queries to Criteria: Understanding How Astronomers Evaluate LLMs",
+    "year": 2025,
+    "venue": "COLM",
+    "venue_type": "AI",
+    "db_name": "@Ask-astro-ph Slack User Queries & ArXiv",
+    "db_size": "40 Q&A pairs",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_metric": "Relevance Score (GPT-4o-mini)",
+    "method": "Astro-LLMs-Benchmark",
+    "paper_link": "https://arxiv.org/abs/2507.15715",
+    "bib_key": "DBLP:journals/corr/abs-2507-15715",
+    "bib_ver": "v2",
+    "domain": [
+      "astronomy"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "From Queries to Criteria (2025, Astro).",
+    "cross_source": false
+  },
+  {
+    "title": "GeoGPT-RAG Technical Report",
+    "year": 2025,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "GeoGPT Library 기반 (공개 지구과학 논문)",
+    "db_size": "938 QA items",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_metric": "Answer Recall (RAGAS), Top-K Recall",
+    "method": "GeoRAG-QA",
+    "paper_link": "https://arxiv.org/abs/2509.09686v2",
+    "bib_key": "DBLP:journals/corr/abs-2509-09686",
+    "bib_ver": "v2",
+    "domain": [
+      "earth"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "GeoGPT-RAG (2025, Earth). Cross-source.",
+    "cross_source": true,
+    "ko_secondary": "K2"
+  },
+  {
+    "title": "GeoGraphRAG: A graph-based retrieval-augmented generation approach for empowering large language models in automated geospatial modeling",
+    "year": 2025,
+    "venue": "Int. J. Appl. Earth Obs. Geoinf. (JAG)",
+    "venue_type": "Science",
+    "db_name": "S-GMKG",
+    "db_size": "15,226 entities, 77,138 relations",
+    "db_open": "Partial",
+    "db_etc": "LLM4KG 자동 추출",
+    "chunk": "엔티티 단위(함수 스니펫, 데이터 속성)",
+    "retriever": "Graph Retriever",
+    "retriever_base": "BAAI/bge-m3",
+    "retriever_train": false,
+    "pre_retrieval": "Demand Identifier (LLM CoT)",
+    "pre_retrieval_detail": "Demand Identifier로 Source/Target 추출",
+    "post_retrieval_detail": "Subgraph Self-Generation, Solution Graph Extension",
+    "generator": "Solution Planner",
+    "generator_base": "GPT-4o, DeepSeek-v3, Llama3-70b, Qwen-max, DeepSeek-R1-Distill-Qwen-32b",
+    "generator_train": false,
+    "eval_task": "Geospatial Modeling Benchmark Dataset",
+    "eval_metric": "LLM-as-a-judge score, Precision/Recall/F1-score",
+    "method": "GeoGraphRAG",
+    "paper_link": "https://doi.org/10.1016/j.jag.2025.104712",
+    "note": "S-GMKG 그래프 RAG. ICL+그래프 탐색만으로 GEE 코드 생성. Execution-based 평가 미실시.",
+    "bib_key": "DBLP:journals/aeog/LiangHJQZSXW25",
+    "bib_ver": "v2",
+    "domain": [
+      "earth"
+    ],
+    "modality": [
+      "Text",
+      "KG"
+    ],
+    "post_retrieval": [
+      "filtering",
+      "fusion"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "GeoGraphRAG (2025, Earth). Cross-source K1+K2.",
+    "cross_source": true,
+    "ko_secondary": "K2"
+  },
+  {
+    "title": "GeoRAG: A Question-Answering Approach from a Geographical Perspective",
+    "year": 2025,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "Geographic corpus (3,267개 지리학 문헌)",
+    "db_size": "3,267 documents / 875,432 QA pairs",
+    "db_open": "Partial",
+    "db_etc": "Qwen-110B + MetaGPT 멀티 에이전트 + 인간 전문가 검증 (94.2%)",
+    "chunk": "spatial-semantic chunking",
+    "retriever": "Dimension-Aware Retrieval (7차원 분류기 + 차원 BERT)",
+    "retriever_base": "BERT-Base-Chinese",
+    "retriever_train": true,
+    "pre_retrieval": "7-Dimensional Classification & Iterative Keyword Generation",
+    "pre_retrieval_detail": "7차원 분류기 + 복합 쿼리 키워드 반복",
+    "post_retrieval_detail": "차원별 BERT 평가기로 채점 후 가중치 합산 재정렬",
+    "generator": "GeoRAG (GeoPrompt)",
+    "generator_base": "Llama3.1-8B, Qwen2-7B",
+    "generator_train": false,
+    "eval_task": "LandformBenchMark",
+    "eval_metric": "Accuracy, Precision, Recall, F1 (Closed); RAGAS (Open)",
+    "method": "GeoRAG",
+    "paper_link": "https://arxiv.org/abs/2504.01458",
+    "note": "7차원 지리학 RAG. +28.7% 성능, -41.9% 환각.",
+    "bib_key": "DBLP:journals/corr/abs-2504-01458",
+    "bib_ver": "v2",
+    "domain": [
+      "earth"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "post_retrieval": [
+      "re-ranking",
+      "filtering"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "GeoRAG (2025, Earth).",
+    "cross_source": false
+  },
+  {
+    "title": "HiPerRAG: High-Performance RAG for Scientific Insights",
+    "year": 2025,
+    "venue": "PASC",
+    "venue_type": "AI",
+    "db_name": "Scientific Literature Corpus (SLC) + Protein Literature Corpus (PLC)",
+    "db_size": "3.6M+ docs (SLC), 10,124 (PLC)",
+    "db_open": "Partial",
+    "chunk": "semantic chunking (SFR-Embedding-Mistral cosine sim)",
+    "retriever": "ColTrast",
+    "retriever_base": "SFR-Embedding-Mistral, BERT-base",
+    "pre_retrieval": "N/A",
+    "generator": "Mistral, Mixtral8x7B",
+    "generator_base": "Mistral-7B, Mixtral-8x7B",
+    "eval_task": "SciQ, PubMedQA, LitQA, ProteinInteractionQA, ProteinFunctionQA, BioSynthQP",
+    "eval_metric": "Accuracy, P@10, MRR@10",
+    "method": "HiPerRAG",
+    "note": "HPC-scale (Polaris/Sunspot/Frontier). Oreo parser 4.5x faster. ProteinInteractionQA/FunctionQA/BioSynthQP self-made.",
+    "domain": [
+      "bio",
+      "medical",
+      "chem",
+      "physics"
+    ],
+    "modality": [
+      "Text",
+      "Image",
+      "Structured Table"
+    ],
+    "evaluated_on": [
+      "SciQ",
+      "PubMedQA",
+      "LitQA",
+      "ProteinInteractionQA",
+      "ProteinFunctionQA",
+      "BioSynthQP"
+    ],
+    "type": "Method",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Improving Retrieval-Augmented Generation in Medicine with Iterative Follow-up Questions",
+    "year": 2025,
+    "venue": "PSB",
+    "venue_type": "AI",
+    "db_name": "Textbooks and Statpearls corpora",
+    "db_open": "Open",
+    "retriever": "MedCPT",
+    "retriever_base": "Contrastive pre-trained transformers",
+    "retriever_train": true,
+    "pre_retrieval": "Iterative Follow-up Query Generation",
+    "pre_retrieval_detail": "Reason-then-query, m회 반복 후속질문 생성",
+    "generator": "i-MedRAG",
+    "generator_base": "GPT-3.5, Llama-3.1-8B",
+    "generator_train": false,
+    "eval_task": "MedQA (USMLE), MMLU-Med",
+    "eval_metric": "Accuracy (%)",
+    "method": "i-MedRAG",
+    "paper_link": "https://arxiv.org/abs/2408.00727",
+    "note": "의료 RAG 후속 쿼리 반복 생성. MedQA Zero-shot GPT-3.5 69.68% SOTA.",
+    "bib_key": "DBLP:journals/corr/abs-2408-00727",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "evaluated_on": [
+      "MedQA",
+      "MMLU-Med"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "Iterative Follow-up Questions Medical (2024, Med).",
+    "cross_source": false
+  },
+  {
+    "title": "LLaMP: Large Language Model Made Powerful for High-fidelity Materials Knowledge Retrieval",
+    "year": 2025,
+    "venue": "EMNLP",
+    "venue_type": "AI",
+    "db_name": "Materials Project (MP)",
+    "db_size": "800 화합물 자기정렬 평가",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "method": "LLaMP MP Property Benchmark",
+    "paper_link": "https://arxiv.org/abs/2401.17244",
+    "bib_key": "DBLP:conf/emnlp/ChiangHCR25",
+    "bib_ver": "v2",
+    "domain": [
+      "material",
+      "chem"
+    ],
+    "modality": [
+      "Structured Table",
+      "3D Structure"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1",
+      "K2.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "LLaMP (2025, Mat). Listed K1.O1 (basic mode); see also K2.O1 for KB mode. Cross-source.",
+    "cross_source": false
+  },
+  {
+    "title": "LVLM-Aware Multimodal Retrieval for RAG-Based Medical Diagnosis with General-Purpose Models",
+    "year": 2025,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "PMC-OA, ROCO, MIMIC-CXR",
+    "db_size": "~2.1M+ pairs (PMC-OA 1.65M, ROCO 81K, MIMIC-CXR 377K)",
+    "db_open": "Open",
+    "db_etc": "FAISS 인덱스",
+    "chunk": "이미지+텍스트 페어",
+    "retriever": "Jina-CLIP 기반 Dual-head Multimodal Retriever",
+    "retriever_base": "jina-clip-v1",
+    "retriever_train": true,
+    "pre_retrieval": "Open→Closed-ended Question Conversion (o3, 훈련 시만)",
+    "pre_retrieval_detail": "훈련 시 프롬프트로 Open→Yes/No 변환",
+    "post_retrieval_detail": "검색 후보 병렬 추론 후 확률 통합 fusion",
+    "generator": "CLARE Reader",
+    "generator_base": "Pixtral, Qwen2-vl",
+    "generator_train": true,
+    "eval_task": "BreastMNIST, DermaMNIST, RetinaMNIST, VinDr-PCXR, BRSET, VQA-RAD, SLAKE-English, PathVQA",
+    "eval_metric": "Accuracy, Macro F1, Token Recall, Exact Match",
+    "method": "CLARE",
+    "paper_link": "https://arxiv.org/abs/2508.17394",
+    "note": "의료 특화 사전학습 없이 범용 LVLM+Retriever 경량 파인튜닝. Inconsistent Retrieval Predictions 문제 개선.",
+    "bib_key": "mazor2025lvlm",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text",
+      "Image"
+    ],
+    "post_retrieval": [
+      "fusion"
+    ],
+    "evaluated_on": [
+      "VQA-RAD"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "LVLM-Aware Multimodal Med Diagnosis (2025, Med).",
+    "cross_source": false
+  },
+  {
+    "title": "Listen to the Context: Towards Faithful Large Language Models for Retrieval Augmented Generation on Climate Questions",
+    "year": 2025,
+    "venue": "ClimateNLP @ ACL",
+    "venue_type": "AI",
+    "db_name": "ClimateGPT Knowledge Base (IPCC, Potsdam, Earth4All, Other)",
+    "db_size": "756 documents, 35,319 chunks",
+    "db_open": "Open",
+    "db_etc": "ClimateGPT (Thulke 2024) KB 재사용. 재임베딩 갱신",
+    "chunk": "512-token; 계층 검색 (페이지 Top-5 → 115-token Top-5)",
+    "retriever": "bge-large-en-v1.5 (계층적 검색)",
+    "retriever_base": "bge-large-en-v1.5 (BAAI)",
+    "retriever_train": false,
+    "pre_retrieval": "없음",
+    "pre_retrieval_detail": "원 쿼리 직접 임베딩",
+    "post_retrieval_detail": "별도 처리 없음",
+    "generator": "ClimateGPT Faithful+",
+    "generator_base": "LLaMA-2 7B",
+    "generator_train": true,
+    "eval_task": "ClimateGPT IFT 테스트셋 (334 prompts); CPR RAG (1,013)",
+    "eval_metric": "Claim Support wrt Reference, wrt KB. LettuceDetect %",
+    "method": "ClimateGPT Faithful+",
+    "paper_link": "https://aclanthology.org/2025.climatenlp-1.17/",
+    "note": "IFT ablation. unfaithful 서브셋 제거 → faithfulness 30%→57%.",
+    "bib_key": "DBLP:journals/corr/abs-2505-15633",
+    "bib_ver": "v2",
+    "domain": [
+      "earth"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "Listen to Context: Faithful LLMs (2025, Bio).",
+    "cross_source": false
+  },
+  {
+    "title": "MARSHA: multi-agent RAG system for hazard adaptation",
+    "year": 2025,
+    "venue": "npj Climate Action",
+    "venue_type": "Science",
+    "db_name": "ClimRR (FWI), WFIGS (산불), NAFSS (고목 연륜), CIACC 문헌, 2022 ACS",
+    "db_size": "산불 발생 기록 2015-2023 / 과학 문헌 (규모 미공개)",
+    "db_open": "Partial",
+    "db_etc": "FWI 투영, 산불, 고목 연륜, ACS, CIACC. FAISS + SentenceTransformers",
+    "chunk": "과학 문헌: 초록 단위 / 지리공간: GeoJSON",
+    "retriever": "FAISS + SentenceTransformers (문헌), 지리공간 API",
+    "retriever_base": "SentenceTransformers (Reimers 2019)",
+    "retriever_train": false,
+    "pre_retrieval": "User Profile + Planning Agent",
+    "pre_retrieval_detail": "사용자 프로파일 에이전트가 직업/위치/시간대 수집",
+    "generator": "WildfireGPT",
+    "generator_base": "GPT-4 Turbo",
+    "generator_train": false,
+    "eval_task": "산불 위험 케이스 스터디 10개",
+    "eval_metric": "Relevance Score (사용자 맥락에 적절히 응답한 비율 %)",
+    "method": "WildfireGPT",
+    "paper_link": "https://doi.org/10.1038/s44168-025-00254-1",
+    "note": "산불 특화 멀티에이전트 RAG. ChatClimate/Perplexity 대비 우수.",
+    "bib_key": "xie2025marsha",
+    "bib_ver": "v2",
+    "domain": [
+      "earth"
+    ],
+    "modality": [
+      "Text",
+      "Structured Table"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "MARSHA hazard adaptation (2025, Earth).",
+    "cross_source": false
+  },
+  {
+    "title": "MITRA: AI Assistant for Knowledge Retrieval in Physics Collaborations",
+    "year": 2025,
+    "venue": "ML4PS @ NeurIPS",
+    "venue_type": "AI",
+    "db_name": "CMS internal analysis docs (Analysis Notes, Internal Wikis, Procedural Guidelines)",
+    "db_size": "unspecified (CMS internal)",
+    "db_open": "Private",
+    "chunk": "paragraph, 768d embed",
+    "retriever": "DPR + Cross-Encoder Reranker",
+    "retriever_base": "facebook/dpr-question_encoder-multiset-base",
+    "pre_retrieval": "Two-tiered DB (abstracts→full-text session)",
+    "generator": "MITRA",
+    "generator_base": "Mistral-7B (4-bit)",
+    "eval_task": "CMS Analysis Query Set (Set 1 exact / Set 2 paraphrase)",
+    "eval_metric": "P@k, R@k, MRR, NDCG@k",
+    "method": "MITRA",
+    "note": "★ K4: CMS Private. On-prem GPU. Two-tier DB prevents cross-analysis confusion. Set 2 paraphrase: P@1 0.13→0.75 vs BM25.",
+    "domain": [
+      "physics"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "post_retrieval": [
+      "re-ranking"
+    ],
+    "type": "Method",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "MMed-RAG: Versatile Multimodal RAG System for Medical VLMs",
+    "year": 2025,
+    "venue": "ICLR",
+    "venue_type": "AI",
+    "db_name": "MIMIC-CXR, IU-Xray, Harvard-FairVLMed, PMC-OA, Quilt-1M",
+    "db_size": "16,034 QA",
+    "db_open": "Open",
+    "chunk": "full report",
+    "retriever": "Domain-Aware Retriever (BiomedCLIP + ResNet-50 + bio-BioClinicalBERT)",
+    "retriever_base": "BiomedCLIP + ResNet-50 + bio-BioClinicalBERT",
+    "pre_retrieval": "",
+    "generator": "MMed-RAG (DPO/RAG-PT)",
+    "generator_base": "LLaVA-Med-1.5 (7B)",
+    "eval_task": "Med VQA + Report Gen across radiology/ophthalmology/pathology",
+    "eval_metric": "Acc, F1, AUROC / BLEU, ROUGE-L, METEOR",
+    "method": "MMed-RAG",
+    "note": "★ K3 multimodal. Domain-aware retriever (radiology/pathology/ophthalmology). DPO-based RAG-PT for cross-modal alignment.",
+    "bib_key": "DBLP:conf/iclr/0005ZLWSWZ0Y25",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text",
+      "Image"
+    ],
+    "post_retrieval": [
+      "filtering"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "MMed-RAG (2025, Med). Could also be O2.",
+    "cross_source": false
+  },
+  {
+    "title": "MOTOR: Multimodal Optimal Transport via Grounded Retrieval in Medical Visual Question Answering",
+    "year": 2025,
+    "venue": "MICCAI",
+    "venue_type": "AI",
+    "db_name": "MIMIC-CXR-JPG (Vector DB 소스)",
+    "db_size": "560개 Image-Report 쌍 (14개 클래스 × 40개)",
+    "db_open": "Open",
+    "db_etc": "방사선사가 작성한 원본 리포트 활용.",
+    "chunk": "이미지-텍스트 쌍 단위 (이미지, Grounded Caption, 의료 리포트)",
+    "retriever": "Vector Database Retriever (RAD-DINO + Clinical-BERT)",
+    "retriever_base": "RAD-DINO (768D) + Clinical-BERT (512D)",
+    "retriever_train": false,
+    "pre_retrieval": "Grounded Caption Generation (MAIRA-2)",
+    "pre_retrieval_detail": "MAIRA-2로 비정상 소견 텍스트 설명과 바운딩 박스 생성",
+    "post_retrieval_detail": "Sinkhorn-Knopp OT 기반 재정렬: 텍스트 유사도 + 비주얼 유사도 결합",
+    "generator": "Answer-Generating VLM (Frozen)",
+    "generator_base": "LLaVA-Med-v1.5-7B, Dragonfly-Med-v2-8B",
+    "generator_train": false,
+    "eval_task": "MIMIC-CXR-VQA, Medical-Diff-VQA",
+    "eval_metric": "Accuracy",
+    "method": "MOTOR",
+    "paper_link": "https://arxiv.org/abs/2506.22900",
+    "note": "Training-free 멀티모달 OT 기반 재랭킹. SOTA 대비 평균 6.45% 향상.",
+    "bib_key": "DBLP:conf/miccai/ShaabanSPY25",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Image",
+      "Text"
+    ],
+    "post_retrieval": [
+      "re-ranking"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "MOTOR Multimodal Optimal Transport (2025, Med).",
+    "cross_source": false
+  },
+  {
+    "title": "Materials Dual-Source Knowledge Retrieval-Augmented Generation for Local Large Language Models in Photocatalysts",
+    "year": 2025,
+    "venue": "J. Chem. Inf. Model.",
+    "venue_type": "Science",
+    "db_name": "In-house Metal-Sulfide Photocatalyst Records + PDFs",
+    "db_size": "740 records + 20 PDFs",
+    "db_open": "Private",
+    "db_etc": "in-house, 완전 오프라인",
+    "chunk": "CSV → template-based text 변환; PDF는 문장/단락",
+    "retriever": "Dual-Source Vector Retriever",
+    "retriever_train": false,
+    "pre_retrieval": "CSV → Template-based Text 변환",
+    "pre_retrieval_detail": "CSV → template text",
+    "post_retrieval_detail": "각 소스별 LLM 요약 후 병합",
+    "generator": "MDSK-RAG",
+    "generator_base": "gemma-2-9b-it; Qwen2.5-7B; gemma-2-27b-it",
+    "generator_train": false,
+    "eval_task": "Photocatalyst Expert QA",
+    "eval_metric": "Cosine Similarity, Expert 5-point",
+    "method": "MDSK-RAG",
+    "paper_link": "https://doi.org/10.1021/acs.jcim.5c01941",
+    "note": "CSV+PDF 이중 소스 오프라인 RAG. gemma-2-9b-it+RAG가 GPT-4o(no RAG)보다 우세 (0.71 vs 0.66).",
+    "bib_key": "DBLP:journals/jcisd/TakaharaYOKHTTKF25",
+    "bib_ver": "v2",
+    "domain": [
+      "material",
+      "chem"
+    ],
+    "modality": [
+      "CSV",
+      "Text"
+    ],
+    "post_retrieval": [
+      "summarization",
+      "fusion"
+    ],
+    "evaluated_on": [
+      "Photocatalyst Expert QA"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K2.O2",
+      "K4.O3"
+    ],
+    "ko_primary": "K2.O2",
+    "ko_note": "Materials Dual-Source RAG (2025, Mat). Cross-source.",
+    "cross_source": true,
+    "ko_secondary": "K1/K4"
+  },
+  {
+    "title": "MedGraphRAG: Evidence-based Medical LLM via Graph RAG",
+    "year": 2025,
+    "venue": "ACL",
+    "venue_type": "AI",
+    "db_name": "MIMIC IV + MedC-K + UMLS/ICD",
+    "db_size": "3-tier hierarchical",
+    "db_open": "Partial",
+    "chunk": "Hybrid Static-Semantic Chunking",
+    "retriever": "U-Retrieval (Top-down + Bottom-up)",
+    "retriever_base": "",
+    "pre_retrieval": "Triple Graph Construction",
+    "generator": "MedGraphRAG",
+    "generator_base": "GPT-4, Llama-2/3 (13B/70B/8B/70B), Gemini-pro",
+    "eval_task": "MultiMedQA, FakeHealth, PubHealth, DiverseHealth",
+    "eval_metric": "Accuracy + 5-dim human eval (Pertinence/Correctness/Citation P/R/Understandability)",
+    "method": "MedGraphRAG",
+    "note": "★★ K1+K2+K4 TRIPLE EXAMPLE. Hierarchical 3-tier graph. U-Retrieval. Strong evidence for §4.5 cross-source integration.",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text",
+      "KG"
+    ],
+    "post_retrieval": [
+      "re-ranking",
+      "summarization"
+    ],
+    "evaluated_on": [
+      "MultiMedQA",
+      "FakeHealth",
+      "PubHealth",
+      "DiverseHealth"
+    ],
+    "type": "Method",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "MedRAG: Enhancing Retrieval-augmented Generation with Knowledge Graph-Elicited Reasoning for Healthcare Copilot",
+    "year": 2025,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "DDXPlus, CPDD (Chronic Pain Diagnostic Dataset)",
+    "db_size": "DDXPlus: ~1.3M (13,230 sample) / CPDD: 551",
+    "db_open": "Partial",
+    "db_etc": "4단계 계층형 진단 KG + LLM Augmentation",
+    "chunk": "엔티티 단위 (KG 노드) 및 EHR 문서",
+    "retriever": "FAISS + Diagnostic Differences KG Searcher",
+    "retriever_train": false,
+    "pre_retrieval": "Clinical Features Decomposition & Proactive Questioning",
+    "pre_retrieval_detail": "증상 텍스트 위치/증상/지리 분해. 매칭도 낙는 핵심 특징 역추적 추가 질문",
+    "post_retrieval_detail": "검색 EHR Top-k + 추출 KG 결합 Prompt",
+    "generator": "KG-elicited Reasoning Engine",
+    "generator_base": "GPT-4o, GPT-4o-mini, GPT-3.5-turbo, Llama-3.1-Instruct, Qwen-2.5, Mixtral-8x7B",
+    "generator_train": false,
+    "eval_task": "DDXPlus, CPDD",
+    "eval_metric": "Accuracy, Specificity(L1, L2, L3), BERTScore, BLEU, ROUGE, METEOR, Mini-CEX",
+    "method": "MedRAG",
+    "paper_link": "https://arxiv.org/abs/2502.04413",
+    "note": "EHR + 4계층 KG. 유사 증상 변별 + Proactive Questioning.",
+    "bib_key": "DBLP:conf/www/ZhaoLYM25",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text",
+      "KG"
+    ],
+    "post_retrieval": [
+      "fusion"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K2.O1"
+    ],
+    "ko_primary": "K2.O1",
+    "ko_note": "MedRAG KG-Elicited Reasoning (2025, Med).",
+    "cross_source": false
+  },
+  {
+    "title": "MedXpertQA: Benchmarking Expert-Level Medical Reasoning and Understanding",
+    "year": 2025,
+    "venue": "ICML",
+    "venue_type": "AI",
+    "db_name": "Expert-level Medical Reasoning Dataset",
+    "db_size": "4,460 문항 (Text + MM 서브셋)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "MedXpertQA",
+    "eval_metric": "Exact-match Accuracy",
+    "method": "MedXpertQA",
+    "paper_link": "https://arxiv.org/abs/2501.18362",
+    "note": "전문가 수준 의료 다단계 추론 MCQ 벤치마크. Patho-AgenticRAG에서 90문항 서브셋으로 평가. RAG 도입 시 +38%p Accuracy 향상.",
+    "bib_key": "DBLP:conf/icml/ZuoQLCZHZ0025",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text",
+      "Image"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Neural Graph Matching Improves Retrieval Augmented Generation in Molecular Machine Learning",
+    "year": 2025,
+    "venue": "ICML",
+    "venue_type": "AI",
+    "db_name": "NIST20 MS/MS dataset + MassSpecGym",
+    "db_size": "NIST20: 530,640 spec / 25,541 mol; MassSpecGym: 231k / 29k",
+    "db_open": "Partial",
+    "db_etc": "reference library = 훈련 데이터셋",
+    "chunk": "분자 단위 (구조 + MS/MS 스펙트럼). 소분자 mass < 1500 Da",
+    "retriever": "Tanimoto similarity retriever",
+    "retriever_base": "Morgan fingerprint (RDKit, 2048-bit)",
+    "retriever_train": false,
+    "pre_retrieval": "Morgan fingerprint Tanimoto 유사도",
+    "pre_retrieval_detail": "Morgan fingerprint Tanimoto",
+    "post_retrieval_detail": "Sinkhorn/Softmax matching layer로 fragment 정렬",
+    "generator": "MARASON",
+    "generator_base": "GNN (FraGNNet/ICEBERG 기반)",
+    "generator_train": true,
+    "eval_task": "MassSpecGym, NIST20 MS/MS",
+    "eval_metric": "Top-1 accuracy",
+    "method": "MARASON",
+    "paper_link": "https://proceedings.mlr.press/v267/wang25dg.html",
+    "note": "분자 RAG: Naive RAG 성능 저하 → neural graph matching이 핵심. 19% → 28% (+45% 상대).",
+    "bib_key": "DBLP:conf/icml/WangWMC25",
+    "bib_ver": "v2",
+    "domain": [
+      "chem"
+    ],
+    "modality": [
+      "SMILES",
+      "Structured Table"
+    ],
+    "post_retrieval": [
+      "re-ranking"
+    ],
+    "evaluated_on": [
+      "MassSpecGym",
+      "NIST20"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K2.O3"
+    ],
+    "ko_primary": "K2.O3",
+    "ko_note": "Neural Graph Matching for RAG in Mol ML (2025, Chem).",
+    "cross_source": false
+  },
+  {
+    "title": "Open Source Planning & Control System with Language Agents for Autonomous Scientific Discovery",
+    "year": 2025,
+    "venue": "ML for Astrophysics @ ICML",
+    "venue_type": "AI",
+    "db_name": "OpenAI vector stores (우주론 논문, 코드베이스)",
+    "db_open": "Partial",
+    "db_etc": "AG2 GPTAssistantAgent. OpenAI vector store.",
+    "chunk": "OpenAI file_search 자동 청킹",
+    "retriever": "OpenAI file_search",
+    "retriever_base": "text-embedding-3-large",
+    "retriever_train": false,
+    "pre_retrieval": "Planning & Control 태스크 분해",
+    "pre_retrieval_detail": "Planner-Reviewer-Controller",
+    "post_retrieval_detail": "Critic/Reviewer 반복 개선",
+    "generator": "cmbagent",
+    "generator_base": "GPT-4o/GPT-5, o3-mini, Claude-3.7-sonnet, Gemini-2.5-pro",
+    "generator_train": false,
+    "eval_task": "DS-1000, CosmoPaperQA",
+    "eval_metric": "DS-1000 Accuracy (pass@1), CosmoPaperQA Accuracy",
+    "method": "cmbagent",
+    "paper_link": "https://arxiv.org/abs/2507.07257",
+    "note": "~30 LLM 에이전트 Planning&Control. NeurIPS 2025 Fair Universe 1위. CosmoPaperQA OpenAI 91.4%.",
+    "bib_key": "DBLP:journals/corr/abs-2507-07257",
+    "bib_ver": "v2",
+    "domain": [
+      "astronomy"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "post_retrieval": [
+      "re-ranking",
+      "summarization",
+      "filtering"
+    ],
+    "evaluated_on": [
+      "DS-1000",
+      "CosmoPaperQA"
+    ],
+    "type": "Method",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "PeerQA: A Scientific Question Answering Dataset from Peer Reviews",
+    "year": 2025,
+    "venue": "NAACL",
+    "venue_type": "AI",
+    "db_name": "NLPeer, OpenReview, ESD, ESurf",
+    "db_size": "12,546 questions (579 주석 + 11,967 미주석)",
+    "db_open": "Partial",
+    "db_etc": "GROBID 0.8 PDF 추출",
+    "chunk": "단락 및 문장 단위",
+    "retriever": "SPLADEv3, Dragon+, MiniLM-L12-v2, Contriever, GTR-XL, ColBERTv2, BM25",
+    "retriever_base": "SPLADEv3 / Dragon+ / MiniLM / Contriever / GTR-XL / ColBERTv2 / BM25",
+    "retriever_train": false,
+    "pre_retrieval": "Decontextualization 및 Decomposition",
+    "pre_retrieval_detail": "이전 3문장 문맥 → InstructGPT/GPT-4 독립 질문 재작성",
+    "generator": "LLM Baselines",
+    "generator_base": "Llama-3-8B-Instruct, Command-R, Mistral-7B-Instruct, GPT-3.5-Turbo, GPT-4o",
+    "generator_train": false,
+    "eval_task": "PeerQA",
+    "eval_metric": "MRR, Recall@10 (Retrieval); Macro-F1, Rouge-L, AlignScore, Prometheus Correctness",
+    "method": "PeerQA Baselines",
+    "paper_link": "https://arxiv.org/abs/2502.13668",
+    "note": "Peer review 질문+ 원 저자 답변. Long-context QA. 제목 prepend 검색 향상.",
+    "bib_key": "DBLP:conf/naacl/BaumgartnerBG25",
+    "bib_ver": "v2",
+    "domain": [
+      "earth",
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "dataset",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "PeerQA dataset (2025, Sci).",
+    "cross_source": false
+  },
+  {
+    "title": "Q-FSRU: Quantum-Augmented Frequency-Spectral Fusion for Medical Visual Question Answering",
+    "year": 2025,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "VQA-RAD (Quantum RAG 외부 의료 KB 포함)",
+    "db_size": "3,515 QA 쌍, 315 방사선 영상 (VQA-RAD)",
+    "db_open": "Open",
+    "db_etc": "VQA-RAD 기반 (MedPix 방사선 아카이브)",
+    "chunk": "QA 쌍 단위 (이미지+텍스트 결합 인코딩)",
+    "retriever": "Quantum RAG (Quantum Fidelity 유사도)",
+    "retriever_base": "Quantum Fidelity (amplitude-based) + ViT + BioBERT",
+    "retriever_train": false,
+    "pre_retrieval": "주파수 강화 피처(FFT) 직접 쿼리",
+    "pre_retrieval_detail": "FSRU 변환 피처 사용. HyDE/Decomposition 없음",
+    "post_retrieval_detail": "검색된 임상 지식과 주파수 피처 결합",
+    "generator": "Q-FSRU",
+    "generator_base": "N/A (3-layer MLP 분류 헤드)",
+    "generator_train": true,
+    "eval_task": "VQA-RAD",
+    "eval_metric": "Accuracy, Precision, Recall, F1, ROC-AUC",
+    "method": "Q-FSRU",
+    "paper_link": "https://arxiv.org/abs/2508.12036",
+    "note": "FFT 주파수 도메인 + Quantum Fidelity. VQA-RAD 91.6%. 양자 영감 메커니즘은 고전 근사.",
+    "bib_key": "DBLP:journals/corr/abs-2508-12036",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text",
+      "Image"
+    ],
+    "post_retrieval": [
+      "fusion"
+    ],
+    "evaluated_on": [
+      "VQA-RAD"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "Q-FSRU Quantum-Augmented Med VQA (2025, Med).",
+    "cross_source": false
+  },
+  {
+    "title": "RAG for 10 LLMs in assessing medical fitness",
+    "year": 2025,
+    "venue": "npj Digital Medicine",
+    "venue_type": "Science",
+    "db_name": "Local + International Preoperative Clinical Guidelines",
+    "db_size": "58 guidelines (35 local + 23 international)",
+    "db_open": "Partial",
+    "chunk": "LlamaIndex Auto-Merging (hierarchical)",
+    "retriever": "Pinecone retrieval / LlamaIndex Auto-Merging",
+    "retriever_base": "",
+    "pre_retrieval": "",
+    "generator": "LLM-RAG pipeline (10 LLMs)",
+    "generator_base": "GPT-3.5/4/4o, Llama2/3, Gemini-1.5-Pro, Claude-3-Opus",
+    "eval_task": "14 de-identified preoperative scenarios",
+    "eval_metric": "Accuracy; S.C.O.R.E (Safety/Consensus/Objectivity/Reproducibility/Explainability); IRR; Hallucination rate",
+    "method": "LLM-RAG pipeline for preoperative medicine",
+    "note": "GPT-4 RAG accuracy 96.4% > human MD avg 86.6%. K4 partial via local hospital protocols.",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "post_retrieval": [
+      "fusion"
+    ],
+    "type": "Method",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "RAG for Geoscience: What We Expect, Gaps and Opportunities",
+    "year": 2025,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "N/A (실험 없음)",
+    "db_open": "Open",
+    "retriever": "미제안",
+    "retriever_train": false,
+    "pre_retrieval": "N/A",
+    "post_retrieval_detail": "Geo-RAG verify 단계 제안 (수치 모델·관측·전문가)",
+    "generator": "Geo-RAG (제안 패러다임)",
+    "generator_train": false,
+    "eval_task": "N/A (vision paper)",
+    "eval_metric": "N/A",
+    "method": "Geo-RAG",
+    "paper_link": "https://arxiv.org/abs/2508.11246",
+    "note": "기존 RAG 지구과학 한계+ Geo-RAG 패러다임 비전 제안. position paper.",
+    "bib_key": "DBLP:journals/corr/abs-2508-11246",
+    "bib_ver": "v2",
+    "domain": [
+      "earth"
+    ],
+    "modality": [
+      "Text",
+      "Image",
+      "Structured Table"
+    ],
+    "post_retrieval": [
+      "re-ranking",
+      "filtering"
+    ],
+    "type": "summary",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "RAG for Geoscience (2025, Earth).",
+    "cross_source": false
+  },
+  {
+    "title": "RAISE: Enhancing Scientific Reasoning in LLMs via Step-by-Step Retrieval",
+    "year": 2025,
+    "venue": "MATH-AI @ NeurIPS",
+    "venue_type": "AI",
+    "db_name": "Wikipedia (December 20, 2018 dump, facebook/wiki_dpr)",
+    "db_size": "~21 million passages",
+    "db_open": "Open",
+    "db_etc": "DPR 임베딩 + FAISS 인덱스",
+    "chunk": "100 words text blocks",
+    "retriever": "DPR (Dense Passage Retrieval)",
+    "retriever_base": "facebook/dpr-question_encoder-single-nq-base",
+    "retriever_train": false,
+    "pre_retrieval": "Problem Decomposition, Logical Query Generation",
+    "pre_retrieval_detail": "Supervisor ReAct가 원본을 하위질문+초기쿼리로 분해→ Logical Query 재구성",
+    "post_retrieval_detail": "DPR 점수 임계값(T=0.84/0.80) 미만 배제",
+    "generator": "RAISE",
+    "generator_base": "Mistral Small 3.1-Instruct-2503, LLaMA 3.1-8B, GPT-4o mini",
+    "generator_train": false,
+    "eval_task": "GPQA, SuperGPQA, MMLU",
+    "eval_metric": "Accuracy",
+    "method": "RAISE",
+    "paper_link": "https://openreview.net/forum?id=2Xwa540MzD",
+    "note": "문제 분해+논리적 쿼리로 in-the-wild 코퍼스 검색. Step-by-Step.",
+    "bib_key": "DBLP:journals/corr/abs-2506-08625",
+    "bib_ver": "v2",
+    "domain": [
+      "physics",
+      "chem",
+      "bio"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "post_retrieval": [
+      "filtering"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "RAISE step-by-step retrieval (2025, Sci).",
+    "cross_source": false
+  },
+  {
+    "title": "RAR2: Retrieval-Augmented Medical Reasoning via Thought-Driven Retrieval",
+    "year": 2025,
+    "venue": "EMNLP (Findings)",
+    "venue_type": "AI",
+    "db_name": "MedCorp",
+    "db_size": "30.4M documents",
+    "db_open": "Open",
+    "db_etc": "순수 텍스트, KG 미포함",
+    "chunk": "문서 청크 (코퍼스 제공)",
+    "retriever": "BM25",
+    "retriever_train": false,
+    "pre_retrieval": "Thought Generation",
+    "pre_retrieval_detail": "Parallel Scaling(병렬) + Iterative Scaling(반복)",
+    "generator": "RAR2",
+    "generator_base": "Qwen2.5-7B-Instruct",
+    "generator_train": true,
+    "eval_task": "MedQA, MedMCQA, MMLU-Med, GPQA, Medbullets, MedXpertQA",
+    "eval_metric": "Accuracy",
+    "method": "RAR2",
+    "note": "Thought 검색+검색 추론 동시 DPO. Test-time scaling.",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "evaluated_on": [
+      "MedQA",
+      "MedMCQA",
+      "MMLU-Med"
+    ],
+    "type": "Method",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Rag2Mol: structure-based drug design based on RAG",
+    "year": 2025,
+    "venue": "Briefings in Bioinformatics",
+    "venue_type": "Science",
+    "db_name": "CrossDocked2020, ZINC",
+    "db_size": "22.5M docked poses + 230M+ ZINC",
+    "db_open": "Open",
+    "chunk": "atom-level (3D coord+bond)",
+    "retriever": "Two-stage Global+Molecular Retriever",
+    "retriever_base": "GVP + Vina",
+    "pre_retrieval": "Global Retriever (pocket-specific DB construction)",
+    "generator": "Rag2Mol-G/R",
+    "generator_base": "GVP autoregressive",
+    "eval_task": "CrossDocked2020 100 pockets + PTPN2 case",
+    "eval_metric": "Vina, QED, SA, PB-Valid, CNN affinity",
+    "method": "Rag2Mol",
+    "note": "★ K2.O3. Cross-KNN graph fusion. PTPN2 undruggable target case validated.",
+    "bib_key": "DBLP:journals/bib/ZhangPHCM25",
+    "bib_ver": "v2",
+    "domain": [
+      "bio",
+      "medical",
+      "chem"
+    ],
+    "modality": [
+      "3D Structure",
+      "SMILES"
+    ],
+    "post_retrieval": [
+      "re-ranking",
+      "fusion",
+      "filtering"
+    ],
+    "evaluated_on": [
+      "CrossDocked2020"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K2.O3"
+    ],
+    "ko_primary": "K2.O3",
+    "ko_note": "Rag2Mol structure-based drug design (2025, Chem).",
+    "cross_source": false
+  },
+  {
+    "title": "Rationale-Guided Retrieval Augmented Generation for Medical Question Answering",
+    "year": 2025,
+    "venue": "NAACL",
+    "venue_type": "AI",
+    "db_name": "PubMed, PMC, Medical Textbooks, Clinical Guidelines",
+    "db_size": "4 corpora (large+small)",
+    "db_open": "Open",
+    "chunk": "snippet, balanced retrieval per corpus",
+    "retriever": "MedCPT (dense + cross-encoder reranker)",
+    "retriever_base": "MedCPT (Jin 2023)",
+    "pre_retrieval": "Rationale-Based Query Formulation (CoT)",
+    "generator": "RAG² (Llama-3-8B / Meerkat-7B / GPT-4o)",
+    "generator_base": "Llama-3-8B-Instruct, Meerkat-7B, GPT-4o",
+    "eval_task": "MedQA, MedMCQA, MMLU-Med",
+    "eval_metric": "Accuracy",
+    "method": "RAG²",
+    "note": "perplexity-차이 자동 라벨링으로 소형 필터 모델 학습 + rationale 쿼리 + 균등검색. SOTA on MedQA.",
+    "bib_key": "DBLP:conf/naacl/SohnPYPHSKK25",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "post_retrieval": [
+      "filtering",
+      "re-ranking"
+    ],
+    "evaluated_on": [
+      "MedQA",
+      "MedMCQA",
+      "MMLU-Med"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "Rationale-Guided RAG MedQA (2025, Med).",
+    "cross_source": false
+  },
+  {
+    "title": "Retrieval-Augmented Generation Assistant for Anatomical Pathology Laboratories",
+    "year": 2025,
+    "venue": "Emerging Science Journal",
+    "venue_type": "AI",
+    "db_name": "AP Lab Protocols (Portuguese)",
+    "db_size": "99 documents / 323 QA pairs",
+    "db_open": "Open",
+    "chunk": "Recursive 512-token / overlap 128",
+    "retriever": "Hybrid (Dense + BM25)",
+    "retriever_base": "MedEmbed-small-v0.1 / paraphrase-multilingual-MiniLM",
+    "pre_retrieval": "",
+    "generator": "Llama 3.1 8B (Ollama local)",
+    "generator_base": "Llama 3.1",
+    "eval_task": "AP Lab Protocols QA",
+    "eval_metric": "RAGAS (Faithfulness/AnswerRel/CtxRecall) + P/R/F1@k",
+    "method": "RAG-AP",
+    "note": "K4 NOVELTY EXAMPLE — internal lab protocols as retrieval source. k=1 best F1=0.50. Hybrid + MedEmbed best on RAGAS.",
+    "bib_key": "DBLP:journals/corr/abs-2602-22216",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "post_retrieval": [
+      "re-ranking"
+    ],
+    "evaluated_on": [
+      "AP Lab Protocols QA"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "Anatomical Pathology Lab RAG (2026, Med).",
+    "cross_source": false
+  },
+  {
+    "title": "Retrieval-augmented generation elevates local LLM quality in radiology contrast media consultation",
+    "year": 2025,
+    "venue": "npj Digital Medicine",
+    "venue_type": "Science",
+    "db_name": "RAG KB for ICM Consultation (ACR Manual + ESUR + institutional)",
+    "db_size": "66 chunks",
+    "db_open": "Partial",
+    "chunk": "max 600 tokens, avg 337 chars",
+    "retriever": "Hybrid Search (semantic + keyword)",
+    "retriever_base": "text-embedding-3-large",
+    "pre_retrieval": "",
+    "generator": "RAG-enhanced Llama 3.2 11B",
+    "generator_base": "Llama 3.2 11B",
+    "eval_task": "Synthetic ICM Consultation Scenarios",
+    "eval_metric": "Ranking, Hallucination Rate, 6-Dim Score",
+    "method": "Llama 3.2 11B + RAG",
+    "note": "local-LLM + RAG → hallucination 0% (was 8%); HIPAA/GDPR compliant.",
+    "bib_key": "DBLP:journals/npjdm/WadaTNYAHHKSSKNA25",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "post_retrieval": [
+      "re-ranking"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "Local LLM Radiology contrast media (2025, Med).",
+    "cross_source": false
+  },
+  {
+    "title": "Retrieval-augmented generation for generative AI in health care",
+    "year": 2025,
+    "venue": "npj Health Systems",
+    "venue_type": "Science",
+    "db_name": "",
+    "db_size": "",
+    "db_open": "",
+    "chunk": "",
+    "retriever": "",
+    "retriever_base": "",
+    "pre_retrieval": "",
+    "generator": "",
+    "generator_base": "",
+    "eval_task": "",
+    "eval_metric": "",
+    "method": "",
+    "note": "Perspective paper on RAG in healthcare: equity, reliability, personalization. Type=summary.",
+    "domain": [
+      "medical"
+    ],
+    "type": "summary",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "SQuAI: Scientific Question-Answering with Multi-Agent Retrieval-Augmented Generation",
+    "year": 2025,
+    "venue": "CIKM",
+    "venue_type": "AI",
+    "db_name": "unarXive 2024",
+    "db_size": "1,000 Q-A-E (Simple 500/Expert 500)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "method": "unarXive (Simple, Expert)",
+    "paper_link": "https://doi.org/10.1145/3746252.3761471",
+    "bib_key": "DBLP:conf/cikm/BesrourHS025",
+    "bib_ver": "v2",
+    "domain": [
+      "bio",
+      "chem",
+      "physics"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "SQuAI Multi-Agent QA (2025, Sci).",
+    "cross_source": false
+  },
+  {
+    "title": "ScIRGen: Synthesize Realistic and Large-Scale RAG Dataset for Scientific Research",
+    "year": 2025,
+    "venue": "KDD",
+    "venue_type": "AI",
+    "db_name": "Tibetan Plateau Data Center",
+    "db_size": "6,819 datasets, 6,755 pubs; 61,376 QA",
+    "db_open": "Open",
+    "db_etc": "Graesser&Pearson 18 분류",
+    "chunk": "100 tokens",
+    "retriever": "BGE-m3 등",
+    "retriever_base": "BGE-m3, BM25, DPR, Contriever, Specter2, E5, NV-Embed-v2",
+    "retriever_train": false,
+    "generator_base": "Llama-2, Qwen-2.5, DeepSeek-R1, GPT-4",
+    "generator_train": false,
+    "eval_task": "ScIRGen-Geo",
+    "eval_metric": "Recall@k, MRR@100, Entailment, ROUGE-L",
+    "method": "ScIRGen",
+    "paper_link": "https://doi.org/10.1145/3711896.3737432",
+    "note": "SePer-Filter Precision 95%. 지구과학 61k QA. C3-C4에서 SOTA 10-25%.",
+    "bib_key": "DBLP:conf/kdd/Lin0HSWSWF0025",
+    "bib_ver": "v2",
+    "domain": [
+      "earth"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "evaluated_on": [
+      "ScIRGen-Geo"
+    ],
+    "type": "dataset",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "ScIRGen synthetic RAG (2025, Sci).",
+    "cross_source": false
+  },
+  {
+    "title": "SciRag: Evaluating RAG Agents for Autonomous Scientific Discovery in Astrophysics",
+    "year": 2025,
+    "venue": "ML4Astro @ ICML",
+    "venue_type": "AI",
+    "db_name": "CosmoPaperQA source corpus",
+    "db_size": "5 cosmology papers",
+    "db_open": "Open",
+    "chunk": "5K token / 250 overlap",
+    "retriever": "SciRag (9 configs)",
+    "retriever_base": "OpenAI text-embedding (best), Gemini, VertexAI",
+    "pre_retrieval": "direct query",
+    "generator": "SciRag",
+    "generator_base": "GPT-4 (best), Gemini, VertexAI",
+    "eval_task": "CosmoPaperQA (105 expert-made cosmology QA)",
+    "eval_metric": "Accuracy + LLMaaJ + Human",
+    "method": "SciRag",
+    "note": "First systematic astronomy RAG eval. 9-config comparison. OpenAI 91.4% best. CMBAgent connection.",
+    "domain": [
+      "astronomy"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "post_retrieval": [
+      "re-ranking"
+    ],
+    "evaluated_on": [
+      "CosmoPaperQA"
+    ],
+    "type": "Method",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "SciRerankBench: Benchmarking Rerankers Towards Scientific Retrieval-Augmented Generated LLMs",
+    "year": 2025,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "OpenAlex",
+    "db_size": "4.5K Q-C-A 쌍 (NC/SSLI/CC/Multi-hop)",
+    "db_open": "Open",
+    "db_etc": "Qdrant 벡터 DB",
+    "chunk": "단락 단위 (100~500자 초록)",
+    "retriever": "BGE + 13종 Reranker",
+    "retriever_base": "Cross-Encoder, Sentence Transformers, BERT, T5, LLM-based",
+    "retriever_train": false,
+    "pre_retrieval_detail": "N/A",
+    "post_retrieval_detail": "13종 Reranker(Cross-encoder, Sparse, Listwise, Seq2Seq, LLM, Agent)",
+    "generator": "11종 오픈소스 LLM",
+    "generator_base": "Mistral, LLaMA2, DeepSeek-V3, Qwen, InternLM2",
+    "generator_train": false,
+    "eval_task": "SciRerankBench",
+    "eval_metric": "Recall, Recall@10, Contain Answer Score",
+    "method": "SciRerankBench",
+    "paper_link": "https://arxiv.org/abs/2508.08742",
+    "note": "과학 RAG Reranker 첫 평가 벤치마크. Reranker가 Top-10에 정답 올려도 LLM 추론 한계.",
+    "bib_key": "DBLP:journals/corr/abs-2508-08742",
+    "bib_ver": "v2",
+    "domain": [
+      "bio",
+      "physics",
+      "chem",
+      "earth"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "post_retrieval": [
+      "re-ranking"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "SciRerankBench (2025, Sci-benchmark).",
+    "cross_source": false
+  },
+  {
+    "title": "Seeing the Forest Through the Trees: Knowledge Retrieval for Streamlining Particle Physics Analysis",
+    "year": 2025,
+    "venue": "ML4PS @ NeurIPS",
+    "venue_type": "AI",
+    "db_name": "HFLAV 2023 보고서 기반 입자물리학 QA",
+    "db_size": "미공개 (HFLAV 보고서 기반)",
+    "db_open": "Partial",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "LHCb 입자물리학 RAG 평가",
+    "eval_metric": "LLM-as-judge 3단계 (poor/satisfactory/good)",
+    "method": "HFLAV-QA",
+    "paper_link": "https://arxiv.org/abs/2509.06855",
+    "bib_key": "mcgreivy2025seeing",
+    "bib_ver": "v2",
+    "domain": [
+      "physics"
+    ],
+    "modality": [
+      "Structured Table",
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1",
+      "K4.O2"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "Seeing the Forest Through the Trees: KR for Particle Physics (2025, Phys).",
+    "cross_source": false
+  },
+  {
+    "title": "Spatial-RAG: Spatial Retrieval Augmented Generation for Real-World Geospatial Reasoning Questions",
+    "year": 2025,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "TripAdvisor 및 여행 포럼 리뷰",
+    "db_size": "NYC (9,470 POI, 17,448 QA), Miami (2,640 POI, 133 QA)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "TourismQA (NYC, Miami)",
+    "eval_metric": "Precision@K, Recall@K, F1@K, NDCG@K",
+    "method": "TourismQA",
+    "paper_link": "https://arxiv.org/abs/2502.18470",
+    "note": "TripAdvisor 도시 관광 지리공간 추론. NYC + Miami.",
+    "bib_key": "yu2025spatial",
+    "bib_ver": "v2",
+    "domain": [
+      "earth"
+    ],
+    "modality": [
+      "Text",
+      "Structured Table"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "SuperGPQA: Scaling LLM Evaluation Across 285 Graduate Disciplines",
+    "year": 2025,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "Human-LLM Collaborative Curated Dataset",
+    "db_size": "26,529 questions",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "method": "SuperGPQA",
+    "paper_link": "https://arxiv.org/abs/2502.14739",
+    "note": "13개 학문, 72개 분야, 285개 대학원 수준 세부 전공. Human-LLM Collaborative Filtering.",
+    "bib_key": "DBLP:journals/corr/abs-2502-14739",
+    "bib_ver": "v2",
+    "domain": [
+      "material",
+      "chem",
+      "bio",
+      "medical",
+      "physics",
+      "earth",
+      "astronomy",
+      "Quantum"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "SuperGPQA (2025, Sci-benchmark).",
+    "cross_source": false
+  },
+  {
+    "title": "Towards Omni-RAG: Comprehensive Retrieval-Augmented Generation for Large Language Models in Medical Applications",
+    "year": 2025,
+    "venue": "ACL",
+    "venue_type": "AI",
+    "db_name": "MedOmniKB",
+    "db_size": "약 3,185만+ 문서 (텍스트), 170만+ 개념 (KG)",
+    "db_open": "Open",
+    "db_etc": "구조화 소스는 SQLite, 비구조화는 Qdrant",
+    "chunk": "텍스트 1000자 / 구조화 1-hop 관계 단위",
+    "retriever": "MedOmniKB Retriever",
+    "retriever_base": "MedCPT-article-encoder",
+    "retriever_train": false,
+    "pre_retrieval": "Source Planning Optimisation (Planning Exploration)",
+    "pre_retrieval_detail": "Expert LLM(Qwen2.5-72B)으로 소스당 다수 쿼리(최대 6개) 생성. SFT+DPO로 소형 Planner 학습",
+    "post_retrieval_detail": "Top-20→Top-10 MedCPT 리랭킹. KG 1-hop 관계 Top-10 후 하위 절반 필터",
+    "generator": "SPO Planner + Reader",
+    "generator_base": "Qwen2.5-7B, Llama3.1-8B, Mistral0.3-7B",
+    "generator_train": true,
+    "eval_task": "MedQA, MedMCQA, MMLU-Med, PubMedQA, BioASQ, SEER, DDXPlus, MIMIC-IV-ED, LiveQA, MedicationQA, ExpertQA-Biomed",
+    "eval_metric": "Accuracy + 인간 평가",
+    "method": "Source Planning Optimisation (SPO)",
+    "paper_link": "https://github.com/Jack-ZC8/Omni-RAG-Medical",
+    "note": "5개 다중 구조 의료 KB(MedOmniKB) 구축 + SPO 기법. 소형 Planner가 10배 큰 모델 능가.",
+    "bib_key": "DBLP:conf/acl/ChenLJWG0025",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text",
+      "KG"
+    ],
+    "post_retrieval": [
+      "re-ranking",
+      "filtering"
+    ],
+    "evaluated_on": [
+      "MedQA",
+      "MedMCQA",
+      "MMLU-Med",
+      "PubMedQA",
+      "BioASQ"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "Towards Omni-RAG (2025, Sci).",
+    "cross_source": false
+  },
+  {
+    "title": "WeatherArchive-Bench: Benchmarking Retrieval-Augmented Reasoning for Historical Weather Archives",
+    "year": 2025,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "Historical newspaper archives (OCR-parsed)",
+    "db_size": "1.05M archival news segments",
+    "db_open": "Open",
+    "db_etc": "OCR + 키워드 검색 + 인간 검증. GPT-4.1 오라클 + 전문가",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "WeatherArchive-Retrieval, WeatherArchive-Assessment",
+    "eval_metric": "Retrieval: nDCG, MAP, MRR, Recall@K / Assessment: Accuracy, F1, ROUGE",
+    "method": "WeatherArchive-Bench",
+    "paper_link": "https://arxiv.org/abs/2510.05336",
+    "note": "역사 날씨 아카이브 첫 대규모 RAG. dense 모델이 archaic language에서 BM25보다 저하.",
+    "bib_key": "DBLP:journals/corr/abs-2510-05336",
+    "bib_ver": "v2",
+    "domain": [
+      "earth"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "WeatherArchive-Bench (2025, Earth).",
+    "cross_source": false
+  },
+  {
+    "title": "BIORAG: RAG-LLM Framework for Biological Question Reasoning",
+    "year": 2024,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "PubMed (22M abstracts) + NCBI Gene/dbSNP/Genome/Protein + web search",
+    "db_size": "22,371,343 PubMed abstracts",
+    "db_open": "Open",
+    "chunk": "abstract-level",
+    "retriever": "Biological embedding (M_emb) + M_MeSH",
+    "retriever_base": "PubMedBERT (CLIP fine-tuned) + Llama3-8B (MeSH)",
+    "pre_retrieval": "Tool Selection + Query Rewrite",
+    "generator": "BIORAG",
+    "generator_base": "Llama3-70B",
+    "eval_task": "GeneTuring, MedMCQA, Medical Genetics, College Biology, College Medicine",
+    "eval_metric": "Accuracy (exact match)",
+    "method": "BIORAG",
+    "note": "★ Cross-source K1+K2. MeSH hierarchical filter + dense retrieval. Self-eval loop. SOTA on GeneTuring.",
+    "domain": [
+      "bio",
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "post_retrieval": [
+      "filtering",
+      "fusion"
+    ],
+    "evaluated_on": [
+      "GeneTuring",
+      "MedMCQA",
+      "Medical Genetics",
+      "College Biology",
+      "College Medicine"
+    ],
+    "type": "Method",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "BRSET: A Brazilian Multilabel Ophthalmological Dataset of Retina Fundus Photos",
+    "year": 2024,
+    "venue": "PLOS Digital Health",
+    "venue_type": "Science",
+    "db_name": "BRSET 프로젝트 (브라질)",
+    "db_size": "16,266 images",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_metric": "Macro F1",
+    "method": "BRSET",
+    "paper_link": "https://physionet.org/content/brazilian-ophthalmological/1.0.0/",
+    "note": "브라질 14 망막 병리. CLARE F1 0.37.",
+    "bib_key": "nakayama2024brset",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "CSV",
+      "Image"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Benchmarking Retrieval-Augmented Generation for Medicine",
+    "year": 2024,
+    "venue": "ACL (Findings)",
+    "venue_type": "AI",
+    "db_name": "MedCorp (PubMed, StatPearls, Textbooks, Wikipedia)",
+    "db_size": "30.4M docs / 54.2M snippets",
+    "db_open": "Open",
+    "chunk": "<=1000 chars (LangChain Recursive), avg 221 tokens",
+    "retriever": "BM25, Contriever, SPECTER, MedCPT, RRF-2, RRF-4",
+    "retriever_base": "Contriever, SPECTER, MedCPT (109-110M)",
+    "pre_retrieval": "Question-Only Retrieval (QOR)",
+    "generator": "GPT-4, GPT-3.5, Mixtral, Llama2, MEDITRON, PMC-LLaMA",
+    "generator_base": "GPT-4, GPT-3.5, Mixtral 8x7B, Llama2-70B, MEDITRON-70B, PMC-LLaMA-13B",
+    "eval_task": "MIRAGE (MMLU-Med, MedQA-US, MedMCQA, PubMedQA*, BioASQ-Y/N)",
+    "eval_metric": "Accuracy",
+    "method": "MEDRAG",
+    "note": "의료 QA 전용 RAG 툴킷+벤치마크. PubMed+RRF-4 최적. GPT-3.5+MEDRAG가 CoT GPT-4에 근접.",
+    "bib_key": "DBLP:conf/acl/Xiong0LZ24",
+    "bib_ver": "v2",
+    "domain": [
+      "medical",
+      "bio"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "post_retrieval": [
+      "fusion"
+    ],
+    "evaluated_on": [
+      "MMLU-Med",
+      "MedQA",
+      "MedMCQA",
+      "PubMedQA",
+      "BioASQ"
+    ],
+    "type": "dataset",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "MEDRAG (2024, Med). PubMed-grounded medical QA, the canonical K1.O1.",
+    "cross_source": false
+  },
+  {
+    "title": "CLINFO.AI: AN OPEN-SOURCE RETRIEVAL-AUGMENTED LARGE LANGUAGE MODEL SYSTEM FOR ANSWERING MEDICAL QUESTIONS USING SCIENTIFIC LITERATURE",
+    "year": 2024,
+    "venue": "PSB",
+    "venue_type": "AI",
+    "db_name": "PubMed Systematic Reviews",
+    "db_size": "200 QA pairs",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "PubMedRS-200",
+    "eval_metric": "UniEval, COMET, CTC, BERTScore, ROUGE-L, METEOR",
+    "method": "PubMedRS-200",
+    "paper_link": "https://arxiv.org/abs/2310.16146",
+    "note": "PubMed SR 의료 QA 벤치마크. Clinfo.ai PSB 2024.",
+    "bib_key": "DBLP:journals/corr/abs-2310-16146",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "Clinfo.AI (2023, Med). Open-source RAG for medical literature QA.",
+    "cross_source": false
+  },
+  {
+    "title": "ChemTEB: Chemical Text Embedding Benchmark, an Overview of Embedding Models Performance & Efficiency on a Specific Domain",
+    "year": 2024,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "Wikipedia, Safety Data Sheets (SDS), CoconutDB, PubChem, BeIR (HotpotQA, Natural Questions)",
+    "db_size": "35개 서브 데이터셋 (옷 약 15만 개 이상의 샘플)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "ChemTEB",
+    "eval_metric": "Macro F1, F1, nDCG@10, V-measure, Max F1, RRF",
+    "method": "ChemTEB",
+    "paper_link": "https://arxiv.org/abs/2412.00532",
+    "note": "화학 도메인 텍스트 및 SMILES 특화 최초의 포괄적 텍스트 임베딩 벤치마크. 35개 서브데이터셋, 5가지 태스크. OpenAI text-embedding-3-large가 1위, Nomic Embedding v1.5가 2위.",
+    "bib_key": "DBLP:conf/enlsp/KasmaeeKSSDMS24",
+    "bib_ver": "v2",
+    "domain": [
+      "chem"
+    ],
+    "modality": [
+      "Text",
+      "SMILES"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K2.O1"
+    ],
+    "ko_primary": "K2.O1",
+    "ko_note": "ChemTEB embedding benchmark (2024, Chem-benchmark).",
+    "cross_source": false
+  },
+  {
+    "title": "ClimateGPT: Towards AI Synthesizing Interdisciplinary Research on Climate Change",
+    "year": 2024,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "ClimateGPT IFT 데이터셋 (IPCC, Potsdam, Earth4All)",
+    "db_size": "전체 IFT 약 78,000개, hold-out 400 중 334 open-ended",
+    "db_open": "Partial",
+    "retriever_train": false,
+    "generator_train": false,
+    "method": "ClimateGPT IFT Test Set",
+    "paper_link": "https://arxiv.org/abs/2401.09646",
+    "bib_key": "DBLP:journals/corr/abs-2401-09646",
+    "bib_ver": "v2",
+    "domain": [
+      "earth"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "ClimateGPT (2024, Earth).",
+    "cross_source": false
+  },
+  {
+    "title": "Designing an Evaluation Framework for Large Language Models in Astronomy Research",
+    "year": 2024,
+    "venue": "arXiv",
+    "venue_type": "Science",
+    "db_name": "arXiv astro-ph dataset (Perkowski et al. 2024)",
+    "db_size": "약 300,000 arXiv papers",
+    "db_open": "Open",
+    "db_etc": "문서 초록 벡터화 → Vector DB",
+    "chunk": "청킹 없음 (초록 전문, <1920 chars)",
+    "retriever": "Dense Retriever (Cosine Similarity)",
+    "retriever_base": "bge-small-en-v1.5",
+    "retriever_train": false,
+    "generator": "Ask astro-ph",
+    "generator_base": "gpt-4o",
+    "generator_train": false,
+    "method": "Ask astro-ph",
+    "paper_link": "https://arxiv.org/abs/2405.20389",
+    "note": "천문학 연구자용 gpt-4o + bge-small Slack RAG 챗봇. 동적 평가 프레임워크.",
+    "bib_key": "DBLP:journals/corr/abs-2405-20389",
+    "bib_ver": "v2",
+    "domain": [
+      "astronomy"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "Evaluation Framework LLMs Astronomy (2024, Astro).",
+    "cross_source": false
+  },
+  {
+    "title": "FairCLIP: Harnessing Fairness in Vision-Language Learning",
+    "year": 2024,
+    "venue": "CVPR",
+    "venue_type": "AI",
+    "db_name": "하버드 소속 병원 임상 노트 및 안저 이미지",
+    "db_size": "10,000 샘플 (인구통계학적 특성 포함)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_metric": "Accuracy Gap, Precision Disparity, AUROC",
+    "method": "Harvard-FairVLMed",
+    "paper_link": "https://arxiv.org/abs/2403.19949",
+    "note": "의료 VLM 인구통계학 편향 평가. 첫 공정성 측정 데이터셋.",
+    "bib_key": "DBLP:conf/cvpr/Luo0KA0Y0SKE0024",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text",
+      "Image"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "FairCLIP fairness in V-L (2024, Med).",
+    "cross_source": false
+  },
+  {
+    "title": "GPQA: A graduate-level google-proof q&a benchmark",
+    "year": 2024,
+    "venue": "COLM",
+    "venue_type": "AI",
+    "db_name": "Expert-authored questions via Upwork",
+    "db_size": "546 questions",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "method": "GPQA",
+    "paper_link": "https://arxiv.org/abs/2311.12022",
+    "note": "PhD 수준 물리·화학·생물 MCQ. 비전문가 Google 사용 22.1%. 전문가 81.3%.",
+    "bib_key": "DBLP:journals/corr/abs-2311-12022",
+    "bib_ver": "v2",
+    "domain": [
+      "physics",
+      "chem",
+      "bio"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "GPQA (2023, Sci-benchmark).",
+    "cross_source": false
+  },
+  {
+    "title": "HoneyComb: Materials Science Agent",
+    "year": 2024,
+    "venue": "EMNLP (Findings)",
+    "venue_type": "AI",
+    "db_name": "Materials Project, MatSci Corpus, Wikipedia",
+    "db_size": "~5M+ docs (MP ~150K entries)",
+    "db_open": "Open",
+    "chunk": "paragraph 256-512 tokens",
+    "retriever": "MatSci-RAG (Dense, BM25+Dense hybrid, FAISS)",
+    "retriever_base": "SciBERT / text-embedding-ada-002",
+    "pre_retrieval": "HyDE + query decomposition",
+    "generator": "HoneyComb Agent (ReAct)",
+    "generator_base": "GPT-4 / GPT-4-turbo",
+    "eval_task": "MaScQA, SciQ",
+    "eval_metric": "Accuracy, EM, ROUGE-L, GPT-4-Judge, Human Eval",
+    "method": "HoneyComb",
+    "note": "★ Cross-source: K2 (MP DB)+K1 (papers)+tool use. ReAct agent.",
+    "domain": [
+      "material"
+    ],
+    "modality": [
+      "Text",
+      "Structured Table",
+      "KG"
+    ],
+    "post_retrieval": [
+      "re-ranking",
+      "summarization",
+      "filtering"
+    ],
+    "evaluated_on": [
+      "MaScQA",
+      "SciQ"
+    ],
+    "type": "Method",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Language Agents Achieve Superhuman Synthesis of Scientific Knowledge",
+    "year": 2024,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "Semantic Scholar 전체 코퍼스",
+    "db_size": "질문당 평균 14.5±0.6편",
+    "db_open": "Partial",
+    "db_etc": "Semantic Scholar + Crossref. Grobid/PyMuPDF",
+    "chunk": "3,000 chars overlap 750",
+    "retriever": "PaperQA2 Hybrid Retriever",
+    "retriever_base": "text-embedding-3-large + sparse 256d",
+    "retriever_train": false,
+    "pre_retrieval": "Planning Agent (ReAct)",
+    "pre_retrieval_detail": "키워드+연도 자동 생성",
+    "post_retrieval_detail": "RCS: 요약+점수→재순위",
+    "generator": "PaperQA2 Agent",
+    "generator_base": "GPT-4-Turbo, Claude-3-Opus, Gemini-1.5-Pro",
+    "generator_train": false,
+    "eval_task": "LitQA2, WikiCrow, ContraDetect",
+    "eval_metric": "Precision, Accuracy, Recall, AUC-ROC 0.842",
+    "method": "PaperQA2",
+    "paper_link": "https://arxiv.org/abs/2409.13740",
+    "note": "인간 전문가 초과 RAG. PaperQA2 85.2% > 인간 73.8%. RCS + Citation Traversal.",
+    "bib_key": "DBLP:journals/corr/abs-2409-13740",
+    "bib_ver": "v2",
+    "domain": [
+      "bio"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "post_retrieval": [
+      "re-ranking",
+      "summarization",
+      "filtering"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "Language Agents Achieve Superhuman Synthesis (PaperQA-multi, 2024, Sci). Canonical K1.O2.",
+    "cross_source": false
+  },
+  {
+    "title": "Leveraging Chemistry Foundation Models to Facilitate Structure Focused Retrieval Augmented Generation in Multi-Agent Workflows for Catalyst and Materials Design",
+    "year": 2024,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "Custom collections via Milvus",
+    "db_size": "~2.5M 저분자, ~2.5M 폴리머, ~2M USPTO 반응",
+    "db_open": "Partial",
+    "db_etc": "SMILES MoLFormer; NMR OpenCLIP",
+    "chunk": "분자, 폴리머, 반응 단위; SMILES + NMR 이미지",
+    "retriever": "LangChain/LangGraph retrievers",
+    "retriever_base": "ibm/MoLFormer-XL, OpenCLIP ViT-g-14",
+    "retriever_train": false,
+    "pre_retrieval": "Adaptive query routing",
+    "pre_retrieval_detail": "Supervisor 라우팅 → 4 Workers",
+    "post_retrieval_detail": "Self-reflective grading + Regenerate",
+    "generator": "Worker agents + Report tool",
+    "generator_base": "GPT-4o mini, llava 7b, llama3.1 8b",
+    "generator_train": false,
+    "eval_metric": "코사인/유클리디안 유사도 + 전문가 검증",
+    "method": "Hierarchical multi-agent adaptive self-reflective RAG",
+    "paper_link": "https://arxiv.org/pdf/2408.11793",
+    "note": "MoLFormer + OpenCLIP. 화학 멀티에이전트 RAG. IBM 특허.",
+    "bib_key": "DBLP:journals/corr/abs-2408-11793",
+    "bib_ver": "v2",
+    "domain": [
+      "chem",
+      "material"
+    ],
+    "modality": [
+      "Text",
+      "SMILES",
+      "Image"
+    ],
+    "post_retrieval": [
+      "filtering"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K2.O1"
+    ],
+    "ko_primary": "K2.O1",
+    "ko_note": "Chemistry Foundation Models for Structure-Focused RAG (2024, Chem).",
+    "cross_source": false
+  },
+  {
+    "title": "LitSearch: A Retrieval Benchmark for Scientific Literature Search",
+    "year": 2024,
+    "venue": "EMNLP",
+    "venue_type": "AI",
+    "db_name": "CS arXiv 논문 코퍼스",
+    "db_size": "478 질문",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "method": "LitSearch",
+    "paper_link": "https://doi.org/10.18653/v1/2024.emnlp-main.840",
+    "bib_key": "DBLP:conf/emnlp/AjithXCG0024",
+    "bib_ver": "v2",
+    "domain": [
+      "bio",
+      "chem",
+      "physics"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "LitSearch (2024, Sci).",
+    "cross_source": false
+  },
+  {
+    "title": "MaScQA: Investigating Materials Science Knowledge of Large Language Models",
+    "year": 2024,
+    "venue": "Digital Discovery (RSC)",
+    "venue_type": "Science",
+    "db_name": "GATE exam",
+    "db_size": "650 questions",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "Materials Science QA (MCQ, MATCH, MCQN, NUM)",
+    "eval_metric": "Accuracy",
+    "method": "MaScQA",
+    "paper_link": "https://pubs.rsc.org/en/content/articlelanding/2024/dd/d3dd00188a",
+    "note": "HoneyComb 평가에 사용. GATE 시험 기반 650개. GPT-4 ~62%.",
+    "bib_key": "zaki2024mascqa",
+    "bib_ver": "v2",
+    "domain": [
+      "material"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K2.O3"
+    ],
+    "ko_primary": "K2.O3",
+    "ko_note": "MaScQA (2024, Mat-benchmark).",
+    "cross_source": false
+  },
+  {
+    "title": "MassSpecGym: A benchmark for the discovery and identification of molecules",
+    "year": 2024,
+    "venue": "NeurIPS",
+    "venue_type": "AI",
+    "db_name": "MoNA + MassBank + GNPS + in-house",
+    "db_size": "231,000+ 스펙트럼 / 29,000+ 분자",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "De novo 분자 생성, 분자 검색, 스펙트럼 시뮬레이션",
+    "eval_metric": "Top-k accuracy, MCES, Tanimoto, Hit rate@k, Cosine 유사도",
+    "method": "MassSpecGym",
+    "paper_link": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/c6c31413d5c53b7d1c343c1498734b0f-Abstract-Datasets_and_Benchmarks_Track.html",
+    "bib_key": "DBLP:conf/nips/BushuievBJYKSHW24",
+    "bib_ver": "v2",
+    "domain": [
+      "chem"
+    ],
+    "modality": [
+      "SMILES",
+      "Structured Table"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K3.O3"
+    ],
+    "ko_primary": "K3.O3",
+    "ko_note": "MassSpecGym discovery & ID of molecules (2024, Chem). Spectra → molecule hypothesis.",
+    "cross_source": false
+  },
+  {
+    "title": "Multi-Agent System for Cosmological Parameter Analysis",
+    "year": 2024,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "우주론 소프트웨어 문서·코드 DB (cobaya, classy_sz, cosmocnc) + ACT 실험 논문·데이터 DB",
+    "db_size": "미명시 (cobaya·classy_sz·cosmocnc·ACT 공개 문서 전체)",
+    "db_open": "Open",
+    "db_etc": "OpenAI Assistant API 내장 벡터 스토어. 3종 RAG DB.",
+    "chunk": "미명시 (OpenAI Assistant API 기본 청킹)",
+    "retriever": "OpenAI Assistant API 내장 벡터 검색 (GPTAssistantAgent)",
+    "retriever_base": "OpenAI Assistant API 내장 임베딩",
+    "retriever_train": false,
+    "pre_retrieval": "없음",
+    "pre_retrieval_detail": "에이전트별 전문 벡터 스토어 직접 검색",
+    "post_retrieval_detail": "별도 처리 없음",
+    "generator": "cmbagent",
+    "generator_base": "GPT-4 (gpt-4o-2024-05-13)",
+    "generator_train": false,
+    "eval_task": "ACT DR6 CMB 렌징 파워스펙트럼 우주론 파라미터 분석; cosmocnc Mass-bias likelihood; classy_sz f_EDE",
+    "eval_metric": "정성적 - 원본 ACT 결과와 등고선 비교",
+    "method": "cmbagent",
+    "paper_link": "https://arxiv.org/abs/2412.00431",
+    "note": "3종 전문 RAG 에이전트 + 멀티에이전트로 ACT DR6 우주론 파라미터 분석을 40분·코드 0줄에 자동 재현.",
+    "bib_key": "sarkar2024multi",
+    "bib_ver": "v2",
+    "domain": [
+      "astronomy"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "Multi-Agent Cosmological Parameter Analysis (2024, Astro).",
+    "cross_source": false
+  },
+  {
+    "title": "OmniMedVQA: A New Large-Scale Comprehensive Evaluation Benchmark for Medical LVLM",
+    "year": 2024,
+    "venue": "CVPR",
+    "venue_type": "AI",
+    "db_name": "Comprehensive Medical LVLM Benchmark",
+    "db_size": "BRIGHT subset 890케이스",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "OmniMedVQA",
+    "eval_metric": "Exact-match Accuracy",
+    "method": "OmniMedVQA",
+    "note": "의료 LVLM 종합. Patho-AgenticRAG 90.11%.",
+    "bib_key": "DBLP:conf/cvpr/HuLLSHQL24",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text",
+      "Image"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "OmniMedVQA (2024, Med-benchmark).",
+    "cross_source": false
+  },
+  {
+    "title": "PathMMU: A Massive Multimodal Expert-Level Benchmark for Understanding and Reasoning in Pathology",
+    "year": 2024,
+    "venue": "ECCV",
+    "venue_type": "AI",
+    "db_name": "Twitter, PubMed, Textbooks, Educational Slides",
+    "db_size": "8,454 questions (PathMMU-test) / 1,139 questions (PathMMU-test-tiny)",
+    "db_open": "Partial",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "PathMMU",
+    "eval_metric": "Exact-match Accuracy",
+    "method": "PathMMU",
+    "note": "5개 다중 출처 기반의 전문가 수준 병리학 Multimodal MCQ 벤치마크. 8,454문항 (Test). SocialPath는 게시물 삭제 시 데이터 유실이 한계점.",
+    "bib_key": "DBLP:conf/eccv/SunWZZCZZWLZLLLY24",
+    "bib_ver": "v2",
+    "domain": [
+      "medical",
+      "bio"
+    ],
+    "modality": [
+      "Text",
+      "Image"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "PathMMU Pathology Benchmark (2024, Med-benchmark).",
+    "cross_source": false
+  },
+  {
+    "title": "RSWFormer: A multi-scale fusion network from local to global with multiple stages for regional geological mapping",
+    "year": 2024,
+    "venue": "Remote Sensing",
+    "venue_type": "Science",
+    "db_name": "GF-2, Landsat 8 원격탐사",
+    "db_size": "GF-2: 783장 (512×512), Landsat 8: 788장 (64×64)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "Multi-GL9",
+    "eval_metric": "Overall Accuracy (OA), Macro-F1, Confusion Matrix",
+    "method": "Multi-GL9",
+    "paper_link": "https://doi.org/10.3390/rs16142548",
+    "note": "GF-2 + Landsat 8 다중 해상도 지질 분류. Geo-MMRAG 79.7%.",
+    "bib_key": "DBLP:journals/remotesensing/HanWDZLZZ24",
+    "bib_ver": "v2",
+    "domain": [
+      "earth"
+    ],
+    "modality": [
+      "Image"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Responsible Retrieval Augmented Generation for Climate Decision Making from Documents",
+    "year": 2024,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "Climate Policy Radar (CPR) Database",
+    "db_size": "6,000+ documents (550 sampled for eval)",
+    "db_open": "Open",
+    "chunk": "passage; single-doc scope",
+    "retriever": "BM25 + 4 dense (hybrid α=0.2)",
+    "retriever_base": "4 open-source dense (incl SciBERT-class)",
+    "pre_retrieval": "Synthetic query gen w/ adversarial filter (NeMo Guardrails)",
+    "generator": "R2AG (GPT-4/4o, Llama 3.1, Gemini-1.5-pro)",
+    "generator_base": "GPT-4, GPT-4o, Llama 3.1, Gemini-1.5-pro",
+    "eval_task": "CPR RAG Climate Expert Eval (self-built)",
+    "eval_metric": "Retrieval R/P/F1; CPR policy F1/Acc; pairwise faithfulness; format compliance",
+    "method": "R2AG (Responsible RAG)",
+    "note": "UNECE 16-expert annotated dataset. Defense-in-depth UX. K4 partial: governmental policy = institutional knowledge.",
+    "bib_key": "DBLP:journals/corr/abs-2410-23902",
+    "bib_ver": "v2",
+    "domain": [
+      "earth"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "post_retrieval": [
+      "filtering"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "Responsible RAG for Climate Decision Making (2024, Earth).",
+    "cross_source": false
+  },
+  {
+    "title": "SPIQA: A Dataset for Multimodal Question Answering on Scientific Papers",
+    "year": 2024,
+    "venue": "D&B @ NeurIPS",
+    "venue_type": "AI",
+    "db_name": "SPIQA",
+    "db_size": "270,194 QAs / 25,859 papers (152,487 figures, 117,707 tables)",
+    "db_open": "Open",
+    "db_etc": "19개 탑티어 CS 학회 (NeurIPS, ICLR, CVPR 등) 2018-2023",
+    "retriever_train": false,
+    "generator_base": "Gemini 1.5 Pro/Flash, GPT-4o, GPT-4V, Claude 3, LLaVA 1.5, InstructBLIP",
+    "generator_train": true,
+    "eval_task": "SPIQA test-A, SPIQA test-B, SPIQA test-C",
+    "eval_metric": "METEOR, ROUGE-L, CIDEr, BERTScore F1, L3Score (LLMLogScore)",
+    "method": "SPIQA / LLMLogScore (L3Score)",
+    "paper_link": "https://arxiv.org/abs/2407.09413",
+    "note": "CS 논문 그림+표 멀티모달 QA. L3Score(LLM 로그 우도) 신규 지표.",
+    "bib_key": "DBLP:conf/nips/PramanickCV24",
+    "bib_ver": "v2",
+    "modality": [
+      "Text",
+      "Structured Table",
+      "Image"
+    ],
+    "evaluated_on": [
+      "QASA",
+      "QASPER"
+    ],
+    "type": "dataset",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "SPIQA Multimodal QA Sci Papers (2024, Sci). Borderline K3 (figure-based); primary K1.",
+    "cross_source": false
+  },
+  {
+    "title": "Towards a RAG-based Summarization for the Electron Ion Collider",
+    "year": 2024,
+    "venue": "JINST",
+    "venue_type": "Science",
+    "db_name": "EIC arXiv dataset (post-2021)",
+    "db_open": "Open",
+    "db_etc": "PDF + .tex",
+    "chunk": "120chars, 10 overlap (LangChain)",
+    "retriever": "Pinecone VectorDatabase",
+    "retriever_base": "text-embedding-ada-002",
+    "retriever_train": false,
+    "pre_retrieval": "LLM Router",
+    "pre_retrieval_detail": "LLM Router",
+    "post_retrieval_detail": "k=20 정렬+검증",
+    "generator": "RAGS4EIC Agent",
+    "generator_base": "GPT-3.5-turbo-1106",
+    "generator_train": false,
+    "eval_task": "AI4EIC2023_DATASETS",
+    "eval_metric": "CRR, CAR, SCF, HF, RAGAS",
+    "method": "RAGS4EIC",
+    "paper_link": "https://arxiv.org/abs/2403.15729",
+    "note": "EIC RAG GPT-3.5. CAR 88.9%, HF 2.0%. LaTeX 취약.",
+    "domain": [
+      "physics"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "post_retrieval": [
+      "re-ranking"
+    ],
+    "type": "Method",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Towards a RAG-based Summarization for the Electron-Ion Collider",
+    "year": 2024,
+    "venue": "JINST",
+    "venue_type": "Science",
+    "db_name": "EIC-related arXiv pre-prints (post-2021)",
+    "db_size": "51 questions",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "AI4EIC2023_DATASETS",
+    "method": "AI4EIC2023_DATASETS",
+    "paper_link": "https://arxiv.org/abs/2403.15729",
+    "note": "EIC 51 QA pairs. GPT-4 + 인간 전문가.",
+    "domain": [
+      "physics"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "f-RAG: Molecule Generation with Fragment Retrieval Augmentation",
+    "year": 2024,
+    "venue": "NeurIPS",
+    "venue_type": "AI",
+    "db_name": "ZINC250K, Fragment Vocabulary",
+    "db_size": "250K compounds, N_frag=50",
+    "db_open": "Open",
+    "chunk": "SAFE arm/linker fragment",
+    "retriever": "Score-based Hard + Similarity-based Soft Fragment Retrievers",
+    "retriever_base": "score+similarity (no embedding)",
+    "pre_retrieval": "property contribution scoring",
+    "generator": "f-RAG (SAFE-GPT + FIM)",
+    "generator_base": "SAFE-GPT",
+    "eval_task": "PMO 23 tasks + Docking 5 targets (PARP1/FA7/5HT1B/BRAF/JAK2)",
+    "eval_metric": "AUC top-10, Novel Hit Ratio, Novel Top 5% Docking",
+    "method": "f-RAG",
+    "note": "★ K2.O3. First fragment-level RAG. Hard/Soft dual retrieval. SAFE-GPT + FIM (Linear, <4hr training).",
+    "domain": [
+      "chem",
+      "bio",
+      "medical"
+    ],
+    "modality": [
+      "SMILES"
+    ],
+    "post_retrieval": [
+      "filtering"
+    ],
+    "evaluated_on": [
+      "PMO",
+      "Docking Optimization (PARP1/FA7/5HT1B/BRAF/JAK2)"
+    ],
+    "type": "Method",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "DS-1000: A Natural and Reliable Benchmark for Data Science Code Generation",
+    "year": 2023,
+    "venue": "ICML",
+    "venue_type": "AI",
+    "db_name": "StackOverflow",
+    "db_size": "1,000문항 (7 라이브러리)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_metric": "Accuracy (pass@1)",
+    "method": "DS-1000",
+    "paper_link": "https://arxiv.org/abs/2211.11501",
+    "bib_key": "DBLP:conf/icml/Lai0WZZZYFWY23",
+    "bib_ver": "v2",
+    "domain": [
+      "chem"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Domain-specific chatbots for science using embeddings",
+    "year": 2023,
+    "venue": "Digital Discovery (RSC)",
+    "venue_type": "Science",
+    "db_name": "저자 피어리뷰 출판물",
+    "db_size": "176 PDFs + 818 쌍별 비교",
+    "db_open": "Private",
+    "retriever_train": false,
+    "generator_train": false,
+    "method": "Scientific Document Classification & Impact Sorting",
+    "paper_link": "https://doi.org/10.1039/d3dd00112a",
+    "note": "분류 81~99%, 임팩트 정렬 IF 유사.",
+    "bib_key": "DBLP:journals/corr/abs-2306-10067",
+    "bib_ver": "v2",
+    "domain": [
+      "material",
+      "chem",
+      "physics"
+    ],
+    "modality": [
+      "Text",
+      "Image"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "Domain-specific chatbots for science using embeddings (2023, Sci).",
+    "cross_source": false
+  },
+  {
+    "title": "EHRXQA: A Multi-Modal Question Answering Dataset for Electronic Health Records with Chest X-ray Images",
+    "year": 2023,
+    "venue": "NeurIPS",
+    "venue_type": "AI",
+    "db_name": "MIMIC-IV (Table) + MIMIC-CXR (Image), Chest ImaGenome (주석)",
+    "db_size": "MIMIC-CXR-VQA 서브셋 포함",
+    "db_open": "Partial",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "MIMIC-CXR-VQA, EHRXQA",
+    "eval_metric": "Accuracy",
+    "method": "EHRXQA",
+    "paper_link": "https://papers.neurips.cc/paper/2023/hash/0c007ebef1d11fd48da6ce4f54687db6-Abstract-Datasets_and_Benchmarks.html",
+    "note": "EHR 테이블+흘부 X-ray 통합 멀티모달 QA. NeuralSQL. MOTOR 58.04%.",
+    "bib_key": "DBLP:conf/nips/BaeKRCLKO0CKC23",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text",
+      "Structured Table",
+      "Image"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K3.O2"
+    ],
+    "ko_primary": "K3.O2",
+    "ko_note": "EHRXQA EHR + chest images (2023, Med-dataset).",
+    "cross_source": false
+  },
+  {
+    "title": "GeneTuring tests GPT models in genomics",
+    "year": 2023,
+    "venue": "bioRxiv",
+    "venue_type": "Science",
+    "db_name": "NCBI Gene, dbSNP, UniProt 등 공개 유전체 DB",
+    "db_size": "12개 태스크, 각 태스크당 50개 QA 쌍 = 600 QA pairs",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "GeneTuring",
+    "eval_metric": "Accuracy (Exact match)",
+    "method": "GeneTuring",
+    "note": "유전체학 LLM 평가 벤치마크. NCBI 12개 서브태스크. GeneGPT/BIORAG 일반 LLM 압도.",
+    "bib_key": "hou2023geneturing",
+    "bib_ver": "v2",
+    "domain": [
+      "bio"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K2.O1"
+    ],
+    "ko_primary": "K2.O1",
+    "ko_note": "GeneTuring genomics tests GPT (2023, Bio).",
+    "cross_source": false
+  },
+  {
+    "title": "Large language models encode clinical knowledge",
+    "year": 2023,
+    "venue": "Nature",
+    "venue_type": "Science",
+    "db_name": "MedQA, MedMCQA, PubMedQA, MMLU 임상, HealthSearchQA",
+    "db_size": "MedQA 1273, MedMCQA 4183, PubMedQA 500, MMLU 1089",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_metric": "Accuracy (MCQ), 의사 평가",
+    "method": "MultiMedQA",
+    "paper_link": "https://doi.org/10.1038/s41586-023-06291-2",
+    "bib_key": "DBLP:journals/corr/abs-2212-13138",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "LitQA (PaperQA benchmark)",
+    "year": 2023,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "Full-text scientific papers (post-2021-09)",
+    "db_size": "50 (LitQA v1) / 248 (LitQA2)",
+    "db_open": "Open",
+    "chunk": "",
+    "retriever": "",
+    "retriever_base": "",
+    "pre_retrieval": "",
+    "generator": "",
+    "generator_base": "",
+    "eval_task": "MC-QA over post-cutoff full-text papers",
+    "eval_metric": "Accuracy + Insufficient information rate",
+    "method": "LitQA",
+    "note": "★ Cross-domain (bio+chem+physics+medical). Anti-contamination via post-cutoff papers + 'Insufficient info' option.",
+    "domain": [
+      "bio",
+      "chem",
+      "physics",
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "MedRedQA for medical consumer question answering: Dataset, tasks, and neural baselines",
+    "year": 2023,
+    "venue": "IJCNLP",
+    "venue_type": "AI",
+    "db_name": "Reddit r/AskDocs (Consumer health)",
+    "db_size": "51,000+ QA pairs (total) / 799 questions (MedRAGChecker 테스트 기준)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "MedRedQA",
+    "eval_metric": "Faithfulness, Hallucination, SafetyErr",
+    "method": "MedRedQA",
+    "paper_link": "https://aclanthology.org/2023.ijcnlp-long.42/",
+    "note": "Reddit r/AskDocs 기반 실제 소비자 의료 QA. 51,000개+ 쌍. 인증 의료인 답변만 필터링. MedRAGChecker(arXiv 2026)에서 사실성 평가에 활용.",
+    "bib_key": "nguyen2023medredqa",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "MedRedQA consumer QA (2023, Med).",
+    "cross_source": false
+  },
+  {
+    "title": "Medicaldiff-vqa: a large-scale medical dataset for difference visual question answering on chest x-ray images",
+    "year": 2023,
+    "venue": "PhysioNet",
+    "venue_type": "Science",
+    "db_name": "MIMIC-CXR (동일 환자 시간차 이미지 쌍)",
+    "db_size": "700,703 QA pairs (164,324 image pairs 기반)",
+    "db_open": "Partial",
+    "chunk": "메인+참조 이미지 쌍 단위",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "Medical-Diff-VQA",
+    "eval_metric": "Accuracy, BLEU, ROUGE-L, CIDEr, METEOR",
+    "method": "Medical-Diff-VQA",
+    "paper_link": "https://physionet.org/content/medical-diff-vqa/",
+    "note": "MIMIC-CXR 기반 종단적 흘부 X-ray VQA. 7가지 카테고리, 700K QA 쌍. MOTOR(arXiv 2025)에서 64.52% SOTA.",
+    "bib_key": "hu2023medicaldiff",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Image",
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K3.O2"
+    ],
+    "ko_primary": "K3.O2",
+    "ko_note": "MedicalDiff-VQA difference VQA (2023, Med-dataset).",
+    "cross_source": false
+  },
+  {
+    "title": "PMC-CLIP: Contrastive Language-Image Pre-training using Biomedical Documents",
+    "year": 2023,
+    "venue": "MICCAI",
+    "venue_type": "AI",
+    "db_name": "PubMed Central (PMC) OpenAccess subset",
+    "db_size": "1.6M image-caption pairs",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_metric": "Image-Text Retrieval (Recall@1, 5, 10), VQA Accuracy",
+    "method": "PMC-OA",
+    "paper_link": "https://arxiv.org/abs/2303.07240",
+    "note": "PMC 오픈액세스 160만 쾼 생의학 시각-언어. PMC-CLIP 사전학습용.",
+    "bib_key": "DBLP:conf/miccai/LinZZWZWX23",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text",
+      "Image"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "PMC-CLIP biomedical pre-training (2023, Bio).",
+    "cross_source": false
+  },
+  {
+    "title": "PaperQA: Retrieval-Augmented Generative Agent for Scientific Research",
+    "year": 2023,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "PubMed, Arxiv, Semantic Scholar, Google Scholar, CORE, PMC",
+    "db_open": "Open",
+    "db_etc": "벡터 DB 임베딩",
+    "chunk": "4,000 char",
+    "retriever": "Keyword Search API + MMR Vector Retrieval",
+    "retriever_base": "text-embedding-ada-002",
+    "retriever_train": false,
+    "pre_retrieval": "Agent LLM",
+    "pre_retrieval_detail": "키워드/연도 자동 생성",
+    "post_retrieval_detail": "Summary LLM 1~10 점수 → top-M 필터",
+    "generator": "PaperQA Agent",
+    "generator_base": "GPT-4 (Agent/Ask/Answer), GPT-3.5 (Summary)",
+    "generator_train": false,
+    "eval_task": "LitQA, PubMedQA, MedQA-USMLE, BioASQ",
+    "eval_metric": "Accuracy, Precision",
+    "method": "PaperQA",
+    "paper_link": "https://arxiv.org/abs/2312.07559v2",
+    "note": "Map-Reduce 환각 0% 인용 답변. LitQA 신규 벤치마크.",
+    "bib_key": "DBLP:journals/corr/abs-2312-07559",
+    "bib_ver": "v2",
+    "domain": [
+      "bio",
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "post_retrieval": [
+      "summarization",
+      "filtering"
+    ],
+    "evaluated_on": [
+      "LitQA",
+      "PubMedQA",
+      "MedQA",
+      "BioASQ"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "PaperQA (2023, Sci). Paper-grounded retrieval-cite-answer agent.",
+    "cross_source": false
+  },
+  {
+    "title": "PeTailor: Improving Large Language Model by Tailored Chunk Scorer in Biomedical Triple Extraction",
+    "year": 2023,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "SemMedDB 기반 트리플 + 추가 수동 주석",
+    "db_size": "2,450 sentences (22 relation types)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "GIT, GIT-RE",
+    "eval_metric": "Triple F1, Relation F1",
+    "method": "GIT",
+    "paper_link": "https://arxiv.org/abs/2310.18463",
+    "note": "유전자-질환 트리플 추출. BiomedRAG +22.43%p F1.",
+    "bib_key": "DBLP:journals/corr/abs-2310-18463",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K2.O2"
+    ],
+    "ko_primary": "K2.O2",
+    "ko_note": "PeTailor biomedical triple extraction (2023, Bio).",
+    "cross_source": false
+  },
+  {
+    "title": "Quilt-1M: One Million Image-Text Pairs for Histopathology",
+    "year": 2023,
+    "venue": "NeurIPS",
+    "venue_type": "AI",
+    "db_name": "YouTube(조직병리학 교육 영상), Twitter, Research Papers",
+    "db_size": "1,000,000 image-text pairs",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_metric": "분류 Accuracy, Retrieval Recall",
+    "method": "Quilt-1M",
+    "paper_link": "https://arxiv.org/abs/2306.11207",
+    "note": "YouTube 조직병리 ASR 100만 쾼 벤치마크. 기존 5배+.",
+    "bib_key": "DBLP:conf/nips/IkezogwoSGGMAKS23",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text",
+      "Image"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "Quilt-1M histopathology (2023, Med).",
+    "cross_source": false
+  },
+  {
+    "title": "RAMM: Retrieval-augmented Biomedical Visual Question Answering with Multi-modal Pre-training",
+    "year": 2023,
+    "venue": "ACM MM",
+    "venue_type": "AI",
+    "db_name": "PMCPM, ROCO, MIMIC-CXR",
+    "db_size": "694,244 image-text pairs (PMCPM 398,109 / ROCO 70,306 / MIMIC-CXR 225,829)",
+    "db_open": "Open",
+    "db_etc": "PMC OA 'Case Report'에서 정규표현식 PMCPM 구축",
+    "chunk": "Image-Text Pair",
+    "retriever": "Image-Text Contrastive (ITC) similarity retriever",
+    "retriever_base": "Swin-Base + PubmedBERT",
+    "retriever_train": true,
+    "post_retrieval_detail": "Multi-modal fusion에 Retrieval-Attention 모듈. CLS Query, 검색 K/V",
+    "generator": "RAMM VQA Multi-modal Encoder",
+    "generator_base": "6-layer Transformer (Co-attention dual-stream)",
+    "generator_train": true,
+    "eval_task": "VQA-Med 2019, VQA-Med 2021, VQA-RAD, SLAKE",
+    "eval_metric": "Accuracy",
+    "method": "RAMM",
+    "paper_link": "https://arxiv.org/abs/2303.00534",
+    "note": "PubMed Case Report PMCPM 398K + Retrieval-Attention. 4 벤치마크 SOTA.",
+    "bib_key": "DBLP:conf/mm/00050TZYHH23",
+    "bib_ver": "v2",
+    "domain": [
+      "medical",
+      "bio"
+    ],
+    "modality": [
+      "Image",
+      "Text"
+    ],
+    "post_retrieval": [
+      "fusion"
+    ],
+    "evaluated_on": [
+      "VQA-RAD"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "RAMM Biomedical VQA (2023, Bio).",
+    "cross_source": false
+  },
+  {
+    "title": "Repurposing non-pharmacological interventions for Alzheimer's disease through link prediction on biomedical literature",
+    "year": 2023,
+    "venue": "medRxiv",
+    "venue_type": "Science",
+    "db_name": "Biomedical literature (AD interventions)",
+    "db_size": "7,440 트리플 (Train 6,000/Dev 720/Test 720)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "ADInt",
+    "eval_metric": "F1, Accuracy",
+    "method": "ADInt",
+    "paper_link": "https://doi.org/10.1101/2023.05.02.23289410",
+    "note": "AD Link Prediction. BiomedRAG.",
+    "bib_key": "xiao2024repurposing",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O3"
+    ],
+    "ko_primary": "K1.O3",
+    "ko_note": "Repurposing non-pharma interventions Alzheimer link prediction (2024, Bio/Med).",
+    "cross_source": false
+  },
+  {
+    "title": "SciRepEval: A Multi-Format Benchmark for Scientific Document Representations",
+    "year": 2023,
+    "venue": "EMNLP",
+    "venue_type": "AI",
+    "db_name": "Semantic Scholar, PubMed, OpenReview",
+    "db_size": "24 tasks (수백만 인스턴스)",
+    "db_open": "Open",
+    "chunk": "Title+Abstract [SEP]",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "SciRepEval",
+    "eval_metric": "Macro F1, Binary F1, Kendall's Tau, MAP, nDCG, B³ F1",
+    "method": "SciRepEval",
+    "paper_link": "https://arxiv.org/abs/2211.13308",
+    "note": "4 포맷 24 태스크 SPECTER2.",
+    "bib_key": "DBLP:conf/emnlp/SinghDCDF23",
+    "bib_ver": "v2",
+    "domain": [
+      "chem",
+      "bio",
+      "medical",
+      "physics"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "evaluated_on": [
+      "SciRepEval"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "SciRepEval (2023, Sci-benchmark).",
+    "cross_source": false
+  },
+  {
+    "title": "The SciQA Scientific Question Answering Benchmark for Scholarly Knowledge",
+    "year": 2023,
+    "venue": "Scientific Reports",
+    "venue_type": "Science",
+    "db_name": "Open Research Knowledge Graph (ORKG)",
+    "db_size": "2,565문항",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "SciQA",
+    "eval_metric": "Precision@k, Recall@k, F1@k, 전문가 4단계 정성 평가",
+    "method": "SciQA",
+    "paper_link": "https://doi.org/10.1038/s41598-023-33607-z",
+    "note": "ORKG 기반 학술 지식 QA. ChatGPT 100개 중 14개만 정답.",
+    "bib_key": "auer2023sciqa",
+    "bib_ver": "v2",
+    "domain": [
+      "chem",
+      "bio",
+      "medical",
+      "earth"
+    ],
+    "modality": [
+      "Text",
+      "KG"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "SciQA Scholarly Knowledge (2023, Sci).",
+    "cross_source": false
+  },
+  {
+    "title": "DDXPlus: A New Dataset For Automatic Medical Diagnosis",
+    "year": 2022,
+    "venue": "NeurIPS",
+    "venue_type": "AI",
+    "db_name": "Synthesized EHR dataset",
+    "db_size": "1.3 million patients",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_metric": "Accuracy, Specificity, L1/L2/L3",
+    "method": "DDXPlus",
+    "paper_link": "https://arxiv.org/abs/2205.09148",
+    "note": "감별 진단. MedRAG 사용.",
+    "bib_key": "DBLP:conf/nips/TchangoGWMG22",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "CSV",
+      "Structured Table",
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "DeepDRiD: Diabetic Retinopathy—Grading and Image Quality Estimation Challenge",
+    "year": 2022,
+    "venue": "Patterns",
+    "venue_type": "Science",
+    "db_name": "DeepDRiD 챌린지 코퍼스 (중국 안과 클리닉)",
+    "db_size": "1,600 images (5 classes)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_metric": "Accuracy, ROC-AUC",
+    "method": "RetinaMNIST",
+    "paper_link": "https://doi.org/10.1016/j.patter.2022.100609",
+    "note": "DeepDRiD MedMNIST v2. 당뇨망막증 5단계.",
+    "bib_key": "DBLP:journals/patterns/LiuWWDFYSTLGGPL22",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Image"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Mapping information-rich genotype-phenotype landscapes with genome-scale Perturb-seq",
+    "year": 2022,
+    "venue": "Cell",
+    "venue_type": "Science",
+    "db_name": "Perturb-seq scRNA-seq (CRISPRi, Replogle 2022 + Nadig 2024)",
+    "db_size": "~0.6M cells, 2,023 perturbations",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "Perturb-seq 단일 유전자 perturbation 발현 예측",
+    "method": "Replogle-Nadig",
+    "paper_link": "https://doi.org/10.1016/j.cell.2022.05.013",
+    "bib_key": "replogle2022mapping",
+    "bib_ver": "v2",
+    "domain": [
+      "bio"
+    ],
+    "modality": [
+      "Structured Table"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "MedMCQA: A Large-scale Multi-Subject Multi-Choice Dataset for Medical domain Question Answering",
+    "year": 2022,
+    "venue": "CHIL",
+    "venue_type": "AI",
+    "db_name": "AIIMS/NEET PG 시험 문제",
+    "db_size": "전체 193,155문항 (train 182,822 + dev 4,183 + test 6,150)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "method": "MedMCQA",
+    "paper_link": "https://proceedings.mlr.press/v174/pal22a.html",
+    "bib_key": "DBLP:conf/chil/PalUS22",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "SCIFACT-OPEN: Towards open-domain scientific claim verification",
+    "year": 2022,
+    "venue": "EMNLP (Findings)",
+    "venue_type": "AI",
+    "db_name": "S2ORC (의학/생물학 도메인)",
+    "db_size": "500K abstracts, 279 claims",
+    "db_open": "Open",
+    "db_etc": "4개 SOTA 모델 풀링. BM25+VerT5erini Top-50",
+    "chunk": "Abstract 단위",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "SCIFACT-OPEN, SCIFACT-ORIG",
+    "eval_metric": "Precision, Recall, F1, Average Precision",
+    "method": "SCIFACT-OPEN",
+    "paper_link": "https://arxiv.org/abs/2210.13777",
+    "note": "50만 문서 오픈 도메인. SOTA F1 15-30 하락 일반화 한계.",
+    "bib_key": "DBLP:conf/emnlp/WaddenLKCBWH22",
+    "bib_ver": "v2",
+    "domain": [
+      "medical",
+      "bio"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "SciFact-Open (2022, Med/Sci).",
+    "cross_source": false
+  },
+  {
+    "title": "Measuring Massive Multitask Language Understanding",
+    "year": 2021,
+    "venue": "ICLR",
+    "venue_type": "AI",
+    "db_name": "Real-world exam and textbook questions",
+    "db_size": "15,908 questions",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_metric": "Accuracy (Zero-shot 또는 5-shot)",
+    "method": "MMLU",
+    "paper_link": "https://openreview.net/forum?id=d7KBjmI3GmQ",
+    "note": "57개 과목 15,908문항 대규모 다중작업 언어 이해. 6.5% Ground-truth 오류.",
+    "bib_key": "DBLP:conf/iclr/HendrycksBBZMSS21",
+    "bib_ver": "v2",
+    "domain": [
+      "material",
+      "chem",
+      "bio",
+      "medical",
+      "physics",
+      "earth",
+      "astronomy",
+      "Quantum"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "MMLU (2021, Sci-benchmark).",
+    "cross_source": false
+  },
+  {
+    "title": "Overview of the VQA-Med Task at ImageCLEF 2021: Visual Question Answering and Generation in the Medical Domain",
+    "year": 2021,
+    "venue": "CLEF",
+    "venue_type": "AI",
+    "db_name": "ImageCLEF / MedPix",
+    "db_size": "Val 500장(500 QA), Test 500장(500 QA)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_metric": "Accuracy, BLEU",
+    "method": "VQA-Med 2021",
+    "paper_link": "https://ceur-ws.org/Vol-2936/paper-82.pdf",
+    "bib_key": "DBLP:conf/clef/AbachaSDHM21",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Image",
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Slake: a semantically-labeled knowledge-enhanced dataset for medical visual question answering",
+    "year": 2021,
+    "venue": "ISBI",
+    "venue_type": "AI",
+    "db_name": "다수 병원 데이터 취합",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_metric": "Accuracy",
+    "method": "SLAKE",
+    "paper_link": "https://doi.org/10.1109/ISBI48211.2021.9434023",
+    "bib_key": "DBLP:conf/isbi/LiuZXMYW21",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Image",
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "SLAKE Knowledge-Enhanced VQA (2021, Med-dataset).",
+    "cross_source": false
+  },
+  {
+    "title": "What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams",
+    "year": 2021,
+    "venue": "Applied Sciences",
+    "venue_type": "AI",
+    "db_name": "미국(USMLE), 중국(MCMLE), 대만(TWMLE) 국가 의사 면허 시험 문제",
+    "db_size": "61,097문항 (USMLE 12,723 + MCMLE 34,251 + TWMLE 14,123)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "MedQA (USMLE, MCMLE, TWMLE)",
+    "eval_metric": "Accuracy (%)",
+    "method": "MedQA",
+    "paper_link": "https://arxiv.org/abs/2009.13081",
+    "note": "실제 의사 면허 시험 기반 3개 언어 61k 의료 OpenQA 벤치마크. USMLE는 가장 도전적. Multi-hop 추론 능력 개발의 벤치마크로 활용.",
+    "bib_key": "DBLP:journals/corr/abs-2009-13081",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Dataset of breast ultrasound images",
+    "year": 2020,
+    "venue": "Data in Brief",
+    "venue_type": "Science",
+    "db_name": "Baheya Hospital (Cairo)",
+    "db_size": "780 images (3 classes)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_metric": "Accuracy, ROC-AUC",
+    "method": "BreastMNIST",
+    "paper_link": "https://doi.org/10.1016/j.dib.2019.104863",
+    "note": "유방 초음파 N/B/M 3클래스. CLARE 사용.",
+    "bib_key": "al2020dataset",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Image"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Explainable Automated Fact-Checking for Public Health Claims",
+    "year": 2020,
+    "venue": "EMNLP",
+    "venue_type": "AI",
+    "db_name": "실제 공중보건 콘텐츠 (fact-checking 웹사이트)",
+    "db_size": "11,832개 공중보건 클레임",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_metric": "Accuracy (Multi-class: true/false/mixture/unproven)",
+    "method": "PubHealth",
+    "paper_link": "https://aclanthology.org/2020.acl-main.671/",
+    "bib_key": "DBLP:journals/corr/abs-2010-09926",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Fact or Fiction: Verifying Scientific Claims",
+    "year": 2020,
+    "venue": "EMNLP",
+    "venue_type": "AI",
+    "db_name": "S2ORC, CORD-19 (케이스 스터디용)",
+    "db_size": "1,409 claims, 5,183 abstracts",
+    "db_open": "Open",
+    "db_etc": "논문 인용구(Citances) 활용",
+    "chunk": "문장 단위 (Rationale sentences)",
+    "retriever": "ABSTRACTRETRIEVAL",
+    "retriever_base": "TF-IDF",
+    "retriever_train": false,
+    "post_retrieval_detail": "RATIONALSELECTION이 abstract에서 증거 문장 필터링",
+    "generator": "LABELPREDICTION",
+    "generator_base": "RoBERTa-large",
+    "generator_train": true,
+    "eval_task": "SCIFACT",
+    "eval_metric": "Abstract-level F1, Sentence-level F1",
+    "method": "VERISCI",
+    "paper_link": "https://aclanthology.org/2020.emnlp-main.609/",
+    "note": "과학적 클레임 검증 첫 공식화. Citance 1.4K SCIFACT. TF-IDF + RoBERTa 3단계.",
+    "bib_key": "DBLP:conf/emnlp/WaddenLLWZCH20",
+    "bib_ver": "v2",
+    "domain": [
+      "bio",
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "post_retrieval": [
+      "filtering"
+    ],
+    "evaluated_on": [
+      "SciFact"
+    ],
+    "type": "Method",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "SciFact Fact or Fiction (2020, Sci).",
+    "cross_source": false
+  },
+  {
+    "title": "Ginger Cannot Cure Cancer: Battling Fake Health News with a Comprehensive Data Repository",
+    "year": 2020,
+    "venue": "ICWSM",
+    "venue_type": "AI",
+    "db_name": "HealthNewsReview.org 의학 뉴스 기사",
+    "db_size": "수백 개 수준 의학 뉴스 기사 (True/Fake 라벨)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_metric": "Accuracy (Binary classification: True/Fake)",
+    "method": "FakeHealth",
+    "paper_link": "https://arxiv.org/abs/2010.13337",
+    "bib_key": "DBLP:conf/icwsm/DaiSW20",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Multi-XScience: A Large-scale Dataset for Extreme Multi-document Summarization of Scientific Articles",
+    "year": 2020,
+    "venue": "EMNLP",
+    "venue_type": "AI",
+    "db_name": "arXiv.org 및 Microsoft Academic Graph (MAG)",
+    "db_size": "전체 40,528건 (Train: 30,369 / Val: 5,066 / Test: 5,093)",
+    "db_open": "Open",
+    "db_etc": "MAG로 인용 그래프 + 참조 초록 추출",
+    "chunk": "Paragraph 단위",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_metric": "ROUGE (R-1, R-2, R-L), Novel n-grams, Human Evaluation",
+    "method": "Multi-XScience",
+    "paper_link": "https://arxiv.org/abs/2010.14235",
+    "note": "과학 논문 초록 + 인용 문헌 초록 → 관련 연구 생성. 추상적 요약 평가에 적합.",
+    "bib_key": "DBLP:conf/emnlp/LuDC20",
+    "bib_ver": "v2",
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "Multi-XScience extreme multi-doc summarization (2020, Sci-dataset).",
+    "cross_source": false
+  },
+  {
+    "title": "NIST/EPA/NIH Tandem Mass Spectral Library (NIST 2020)",
+    "year": 2020,
+    "venue": "NIST",
+    "venue_type": "Science",
+    "db_name": "NIST/EPA/NIH Tandem (MS/MS) Mass Spectral Library (HCD subset)",
+    "db_size": "530,640 HCD 스펙트럼 / 25,541 분자 (MARASON 서브셋)",
+    "db_open": "Private",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "소분자 LC-MS/MS 스펙트럼 시뮬레이션, 분자 동정",
+    "eval_metric": "Top-1 retrieval accuracy (cosine), Cosine similarity, Top-k accuracy",
+    "method": "NIST20",
+    "paper_link": "https://chemdata.nist.gov/",
+    "domain": [
+      "chem"
+    ],
+    "modality": [
+      "SMILES",
+      "Structured Table"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "PathVQA: 30000+ Questions for Medical Visual Question Answering",
+    "year": 2020,
+    "venue": "arXiv",
+    "venue_type": "AI",
+    "db_name": "Pathology Textbooks and Digital Libraries",
+    "db_size": "30,000+ questions",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "Path-VQA",
+    "eval_metric": "Exact-match Accuracy",
+    "method": "Path-VQA",
+    "note": "병리학 교과서 기반 VQA. 3만개+ 질문, Yes/No + Open-ended. Patho-AgenticRAG에서 Yes/No 서브셋(3,362문항)으로 평가. 80.34% Accuracy.",
+    "bib_key": "DBLP:journals/corr/abs-2003-10286",
+    "bib_ver": "v2",
+    "domain": [
+      "medical",
+      "bio"
+    ],
+    "modality": [
+      "Text",
+      "Image"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "PathVQA pathology VQA (2020, Med).",
+    "cross_source": false
+  },
+  {
+    "title": "S2ORC: The Semantic Scholar Open Research Corpus",
+    "year": 2020,
+    "venue": "ACL",
+    "venue_type": "AI",
+    "db_name": "S2ORC",
+    "db_size": "81.1M papers, 380.5M citations",
+    "db_open": "Open",
+    "db_etc": "MAG, arXiv, PubMed. ScienceParse + GROBID",
+    "chunk": "단락/섹션",
+    "retriever_train": false,
+    "generator_base": "BERT-Base",
+    "generator_train": true,
+    "eval_task": "BC5CDR, JNLPBA, GENIA, ChemProt, SciERC, SciCite",
+    "method": "S2ORC",
+    "paper_link": "https://arxiv.org/abs/1911.02782",
+    "note": "81M 학술 코퍼스. S2ORC-SCIBERT.",
+    "bib_key": "DBLP:conf/acl/LoWNKW20",
+    "bib_ver": "v2",
+    "domain": [
+      "bio",
+      "medical",
+      "physics"
+    ],
+    "modality": [
+      "Text",
+      "Structured Table"
+    ],
+    "type": "dataset",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "S2ORC (2020, Sci-corpus).",
+    "cross_source": false
+  },
+  {
+    "title": "Three-Dimensional Convolutional Neural Networks and a Cross-Docked Data Set for Structure-Based Drug Design",
+    "year": 2020,
+    "venue": "J. Chem. Inf. Model.",
+    "venue_type": "Science",
+    "db_name": "PDB, Pocketome DB",
+    "db_size": "22.5M 도킹 포즈 (13,780 리간드, 2,922 포켓)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "단백질-리간드 친화도, 포즈 선택, SBDD 평가",
+    "eval_metric": "RMSE, Pearson R, AUC, Vina, QED, SA",
+    "method": "CrossDocked2020",
+    "paper_link": "https://doi.org/10.1021/acs.jcim.0c00411",
+    "bib_key": "DBLP:journals/jcisd/FrancoeurMSJISK20",
+    "bib_ver": "v2",
+    "domain": [
+      "bio",
+      "medical",
+      "chem"
+    ],
+    "modality": [
+      "3D Structure"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K2.O3"
+    ],
+    "ko_primary": "K2.O3",
+    "ko_note": "3D CNN Cross-Docked dataset (2020, Chem).",
+    "cross_source": false
+  },
+  {
+    "title": "Detecting causal language use in science findings",
+    "year": 2019,
+    "venue": "EMNLP-IJCNLP",
+    "venue_type": "AI",
+    "db_name": "PubMed research conclusion sentences",
+    "db_size": "3,000+ sentences",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "HealthAdvice",
+    "eval_metric": "Micro Precision, Recall, F1",
+    "method": "HealthAdvice",
+    "paper_link": "https://aclanthology.org/D19-1473/",
+    "note": "인과 관계 언어 감지 분류. MMRAG TC.",
+    "bib_key": "DBLP:conf/emnlp/YuLW19",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "Detecting causal language in science findings (2019, Sci).",
+    "cross_source": false
+  },
+  {
+    "title": "PubMedQA: A Dataset for Biomedical Research Question Answering",
+    "year": 2019,
+    "venue": "EMNLP",
+    "venue_type": "AI",
+    "db_name": "PubMed 논문 초록 (structured abstract with question title)",
+    "db_size": "1k expert-labeled (PQA-L), 61.2k unlabeled (PQA-U), 211.3k artificially generated (PQA-A)",
+    "db_open": "Open",
+    "db_etc": "PQA-A 휴리스틱, PQA-U 라벨 없음, PQA-L 전문가 수동",
+    "chunk": "Conclusion=Long Answer, 나머지=Context",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "PubMedQA",
+    "eval_metric": "Accuracy, Macro-F1 (yes/no/maybe)",
+    "method": "PubMedQA",
+    "paper_link": "https://aclanthology.org/D19-1259",
+    "note": "생의학 yes/no/maybe QA 첫 데이터셋. 인간 78.0% vs 모델 68.1%.",
+    "bib_key": "DBLP:conf/emnlp/JinDLCL19",
+    "bib_ver": "v2",
+    "domain": [
+      "bio",
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "A dataset of clinically generated visual questions and answers about radiology images",
+    "year": 2018,
+    "venue": "Scientific Data (Nature)",
+    "venue_type": "Science",
+    "db_name": "MedPix (미국 NLM 공개 방사선 아카이브)",
+    "db_size": "315개 이미지, 3,515 QA 쌍 (517개 고유 답변)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "method": "VQA-RAD",
+    "paper_link": "https://doi.org/10.1038/sdata.2018.251",
+    "bib_key": "lau2018dataset",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Image",
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "VQA-RAD radiology images (2018, Med-dataset).",
+    "cross_source": false
+  },
+  {
+    "title": "MoleculeNet: a benchmark for molecular machine learning",
+    "year": 2018,
+    "venue": "Chemical Science (RSC)",
+    "venue_type": "Science",
+    "db_name": "PubChem BioAssay, ChEMBL, SWEETLEAD",
+    "db_size": "70만+ 화합물 (17 datasets)",
+    "db_open": "Open",
+    "db_etc": "DeepChem 통합",
+    "chunk": "화합물 단위 (SMILES/3D)",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "QM7-9, ESOL, FreeSolv, Lipo, PCBA, MUV, HIV, PDBbind, BACE, BBBP, Tox21, ToxCast, SIDER, ClinTox",
+    "eval_metric": "MAE, RMSE, ROC-AUC, PRC-AUC",
+    "method": "MoleculeNet",
+    "paper_link": "https://doi.org/10.1039/C7SC02664A",
+    "note": "분자 ML 표준 벤치마크. 4 카테고리 17 데이터셋. CLADD 사용.",
+    "bib_key": "DBLP:journals/corr/WuRFGGPLP17",
+    "bib_ver": "v2",
+    "domain": [
+      "chem",
+      "bio",
+      "medical"
+    ],
+    "modality": [
+      "SMILES",
+      "Structured Table"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K2.O3"
+    ],
+    "ko_primary": "K2.O3",
+    "ko_note": "MoleculeNet benchmark (2017, Chem-benchmark).",
+    "cross_source": false
+  },
+  {
+    "title": "The HAM10000 dataset, a large collection of multi-source dermatoscopic images of common pigmented skin lesions",
+    "year": 2018,
+    "venue": "Scientific Data",
+    "venue_type": "Science",
+    "db_name": "ISIC 2018 Archive",
+    "db_size": "10,015 images (7 classes)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_metric": "Multi-class Accuracy, Balanced Acc, ROC-AUC",
+    "method": "DermaMNIST",
+    "paper_link": "https://doi.org/10.1038/sdata.2018.161",
+    "note": "피부경 이미지. CLARE/MedMNIST.",
+    "bib_key": "tschandl2018ham10000",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Image"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "Crowdsourcing Multiple Choice Science Questions",
+    "year": 2017,
+    "venue": "Workshop on Noisy User-generated Text (WNUT)",
+    "venue_type": "AI",
+    "db_name": "Crowdsourced science exam questions",
+    "db_size": "13,679 questions",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "Science MCQ (Physics, Chemistry, Biology)",
+    "eval_metric": "Accuracy",
+    "method": "SciQ",
+    "paper_link": "https://aclanthology.org/W17-4413/",
+    "note": "HoneyComb 평가에 사용. 13.7K 크라우드소싱 과학 객관식 (물리, 화학, 생물). AllenAI 오픈 데이터셋.",
+    "bib_key": "DBLP:conf/aclnut/WelblLG17",
+    "bib_ver": "v2",
+    "domain": [
+      "physics",
+      "chem",
+      "bio"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "SciQ Crowdsourcing MCQ (2017, Sci).",
+    "cross_source": false
+  },
+  {
+    "title": "Overview of the Medical Question Answering Task at TREC 2017 LiveQA",
+    "year": 2017,
+    "venue": "TREC",
+    "venue_type": "AI",
+    "db_name": "U.S. NLM Consumer Health Questions (CHQA)",
+    "db_size": "738 Questions (Train 634 + Test 104)",
+    "db_open": "Open",
+    "db_etc": "사서의 수동 검색 및 주석, NIST 평가자 검수 포함.",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "TREC 2017 LiveQA Medical Task",
+    "eval_metric": "avgScore (0-3), succ@i+, prec@i+",
+    "method": "TREC LiveQA Medical",
+    "paper_link": "https://trec.nist.gov/pubs/trec26/papers/Overview-QA.pdf",
+    "note": "NLM에 실제 일반 소비자가 보낸 의학 질문 기반 QA 벤치마크. 비정형 실생활 질문 처리 능력 평가. MedBioRAG(2025)에서 ROUGE-1 27.33 달성.",
+    "bib_key": "DBLP:conf/trec/AbachaAPD17",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "TREC 2017 LiveQA Medical (2017, Med).",
+    "cross_source": false
+  },
+  {
+    "title": "TREC 2017 LiveQA: Medical Question Answering Track Overview",
+    "year": 2017,
+    "venue": "TREC",
+    "venue_type": "AI",
+    "db_name": "Consumer health questions to NLM",
+    "db_size": "104 questions (MedRAGChecker 기준)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "LiveQA",
+    "eval_metric": "Faithfulness, Hallucination, SafetyErr",
+    "method": "LiveQA",
+    "paper_link": "https://arxiv.org/abs/1711.05789",
+    "note": "미국 NLM에 제출된 실제 소비자 의료 질문 테스트셋. 104문항. MedRAGChecker(arXiv 2026)에서 Faithfulness 평가에 활용.",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "title": "A full-text learning to rank dataset for medical information retrieval",
+    "year": 2016,
+    "venue": "ECIR",
+    "venue_type": "AI",
+    "db_name": "NutritionFacts.org",
+    "db_size": "3,244 쿼리 / 약 3,114개 의료 문서",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "method": "NFCorpus",
+    "paper_link": "https://link.springer.com/chapter/10.1007/978-3-319-30671-1_73",
+    "note": "의학 도메인 Full-Text Learning-to-Rank 벤치마크. NutritionFacts.org 기반. MedBioRAG(2025)에서 Semantic Search가 BM25 대비 NDCG@10 37.91% 달성.",
+    "bib_key": "boteva2016full",
+    "bib_ver": "v2",
+    "domain": [
+      "medical",
+      "bio"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "Full-text learning to rank for medical IR (2016, Med-dataset).",
+    "cross_source": false
+  },
+  {
+    "title": "ADMET Evaluation in Drug Discovery. 16. Predicting hERG Blockers by Combining Multiple Pharmacophores and Machine Learning Approaches",
+    "year": 2016,
+    "venue": "Molecular Pharmaceutics",
+    "venue_type": "Science",
+    "db_name": "hERG active/inactive 화합물 데이터셋",
+    "db_size": "training+external test (figshare)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "method": "hERG Dataset (Wang 2016)",
+    "paper_link": "https://doi.org/10.1021/acs.molpharmaceut.6b00471",
+    "bib_key": "wang2016admet",
+    "bib_ver": "v2",
+    "domain": [
+      "medical",
+      "chem"
+    ],
+    "modality": [
+      "SMILES",
+      "Structured Table"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K2.O3"
+    ],
+    "ko_primary": "K2.O3",
+    "ko_note": "ADMET hERG Blockers (2016, Chem).",
+    "cross_source": false
+  },
+  {
+    "title": "Deep Learning for Drug-Induced Liver Injury",
+    "year": 2015,
+    "venue": "J. Chem. Inf. Model.",
+    "venue_type": "Science",
+    "db_name": "NCTR, Greene, Xu, Liew Datasets",
+    "db_size": "훈련 475 + 외부 검증 198",
+    "db_open": "Partial",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "DILI 이진 분류",
+    "eval_metric": "Accuracy, Sensitivity, Specificity, AUC, MCC, GMEAN",
+    "method": "DILI Combined",
+    "paper_link": "https://doi.org/10.1021/acs.jcim.5b00238",
+    "bib_key": "DBLP:journals/jcisd/XuDCGPL15",
+    "bib_ver": "v2",
+    "domain": [
+      "medical",
+      "bio"
+    ],
+    "modality": [
+      "SMILES",
+      "Structured Table"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K2.O3"
+    ],
+    "ko_primary": "K2.O3",
+    "ko_note": "Deep Learning Drug-Induced Liver Injury (2015, Chem).",
+    "cross_source": false
+  },
+  {
+    "title": "SemEval-2013 Task 9: Extraction of Drug-Drug Interactions from Biomedical Texts",
+    "year": 2013,
+    "venue": "SemEval",
+    "venue_type": "AI",
+    "db_name": "Medline abstracts, DrugBank",
+    "db_size": "7,966 문장 (Train 5,154/Dev 1,436/Test 1,376)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "DDI",
+    "eval_metric": "Micro Precision, Recall, F1",
+    "method": "DDI",
+    "paper_link": "https://aclanthology.org/S13-2056/",
+    "note": "DDI 관계 추출. BiomedRAG 사용.",
+    "bib_key": "DBLP:conf/semeval/Segura-BedmarMH13",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K2.O1"
+    ],
+    "ko_primary": "K2.O1",
+    "ko_note": "DDI Drug-Drug Interactions (2013, Chem).",
+    "cross_source": false
+  },
+  {
+    "title": "BioASQ: A challenge on large-scale biomedical semantic indexing and question answering",
+    "year": 2012,
+    "venue": "AAAI Fall Symposium Series",
+    "venue_type": "AI",
+    "db_name": "PubMed / MEDLINE 문헌 기반 자체 구축 질문",
+    "db_size": "매년 챌린지마다 수백~수천 문항 누적",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "method": "BioASQ",
+    "paper_link": "https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-015-0564-6",
+    "note": "MEDLINE 의생명 IR+QA+요약 챌린지. 전문가 수동. MedBioRAG 98%.",
+    "bib_key": "DBLP:conf/aaaifs/TsatsaronisSPAAGGAAZN12",
+    "bib_ver": "v2",
+    "domain": [
+      "bio",
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "BioASQ (2012, Bio-benchmark).",
+    "cross_source": false
+  },
+  {
+    "title": "Development of a benchmark corpus to support the automatic extraction of drug-related adverse effects from medical case reports",
+    "year": 2012,
+    "venue": "J. Biomed. Informatics",
+    "venue_type": "Science",
+    "db_name": "Medical case reports",
+    "db_size": "5,000 (Train 4,000/Dev 500/Test 500)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "ade-corpus-v2",
+    "eval_metric": "Accuracy, F1",
+    "method": "ade-corpus-v2",
+    "paper_link": "https://doi.org/10.1016/j.jbi.2012.04.008",
+    "note": "약물 부작용 분류. BiomedRAG.",
+    "bib_key": "DBLP:journals/jbi/GurulingappaRRFHT12",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K2.O2"
+    ],
+    "ko_primary": "K2.O2",
+    "ko_note": "Drug-related adverse events extraction corpus (2012, Chem/Bio).",
+    "cross_source": false
+  },
+  {
+    "title": "ChemProt: a disease chemical biology database",
+    "year": 2011,
+    "venue": "Nucleic Acids Research",
+    "venue_type": "Science",
+    "db_name": "PubMed abstracts",
+    "db_size": "9,960 문장-트리플 쌍 (Train 4,111 / Dev 2,411 / Test 3,438)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "ChemProt",
+    "eval_metric": "Micro Precision, Recall, F1",
+    "method": "ChemProt",
+    "paper_link": "https://doi.org/10.1093/nar/gkq906",
+    "note": "화학물질-단백질 상호작용 관계 추출 벤치마크. PubMed 초록 2,432편. 5개 CPR 라벨. BiomedRAG에서 LLaMA2 13B F1 향상.",
+    "bib_key": "DBLP:journals/nar/TaboureauNAWERKBCJBO11",
+    "bib_ver": "v2",
+    "domain": [
+      "bio",
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K2.O1"
+    ],
+    "ko_primary": "K2.O1",
+    "ko_note": "ChemProt disease chemical biology DB (2011, Chem-dataset).",
+    "cross_source": false
+  },
+  {
+    "title": "Overview of BioCreative II gene mention recognition",
+    "year": 2008,
+    "venue": "Genome biology",
+    "venue_type": "Science",
+    "db_name": "PubMed abstracts",
+    "db_size": "5,000+ sentences",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "BC2GM",
+    "eval_metric": "Micro Precision, Recall, F1",
+    "method": "BC2GM",
+    "note": "BioCreative II Gene Mention. PubMed 초록 NER. MMRAG Top+Llama-3 F1 0.978.",
+    "bib_key": "smith2008overview",
+    "bib_ver": "v2",
+    "domain": [
+      "bio"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K2.O2"
+    ],
+    "ko_primary": "K2.O2",
+    "ko_note": "BioCreative II gene mention recognition (2008, Bio).",
+    "cross_source": false
+  },
+  {
+    "title": "Statistical Predicate Invention",
+    "year": 2007,
+    "venue": "ICML",
+    "venue_type": "AI",
+    "db_name": "Unified Medical Language System (NLM)",
+    "db_size": "6,529 트리플 (Train 5,216 / Dev 652 / Test 661)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "UMLS",
+    "eval_metric": "F1, Accuracy",
+    "method": "UMLS",
+    "paper_link": "https://dl.acm.org/doi/10.1145/1273496.1273551",
+    "note": "UMLS 의학 개념 관계 링크 예측. BiomedRAG.",
+    "bib_key": "DBLP:conf/icml/KokD07",
+    "bib_ver": "v2",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "KG"
+    ],
+    "type": "benchmark",
+    "ko_cells": [
+      "K2.O3"
+    ],
+    "ko_primary": "K2.O3",
+    "ko_note": "Statistical Predicate Invention (2007, Sci) [needs-fetch — old, fits poorly; tentative K2.O3].",
+    "cross_source": false
+  },
+  {
+    "bib_key": "DBLP:conf/aaai/LeeBHBPS26",
+    "title": "DBLP:conf/aaai/LeeBHBPS26",
+    "note": "CLADD RAG-Enhanced Collaborative Drug Discovery (2026, Chem). Cross-source K2+K3.",
+    "ko_cells": [
+      "K2.O3"
+    ],
+    "ko_primary": "K2.O3",
+    "ko_note": "CLADD RAG-Enhanced Collaborative Drug Discovery (2026, Chem). Cross-source K2+K3.",
+    "cross_source": true,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true,
+    "ko_secondary": "K3"
+  },
+  {
+    "bib_key": "DBLP:conf/aaai/ZhangGZZCZZYB26",
+    "title": "DBLP:conf/aaai/ZhangGZZCZZYB26",
+    "note": "Patho-AgenticRAG pathology (2026, Med). Cross-source.",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "Patho-AgenticRAG pathology (2026, Med). Cross-source.",
+    "cross_source": true,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true,
+    "ko_secondary": "K2"
+  },
+  {
+    "bib_key": "DBLP:conf/acl/WuZQCXMJG25",
+    "title": "DBLP:conf/acl/WuZQCXMJG25",
+    "note": "Medical Graph RAG (2025, Med).",
+    "ko_cells": [
+      "K2.O1"
+    ],
+    "ko_primary": "K2.O1",
+    "ko_note": "Medical Graph RAG (2025, Med).",
+    "cross_source": false,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true
+  },
+  {
+    "bib_key": "DBLP:conf/bionlp/DeYoungLNMW20",
+    "title": "DBLP:conf/bionlp/DeYoungLNMW20",
+    "note": "Evidence Inference 2.0 (2020, Bio).",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "Evidence Inference 2.0 (2020, Bio).",
+    "cross_source": false,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true
+  },
+  {
+    "bib_key": "DBLP:conf/clef/AbachaHDLDM19",
+    "title": "DBLP:conf/clef/AbachaHDLDM19",
+    "note": "VQA-Med 2019 (2019, Med).",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "VQA-Med 2019 (2019, Med).",
+    "cross_source": false,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true
+  },
+  {
+    "bib_key": "DBLP:conf/emnlp/SinghSC24",
+    "title": "DBLP:conf/emnlp/SinghSC24",
+    "note": "SCIDQA (2024, Sci).",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "SCIDQA (2024, Sci).",
+    "cross_source": false,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true
+  },
+  {
+    "bib_key": "DBLP:conf/emnlp/ZhangSHML24",
+    "title": "DBLP:conf/emnlp/ZhangSHML24",
+    "note": "HoneyComb Materials Science Agent (2024, Mat). Cross-source.",
+    "ko_cells": [
+      "K2.O1"
+    ],
+    "ko_primary": "K2.O1",
+    "ko_note": "HoneyComb Materials Science Agent (2024, Mat). Cross-source.",
+    "cross_source": true,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true,
+    "ko_secondary": "K1"
+  },
+  {
+    "bib_key": "DBLP:conf/icml/LeeLPHKLL23",
+    "title": "DBLP:conf/icml/LeeLPHKLL23",
+    "note": "QASA QA on Sci Articles (2023, Sci).",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "QASA QA on Sci Articles (2023, Sci).",
+    "cross_source": false,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true
+  },
+  {
+    "bib_key": "DBLP:conf/medinfo/AbachaMSGSD19",
+    "title": "DBLP:conf/medinfo/AbachaMSGSD19",
+    "note": "MedQuAD bridging consumer questions (2019, Med).",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "MedQuAD bridging consumer questions (2019, Med).",
+    "cross_source": false,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true
+  },
+  {
+    "bib_key": "DBLP:conf/nips/LeeKV0RPVN24",
+    "title": "DBLP:conf/nips/LeeKV0RPVN24",
+    "note": "Molecule Generation w/ Fragment Retrieval (2024, Chem).",
+    "ko_cells": [
+      "K2.O3"
+    ],
+    "ko_primary": "K2.O3",
+    "ko_note": "Molecule Generation w/ Fragment Retrieval (2024, Chem).",
+    "cross_source": false,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true
+  },
+  {
+    "bib_key": "DBLP:conf/pasc/GokdemirSBWHHSA25",
+    "title": "DBLP:conf/pasc/GokdemirSBWHHSA25",
+    "note": "HiPerRAG High-Performance for Sci Insights (2025, Sci).",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "HiPerRAG High-Performance for Sci Insights (2025, Sci).",
+    "cross_source": false,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true
+  },
+  {
+    "bib_key": "DBLP:journals/corr/abs-1901-08079",
+    "title": "DBLP:journals/corr/abs-1901-08079",
+    "note": "Question-Entailment Approach (2019, Sci).",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "Question-Entailment Approach (2019, Sci).",
+    "cross_source": false,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true
+  },
+  {
+    "bib_key": "DBLP:journals/corr/abs-2403-15729",
+    "title": "DBLP:journals/corr/abs-2403-15729",
+    "note": "Towards a RAG-based Summarization for the Electron-Ion Collider (2024, Phys).",
+    "ko_cells": [
+      "K1.O1",
+      "K4.O2"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "Towards a RAG-based Summarization for the Electron-Ion Collider (2024, Phys).",
+    "cross_source": false,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true
+  },
+  {
+    "bib_key": "DBLP:journals/corr/abs-2408-01107",
+    "title": "DBLP:journals/corr/abs-2408-01107",
+    "note": "BIORAG (2024, Bio).",
+    "ko_cells": [
+      "K1.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "BIORAG (2024, Bio).",
+    "cross_source": false,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true
+  },
+  {
+    "bib_key": "DBLP:journals/corr/abs-2411-09213",
+    "title": "DBLP:journals/corr/abs-2411-09213",
+    "note": "Comprehensive RAG Eval Medical (2024, Med).",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "Comprehensive RAG Eval Medical (2024, Med).",
+    "cross_source": false,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true
+  },
+  {
+    "bib_key": "DBLP:journals/corr/abs-2504-04988",
+    "title": "DBLP:journals/corr/abs-2504-04988",
+    "note": "Remote Sensing RAG (2025, Earth).",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "Remote Sensing RAG (2025, Earth).",
+    "cross_source": false,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true
+  },
+  {
+    "bib_key": "DBLP:journals/corr/abs-2509-22713",
+    "title": "DBLP:journals/corr/abs-2509-22713",
+    "note": "RAR2 Thought-Driven Retrieval (2025, Med).",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "RAR2 Thought-Driven Retrieval (2025, Med).",
+    "cross_source": false,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true
+  },
+  {
+    "bib_key": "DBLP:journals/corr/abs-2512-10996",
+    "title": "DBLP:journals/corr/abs-2512-10996",
+    "note": "MedBioRAG (2025, Med).",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "MedBioRAG (2025, Med).",
+    "cross_source": false,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true
+  },
+  {
+    "bib_key": "DBLP:journals/corr/abs-2603-09800",
+    "title": "DBLP:journals/corr/abs-2603-09800",
+    "note": "MITRA Physics Collaborations Knowledge Retrieval (2026, Phys). Strongest K4 example.",
+    "ko_cells": [
+      "K4.O1"
+    ],
+    "ko_primary": "K4.O1",
+    "ko_note": "MITRA Physics Collaborations Knowledge Retrieval (2026, Phys). Strongest K4 example.",
+    "cross_source": true,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true,
+    "ko_secondary": "K1"
+  },
+  {
+    "bib_key": "DBLP:journals/corr/abs-2603-15712",
+    "title": "DBLP:journals/corr/abs-2603-15712",
+    "note": "High-Entropy Catalysts via RAG (2026, Mat).",
+    "ko_cells": [
+      "K2.O3"
+    ],
+    "ko_primary": "K2.O3",
+    "ko_note": "High-Entropy Catalysts via RAG (2026, Mat).",
+    "cross_source": false,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true
+  },
+  {
+    "bib_key": "DBLP:journals/jamia/ZhanWZDZ25",
+    "title": "DBLP:journals/jamia/ZhanWZDZ25",
+    "note": "MMRAG biomedical (2025, Bio). Cross-source K1+K2.",
+    "ko_cells": [
+      "K1.O2",
+      "K2.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "MMRAG biomedical (2025, Bio). Cross-source K1+K2.",
+    "cross_source": true,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true,
+    "ko_secondary": "K2"
+  },
+  {
+    "bib_key": "DBLP:journals/make/LahiriH25",
+    "title": "DBLP:journals/make/LahiriH25",
+    "note": "AlzheimerRAG multimodal (2025, Med). Cross-source.",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "AlzheimerRAG multimodal (2025, Med). Cross-source.",
+    "cross_source": true,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true,
+    "ko_secondary": "K1"
+  },
+  {
+    "bib_key": "DBLP:journals/npjdm/KeJEALSSTOKWKT25",
+    "title": "DBLP:journals/npjdm/KeJEALSSTOKWKT25",
+    "note": "Generalizability of RAG across 10 LLMs (2025, Med).",
+    "ko_cells": [
+      "K1.O2"
+    ],
+    "ko_primary": "K1.O2",
+    "ko_note": "Generalizability of RAG across 10 LLMs (2025, Med).",
+    "cross_source": false,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true
+  },
+  {
+    "title": "MTsamples (Web Dataset)",
+    "db_name": "Medical transcriptions (mtsamples.com)",
+    "db_size": "5,029 (Train 4,029/Dev 500/Test 500)",
+    "db_open": "Open",
+    "retriever_train": false,
+    "generator_train": false,
+    "eval_task": "MTsample",
+    "eval_metric": "Accuracy, F1",
+    "method": "MTsample",
+    "paper_link": "https://mtsamples.com/",
+    "note": "의료 발화 진료과 분류. BiomedRAG.",
+    "domain": [
+      "medical"
+    ],
+    "modality": [
+      "Text"
+    ],
+    "type": "benchmark",
+    "ko_cells": [],
+    "ko_primary": null,
+    "ko_note": "",
+    "cross_source": false
+  },
+  {
+    "bib_key": "aplabprotocols2025",
+    "title": "aplabprotocols2025",
+    "note": "AP Lab Protocols benchmark (2025, Sci) [bib only].",
+    "ko_cells": [
+      "K4.O2"
+    ],
+    "ko_primary": "K4.O2",
+    "ko_note": "AP Lab Protocols benchmark (2025, Sci) [bib only].",
+    "cross_source": false,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true
+  },
+  {
+    "bib_key": "meyur2025weqa",
+    "title": "meyur2025weqa",
+    "note": "WeQA Wind Energy (2025, Earth).",
+    "ko_cells": [
+      "K1.O1",
+      "K4.O2"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "WeQA Wind Energy (2025, Earth).",
+    "cross_source": false,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true
+  },
+  {
+    "bib_key": "rafique2025large",
+    "title": "rafique2025large",
+    "note": "DUNE Knowledge Retrieval (2025, Phys). Borderline K4 (institutional memory) — primary tag K1, secondary K4.",
+    "ko_cells": [
+      "K1.O1",
+      "K4.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "DUNE Knowledge Retrieval (2025, Phys). Borderline K4 (institutional memory) — primary tag K1, secondary K4.",
+    "cross_source": false,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true
+  },
+  {
+    "bib_key": "taffese2025polymerexpert",
+    "title": "taffese2025polymerexpert",
+    "note": "Polymer Expert literature-derived (2025, Mat). Cross-source K1+K2.",
+    "ko_cells": [
+      "K1.O3"
+    ],
+    "ko_primary": "K1.O3",
+    "ko_note": "Polymer Expert literature-derived (2025, Mat). Cross-source K1+K2.",
+    "cross_source": true,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true,
+    "ko_secondary": "K2"
+  },
+  {
+    "bib_key": "zhang2026matclaw",
+    "title": "zhang2026matclaw",
+    "note": "MatClaw autonomous code-first agent (2026, Mat). Cross-source K1+K2.",
+    "ko_cells": [
+      "K2.O2",
+      "K4.O3"
+    ],
+    "ko_primary": "K2.O2",
+    "ko_note": "MatClaw autonomous code-first agent (2026, Mat). Cross-source K1+K2.",
+    "cross_source": true,
+    "type": "Method",
+    "domain": [],
+    "bib_only": true,
+    "ko_secondary": "K1"
+  }
+]

@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home — Scientific RAG Hub</title>
+<meta name="description" content="Scientific RAG Hub — a curated catalog of retrieval-augmented generation systems for scientific discovery.">
+<link rel="stylesheet" href="static/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E%F0%9F%94%AC%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">🔬</span>
+      <span class="logo-text">Scientific RAG Hub</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse</a>
+      <a href="index.html#grid">K×O Grid</a>
+      <a href="index.html#domains">Domains</a>
+      <a href="about.html">About</a>
+      <a href="llms.txt" title="LLM-friendly index">llms.txt</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">AI for Science · Retrieval-Augmented Generation</p>
+    <h1>The catalog of scientific RAG systems, organized by Knowledge × Mission.</h1>
+    <p class="lede">
+      <strong>182</strong> methods, benchmarks, and datasets across
+      <strong>8</strong> scientific domains —
+      classified by a dual-axis taxonomy of Knowledge Source (K) × Operational Objective (O).
+      Companion to the TPAMI 2026 survey by Oh et al.
+    </p>
+    <div class="hero-search">
+      <input id="q" type="search" placeholder="Search by title, method, dataset, venue, or tag…" autofocus>
+      <span class="hero-search-hint">↵ to filter on <a href="browse.html">Browse</a></span>
+    </div>
+    <div class="hero-cta">
+      <a href="#grid" class="btn">Explore K×O grid</a>
+      <a href="browse.html" class="btn btn-secondary">Browse all 182</a>
+      <a href="about.html" class="btn btn-ghost">Read about the taxonomy</a>
+    </div>
+  </div>
+</section>
+
+<section id="grid" class="ko-grid-section">
+  <div class="wrap">
+    <h2 class="section-title">The K×O Grid — 12 cells</h2>
+    <p class="section-sub">
+      Each cell pairs a <em>knowledge source</em> (K, row) with an <em>operational objective</em> (O, column).
+      Cell counts include cross-listed cross-source papers. Sparse cells <strong>[K3.O3]</strong> and
+      <strong>[K4.O3]</strong> are explicit frontier opportunities in §11.
+    </p>
+    <table class="ko-grid">
+      <thead>
+        <tr>
+          <th class="corner"></th>
+          <th class="o-head"><span class="cell-axis">O1</span> Ground<span class="cell-axis-desc">Single-source grounding: retrieve, cite, answer over one corpus.</span></th>
+          <th class="o-head"><span class="cell-axis">O2</span> Synthesis<span class="cell-axis-desc">Multi-source integration, claim verification across documents.</span></th>
+          <th class="o-head"><span class="cell-axis">O3</span> Hypothesis<span class="cell-axis-desc">Generate new scientific candidates — molecules, mechanisms, parameters.</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="k-head"><span class="cell-axis">K1</span> Primary Literature<span class="cell-axis-desc">Peer-reviewed papers, preprints, scientific corpora (PubMed, arXiv, S2ORC, ChemRxiv, bioRxiv).</span></th>
+          <td class="ko-cell heat-high">
+            <a href="cell/K1.O1.html" class="cell-link">
+              <span class="cell-id">[K1.O1]</span>
+              <span class="cell-count">52</span>
+              <ul class="cell-top"><li>IRPAPERS</li>
+<li>OpenScholar</li>
+<li>EIC RAG Q&amp;A application</li></ul>
+            </a>
+          </td>
+          <td class="ko-cell heat-high">
+            <a href="cell/K1.O2.html" class="cell-link">
+              <span class="cell-id">[K1.O2]</span>
+              <span class="cell-count">22</span>
+              <ul class="cell-top"><li>MedRAGChecker</li>
+<li>TREC 2025 BioGen</li>
+<li>BiomedRAG</li></ul>
+            </a>
+          </td>
+          <td class="ko-cell heat-mid">
+            <a href="cell/K1.O3.html" class="cell-link">
+              <span class="cell-id">[K1.O3]</span>
+              <span class="cell-count">5</span>
+              <ul class="cell-top"><li>BioModels Custom QA</li>
+<li>PHA-related Domain-Expert QA Benchmark</li>
+<li>PT-RAG</li></ul>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th class="k-head"><span class="cell-axis">K2</span> Curated Knowledge Base<span class="cell-axis-desc">Community-maintained structured records (PubChem, RCSB PDB, AlphaFold DB, ChEMBL, UMLS, PrimeKG, Materials Project, OQMD, AFLOW).</span></th>
+          <td class="ko-cell heat-mid">
+            <a href="cell/K2.O1.html" class="cell-link">
+              <span class="cell-id">[K2.O1]</span>
+              <span class="cell-count">12</span>
+              <ul class="cell-top"><li>ChemRAG (Bench + Toolkit)</li>
+<li>ChemRxiv Retrieval</li>
+<li>ChemisTRAG-QA</li></ul>
+            </a>
+          </td>
+          <td class="ko-cell heat-mid">
+            <a href="cell/K2.O2.html" class="cell-link">
+              <span class="cell-id">[K2.O2]</span>
+              <span class="cell-count">6</span>
+              <ul class="cell-top"><li>MDSK-RAG</li>
+<li>GIT</li>
+<li>ade-corpus-v2</li></ul>
+            </a>
+          </td>
+          <td class="ko-cell heat-mid">
+            <a href="cell/K2.O3.html" class="cell-link">
+              <span class="cell-id">[K2.O3]</span>
+              <span class="cell-count">13</span>
+              <ul class="cell-top"><li>TaLiRAGen</li>
+<li>ChemLit-QA</li>
+<li>MARASON</li></ul>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th class="k-head"><span class="cell-axis">K3</span> Observational &amp; Experimental<span class="cell-axis-desc">Raw modality data: images, spectra, sequencing, time-series (cryo-EM, mass spec, telescope archives, EHR images).</span></th>
+          <td class="ko-cell heat-high">
+            <a href="cell/K3.O1.html" class="cell-link">
+              <span class="cell-id">[K3.O1]</span>
+              <span class="cell-count">22</span>
+              <ul class="cell-top"><li>Grounded Multimodal RAG</li>
+<li>Geo-MMRAG</li>
+<li>FactMM-RAG</li></ul>
+            </a>
+          </td>
+          <td class="ko-cell heat-low">
+            <a href="cell/K3.O2.html" class="cell-link">
+              <span class="cell-id">[K3.O2]</span>
+              <span class="cell-count">4</span>
+              <ul class="cell-top"><li>ImageRAG</li>
+<li>OCR-free vs Text MM-RAG</li>
+<li>EHRXQA</li></ul>
+            </a>
+          </td>
+          <td class="ko-cell heat-low frontier">
+            <a href="cell/K3.O3.html" class="cell-link">
+              <span class="cell-id">[K3.O3]</span>
+              <span class="cell-count">1</span>
+              <ul class="cell-top"><li>MassSpecGym</li></ul>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th class="k-head"><span class="cell-axis">K4</span> Tacit Knowledge<span class="cell-axis-desc">Institutional memory (RHIC, DUNE, CMS), lab protocols, private EHRs, governmental/industry process docs. ★ Novelty axis.</span></th>
+          <td class="ko-cell heat-low">
+            <a href="cell/K4.O1.html" class="cell-link">
+              <span class="cell-id">[K4.O1]</span>
+              <span class="cell-count">3</span>
+              <ul class="cell-top"><li>RHIC DAPP</li>
+<li>DBLP:journals/corr/abs-2603-09800</li>
+<li>rafique2025large</li></ul>
+            </a>
+          </td>
+          <td class="ko-cell heat-low">
+            <a href="cell/K4.O2.html" class="cell-link">
+              <span class="cell-id">[K4.O2]</span>
+              <span class="cell-count">4</span>
+              <ul class="cell-top"><li>HFLAV-QA</li>
+<li>DBLP:journals/corr/abs-2403-15729</li>
+<li>aplabprotocols2025</li></ul>
+            </a>
+          </td>
+          <td class="ko-cell heat-low frontier">
+            <a href="cell/K4.O3.html" class="cell-link">
+              <span class="cell-id">[K4.O3]</span>
+              <span class="cell-count">2</span>
+              <ul class="cell-top"><li>MDSK-RAG</li>
+<li>zhang2026matclaw</li></ul>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="domains" class="domains-section">
+  <div class="wrap">
+    <h2 class="section-title">By scientific domain</h2>
+    <div class="domain-grid">
+      <a href="domain/bio.html" class="domain-card">
+        <span class="domain-emoji">🧬</span>
+        <span class="domain-name">Biology</span>
+        <span class="domain-count">47 entries</span>
+      </a>
+      <a href="domain/chem.html" class="domain-card">
+        <span class="domain-emoji">⚗️</span>
+        <span class="domain-name">Chemistry</span>
+        <span class="domain-count">34 entries</span>
+      </a>
+      <a href="domain/medical.html" class="domain-card">
+        <span class="domain-emoji">🩺</span>
+        <span class="domain-name">Medicine</span>
+        <span class="domain-count">86 entries</span>
+      </a>
+      <a href="domain/material.html" class="domain-card">
+        <span class="domain-emoji">🪨</span>
+        <span class="domain-name">Materials Science</span>
+        <span class="domain-count">12 entries</span>
+      </a>
+      <a href="domain/physics.html" class="domain-card">
+        <span class="domain-emoji">⚛️</span>
+        <span class="domain-name">Physics</span>
+        <span class="domain-count">23 entries</span>
+      </a>
+      <a href="domain/earth.html" class="domain-card">
+        <span class="domain-emoji">🌍</span>
+        <span class="domain-name">Earth Science</span>
+        <span class="domain-count">22 entries</span>
+      </a>
+      <a href="domain/astronomy.html" class="domain-card">
+        <span class="domain-emoji">🔭</span>
+        <span class="domain-name">Astronomy</span>
+        <span class="domain-count">9 entries</span>
+      </a>
+      <a href="domain/Quantum.html" class="domain-card">
+        <span class="domain-emoji">🌀</span>
+        <span class="domain-name">Quantum</span>
+        <span class="domain-count">2 entries</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="types-section">
+  <div class="wrap">
+    <h2 class="section-title">By resource type</h2>
+    <div class="type-grid">
+      <a href="topics/method.html" class="type-card"><strong>Methods</strong><span>88</span></a>
+      <a href="topics/benchmark.html" class="type-card"><strong>Benchmarks</strong><span>87</span></a>
+      <a href="topics/dataset.html" class="type-card"><strong>Datasets</strong><span>5</span></a>
+      <a href="topics/summary.html" class="type-card"><strong>Surveys</strong><span>2</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="recent-section">
+  <div class="wrap">
+    <h2 class="section-title">Recently added (2025-2026)</h2>
+    <div class="card-grid">
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2601.22684" target="_blank" rel="noopener">BioModelsRAG: A Biological Modeling Assistant Using RAG (Retrieval Augmented Generation) ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">BioModels Custom QA</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">BioModelsRAG (2026, Bio). Cross-source K1+K2.</p>
+  <div class="card-tags"><a href="cell/K1.O3.html" class="tag tag-cell">K1.O3</a><a href="domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-xs">★ cross-source</span></div>
+</article>
+<article class="card">
+  <h3 class="card-title">BioModelsRAG: Biological Modeling Assistant</h3>
+  <div class="card-meta"><span class="meta-method">BioModelsRAG</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">K2 EXEMPLAR — curated systems-biology DB. SBML→Antimony→LLM-summary→ChromaDB pipeline.</p>
+  <div class="card-tags"><a href="domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="topics/method.html" class="tag tag-type">Methods</a></div>
+</article>
+<article class="card">
+  <h3 class="card-title">CLADD: RAG-Enhanced Collaborative LLM Agents for Drug Discovery</h3>
+  <div class="card-meta"><span class="meta-method">CLADD</span> · <span class="meta-venue">AAAI</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">★ K2.O3 EXEMPLAR. Multi-agent (Planning/KG/MU/Prediction). Anchor drug technique extends KG to novel molecules. CLADD beats fine-tuned baselines without any fine-tuning.</p>
+  <div class="card-tags"><a href="domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">KG</span><span class="tag tag-mod">SMILES</span></div>
+</article>
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2603.17765" target="_blank" rel="noopener">Grounded Multimodal Retrieval-Augmented Drafting of Radiology Impressions Using Case-Based Similarity ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">Grounded Multimodal RAG</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">이미지+텍스트 Late Fusion (a=0.5). Recall@5 0.975.</p>
+  <div class="card-tags"><a href="cell/K3.O1.html" class="tag tag-cell">K3.O1</a><a href="domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">Image</span></div>
+</article>
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2602.17687" target="_blank" rel="noopener">IRPAPERS: A VISUAL DOCUMENT BENCHMARK FOR SCIENTIFIC RETRIEVAL AND QUESTION ANSWERING ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">IRPAPERS</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">166 IR 논문 시각 문서 RAG 벤치마크. Hybrid Search Recall@20 95%.</p>
+  <div class="card-tags"><a href="cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">Image</span></div>
+</article>
+<article class="card">
+  <h3 class="card-title">MatClaw RAG Benchmark (pymatgen/atomate2)</h3>
+  <div class="card-meta"><span class="meta-method">MatClaw RAG Benchmark</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">Structure-aware chunking 99% accuracy. Code as domain knowledge.</p>
+  <div class="card-tags"><a href="domain/material.html" class="tag tag-domain">🪨Materials Science</a><a href="topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2601.06519v1" target="_blank" rel="noopener">MedRAGChecker: Claim-Level Verification for Biomedical Retrieval-Augmented Generation ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">MedRAGChecker</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">Atomic Claim 분해 + NLI + KG 융합. GPT-4.1 → 소형 모델 distill.</p>
+  <div class="card-tags"><a href="cell/K1.O2.html" class="tag tag-cell">K1.O2</a><a href="domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">KG</span></div>
+</article>
+<article class="card">
+  <h3 class="card-title">OER-DFT (HEA) — LLM-Driven Discovery of High-Entropy Catalysts via RAG</h3>
+  <div class="card-meta"><span class="meta-method">OER-DFT (HEA)</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">★ K2.O3 + Materials. LLM+RAG generates catalysts; VASP PBE+U DFT verifies. Top: Fe0.2Co0.2Ni0.2Ir0.1Ru0.3 ηOER=0.285V (25% improvement over IrO2).</p>
+  <div class="card-tags"><a href="domain/material.html" class="tag tag-domain">🪨Materials Science</a><a href="domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">Structured Table</span></div>
+</article>
+<article class="card">
+  <h3 class="card-title">OpenScholar: Synthesizing Scientific Literature with RAG LMs</h3>
+  <div class="card-meta"><span class="meta-method">OpenScholar</span> · <span class="meta-venue">Nature</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">★★ K1.O2 FLAGSHIP. Iterative self-feedback. 0% hallucination vs GPT-4o 78-90%. Experts prefer OpenScholar-GPT-4o over human 70%. Public demo 30K users.</p>
+  <div class="card-tags"><a href="cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="domain/physics.html" class="tag tag-domain">⚛️Physics</a><a href="topics/method.html" class="tag tag-type">Methods</a></div>
+</article>
+    </div>
+  </div>
+</section>
+
+<script>
+document.getElementById('q')?.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    const q = encodeURIComponent(e.target.value);
+    window.location.href = 'browse.html?q=' + q;
+  }
+});
+</script>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>
+      <strong>Scientific RAG Hub</strong> — companion catalog to the TPAMI 2026 survey
+      <em>"Scientific Retrieval-Augmented Generation: A Survey through Knowledge Source and Scientific Mission"</em>
+      by Oh et al. (Vision and Learning Lab, Seoul National University).
+    </p>
+    <p class="links">
+      <a href="llms.txt">llms.txt</a> ·
+      <a href="llms-full.txt">llms-full.txt</a> ·
+      <a href="data/papers.json">papers.json</a> ·
+      <a href="about.html">About</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

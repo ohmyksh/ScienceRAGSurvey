@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About — Scientific RAG Hub</title>
+<meta name="description" content="Scientific RAG Hub — a curated catalog of retrieval-augmented generation systems for scientific discovery.">
+<link rel="stylesheet" href="static/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E%F0%9F%94%AC%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">🔬</span>
+      <span class="logo-text">Scientific RAG Hub</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse</a>
+      <a href="index.html#grid">K×O Grid</a>
+      <a href="index.html#domains">Domains</a>
+      <a href="about.html">About</a>
+      <a href="llms.txt" title="LLM-friendly index">llms.txt</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<section class="prose">
+  <div class="wrap">
+    <h1>About Scientific RAG Hub</h1>
+    <p class="lede">
+      A curated catalog of <strong>182 retrieval-augmented generation</strong> systems,
+      benchmarks, and datasets across the sciences — the companion resource to the TPAMI 2026 survey
+      <em>"Scientific Retrieval-Augmented Generation: A Survey through Knowledge Source and Scientific Mission."</em>
+    </p>
+
+    <h2>The K×O taxonomy</h2>
+    <p>
+      We argue that scientific RAG is a <em>deterministic engine</em> constrained by physical laws,
+      stoichiometric exactness, and experimental protocols — not by the probabilistic semantic proximity
+      on which general-purpose RAG depends. Two axes capture what most shapes a scientific RAG system:
+    </p>
+    <h3>Knowledge Source (K) — what you draw upon</h3>
+    <ul>
+      <li><strong>K1 Primary Literature</strong> — peer-reviewed papers, preprints, scientific corpora.</li>
+      <li><strong>K2 Curated Knowledge Base</strong> — community-maintained structured records (PubChem, RCSB PDB, Materials Project…).</li>
+      <li><strong>K3 Observational & Experimental</strong> — image, spectra, sequencing, time-series modalities.</li>
+      <li><strong>K4 Tacit Knowledge</strong> — institutional memory, lab protocols, private EHRs, industry process docs. ★ Novelty axis.</li>
+    </ul>
+    <h3>Operational Objective (O) — what you do with it</h3>
+    <ul>
+      <li><strong>O1 Ground</strong> — single-source grounding (retrieve · cite · answer).</li>
+      <li><strong>O2 Synthesis</strong> — multi-source integration, claim verification.</li>
+      <li><strong>O3 Hypothesis</strong> — generate new candidates (molecules, mechanisms, parameters).</li>
+    </ul>
+
+    <h2>Why this taxonomy</h2>
+    <p>
+      Existing RAG surveys classify systems by retriever-generator pipeline. That view misses what most
+      shapes a <em>scientific</em> RAG system: the epistemic tier of the source and the scientific operation
+      performed on it. The K×O grid surfaces structural patterns invisible to pipeline-centric views —
+      dense cells (e.g. <strong>[K1.O1]</strong> medical QA, <strong>[K2.O3]</strong> drug/catalyst generation),
+      and frontier cells (<strong>[K3.O3]</strong>, <strong>[K4.O3]</strong>) where opportunity remains.
+    </p>
+
+    <h2>Cell distribution</h2>
+    <table class="ko-stat">
+      <thead><tr><th>Cell</th><th>Count</th><th>K × O</th></tr></thead>
+      <tbody>
+    <tr><th>K1.O1</th><td>52</td><td>Primary Literature × Ground</td></tr>
+    <tr><th>K1.O2</th><td>22</td><td>Primary Literature × Synthesis</td></tr>
+    <tr><th>K1.O3</th><td>5</td><td>Primary Literature × Hypothesis</td></tr>
+    <tr><th>K2.O1</th><td>12</td><td>Curated Knowledge Base × Ground</td></tr>
+    <tr><th>K2.O2</th><td>6</td><td>Curated Knowledge Base × Synthesis</td></tr>
+    <tr><th>K2.O3</th><td>13</td><td>Curated Knowledge Base × Hypothesis</td></tr>
+    <tr><th>K3.O1</th><td>22</td><td>Observational &amp; Experimental × Ground</td></tr>
+    <tr><th>K3.O2</th><td>4</td><td>Observational &amp; Experimental × Synthesis</td></tr>
+    <tr><th>K3.O3</th><td>1</td><td>Observational &amp; Experimental × Hypothesis</td></tr>
+    <tr><th>K4.O1</th><td>3</td><td>Tacit Knowledge × Ground</td></tr>
+    <tr><th>K4.O2</th><td>4</td><td>Tacit Knowledge × Synthesis</td></tr>
+    <tr><th>K4.O3</th><td>2</td><td>Tacit Knowledge × Hypothesis</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Five Unique Requirements of Scientific RAG</h2>
+    <ol>
+      <li><strong>Mandatory Claim Attribution</strong> — every claim traceable to source unit.</li>
+      <li><strong>Relational Knowledge Coupling</strong> — facts in webs (PDB ↔ UniProt ↔ ChEMBL); traverse couplings.</li>
+      <li><strong>Source Reliability Tiering</strong> — paper / preprint / curated / lab-note carry different epistemic weight.</li>
+      <li><strong>Protocol-level Reproducibility</strong> — enough method detail for expert to reproduce.</li>
+      <li><strong>Domain-Native Representations</strong> — SMILES, InChI, FASTA, LaTeX, CIF, DICOM — no text flattening.</li>
+    </ol>
+
+    <h2>How to use the catalog</h2>
+    <ul>
+      <li><a href="index.html#grid">K×O Grid</a> — pick a cell to see all systems landing there.</li>
+      <li><a href="index.html#domains">Domains</a> — browse by scientific field.</li>
+      <li><a href="browse.html">Browse</a> — full searchable, filterable catalog.</li>
+      <li><a href="llms.txt">/llms.txt</a> · <a href="llms-full.txt">/llms-full.txt</a> — LLM-friendly indices.</li>
+      <li><a href="data/papers.json">papers.json</a> — full machine-readable dump (one JSON, all metadata).</li>
+    </ul>
+
+    <h2>Methodology</h2>
+    <p>
+      Entries are sourced from a Notion-tracked literature database curated by the Vision and Learning Lab,
+      cross-referenced against the survey's master bibliography. K×O assignments are author-verified for
+      138 papers via full Notion fetch; the remaining ~44 are tagged provisionally pending re-verification.
+      Cross-source papers (e.g. <strong>MedGraphRAG</strong> spanning K1+K2+K4) appear in multiple cells.
+    </p>
+    <p>
+      Authoritative source files live in <code>/gallery_millet/yerim.oh/ScienceRAGServey/ver/2/</code>
+      (<code>main.tex</code>, <code>references.bib</code>). The catalog data pipeline is reproducible from
+      <code>site/build/</code>.
+    </p>
+
+    <h2>Contributing</h2>
+    <p>
+      Missing entries, mis-classifications, or new systems? Open an issue or PR on the
+      GitHub repo. The build is fully deterministic — edit <code>data/ko_assignments.json</code>
+      (or the source Notion DB) and re-run <code>build/render_html.py</code>.
+    </p>
+
+    <h2>Cite</h2>
+    <pre><code>@article{oh2026sciragsurvey,
+  title   = {Scientific Retrieval-Augmented Generation: A Survey through
+             Knowledge Source and Scientific Mission},
+  author  = {Oh, Yerim and others},
+  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year    = {2026}
+}</code></pre>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>
+      <strong>Scientific RAG Hub</strong> — companion catalog to the TPAMI 2026 survey
+      <em>"Scientific Retrieval-Augmented Generation: A Survey through Knowledge Source and Scientific Mission"</em>
+      by Oh et al. (Vision and Learning Lab, Seoul National University).
+    </p>
+    <p class="links">
+      <a href="llms.txt">llms.txt</a> ·
+      <a href="llms-full.txt">llms-full.txt</a> ·
+      <a href="data/papers.json">papers.json</a> ·
+      <a href="about.html">About</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

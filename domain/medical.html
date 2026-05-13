@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Medicine — Scientific RAG Hub</title>
+<meta name="description" content="Scientific RAG Hub — a curated catalog of retrieval-augmented generation systems for scientific discovery.">
+<link rel="stylesheet" href="../static/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E%F0%9F%94%AC%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="logo">
+      <span class="logo-mark">🔬</span>
+      <span class="logo-text">Scientific RAG Hub</span>
+    </a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="../browse.html">Browse</a>
+      <a href="../index.html#grid">K×O Grid</a>
+      <a href="../index.html#domains">Domains</a>
+      <a href="../about.html">About</a>
+      <a href="../llms.txt" title="LLM-friendly index">llms.txt</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<section class="domain-hero">
+  <div class="wrap">
+    <p class="eyebrow"><a href="../index.html#domains">← Domains</a></p>
+    <h1>🩺 Medicine</h1>
+    <p class="lede"><strong>86</strong> entries in the medicine domain.</p>
+    <div class="cell-breakdown"><span class="muted">K×O distribution:</span> <a href="../cell/K3.O1.html" class="pill">[K3.O1] 17</a><a href="../cell/K1.O1.html" class="pill">[K1.O1] 16</a><a href="../cell/K1.O2.html" class="pill">[K1.O2] 10</a><a href="../cell/K2.O3.html" class="pill">[K2.O3] 7</a><a href="../cell/K3.O2.html" class="pill">[K3.O2] 3</a><a href="../cell/K2.O1.html" class="pill">[K2.O1] 3</a><a href="../cell/K2.O2.html" class="pill">[K2.O2] 2</a><a href="../cell/K1.O3.html" class="pill">[K1.O3] 1</a></div>
+  </div>
+</section>
+
+<section class="domain-list">
+  <div class="wrap">
+    <div class="card-grid"><article class="card">
+  <h3 class="card-title">CLADD: RAG-Enhanced Collaborative LLM Agents for Drug Discovery</h3>
+  <div class="card-meta"><span class="meta-method">CLADD</span> · <span class="meta-venue">AAAI</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">★ K2.O3 EXEMPLAR. Multi-agent (Planning/KG/MU/Prediction). Anchor drug technique extends KG to novel molecules. CLADD beats fine-tuned baselines without any fine-tuning.</p>
+  <div class="card-tags"><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="../topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">KG</span><span class="tag tag-mod">SMILES</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2603.17765" target="_blank" rel="noopener">Grounded Multimodal Retrieval-Augmented Drafting of Radiology Impressions Using Case-Based Similarity ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">Grounded Multimodal RAG</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">이미지+텍스트 Late Fusion (a=0.5). Recall@5 0.975.</p>
+  <div class="card-tags"><a href="../cell/K3.O1.html" class="tag tag-cell">K3.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2601.06519v1" target="_blank" rel="noopener">MedRAGChecker: Claim-Level Verification for Biomedical Retrieval-Augmented Generation ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">MedRAGChecker</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">Atomic Claim 분해 + NLI + KG 융합. GPT-4.1 → 소형 모델 distill.</p>
+  <div class="card-tags"><a href="../cell/K1.O2.html" class="tag tag-cell">K1.O2</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">KG</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">OpenScholar: Synthesizing Scientific Literature with RAG LMs</h3>
+  <div class="card-meta"><span class="meta-method">OpenScholar</span> · <span class="meta-venue">Nature</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">★★ K1.O2 FLAGSHIP. Iterative self-feedback. 0% hallucination vs GPT-4o 78-90%. Experts prefer OpenScholar-GPT-4o over human 70%. Public demo 30K users.</p>
+  <div class="card-tags"><a href="../cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/physics.html" class="tag tag-domain">⚛️Physics</a><a href="../topics/method.html" class="tag tag-type">Methods</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2603.21582" target="_blank" rel="noopener">Overview of TREC 2025 Biomedical Generative Retrieval (BioGen) Track ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">TREC 2025 BioGen</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">TREC 2025 BioGen Track (2026, Bio).</p>
+  <div class="card-tags"><a href="../cell/K1.O2.html" class="tag tag-cell">K1.O2</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">Patho-AgenticRAG: Multimodal Agentic RAG for Pathology VLMs via RL</h3>
+  <div class="card-meta"><span class="meta-method">Patho-AgenticRAG</span> · <span class="meta-venue">AAAI</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">GRPO-trained agentic router. 600 textbooks → 200K page-level multimodal KB. +38pp on MedXpertQA over Patho-R1 baseline. Private DB but textbook-derived.</p>
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://doi.org/10.1038/s41586-025-10072-4" target="_blank" rel="noopener">Synthesizing Scientific Literature with Retrieval-Augmented Language Models ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">ScholarQABench</span> · <span class="meta-venue">Nature</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">OpenScholar의 다학제 장문 합성 벤치마크.</p>
+  <div class="card-tags"><a href="../cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/physics.html" class="tag tag-domain">⚛️Physics</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">TaLiRAGen: target-aware ligand generation via RAG LLMs</h3>
+  <div class="card-meta"><span class="meta-method">TaLiRAGen</span> · <span class="meta-venue">Molecular Diversity</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">★ K2.O3 EXEMPLAR. No-training RAG+LLM SBDD. Evidence-theoretic norm metric.</p>
+  <div class="card-tags"><a href="../cell/K2.O3.html" class="tag tag-cell">K2.O3</a><a href="../domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">SMILES</span><span class="tag tag-mod">3D Structure</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">AlzheimerRAG: Multimodal RAG for Clinical Use Cases</h3>
+  <div class="card-meta"><span class="meta-method">AlzheimerRAG</span> · <span class="meta-venue">Mach. Learn. Knowl. Extr.</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">Cross-modal fusion. 84% accuracy in clinical scenarios. 6% hallucination.</p>
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">Structured Table</span><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2402.18060" target="_blank" rel="noopener">Benchmarking Large Language Models on Answering and Explaining Challenging Medical Questions ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">Medbullets</span> · <span class="meta-venue">NAACL</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">Benchmark LLM challenging medical Qs (2025, Med).</p>
+  <div class="card-tags"><a href="../cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2405.00465" target="_blank" rel="noopener">BiomedRAG: A Retrieval Augmented Large Language Model for Biomedicine ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">BiomedRAG</span> · <span class="meta-venue">Journal of Biomedical Informatics</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">Tailored Chunk Scorer로 LLM Perplexity 학습. GIT +22.43%p F1.</p>
+  <div class="card-tags"><a href="../cell/K1.O2.html" class="tag tag-cell">K1.O2</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">CPDD (Chronic Pain Diagnostic Dataset / MedRAG benchmark)</h3>
+  <div class="card-meta"><span class="meta-method">CPDD</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">★ K4: Private hospital EHR. Used by MedRAG (KG-elicited).</p>
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://aclanthology.org/2025.emnlp-industry.3/" target="_blank" rel="noopener">CRAB: A Benchmark for Evaluating Curation of Retrieval-Augmented LLMs in Biomedicine ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">CRAB</span> · <span class="meta-venue">EMNLP (Industry Track)</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">생의학 다국어 큐레이션 벤치마크. 추론특화 LLM에서 과도한 추론 현상 발견.</p>
+  <div class="card-tags"><a href="../cell/K1.O2.html" class="tag tag-cell">K1.O2</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2512.16802" target="_blank" rel="noopener">Exploration of Augmentation Strategies in Multi-modal Retrieval-Augmented Generation for the Biomedical Domain ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">OCR-free vs Text MM-RAG</span> · <span class="meta-venue">IEEE BigData</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">중간모델은 텍스트변환, GPT-5는 OCR-free 우세. ColFlor 174M 5.25배 빠름.</p>
+  <div class="card-tags"><a href="../cell/K3.O2.html" class="tag tag-cell">K3.O2</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">Structured Table</span><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">Fact-Aware Multimodal Retrieval Augmentation for Accurate Medical Radiology Report Generation</h3>
+  <div class="card-meta"><span class="meta-method">FactMM-RAG</span> · <span class="meta-venue">NAACL</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">RadGraph 기반 Factual Pair Mining + LLaVA. MIMIC-CXR F1CheXbert +6.5%.</p>
+  <div class="card-tags"><a href="../cell/K3.O1.html" class="tag tag-cell">K3.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">HiPerRAG: High-Performance RAG for Scientific Insights</h3>
+  <div class="card-meta"><span class="meta-method">HiPerRAG</span> · <span class="meta-venue">PASC</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">HPC-scale (Polaris/Sunspot/Frontier). Oreo parser 4.5x faster. ProteinInteractionQA/FunctionQA/BioSynthQP self-made.</p>
+  <div class="card-tags"><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="../domain/physics.html" class="tag tag-domain">⚛️Physics</a><a href="../topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">Image</span><span class="tag tag-mod">Structured Table</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2408.00727" target="_blank" rel="noopener">Improving Retrieval-Augmented Generation in Medicine with Iterative Follow-up Questions ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">i-MedRAG</span> · <span class="meta-venue">PSB</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">의료 RAG 후속 쿼리 반복 생성. MedQA Zero-shot GPT-3.5 69.68% SOTA.</p>
+  <div class="card-tags"><a href="../cell/K1.O2.html" class="tag tag-cell">K1.O2</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2508.17394" target="_blank" rel="noopener">LVLM-Aware Multimodal Retrieval for RAG-Based Medical Diagnosis with General-Purpose Models ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">CLARE</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">의료 특화 사전학습 없이 범용 LVLM+Retriever 경량 파인튜닝. Inconsistent Retrieval Predictions 문제 개선.</p>
+  <div class="card-tags"><a href="../cell/K3.O1.html" class="tag tag-cell">K3.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">MMed-RAG: Versatile Multimodal RAG System for Medical VLMs</h3>
+  <div class="card-meta"><span class="meta-method">MMed-RAG</span> · <span class="meta-venue">ICLR</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">★ K3 multimodal. Domain-aware retriever (radiology/pathology/ophthalmology). DPO-based RAG-PT for cross-modal alignment.</p>
+  <div class="card-tags"><a href="../cell/K3.O1.html" class="tag tag-cell">K3.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2506.22900" target="_blank" rel="noopener">MOTOR: Multimodal Optimal Transport via Grounded Retrieval in Medical Visual Question Answering ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">MOTOR</span> · <span class="meta-venue">MICCAI</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">Training-free 멀티모달 OT 기반 재랭킹. SOTA 대비 평균 6.45% 향상.</p>
+  <div class="card-tags"><a href="../cell/K3.O1.html" class="tag tag-cell">K3.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">MedGraphRAG: Evidence-based Medical LLM via Graph RAG</h3>
+  <div class="card-meta"><span class="meta-method">MedGraphRAG</span> · <span class="meta-venue">ACL</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">★★ K1+K2+K4 TRIPLE EXAMPLE. Hierarchical 3-tier graph. U-Retrieval. Strong evidence for §4.5 cross-source integration.</p>
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">KG</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2502.04413" target="_blank" rel="noopener">MedRAG: Enhancing Retrieval-augmented Generation with Knowledge Graph-Elicited Reasoning for Healthcare Copilot ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">MedRAG</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">EHR + 4계층 KG. 유사 증상 변별 + Proactive Questioning.</p>
+  <div class="card-tags"><a href="../cell/K2.O1.html" class="tag tag-cell">K2.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">KG</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2501.18362" target="_blank" rel="noopener">MedXpertQA: Benchmarking Expert-Level Medical Reasoning and Understanding ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">MedXpertQA</span> · <span class="meta-venue">ICML</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">전문가 수준 의료 다단계 추론 MCQ 벤치마크. Patho-AgenticRAG에서 90문항 서브셋으로 평가. RAG 도입 시 +38%p Accuracy 향상.</p>
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2502.13668" target="_blank" rel="noopener">PeerQA: A Scientific Question Answering Dataset from Peer Reviews ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">PeerQA Baselines</span> · <span class="meta-venue">NAACL</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">Peer review 질문+ 원 저자 답변. Long-context QA. 제목 prepend 검색 향상.</p>
+  <div class="card-tags"><a href="../cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="../domain/earth.html" class="tag tag-domain">🌍Earth Science</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/dataset.html" class="tag tag-type">Datasets</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2508.12036" target="_blank" rel="noopener">Q-FSRU: Quantum-Augmented Frequency-Spectral Fusion for Medical Visual Question Answering ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">Q-FSRU</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">FFT 주파수 도메인 + Quantum Fidelity. VQA-RAD 91.6%. 양자 영감 메커니즘은 고전 근사.</p>
+  <div class="card-tags"><a href="../cell/K3.O1.html" class="tag tag-cell">K3.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">RAG for 10 LLMs in assessing medical fitness</h3>
+  <div class="card-meta"><span class="meta-method">LLM-RAG pipeline for preoperative medicine</span> · <span class="meta-venue">npj Digital Medicine</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">GPT-4 RAG accuracy 96.4% &gt; human MD avg 86.6%. K4 partial via local hospital protocols.</p>
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">RAR2: Retrieval-Augmented Medical Reasoning via Thought-Driven Retrieval</h3>
+  <div class="card-meta"><span class="meta-method">RAR2</span> · <span class="meta-venue">EMNLP (Findings)</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">Thought 검색+검색 추론 동시 DPO. Test-time scaling.</p>
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">Rag2Mol: structure-based drug design based on RAG</h3>
+  <div class="card-meta"><span class="meta-method">Rag2Mol</span> · <span class="meta-venue">Briefings in Bioinformatics</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">★ K2.O3. Cross-KNN graph fusion. PTPN2 undruggable target case validated.</p>
+  <div class="card-tags"><a href="../cell/K2.O3.html" class="tag tag-cell">K2.O3</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="../topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">3D Structure</span><span class="tag tag-mod">SMILES</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">Rationale-Guided Retrieval Augmented Generation for Medical Question Answering</h3>
+  <div class="card-meta"><span class="meta-method">RAG²</span> · <span class="meta-venue">NAACL</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">perplexity-차이 자동 라벨링으로 소형 필터 모델 학습 + rationale 쿼리 + 균등검색. SOTA on MedQA.</p>
+  <div class="card-tags"><a href="../cell/K1.O2.html" class="tag tag-cell">K1.O2</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">Retrieval-Augmented Generation Assistant for Anatomical Pathology Laboratories</h3>
+  <div class="card-meta"><span class="meta-method">RAG-AP</span> · <span class="meta-venue">Emerging Science Journal</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">K4 NOVELTY EXAMPLE — internal lab protocols as retrieval source. k=1 best F1=0.50. Hybrid + MedEmbed best on RAGAS.</p>
+  <div class="card-tags"><a href="../cell/K3.O1.html" class="tag tag-cell">K3.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">Retrieval-augmented generation elevates local LLM quality in radiology contrast media consultation</h3>
+  <div class="card-meta"><span class="meta-method">Llama 3.2 11B + RAG</span> · <span class="meta-venue">npj Digital Medicine</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">local-LLM + RAG → hallucination 0% (was 8%); HIPAA/GDPR compliant.</p>
+  <div class="card-tags"><a href="../cell/K3.O1.html" class="tag tag-cell">K3.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">Retrieval-augmented generation for generative AI in health care</h3>
+  <div class="card-meta"><span class="meta-venue">npj Health Systems</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">Perspective paper on RAG in healthcare: equity, reliability, personalization. Type=summary.</p>
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/summary.html" class="tag tag-type">Surveys</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2502.14739" target="_blank" rel="noopener">SuperGPQA: Scaling LLM Evaluation Across 285 Graduate Disciplines ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">SuperGPQA</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">13개 학문, 72개 분야, 285개 대학원 수준 세부 전공. Human-LLM Collaborative Filtering.</p>
+  <div class="card-tags"><a href="../cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="../domain/material.html" class="tag tag-domain">🪨Materials Science</a><a href="../domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/physics.html" class="tag tag-domain">⚛️Physics</a><a href="../domain/earth.html" class="tag tag-domain">🌍Earth Science</a><a href="../domain/astronomy.html" class="tag tag-domain">🔭Astronomy</a><a href="../domain/Quantum.html" class="tag tag-domain">🌀Quantum</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://github.com/Jack-ZC8/Omni-RAG-Medical" target="_blank" rel="noopener">Towards Omni-RAG: Comprehensive Retrieval-Augmented Generation for Large Language Models in Medical Applications ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">Source Planning Optimisation (SPO)</span> · <span class="meta-venue">ACL</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">5개 다중 구조 의료 KB(MedOmniKB) 구축 + SPO 기법. 소형 Planner가 10배 큰 모델 능가.</p>
+  <div class="card-tags"><a href="../cell/K1.O2.html" class="tag tag-cell">K1.O2</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">KG</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">BIORAG: RAG-LLM Framework for Biological Question Reasoning</h3>
+  <div class="card-meta"><span class="meta-method">BIORAG</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2024</span></div>
+  <p class="card-note">★ Cross-source K1+K2. MeSH hierarchical filter + dense retrieval. Self-eval loop. SOTA on GeneTuring.</p>
+  <div class="card-tags"><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://physionet.org/content/brazilian-ophthalmological/1.0.0/" target="_blank" rel="noopener">BRSET: A Brazilian Multilabel Ophthalmological Dataset of Retina Fundus Photos ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">BRSET</span> · <span class="meta-venue">PLOS Digital Health</span> · <span class="meta-year">2024</span></div>
+  <p class="card-note">브라질 14 망막 병리. CLARE F1 0.37.</p>
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">CSV</span><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">Benchmarking Retrieval-Augmented Generation for Medicine</h3>
+  <div class="card-meta"><span class="meta-method">MEDRAG</span> · <span class="meta-venue">ACL (Findings)</span> · <span class="meta-year">2024</span></div>
+  <p class="card-note">의료 QA 전용 RAG 툴킷+벤치마크. PubMed+RRF-4 최적. GPT-3.5+MEDRAG가 CoT GPT-4에 근접.</p>
+  <div class="card-tags"><a href="../cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../topics/dataset.html" class="tag tag-type">Datasets</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2310.16146" target="_blank" rel="noopener">CLINFO.AI: AN OPEN-SOURCE RETRIEVAL-AUGMENTED LARGE LANGUAGE MODEL SYSTEM FOR ANSWERING MEDICAL QUESTIONS USING SCIENTIFIC LITERATURE ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">PubMedRS-200</span> · <span class="meta-venue">PSB</span> · <span class="meta-year">2024</span></div>
+  <p class="card-note">PubMed SR 의료 QA 벤치마크. Clinfo.ai PSB 2024.</p>
+  <div class="card-tags"><a href="../cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2403.19949" target="_blank" rel="noopener">FairCLIP: Harnessing Fairness in Vision-Language Learning ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">Harvard-FairVLMed</span> · <span class="meta-venue">CVPR</span> · <span class="meta-year">2024</span></div>
+  <p class="card-note">의료 VLM 인구통계학 편향 평가. 첫 공정성 측정 데이터셋.</p>
+  <div class="card-tags"><a href="../cell/K3.O1.html" class="tag tag-cell">K3.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">OmniMedVQA: A New Large-Scale Comprehensive Evaluation Benchmark for Medical LVLM</h3>
+  <div class="card-meta"><span class="meta-method">OmniMedVQA</span> · <span class="meta-venue">CVPR</span> · <span class="meta-year">2024</span></div>
+  <p class="card-note">의료 LVLM 종합. Patho-AgenticRAG 90.11%.</p>
+  <div class="card-tags"><a href="../cell/K3.O1.html" class="tag tag-cell">K3.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">PathMMU: A Massive Multimodal Expert-Level Benchmark for Understanding and Reasoning in Pathology</h3>
+  <div class="card-meta"><span class="meta-method">PathMMU</span> · <span class="meta-venue">ECCV</span> · <span class="meta-year">2024</span></div>
+  <p class="card-note">5개 다중 출처 기반의 전문가 수준 병리학 Multimodal MCQ 벤치마크. 8,454문항 (Test). SocialPath는 게시물 삭제 시 데이터 유실이 한계점.</p>
+  <div class="card-tags"><a href="../cell/K3.O1.html" class="tag tag-cell">K3.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">f-RAG: Molecule Generation with Fragment Retrieval Augmentation</h3>
+  <div class="card-meta"><span class="meta-method">f-RAG</span> · <span class="meta-venue">NeurIPS</span> · <span class="meta-year">2024</span></div>
+  <p class="card-note">★ K2.O3. First fragment-level RAG. Hard/Soft dual retrieval. SAFE-GPT + FIM (Linear, &lt;4hr training).</p>
+  <div class="card-tags"><a href="../domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">SMILES</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://papers.neurips.cc/paper/2023/hash/0c007ebef1d11fd48da6ce4f54687db6-Abstract-Datasets_and_Benchmarks.html" target="_blank" rel="noopener">EHRXQA: A Multi-Modal Question Answering Dataset for Electronic Health Records with Chest X-ray Images ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">EHRXQA</span> · <span class="meta-venue">NeurIPS</span> · <span class="meta-year">2023</span></div>
+  <p class="card-note">EHR 테이블+흘부 X-ray 통합 멀티모달 QA. NeuralSQL. MOTOR 58.04%.</p>
+  <div class="card-tags"><a href="../cell/K3.O2.html" class="tag tag-cell">K3.O2</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">Structured Table</span><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://doi.org/10.1038/s41586-023-06291-2" target="_blank" rel="noopener">Large language models encode clinical knowledge ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">MultiMedQA</span> · <span class="meta-venue">Nature</span> · <span class="meta-year">2023</span></div>
+  
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">LitQA (PaperQA benchmark)</h3>
+  <div class="card-meta"><span class="meta-method">LitQA</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2023</span></div>
+  <p class="card-note">★ Cross-domain (bio+chem+physics+medical). Anti-contamination via post-cutoff papers + &#x27;Insufficient info&#x27; option.</p>
+  <div class="card-tags"><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="../domain/physics.html" class="tag tag-domain">⚛️Physics</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://aclanthology.org/2023.ijcnlp-long.42/" target="_blank" rel="noopener">MedRedQA for medical consumer question answering: Dataset, tasks, and neural baselines ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">MedRedQA</span> · <span class="meta-venue">IJCNLP</span> · <span class="meta-year">2023</span></div>
+  <p class="card-note">Reddit r/AskDocs 기반 실제 소비자 의료 QA. 51,000개+ 쌍. 인증 의료인 답변만 필터링. MedRAGChecker(arXiv 2026)에서 사실성 평가에 활용.</p>
+  <div class="card-tags"><a href="../cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://physionet.org/content/medical-diff-vqa/" target="_blank" rel="noopener">Medicaldiff-vqa: a large-scale medical dataset for difference visual question answering on chest x-ray images ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">Medical-Diff-VQA</span> · <span class="meta-venue">PhysioNet</span> · <span class="meta-year">2023</span></div>
+  <p class="card-note">MIMIC-CXR 기반 종단적 흘부 X-ray VQA. 7가지 카테고리, 700K QA 쌍. MOTOR(arXiv 2025)에서 64.52% SOTA.</p>
+  <div class="card-tags"><a href="../cell/K3.O2.html" class="tag tag-cell">K3.O2</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2303.07240" target="_blank" rel="noopener">PMC-CLIP: Contrastive Language-Image Pre-training using Biomedical Documents ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">PMC-OA</span> · <span class="meta-venue">MICCAI</span> · <span class="meta-year">2023</span></div>
+  <p class="card-note">PMC 오픈액세스 160만 쾼 생의학 시각-언어. PMC-CLIP 사전학습용.</p>
+  <div class="card-tags"><a href="../cell/K3.O1.html" class="tag tag-cell">K3.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2312.07559v2" target="_blank" rel="noopener">PaperQA: Retrieval-Augmented Generative Agent for Scientific Research ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">PaperQA</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2023</span></div>
+  <p class="card-note">Map-Reduce 환각 0% 인용 답변. LitQA 신규 벤치마크.</p>
+  <div class="card-tags"><a href="../cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2310.18463" target="_blank" rel="noopener">PeTailor: Improving Large Language Model by Tailored Chunk Scorer in Biomedical Triple Extraction ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">GIT</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2023</span></div>
+  <p class="card-note">유전자-질환 트리플 추출. BiomedRAG +22.43%p F1.</p>
+  <div class="card-tags"><a href="../cell/K2.O2.html" class="tag tag-cell">K2.O2</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2306.11207" target="_blank" rel="noopener">Quilt-1M: One Million Image-Text Pairs for Histopathology ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">Quilt-1M</span> · <span class="meta-venue">NeurIPS</span> · <span class="meta-year">2023</span></div>
+  <p class="card-note">YouTube 조직병리 ASR 100만 쾼 벤치마크. 기존 5배+.</p>
+  <div class="card-tags"><a href="../cell/K3.O1.html" class="tag tag-cell">K3.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2303.00534" target="_blank" rel="noopener">RAMM: Retrieval-augmented Biomedical Visual Question Answering with Multi-modal Pre-training ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">RAMM</span> · <span class="meta-venue">ACM MM</span> · <span class="meta-year">2023</span></div>
+  <p class="card-note">PubMed Case Report PMCPM 398K + Retrieval-Attention. 4 벤치마크 SOTA.</p>
+  <div class="card-tags"><a href="../cell/K3.O1.html" class="tag tag-cell">K3.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://doi.org/10.1101/2023.05.02.23289410" target="_blank" rel="noopener">Repurposing non-pharmacological interventions for Alzheimer&#x27;s disease through link prediction on biomedical literature ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">ADInt</span> · <span class="meta-venue">medRxiv</span> · <span class="meta-year">2023</span></div>
+  <p class="card-note">AD Link Prediction. BiomedRAG.</p>
+  <div class="card-tags"><a href="../cell/K1.O3.html" class="tag tag-cell">K1.O3</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2211.13308" target="_blank" rel="noopener">SciRepEval: A Multi-Format Benchmark for Scientific Document Representations ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">SciRepEval</span> · <span class="meta-venue">EMNLP</span> · <span class="meta-year">2023</span></div>
+  <p class="card-note">4 포맷 24 태스크 SPECTER2.</p>
+  <div class="card-tags"><a href="../cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="../domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/physics.html" class="tag tag-domain">⚛️Physics</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://doi.org/10.1038/s41598-023-33607-z" target="_blank" rel="noopener">The SciQA Scientific Question Answering Benchmark for Scholarly Knowledge ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">SciQA</span> · <span class="meta-venue">Scientific Reports</span> · <span class="meta-year">2023</span></div>
+  <p class="card-note">ORKG 기반 학술 지식 QA. ChatGPT 100개 중 14개만 정답.</p>
+  <div class="card-tags"><a href="../cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="../domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/earth.html" class="tag tag-domain">🌍Earth Science</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">KG</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2205.09148" target="_blank" rel="noopener">DDXPlus: A New Dataset For Automatic Medical Diagnosis ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">DDXPlus</span> · <span class="meta-venue">NeurIPS</span> · <span class="meta-year">2022</span></div>
+  <p class="card-note">감별 진단. MedRAG 사용.</p>
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">CSV</span><span class="tag tag-mod">Structured Table</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://doi.org/10.1016/j.patter.2022.100609" target="_blank" rel="noopener">DeepDRiD: Diabetic Retinopathy—Grading and Image Quality Estimation Challenge ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">RetinaMNIST</span> · <span class="meta-venue">Patterns</span> · <span class="meta-year">2022</span></div>
+  <p class="card-note">DeepDRiD MedMNIST v2. 당뇨망막증 5단계.</p>
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://proceedings.mlr.press/v174/pal22a.html" target="_blank" rel="noopener">MedMCQA: A Large-scale Multi-Subject Multi-Choice Dataset for Medical domain Question Answering ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">MedMCQA</span> · <span class="meta-venue">CHIL</span> · <span class="meta-year">2022</span></div>
+  
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2210.13777" target="_blank" rel="noopener">SCIFACT-OPEN: Towards open-domain scientific claim verification ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">SCIFACT-OPEN</span> · <span class="meta-venue">EMNLP (Findings)</span> · <span class="meta-year">2022</span></div>
+  <p class="card-note">50만 문서 오픈 도메인. SOTA F1 15-30 하락 일반화 한계.</p>
+  <div class="card-tags"><a href="../cell/K1.O2.html" class="tag tag-cell">K1.O2</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://openreview.net/forum?id=d7KBjmI3GmQ" target="_blank" rel="noopener">Measuring Massive Multitask Language Understanding ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">MMLU</span> · <span class="meta-venue">ICLR</span> · <span class="meta-year">2021</span></div>
+  <p class="card-note">57개 과목 15,908문항 대규모 다중작업 언어 이해. 6.5% Ground-truth 오류.</p>
+  <div class="card-tags"><a href="../cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="../domain/material.html" class="tag tag-domain">🪨Materials Science</a><a href="../domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/physics.html" class="tag tag-domain">⚛️Physics</a><a href="../domain/earth.html" class="tag tag-domain">🌍Earth Science</a><a href="../domain/astronomy.html" class="tag tag-domain">🔭Astronomy</a><a href="../domain/Quantum.html" class="tag tag-domain">🌀Quantum</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://ceur-ws.org/Vol-2936/paper-82.pdf" target="_blank" rel="noopener">Overview of the VQA-Med Task at ImageCLEF 2021: Visual Question Answering and Generation in the Medical Domain ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">VQA-Med 2021</span> · <span class="meta-venue">CLEF</span> · <span class="meta-year">2021</span></div>
+  
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://doi.org/10.1109/ISBI48211.2021.9434023" target="_blank" rel="noopener">Slake: a semantically-labeled knowledge-enhanced dataset for medical visual question answering ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">SLAKE</span> · <span class="meta-venue">ISBI</span> · <span class="meta-year">2021</span></div>
+  <p class="card-note">SLAKE Knowledge-Enhanced VQA (2021, Med-dataset).</p>
+  <div class="card-tags"><a href="../cell/K3.O1.html" class="tag tag-cell">K3.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2009.13081" target="_blank" rel="noopener">What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">MedQA</span> · <span class="meta-venue">Applied Sciences</span> · <span class="meta-year">2021</span></div>
+  <p class="card-note">실제 의사 면허 시험 기반 3개 언어 61k 의료 OpenQA 벤치마크. USMLE는 가장 도전적. Multi-hop 추론 능력 개발의 벤치마크로 활용.</p>
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://doi.org/10.1016/j.dib.2019.104863" target="_blank" rel="noopener">Dataset of breast ultrasound images ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">BreastMNIST</span> · <span class="meta-venue">Data in Brief</span> · <span class="meta-year">2020</span></div>
+  <p class="card-note">유방 초음파 N/B/M 3클래스. CLARE 사용.</p>
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://aclanthology.org/2020.acl-main.671/" target="_blank" rel="noopener">Explainable Automated Fact-Checking for Public Health Claims ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">PubHealth</span> · <span class="meta-venue">EMNLP</span> · <span class="meta-year">2020</span></div>
+  
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://aclanthology.org/2020.emnlp-main.609/" target="_blank" rel="noopener">Fact or Fiction: Verifying Scientific Claims ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">VERISCI</span> · <span class="meta-venue">EMNLP</span> · <span class="meta-year">2020</span></div>
+  <p class="card-note">과학적 클레임 검증 첫 공식화. Citance 1.4K SCIFACT. TF-IDF + RoBERTa 3단계.</p>
+  <div class="card-tags"><a href="../cell/K1.O2.html" class="tag tag-cell">K1.O2</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/method.html" class="tag tag-type">Methods</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2010.13337" target="_blank" rel="noopener">Ginger Cannot Cure Cancer: Battling Fake Health News with a Comprehensive Data Repository ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">FakeHealth</span> · <span class="meta-venue">ICWSM</span> · <span class="meta-year">2020</span></div>
+  
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">PathVQA: 30000+ Questions for Medical Visual Question Answering</h3>
+  <div class="card-meta"><span class="meta-method">Path-VQA</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2020</span></div>
+  <p class="card-note">병리학 교과서 기반 VQA. 3만개+ 질문, Yes/No + Open-ended. Patho-AgenticRAG에서 Yes/No 서브셋(3,362문항)으로 평가. 80.34% Accuracy.</p>
+  <div class="card-tags"><a href="../cell/K3.O1.html" class="tag tag-cell">K3.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/1911.02782" target="_blank" rel="noopener">S2ORC: The Semantic Scholar Open Research Corpus ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">S2ORC</span> · <span class="meta-venue">ACL</span> · <span class="meta-year">2020</span></div>
+  <p class="card-note">81M 학술 코퍼스. S2ORC-SCIBERT.</p>
+  <div class="card-tags"><a href="../cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/physics.html" class="tag tag-domain">⚛️Physics</a><a href="../topics/dataset.html" class="tag tag-type">Datasets</a><span class="tag tag-mod">Structured Table</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://doi.org/10.1021/acs.jcim.0c00411" target="_blank" rel="noopener">Three-Dimensional Convolutional Neural Networks and a Cross-Docked Data Set for Structure-Based Drug Design ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">CrossDocked2020</span> · <span class="meta-venue">J. Chem. Inf. Model.</span> · <span class="meta-year">2020</span></div>
+  <p class="card-note">3D CNN Cross-Docked dataset (2020, Chem).</p>
+  <div class="card-tags"><a href="../cell/K2.O3.html" class="tag tag-cell">K2.O3</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">3D Structure</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://aclanthology.org/D19-1473/" target="_blank" rel="noopener">Detecting causal language use in science findings ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">HealthAdvice</span> · <span class="meta-venue">EMNLP-IJCNLP</span> · <span class="meta-year">2019</span></div>
+  <p class="card-note">인과 관계 언어 감지 분류. MMRAG TC.</p>
+  <div class="card-tags"><a href="../cell/K1.O2.html" class="tag tag-cell">K1.O2</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://aclanthology.org/D19-1259" target="_blank" rel="noopener">PubMedQA: A Dataset for Biomedical Research Question Answering ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">PubMedQA</span> · <span class="meta-venue">EMNLP</span> · <span class="meta-year">2019</span></div>
+  <p class="card-note">생의학 yes/no/maybe QA 첫 데이터셋. 인간 78.0% vs 모델 68.1%.</p>
+  <div class="card-tags"><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://doi.org/10.1038/sdata.2018.251" target="_blank" rel="noopener">A dataset of clinically generated visual questions and answers about radiology images ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">VQA-RAD</span> · <span class="meta-venue">Scientific Data (Nature)</span> · <span class="meta-year">2018</span></div>
+  <p class="card-note">VQA-RAD radiology images (2018, Med-dataset).</p>
+  <div class="card-tags"><a href="../cell/K3.O1.html" class="tag tag-cell">K3.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://doi.org/10.1039/C7SC02664A" target="_blank" rel="noopener">MoleculeNet: a benchmark for molecular machine learning ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">MoleculeNet</span> · <span class="meta-venue">Chemical Science (RSC)</span> · <span class="meta-year">2018</span></div>
+  <p class="card-note">분자 ML 표준 벤치마크. 4 카테고리 17 데이터셋. CLADD 사용.</p>
+  <div class="card-tags"><a href="../cell/K2.O3.html" class="tag tag-cell">K2.O3</a><a href="../domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">SMILES</span><span class="tag tag-mod">Structured Table</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://doi.org/10.1038/sdata.2018.161" target="_blank" rel="noopener">The HAM10000 dataset, a large collection of multi-source dermatoscopic images of common pigmented skin lesions ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">DermaMNIST</span> · <span class="meta-venue">Scientific Data</span> · <span class="meta-year">2018</span></div>
+  <p class="card-note">피부경 이미지. CLARE/MedMNIST.</p>
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">Image</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://trec.nist.gov/pubs/trec26/papers/Overview-QA.pdf" target="_blank" rel="noopener">Overview of the Medical Question Answering Task at TREC 2017 LiveQA ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">TREC LiveQA Medical</span> · <span class="meta-venue">TREC</span> · <span class="meta-year">2017</span></div>
+  <p class="card-note">NLM에 실제 일반 소비자가 보낸 의학 질문 기반 QA 벤치마크. 비정형 실생활 질문 처리 능력 평가. MedBioRAG(2025)에서 ROUGE-1 27.33 달성.</p>
+  <div class="card-tags"><a href="../cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/1711.05789" target="_blank" rel="noopener">TREC 2017 LiveQA: Medical Question Answering Track Overview ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">LiveQA</span> · <span class="meta-venue">TREC</span> · <span class="meta-year">2017</span></div>
+  <p class="card-note">미국 NLM에 제출된 실제 소비자 의료 질문 테스트셋. 104문항. MedRAGChecker(arXiv 2026)에서 Faithfulness 평가에 활용.</p>
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://link.springer.com/chapter/10.1007/978-3-319-30671-1_73" target="_blank" rel="noopener">A full-text learning to rank dataset for medical information retrieval ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">NFCorpus</span> · <span class="meta-venue">ECIR</span> · <span class="meta-year">2016</span></div>
+  <p class="card-note">의학 도메인 Full-Text Learning-to-Rank 벤치마크. NutritionFacts.org 기반. MedBioRAG(2025)에서 Semantic Search가 BM25 대비 NDCG@10 37.91% 달성.</p>
+  <div class="card-tags"><a href="../cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://doi.org/10.1021/acs.molpharmaceut.6b00471" target="_blank" rel="noopener">ADMET Evaluation in Drug Discovery. 16. Predicting hERG Blockers by Combining Multiple Pharmacophores and Machine Learning Approaches ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">hERG Dataset (Wang 2016)</span> · <span class="meta-venue">Molecular Pharmaceutics</span> · <span class="meta-year">2016</span></div>
+  <p class="card-note">ADMET hERG Blockers (2016, Chem).</p>
+  <div class="card-tags"><a href="../cell/K2.O3.html" class="tag tag-cell">K2.O3</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">SMILES</span><span class="tag tag-mod">Structured Table</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://doi.org/10.1021/acs.jcim.5b00238" target="_blank" rel="noopener">Deep Learning for Drug-Induced Liver Injury ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">DILI Combined</span> · <span class="meta-venue">J. Chem. Inf. Model.</span> · <span class="meta-year">2015</span></div>
+  <p class="card-note">Deep Learning Drug-Induced Liver Injury (2015, Chem).</p>
+  <div class="card-tags"><a href="../cell/K2.O3.html" class="tag tag-cell">K2.O3</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">SMILES</span><span class="tag tag-mod">Structured Table</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://aclanthology.org/S13-2056/" target="_blank" rel="noopener">SemEval-2013 Task 9: Extraction of Drug-Drug Interactions from Biomedical Texts ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">DDI</span> · <span class="meta-venue">SemEval</span> · <span class="meta-year">2013</span></div>
+  <p class="card-note">DDI 관계 추출. BiomedRAG 사용.</p>
+  <div class="card-tags"><a href="../cell/K2.O1.html" class="tag tag-cell">K2.O1</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-015-0564-6" target="_blank" rel="noopener">BioASQ: A challenge on large-scale biomedical semantic indexing and question answering ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">BioASQ</span> · <span class="meta-venue">AAAI Fall Symposium Series</span> · <span class="meta-year">2012</span></div>
+  <p class="card-note">MEDLINE 의생명 IR+QA+요약 챌린지. 전문가 수동. MedBioRAG 98%.</p>
+  <div class="card-tags"><a href="../cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://doi.org/10.1016/j.jbi.2012.04.008" target="_blank" rel="noopener">Development of a benchmark corpus to support the automatic extraction of drug-related adverse effects from medical case reports ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">ade-corpus-v2</span> · <span class="meta-venue">J. Biomed. Informatics</span> · <span class="meta-year">2012</span></div>
+  <p class="card-note">약물 부작용 분류. BiomedRAG.</p>
+  <div class="card-tags"><a href="../cell/K2.O2.html" class="tag tag-cell">K2.O2</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://doi.org/10.1093/nar/gkq906" target="_blank" rel="noopener">ChemProt: a disease chemical biology database ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">ChemProt</span> · <span class="meta-venue">Nucleic Acids Research</span> · <span class="meta-year">2011</span></div>
+  <p class="card-note">화학물질-단백질 상호작용 관계 추출 벤치마크. PubMed 초록 2,432편. 5개 CPR 라벨. BiomedRAG에서 LLaMA2 13B F1 향상.</p>
+  <div class="card-tags"><a href="../cell/K2.O1.html" class="tag tag-cell">K2.O1</a><a href="../domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://dl.acm.org/doi/10.1145/1273496.1273551" target="_blank" rel="noopener">Statistical Predicate Invention ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">UMLS</span> · <span class="meta-venue">ICML</span> · <span class="meta-year">2007</span></div>
+  <p class="card-note">UMLS 의학 개념 관계 링크 예측. BiomedRAG.</p>
+  <div class="card-tags"><a href="../cell/K2.O3.html" class="tag tag-cell">K2.O3</a><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">KG</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://mtsamples.com/" target="_blank" rel="noopener">MTsamples (Web Dataset) ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">MTsample</span></div>
+  <p class="card-note">의료 발화 진료과 분류. BiomedRAG.</p>
+  <div class="card-tags"><a href="../domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="../topics/benchmark.html" class="tag tag-type">Benchmarks</a></div>
+</article>
+</div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>
+      <strong>Scientific RAG Hub</strong> — companion catalog to the TPAMI 2026 survey
+      <em>"Scientific Retrieval-Augmented Generation: A Survey through Knowledge Source and Scientific Mission"</em>
+      by Oh et al. (Vision and Learning Lab, Seoul National University).
+    </p>
+    <p class="links">
+      <a href="llms.txt">llms.txt</a> ·
+      <a href="llms-full.txt">llms-full.txt</a> ·
+      <a href="data/papers.json">papers.json</a> ·
+      <a href="about.html">About</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+# Scientific RAG Hub — AI for Science Retrieval-Augmented Generation Index
+
+A curated catalog of Retrieval-Augmented Generation (RAG) systems, benchmarks, and datasets
+across nine scientific domains, organized by a dual-axis Knowledge Source × Operational Objective
+taxonomy. 182 entries; 146 K×O cell assignments across 12 cells.
+
+Companion to the TPAMI 2026 survey "Scientific Retrieval-Augmented Generation: A Survey through
+Knowledge Source and Scientific Mission" (Oh et al., Vision and Learning Lab, Seoul National University).
+
+## Browse by K×O cell (12 cells)
+
+- [/cell/K1.O1.md](K1.O1.md) — Primary Literature × Ground (52 entries)
+- [/cell/K1.O2.md](K1.O2.md) — Primary Literature × Synthesis (22 entries)
+- [/cell/K1.O3.md](K1.O3.md) — Primary Literature × Hypothesis (5 entries)
+- [/cell/K2.O1.md](K2.O1.md) — Curated Knowledge Base × Ground (12 entries)
+- [/cell/K2.O2.md](K2.O2.md) — Curated Knowledge Base × Synthesis (6 entries)
+- [/cell/K2.O3.md](K2.O3.md) — Curated Knowledge Base × Hypothesis (13 entries)
+- [/cell/K3.O1.md](K3.O1.md) — Observational & Experimental × Ground (22 entries)
+- [/cell/K3.O2.md](K3.O2.md) — Observational & Experimental × Synthesis (4 entries)
+- [/cell/K3.O3.md](K3.O3.md) — Observational & Experimental × Hypothesis (1 entries)
+- [/cell/K4.O1.md](K4.O1.md) — Tacit Knowledge × Ground (3 entries)
+- [/cell/K4.O2.md](K4.O2.md) — Tacit Knowledge × Synthesis (4 entries)
+- [/cell/K4.O3.md](K4.O3.md) — Tacit Knowledge × Hypothesis (2 entries)
+
+## Browse by scientific domain
+
+- [/domain/bio.md](bio.md) — Biology (47 entries)
+- [/domain/chem.md](chem.md) — Chemistry (34 entries)
+- [/domain/medical.md](medical.md) — Medicine (86 entries)
+- [/domain/material.md](material.md) — Materials Science (12 entries)
+- [/domain/physics.md](physics.md) — Physics (23 entries)
+- [/domain/earth.md](earth.md) — Earth Science (22 entries)
+- [/domain/astronomy.md](astronomy.md) — Astronomy (9 entries)
+- [/domain/Quantum.md](Quantum.md) — Quantum (2 entries)
+
+## Browse by resource type
+
+- [/topics/method.md](method.md) — Methods (88 entries)
+- [/topics/benchmark.md](benchmark.md) — Benchmarks (87 entries)
+- [/topics/dataset.md](dataset.md) — Datasets (5 entries)
+- [/topics/summary.md](summary.md) — Surveys (2 entries)
+
+## Knowledge Source axis (K1-K4)
+
+- **K1 Primary Literature** — Peer-reviewed papers, preprints, scientific corpora (PubMed, arXiv, S2ORC, ChemRxiv).
+- **K2 Curated Knowledge Base** — Community-maintained structured records (PubChem, RCSB PDB, AlphaFold DB, ChEMBL, UMLS, PrimeKG, Materials Project).
+- **K3 Observational & Experimental** — Raw modality data: images, spectra, sequencing, time-series (cryo-EM, mass spec, telescope archives, EHR images).
+- **K4 Tacit Knowledge** — Institutional memory (RHIC, DUNE, CMS), lab protocols, private EHRs, governmental/industry process docs. ★ Novelty axis.
+
+## Operational Objective axis (O1-O3)
+
+- **O1 Ground** — Single-source grounding: retrieve, cite, answer.
+- **O2 Synthesis** — Multi-source integration, claim verification.
+- **O3 Hypothesis** — Generate new candidates — molecules, mechanisms, parameters.
+
+For the full catalog with descriptions, see /llms-full.txt

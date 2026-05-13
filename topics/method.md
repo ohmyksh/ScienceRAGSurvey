@@ -1,0 +1,94 @@
+# Methods
+
+_88 entries of type "Method"._
+
+---
+
+- **BioModelsRAG: Biological Modeling Assistant** — BioModelsRAG · arXiv · 2026 — K2 EXEMPLAR — curated systems-biology DB. SBML→Antimony→LLM-summary→ChromaDB pipeline  `[Biology, Methods]`
+- **CLADD: RAG-Enhanced Collaborative LLM Agents for Drug Discovery** — CLADD · AAAI · 2026 — ★ K2.O3 EXEMPLAR. Multi-agent (Planning/KG/MU/Prediction). Anchor drug technique extends KG to novel molecules. CLADD beats fine-tuned baselines without any fine-tuning  `[Biology, Medicine, Chemistry, Methods]`
+- **[Grounded Multimodal Retrieval-Augmented Drafting of Radiology Impressions Using Case-Based Similarity](https://arxiv.org/abs/2603.17765)** — Grounded Multimodal RAG · arXiv · 2026 — 이미지+텍스트 Late Fusion (a=0.5). Recall@5 0.975  `[K3.O1, Medicine, Methods]`
+- **[MedRAGChecker: Claim-Level Verification for Biomedical Retrieval-Augmented Generation](https://arxiv.org/abs/2601.06519v1)** — MedRAGChecker · arXiv · 2026 — Atomic Claim 분해 + NLI + KG 융합. GPT-4.1 → 소형 모델 distill  `[K1.O2, Medicine, Biology, Methods]`
+- **OpenScholar: Synthesizing Scientific Literature with RAG LMs** — OpenScholar · Nature · 2026 — ★★ K1.O2 FLAGSHIP. Iterative self-feedback. 0% hallucination vs GPT-4o 78-90%. Experts prefer OpenScholar-GPT-4o over human 70%. Public demo 30K users  `[K1.O1, Biology, Medicine, Physics, Methods]`
+- **Patho-AgenticRAG: Multimodal Agentic RAG for Pathology VLMs via RL** — Patho-AgenticRAG · AAAI · 2026 — GRPO-trained agentic router. 600 textbooks → 200K page-level multimodal KB. +38pp on MedXpertQA over Patho-R1 baseline. Private DB but textbook-derived  `[Medicine, Biology, Methods]`
+- **Polymer Literature Scholar (PHA Biodegradable Polymer Expert)** — Polymer Literature Scholar · arXiv · 2026 — Cross-source K1+K2. Vector vs Graph RAG comparison. GraphRAG=0.938 recall, VectorRAG=0.717. Domain chemist eval  `[Materials Science, Methods]`
+- **Remote Sensing RAG (RS-RAG)** — RS-RAG · IEEE GRSM · 2026 — K3 multimodal exemplar. CLIP-based image retrieval + cross-modal fusion  `[Earth Science, Methods]`
+- **[Retrieval-Augmented Generation for Predicting Cellular Responses to Gene Perturbation](https://arxiv.org/abs/2603.07233)** — PT-RAG · Gen2 @ ICLR · 2026 — PT-RAG: 단일 세포 생물학에 RAG 최초 적용. naive RAG가 성능 저하 (W2: 1189.5 vs STATE 646.1). GenePT + Gumbel-Softmax 2단계 미분 가능 검색  `[K1.O3, Biology, Methods]`
+- **[Retrieval-Augmented Question Answering over Scientific Literature for the Electron-Ion Collider](https://arxiv.org/abs/2604.02259)** — EIC RAG Q&A application · arXiv · 2026 — EIC 로컬 RAG. 청크 180+Cosine 최적  `[K1.O1, Physics, Methods]`
+- **TaLiRAGen: target-aware ligand generation via RAG LLMs** — TaLiRAGen · Molecular Diversity · 2026 — ★ K2.O3 EXEMPLAR. No-training RAG+LLM SBDD. Evidence-theoretic norm metric  `[K2.O3, Chemistry, Biology, Medicine, Methods]`
+- **[A vision-language foundation model-based multi-modal retrieval-augmented generation framework for remote sensing lithological recognition](https://doi.org/10.1016/j.isprsjprs.2025.04.015)** — Geo-MMRAG · ISPRS Journal of Photogrammetry and Remote Sensing · 2025 — 지질 RS 첫 멀티모달 RAG. GF-2 OA 79.7% (+23.9%p)  `[K3.O1, Earth Science, Methods]`
+- **AI-Powered Assistant for Long-Term Access to RHIC Knowledge** — RHIC DAPP · New York Scientific Data Summit · 2025 — ★ FLAGSHIP K4 EXAMPLE. ~1 ExaByte institutional memory. MCP-RAG. Demonstrates commercial AI's blindness to non-public scientific tacit knowledge  `[K4.O1, Physics, Methods]`
+- **AlzheimerRAG: Multimodal RAG for Clinical Use Cases** — AlzheimerRAG · Mach. Learn. Knowl. Extr. · 2025 — Cross-modal fusion. 84% accuracy in clinical scenarios. 6% hallucination  `[Medicine, Methods]`
+- **[Benchmarking Foundation Models with Retrieval-Augmented Generation in Olympic-Level Physics Problem Solving](https://aclanthology.org/2025.findings-emnlp.1196/)** — PhoPile RAG Framework · EMNLP (Findings) · 2025 — Physics Olympiad 멀티모달 RAG 첫 벤치마크. 4 retriever × 3 multimodal × 8 모델 비교. retrieval 노이즈 문제 존재  `[K1.O1, Physics, Methods]`
+- **Benchmarking Retrieval-Augmented Generation for Chemistry** — ChemRAG (Bench + Toolkit) · COLM · 2025 — 화학 RAG 첫 대규모 벤치마크. 6 corpus × 5 retrievers × 8 LLMs. RAG +17.4% 평균 향상. ChemLLM은 RAG 효과 미미  `[K2.O1, Chemistry, Methods]`
+- **[BiomedRAG: A Retrieval Augmented Large Language Model for Biomedicine](https://arxiv.org/abs/2405.00465)** — BiomedRAG · Journal of Biomedical Informatics · 2025 — Tailored Chunk Scorer로 LLM Perplexity 학습. GIT +22.43%p F1  `[K1.O2, Biology, Medicine, Methods]`
+- **[CLAPP: The CLASS LLM Agent for Pair Programming](https://arxiv.org/abs/2508.05728)** — CLAPP · arXiv · 2025 — CLASS 공식 문서 RAG + AG2 멀티에이전트(5개). Streamlit 웹앱  `[K1.O1, Astronomy, Methods]`
+- **[Chunk Twice, Embed Once: A Systematic Study of Segmentation and Representation Trade-offs in Chemistry-Aware Retrieval-Augmented Generation](https://arxiv.org/abs/2506.17277)** — RT100-0 · arXiv · 2025 — 화학 RAG 청킹·임베딩 가이드라인. RT100-0 + 범용 모델 우수. MTEB 호환 FSUChemRxivQuest 공개  `[K1.O2, Chemistry, Methods]`
+- **DUNE-GPT (LLM Integration for DUNE Experiment)** — DUNE-GPT · Lepton Photon · 2025 — ★ K4: Private institutional memory. Fermilab/Argonne offline only. ~70% accuracy  `[Physics, Methods]`
+- **[Enhancing Ultrahigh Resolution Remote Sensing Imagery Analysis With ImageRAG: A new framework](https://doi.org/10.1109/MGRS.2025.3574742)** — ImageRAG · IEEE Geoscience and Remote Sensing Magazine · 2025 — UHR RS 이미지 RAG. Fast/Slow Path. 작은 객체 향상. 검색 지연 한계  `[K3.O2, Earth Science, Methods]`
+- **[Exploration of Augmentation Strategies in Multi-modal Retrieval-Augmented Generation for the Biomedical Domain](https://arxiv.org/abs/2512.16802)** — OCR-free vs Text MM-RAG · IEEE BigData · 2025 — 중간모델은 텍스트변환, GPT-5는 OCR-free 우세. ColFlor 174M 5.25배 빠름  `[K3.O2, Biology, Medicine, Methods]`
+- **Fact-Aware Multimodal Retrieval Augmentation for Accurate Medical Radiology Report Generation** — FactMM-RAG · NAACL · 2025 — RadGraph 기반 Factual Pair Mining + LLaVA. MIMIC-CXR F1CheXbert +6.5%  `[K3.O1, Medicine, Methods]`
+- **[GeoGraphRAG: A graph-based retrieval-augmented generation approach for empowering large language models in automated geospatial modeling](https://doi.org/10.1016/j.jag.2025.104712)** — GeoGraphRAG · Int. J. Appl. Earth Obs. Geoinf. (JAG) · 2025 — S-GMKG 그래프 RAG. ICL+그래프 탐색만으로 GEE 코드 생성. Execution-based 평가 미실시  `[K1.O1, Earth Science, Methods]`
+- **[GeoRAG: A Question-Answering Approach from a Geographical Perspective](https://arxiv.org/abs/2504.01458)** — GeoRAG · arXiv · 2025 — 7차원 지리학 RAG. +28.7% 성능, -41.9% 환각  `[K1.O1, Earth Science, Methods]`
+- **HiPerRAG: High-Performance RAG for Scientific Insights** — HiPerRAG · PASC · 2025 — HPC-scale (Polaris/Sunspot/Frontier). Oreo parser 4.5x faster. ProteinInteractionQA/FunctionQA/BioSynthQP self-made  `[Biology, Medicine, Chemistry, Physics, Methods]`
+- **[Improving Retrieval-Augmented Generation in Medicine with Iterative Follow-up Questions](https://arxiv.org/abs/2408.00727)** — i-MedRAG · PSB · 2025 — 의료 RAG 후속 쿼리 반복 생성. MedQA Zero-shot GPT-3.5 69.68% SOTA  `[K1.O2, Medicine, Methods]`
+- **[LVLM-Aware Multimodal Retrieval for RAG-Based Medical Diagnosis with General-Purpose Models](https://arxiv.org/abs/2508.17394)** — CLARE · arXiv · 2025 — 의료 특화 사전학습 없이 범용 LVLM+Retriever 경량 파인튜닝. Inconsistent Retrieval Predictions 문제 개선  `[K3.O1, Medicine, Methods]`
+- **[Listen to the Context: Towards Faithful Large Language Models for Retrieval Augmented Generation on Climate Questions](https://aclanthology.org/2025.climatenlp-1.17/)** — ClimateGPT Faithful+ · ClimateNLP @ ACL · 2025 — IFT ablation. unfaithful 서브셋 제거 → faithfulness 30%→57%  `[K1.O2, Earth Science, Methods]`
+- **[MARSHA: multi-agent RAG system for hazard adaptation](https://doi.org/10.1038/s44168-025-00254-1)** — WildfireGPT · npj Climate Action · 2025 — 산불 특화 멀티에이전트 RAG. ChatClimate/Perplexity 대비 우수  `[K1.O1, Earth Science, Methods]`
+- **MITRA: AI Assistant for Knowledge Retrieval in Physics Collaborations** — MITRA · ML4PS @ NeurIPS · 2025 — ★ K4: CMS Private. On-prem GPU. Two-tier DB prevents cross-analysis confusion. Set 2 paraphrase: P@1 0.13→0.75 vs BM25  `[Physics, Methods]`
+- **MMed-RAG: Versatile Multimodal RAG System for Medical VLMs** — MMed-RAG · ICLR · 2025 — ★ K3 multimodal. Domain-aware retriever (radiology/pathology/ophthalmology). DPO-based RAG-PT for cross-modal alignment  `[K3.O1, Medicine, Methods]`
+- **[MOTOR: Multimodal Optimal Transport via Grounded Retrieval in Medical Visual Question Answering](https://arxiv.org/abs/2506.22900)** — MOTOR · MICCAI · 2025 — Training-free 멀티모달 OT 기반 재랭킹. SOTA 대비 평균 6.45% 향상  `[K3.O1, Medicine, Methods]`
+- **[Materials Dual-Source Knowledge Retrieval-Augmented Generation for Local Large Language Models in Photocatalysts](https://doi.org/10.1021/acs.jcim.5c01941)** — MDSK-RAG · J. Chem. Inf. Model. · 2025 — CSV+PDF 이중 소스 오프라인 RAG. gemma-2-9b-it+RAG가 GPT-4o(no RAG)보다 우세 (0.71 vs 0.66)  `[K2.O2, K4.O3, Materials Science, Chemistry, Methods]`
+- **MedGraphRAG: Evidence-based Medical LLM via Graph RAG** — MedGraphRAG · ACL · 2025 — ★★ K1+K2+K4 TRIPLE EXAMPLE. Hierarchical 3-tier graph. U-Retrieval. Strong evidence for §4.5 cross-source integration  `[Medicine, Methods]`
+- **[MedRAG: Enhancing Retrieval-augmented Generation with Knowledge Graph-Elicited Reasoning for Healthcare Copilot](https://arxiv.org/abs/2502.04413)** — MedRAG · arXiv · 2025 — EHR + 4계층 KG. 유사 증상 변별 + Proactive Questioning  `[K2.O1, Medicine, Methods]`
+- **[Neural Graph Matching Improves Retrieval Augmented Generation in Molecular Machine Learning](https://proceedings.mlr.press/v267/wang25dg.html)** — MARASON · ICML · 2025 — 분자 RAG: Naive RAG 성능 저하 → neural graph matching이 핵심. 19% → 28% (+45% 상대)  `[K2.O3, Chemistry, Methods]`
+- **[Open Source Planning & Control System with Language Agents for Autonomous Scientific Discovery](https://arxiv.org/abs/2507.07257)** — cmbagent · ML for Astrophysics @ ICML · 2025 — ~30 LLM 에이전트 Planning&Control. NeurIPS 2025 Fair Universe 1위. CosmoPaperQA OpenAI 91.4%  `[Astronomy, Methods]`
+- **[Q-FSRU: Quantum-Augmented Frequency-Spectral Fusion for Medical Visual Question Answering](https://arxiv.org/abs/2508.12036)** — Q-FSRU · arXiv · 2025 — FFT 주파수 도메인 + Quantum Fidelity. VQA-RAD 91.6%. 양자 영감 메커니즘은 고전 근사  `[K3.O1, Medicine, Methods]`
+- **RAG for 10 LLMs in assessing medical fitness** — LLM-RAG pipeline for preoperative medicine · npj Digital Medicine · 2025 — GPT-4 RAG accuracy 96.4% > human MD avg 86.6%. K4 partial via local hospital protocols  `[Medicine, Methods]`
+- **[RAISE: Enhancing Scientific Reasoning in LLMs via Step-by-Step Retrieval](https://openreview.net/forum?id=2Xwa540MzD)** — RAISE · MATH-AI @ NeurIPS · 2025 — 문제 분해+논리적 쿼리로 in-the-wild 코퍼스 검색. Step-by-Step  `[K1.O1, Physics, Chemistry, Biology, Methods]`
+- **RAR2: Retrieval-Augmented Medical Reasoning via Thought-Driven Retrieval** — RAR2 · EMNLP (Findings) · 2025 — Thought 검색+검색 추론 동시 DPO. Test-time scaling  `[Medicine, Methods]`
+- **Rag2Mol: structure-based drug design based on RAG** — Rag2Mol · Briefings in Bioinformatics · 2025 — ★ K2.O3. Cross-KNN graph fusion. PTPN2 undruggable target case validated  `[K2.O3, Biology, Medicine, Chemistry, Methods]`
+- **Rationale-Guided Retrieval Augmented Generation for Medical Question Answering** — RAG² · NAACL · 2025 — perplexity-차이 자동 라벨링으로 소형 필터 모델 학습 + rationale 쿼리 + 균등검색. SOTA on MedQA  `[K1.O2, Medicine, Methods]`
+- **Retrieval-Augmented Generation Assistant for Anatomical Pathology Laboratories** — RAG-AP · Emerging Science Journal · 2025 — K4 NOVELTY EXAMPLE — internal lab protocols as retrieval source. k=1 best F1=0.50. Hybrid + MedEmbed best on RAGAS  `[K3.O1, Medicine, Methods]`
+- **Retrieval-augmented generation elevates local LLM quality in radiology contrast media consultation** — Llama 3.2 11B + RAG · npj Digital Medicine · 2025 — local-LLM + RAG → hallucination 0% (was 8%); HIPAA/GDPR compliant  `[K3.O1, Medicine, Methods]`
+- **SciRag: Evaluating RAG Agents for Autonomous Scientific Discovery in Astrophysics** — SciRag · ML4Astro @ ICML · 2025 — First systematic astronomy RAG eval. 9-config comparison. OpenAI 91.4% best. CMBAgent connection  `[Astronomy, Methods]`
+- **[Towards Omni-RAG: Comprehensive Retrieval-Augmented Generation for Large Language Models in Medical Applications](https://github.com/Jack-ZC8/Omni-RAG-Medical)** — Source Planning Optimisation (SPO) · ACL · 2025 — 5개 다중 구조 의료 KB(MedOmniKB) 구축 + SPO 기법. 소형 Planner가 10배 큰 모델 능가  `[K1.O2, Medicine, Methods]`
+- **BIORAG: RAG-LLM Framework for Biological Question Reasoning** — BIORAG · arXiv · 2024 — ★ Cross-source K1+K2. MeSH hierarchical filter + dense retrieval. Self-eval loop. SOTA on GeneTuring  `[Biology, Medicine, Methods]`
+- **[Designing an Evaluation Framework for Large Language Models in Astronomy Research](https://arxiv.org/abs/2405.20389)** — Ask astro-ph · arXiv · 2024 — 천문학 연구자용 gpt-4o + bge-small Slack RAG 챗봇. 동적 평가 프레임워크  `[K1.O1, Astronomy, Methods]`
+- **HoneyComb: Materials Science Agent** — HoneyComb · EMNLP (Findings) · 2024 — ★ Cross-source: K2 (MP DB)+K1 (papers)+tool use. ReAct agent  `[Materials Science, Methods]`
+- **[Language Agents Achieve Superhuman Synthesis of Scientific Knowledge](https://arxiv.org/abs/2409.13740)** — PaperQA2 · arXiv · 2024 — 인간 전문가 초과 RAG. PaperQA2 85.2% > 인간 73.8%. RCS + Citation Traversal  `[K1.O2, Biology, Methods]`
+- **[Leveraging Chemistry Foundation Models to Facilitate Structure Focused Retrieval Augmented Generation in Multi-Agent Workflows for Catalyst and Materials Design](https://arxiv.org/pdf/2408.11793)** — Hierarchical multi-agent adaptive self-reflective RAG · arXiv · 2024 — MoLFormer + OpenCLIP. 화학 멀티에이전트 RAG. IBM 특허  `[K2.O1, Chemistry, Materials Science, Methods]`
+- **[Multi-Agent System for Cosmological Parameter Analysis](https://arxiv.org/abs/2412.00431)** — cmbagent · arXiv · 2024 — 3종 전문 RAG 에이전트 + 멀티에이전트로 ACT DR6 우주론 파라미터 분석을 40분·코드 0줄에 자동 재현  `[K1.O1, Astronomy, Methods]`
+- **Responsible Retrieval Augmented Generation for Climate Decision Making from Documents** — R2AG (Responsible RAG) · arXiv · 2024 — UNECE 16-expert annotated dataset. Defense-in-depth UX. K4 partial: governmental policy = institutional knowledge  `[K1.O1, Earth Science, Methods]`
+- **[Towards a RAG-based Summarization for the Electron Ion Collider](https://arxiv.org/abs/2403.15729)** — RAGS4EIC · JINST · 2024 — EIC RAG GPT-3.5. CAR 88.9%, HF 2.0%. LaTeX 취약  `[Physics, Methods]`
+- **f-RAG: Molecule Generation with Fragment Retrieval Augmentation** — f-RAG · NeurIPS · 2024 — ★ K2.O3. First fragment-level RAG. Hard/Soft dual retrieval. SAFE-GPT + FIM (Linear, <4hr training)  `[Chemistry, Biology, Medicine, Methods]`
+- **[PaperQA: Retrieval-Augmented Generative Agent for Scientific Research](https://arxiv.org/abs/2312.07559v2)** — PaperQA · arXiv · 2023 — Map-Reduce 환각 0% 인용 답변. LitQA 신규 벤치마크  `[K1.O1, Biology, Medicine, Methods]`
+- **[RAMM: Retrieval-augmented Biomedical Visual Question Answering with Multi-modal Pre-training](https://arxiv.org/abs/2303.00534)** — RAMM · ACM MM · 2023 — PubMed Case Report PMCPM 398K + Retrieval-Attention. 4 벤치마크 SOTA  `[K3.O1, Medicine, Biology, Methods]`
+- **[Fact or Fiction: Verifying Scientific Claims](https://aclanthology.org/2020.emnlp-main.609/)** — VERISCI · EMNLP · 2020 — 과학적 클레임 검증 첫 공식화. Citance 1.4K SCIFACT. TF-IDF + RoBERTa 3단계  `[K1.O2, Biology, Medicine, Methods]`
+- **DBLP:conf/aaai/LeeBHBPS26** — CLADD RAG-Enhanced Collaborative Drug Discovery (2026, Chem). Cross-source K2+K3  `[K2.O3, Methods]`
+- **DBLP:conf/aaai/ZhangGZZCZZYB26** — Patho-AgenticRAG pathology (2026, Med). Cross-source  `[K3.O1, Methods]`
+- **DBLP:conf/acl/WuZQCXMJG25** — Medical Graph RAG (2025, Med)  `[K2.O1, Methods]`
+- **DBLP:conf/bionlp/DeYoungLNMW20** — Evidence Inference 2.0 (2020, Bio)  `[K1.O2, Methods]`
+- **DBLP:conf/clef/AbachaHDLDM19** — VQA-Med 2019 (2019, Med)  `[K3.O1, Methods]`
+- **DBLP:conf/emnlp/SinghSC24** — SCIDQA (2024, Sci)  `[K1.O1, Methods]`
+- **DBLP:conf/emnlp/ZhangSHML24** — HoneyComb Materials Science Agent (2024, Mat). Cross-source  `[K2.O1, Methods]`
+- **DBLP:conf/icml/LeeLPHKLL23** — QASA QA on Sci Articles (2023, Sci)  `[K1.O1, Methods]`
+- **DBLP:conf/medinfo/AbachaMSGSD19** — MedQuAD bridging consumer questions (2019, Med)  `[K1.O1, Methods]`
+- **DBLP:conf/nips/LeeKV0RPVN24** — Molecule Generation w/ Fragment Retrieval (2024, Chem)  `[K2.O3, Methods]`
+- **DBLP:conf/pasc/GokdemirSBWHHSA25** — HiPerRAG High-Performance for Sci Insights (2025, Sci)  `[K1.O2, Methods]`
+- **DBLP:journals/corr/abs-1901-08079** — Question-Entailment Approach (2019, Sci)  `[K1.O1, Methods]`
+- **DBLP:journals/corr/abs-2403-15729** — Towards a RAG-based Summarization for the Electron-Ion Collider (2024, Phys)  `[K1.O1, K4.O2, Methods]`
+- **DBLP:journals/corr/abs-2408-01107** — BIORAG (2024, Bio)  `[K1.O1, Methods]`
+- **DBLP:journals/corr/abs-2411-09213** — Comprehensive RAG Eval Medical (2024, Med)  `[K1.O2, Methods]`
+- **DBLP:journals/corr/abs-2504-04988** — Remote Sensing RAG (2025, Earth)  `[K3.O1, Methods]`
+- **DBLP:journals/corr/abs-2509-22713** — RAR2 Thought-Driven Retrieval (2025, Med)  `[K1.O2, Methods]`
+- **DBLP:journals/corr/abs-2512-10996** — MedBioRAG (2025, Med)  `[K1.O2, Methods]`
+- **DBLP:journals/corr/abs-2603-09800** — MITRA Physics Collaborations Knowledge Retrieval (2026, Phys). Strongest K4 example  `[K4.O1, Methods]`
+- **DBLP:journals/corr/abs-2603-15712** — High-Entropy Catalysts via RAG (2026, Mat)  `[K2.O3, Methods]`
+- **DBLP:journals/jamia/ZhanWZDZ25** — MMRAG biomedical (2025, Bio). Cross-source K1+K2  `[K1.O2, K2.O2, Methods]`
+- **DBLP:journals/make/LahiriH25** — AlzheimerRAG multimodal (2025, Med). Cross-source  `[K3.O1, Methods]`
+- **DBLP:journals/npjdm/KeJEALSSTOKWKT25** — Generalizability of RAG across 10 LLMs (2025, Med)  `[K1.O2, Methods]`
+- **aplabprotocols2025** — AP Lab Protocols benchmark (2025, Sci) [bib only]  `[K4.O2, Methods]`
+- **meyur2025weqa** — WeQA Wind Energy (2025, Earth)  `[K1.O1, K4.O2, Methods]`
+- **rafique2025large** — DUNE Knowledge Retrieval (2025, Phys). Borderline K4 (institutional memory) — primary tag K1, secondary K4  `[K1.O1, K4.O1, Methods]`
+- **taffese2025polymerexpert** — Polymer Expert literature-derived (2025, Mat). Cross-source K1+K2  `[K1.O3, Methods]`
+- **zhang2026matclaw** — MatClaw autonomous code-first agent (2026, Mat). Cross-source K1+K2  `[K2.O2, K4.O3, Methods]`
