@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Insights — Scientific RAG Hub</title>
+<meta name="description" content="The five requirements of scientific RAG, K×Domain coverage map, paper growth timeline, cross-source bridges, and frontier opportunities.">
+<link rel="stylesheet" href="static/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E%F0%9F%94%AC%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">🔬</span>
+      <span class="logo-text">Scientific RAG Hub</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse</a>
+      <a href="insights.html">Insights</a>
+      <a href="index.html#grid">K×O Grid</a>
+      <a href="index.html#domains">Domains</a>
+      <a href="about.html">About</a>
+      <a href="llms.txt" title="LLM-friendly index">llms.txt</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<section class="insights-hero">
+  <div class="wrap">
+    <p class="eyebrow">Insights · The shape of scientific RAG</p>
+    <h1>What the 182-paper catalog reveals.</h1>
+    <p class="lede">
+      Six lenses on the field — flagship demonstrations, the unique requirements that distinguish
+      scientific from general RAG, where coverage is dense, where the white space is,
+      and the seven directions where the next breakthroughs are most likely.
+    </p>
+    <nav class="insights-toc">
+      <a href="#flagships">Flagships</a>
+      <a href="#requirements">5 Requirements</a>
+      <a href="#growth">Growth</a>
+      <a href="#kd">K×Domain</a>
+      <a href="#bridges">Cross-source</a>
+      <a href="#frontiers">Frontiers</a>
+      <a href="#directions">Future</a>
+    </nav>
+  </div>
+</section>
+
+<section id="flagships" class="prose-section">
+  <div class="wrap">
+    <h2 class="section-title">Flagships — papers that move the field</h2>
+    <p class="section-sub">Nine systems chosen for the largest measured gains or the clearest demonstration of a structural pattern.</p>
+    <div class="fl-grid">
+        <article class="fl-card">
+          <div class="fl-head">
+            <h3 class="fl-name">OpenScholar</h3>
+            <a href="cell/K1.O2.html" class="tag tag-cell">K1.O2</a>
+          </div>
+          <p class="fl-tagline">0% citation hallucination vs GPT-4o&#x27;s 78–90%</p>
+          <div class="fl-stats"><div class="fl-stat"><span class="fl-num">0%</span><span class="fl-label">citation hallucination</span></div><div class="fl-stat"><span class="fl-num">70%</span><span class="fl-label">expert win rate vs human</span></div><div class="fl-stat"><span class="fl-num">45M</span><span class="fl-label">indexed papers</span></div></div>
+          <p class="fl-subtitle">45M open-access papers · Contriever retriever · synthetic SFT data</p>
+          <p class="fl-why"><strong>Why it matters.</strong> Sets the modern bar for evidence-grounded scientific synthesis. Strongest empirical evidence that retrieval can eliminate hallucinated citations.</p>
+          <p class="fl-cite">OpenScholar: Synthesizing Scientific Literature with RAG LMs · <span class="muted">Nature 2026</span></p>
+        </article>
+        <article class="fl-card">
+          <div class="fl-head">
+            <h3 class="fl-name">f-RAG</h3>
+            <a href="cell/K2.O3.html" class="tag tag-cell">K2.O3</a>
+          </div>
+          <p class="fl-tagline">21/23 PMO benchmarks at SOTA</p>
+          <div class="fl-stats"><div class="fl-stat"><span class="fl-num">21/23</span><span class="fl-label">PMO SOTA</span></div><div class="fl-stat"><span class="fl-num">NeurIPS &#x27;24</span><span class="fl-label">venue</span></div></div>
+          <p class="fl-subtitle">Fragment-vocabulary retrieval over ZINC250K · drug-like molecule generation</p>
+          <p class="fl-why"><strong>Why it matters.</strong> Demonstrates the dominant K2.O3 pattern — curated DB feeds generative model with downstream physical verification.</p>
+          <p class="fl-cite">Molecule Generation with Fragment Retrieval Augmentation · <span class="muted">NeurIPS 2024</span></p>
+        </article>
+        <article class="fl-card">
+          <div class="fl-head">
+            <h3 class="fl-name">CLADD</h3>
+            <a href="cell/K2.O3.html" class="tag tag-cell">K2.O3</a>
+          </div>
+          <p class="fl-tagline">4-agent collaborative drug discovery</p>
+          <div class="fl-stats"><div class="fl-stat"><span class="fl-num">4</span><span class="fl-label">agent teams</span></div><div class="fl-stat"><span class="fl-num">AAAI &#x27;26</span><span class="fl-label">venue</span></div></div>
+          <p class="fl-subtitle">PrimeKG · PubChem · DrugBank · STITCH cross-source · anchor-drug technique</p>
+          <p class="fl-why"><strong>Why it matters.</strong> Canonical example of relational knowledge coupling (Requirement #2) — traverses PrimeKG drug-protein-disease links.</p>
+          <p class="fl-cite">CLADD: RAG-Enhanced Collaborative LLM Agents for Drug Discovery · <span class="muted">AAAI 2026</span></p>
+        </article>
+        <article class="fl-card">
+          <div class="fl-head">
+            <h3 class="fl-name">MedGraphRAG</h3>
+            <a href="cell/K1.O2.html" class="tag tag-cell">K1.O2</a>
+          </div>
+          <p class="fl-tagline">Triple-tier graph: MIMIC IV + MedC-K + UMLS/ICD</p>
+          <div class="fl-stats"><div class="fl-stat"><span class="fl-num">3</span><span class="fl-label">knowledge tiers</span></div><div class="fl-stat"><span class="fl-num">★</span><span class="fl-label">triple-K cross-source</span></div></div>
+          <p class="fl-subtitle">U-Retrieval · evidence-based citations · ★ K1+K2+K4 cross-source</p>
+          <p class="fl-why"><strong>Why it matters.</strong> The clearest demonstration of all four K sources working in concert — primary literature, curated ontology, and tacit private EHR.</p>
+          <p class="fl-cite">Medical Graph RAG: Towards Safe Medical Large Language Model via Graph Retrieval-Augmented Generation · <span class="muted">ACL 2025</span></p>
+        </article>
+        <article class="fl-card">
+          <div class="fl-head">
+            <h3 class="fl-name">MITRA</h3>
+            <a href="cell/K4.O1.html" class="tag tag-cell">K4.O1</a>
+          </div>
+          <p class="fl-tagline">Physics collaboration tacit memory · +6× over BM25</p>
+          <div class="fl-stats"><div class="fl-stat"><span class="fl-num">6×</span><span class="fl-label">over BM25</span></div><div class="fl-stat"><span class="fl-num">★</span><span class="fl-label">K4 frontier</span></div></div>
+          <p class="fl-subtitle">CMS Analysis Notes · internal wikis · on-prem 4-bit deployment</p>
+          <p class="fl-why"><strong>Why it matters.</strong> Bellwether for K4 tacit knowledge — institutional memory that ChatGPT structurally cannot access.</p>
+          <p class="fl-cite">MITRA: Knowledge Retrieval over Physics Collaborations&#x27; Tacit Memory · <span class="muted">arXiv 2026</span></p>
+        </article>
+        <article class="fl-card">
+          <div class="fl-head">
+            <h3 class="fl-name">Patho-AgenticRAG</h3>
+            <a href="cell/K3.O1.html" class="tag tag-cell">K3.O1</a>
+          </div>
+          <p class="fl-tagline">+38pp over baseline on pathology QA</p>
+          <div class="fl-stats"><div class="fl-stat"><span class="fl-num">+38</span><span class="fl-label">pp gain</span></div><div class="fl-stat"><span class="fl-num">AAAI &#x27;26</span><span class="fl-label">venue</span></div></div>
+          <p class="fl-subtitle">600 textbook pages · agentic router · GRPO training · multimodal</p>
+          <p class="fl-why"><strong>Why it matters.</strong> Largest gain reported in a peer-reviewed K3 RAG paper; agentic routing over multimodal textbook.</p>
+          <p class="fl-cite">Patho-AgenticRAG: Pathology Agentic RAG with Textbook-aligned Multimodal Knowledge · <span class="muted">AAAI 2026</span></p>
+        </article>
+        <article class="fl-card">
+          <div class="fl-head">
+            <h3 class="fl-name">MEDRAG</h3>
+            <a href="cell/K1.O1.html" class="tag tag-cell">K1.O1</a>
+          </div>
+          <p class="fl-tagline">Canonical medical RAG · 4-corpus retrieval</p>
+          <div class="fl-stats"><div class="fl-stat"><span class="fl-num">4</span><span class="fl-label">corpora</span></div><div class="fl-stat"><span class="fl-num">ACL &#x27;24</span><span class="fl-label">venue</span></div></div>
+          <p class="fl-subtitle">PubMed + StatPearls + Textbooks + Wikipedia · MedCPT retriever · RRF fusion</p>
+          <p class="fl-why"><strong>Why it matters.</strong> Established the source-reliability-tiering benchmark (Requirement #3) — different epistemic weight per corpus.</p>
+          <p class="fl-cite">Benchmarking Retrieval-Augmented Generation for Medicine · <span class="muted">ACL Findings 2024</span></p>
+        </article>
+        <article class="fl-card">
+          <div class="fl-head">
+            <h3 class="fl-name">PaperQA</h3>
+            <a href="cell/K1.O1.html" class="tag tag-cell">K1.O1</a>
+          </div>
+          <p class="fl-tagline">Sentence-level claim attribution</p>
+          <div class="fl-stats"><div class="fl-stat"><span class="fl-num">Sentence-</span><span class="fl-label">level citing</span></div></div>
+          <p class="fl-subtitle">Paper-grounded retrieve-cite-answer · the K1.O1 reference design</p>
+          <p class="fl-why"><strong>Why it matters.</strong> Established mandatory claim attribution (Requirement #1) as the baseline expectation for scientific RAG.</p>
+          <p class="fl-cite"><a href="https://arxiv.org/abs/2312.07559v2" target="_blank" rel="noopener">PaperQA: Retrieval-Augmented Generative Agent for Scientific Research ↗</a> · <span class="muted">arXiv 2023</span></p>
+        </article>
+        <article class="fl-card">
+          <div class="fl-head">
+            <h3 class="fl-name">LLaMP</h3>
+            <a href="cell/K2.O1.html" class="tag tag-cell">K2.O1</a>
+          </div>
+          <p class="fl-tagline">Materials Project KB-grounded science</p>
+          <div class="fl-stats"><div class="fl-stat"><span class="fl-num">EMNLP &#x27;25</span><span class="fl-label">venue</span></div></div>
+          <p class="fl-subtitle">Property lookup · simulation tools · K1+K2 cross-source</p>
+          <p class="fl-why"><strong>Why it matters.</strong> Bridges primary literature and the Materials Project KB — sets the K2 materials science pattern.</p>
+          <p class="fl-cite"><a href="https://arxiv.org/abs/2401.17244" target="_blank" rel="noopener">LLaMP: Large Language Model Made Powerful for High-fidelity Materials Knowledge Retrieval ↗</a> · <span class="muted">EMNLP 2025</span></p>
+        </article></div>
+  </div>
+</section>
+
+<section id="requirements" class="prose-section alt-bg">
+  <div class="wrap">
+    <h2 class="section-title">The 5 unique requirements of scientific RAG</h2>
+    <p class="section-sub">General-purpose RAG ranks by semantic proximity. Scientific RAG must obey stricter, often quantitative, demands.</p>
+    <div class="req-grid">
+      <div class="req-card req-1">
+        <div class="req-num">1</div>
+        <h3>Mandatory Claim Attribution</h3>
+        <p>Every claim traceable to a source unit — sentence-level, page-level, or claim-graph.</p>
+        <p class="req-evidence">OpenScholar 0% hallucination · PaperQA sentence-level citing · R2AG-Climate 4-dim faithfulness</p>
+      </div>
+      <div class="req-card req-2">
+        <div class="req-num">2</div>
+        <h3>Relational Knowledge Coupling</h3>
+        <p>Facts live in webs (PDB ↔ UniProt ↔ ChEMBL). Retrieval must traverse couplings, not just rank entities.</p>
+        <p class="req-evidence">CLADD 2-hop PrimeKG · MedGraphRAG 3-tier · BIORAG NCBI cross-DB</p>
+      </div>
+      <div class="req-card req-3">
+        <div class="req-num">3</div>
+        <h3>Source Reliability Tiering</h3>
+        <p>Papers, preprints, curated DBs, lab notes — each carries different epistemic weight. RAG must reflect this.</p>
+        <p class="req-evidence">MEDRAG RRF over 4 corpora · Rationale-Guided RAG balanced retrieval · MITRA 2-tier abstracts→full-text</p>
+      </div>
+      <div class="req-card req-4">
+        <div class="req-num">4</div>
+        <h3>Protocol-level Reproducibility</h3>
+        <p>Outputs must include enough method detail for an expert to reproduce — not just a summary.</p>
+        <p class="req-evidence">AP Lab Protocols · RHIC DAPP · MatClaw 99% API-call accuracy · MITRA full-method docs</p>
+      </div>
+      <div class="req-card req-5">
+        <div class="req-num">5</div>
+        <h3>Domain-Native Representations</h3>
+        <p>SMILES, InChI, FASTA, LaTeX, CIF, DICOM. No flattening to text — the chemistry of the structure matters.</p>
+        <p class="req-evidence">Rag2Mol/TaLiRAGen/f-RAG SMILES+3D · HoneyComb CIF · MMed-RAG DICOM</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="growth" class="prose-section">
+  <div class="wrap">
+    <h2 class="section-title">Growth by year, stacked by Knowledge Source</h2>
+    <p class="section-sub">
+      The 2024–2025 explosion is dominated by <strong style="color:#b8431f">K1 primary-literature</strong> systems
+      (medical QA, scientific synthesis). <strong style="color:#1f7a4d">K2 curated-KB</strong> work follows, while
+      <strong style="color:#d4992a">K4 tacit</strong> systems remain rare — most are 2025–2026 firsts.
+    </p>
+    <div class="chart-frame"><svg viewBox="0 0 906 260" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Scientific RAG paper growth by year, stacked by Knowledge Source axis"><rect x="50" y="227.07692307692307" width="80" height="2.9" fill="#6a3acb" opacity="0.92"><title>2018 · K3: 1</title></rect><rect x="50" y="224.15384615384613" width="80" height="2.9" fill="#1f7a4d" opacity="0.92"><title>2018 · K2: 1</title></rect><rect x="50" y="221.2307692307692" width="80" height="2.9" fill="#999" opacity="0.92"><title>2018 · ?: 1</title></rect><text x="90.0" y="248" text-anchor="middle" font-size="12" fill="var(--fg-muted)">2018</text><text x="90.0" y="215.23076923076923" text-anchor="middle" font-size="11" font-weight="700" fill="var(--fg)">3</text><rect x="144" y="227.07692307692307" width="80" height="2.9" fill="#b8431f" opacity="0.92"><title>2019 · K1: 1</title></rect><rect x="144" y="224.15384615384613" width="80" height="2.9" fill="#999" opacity="0.92"><title>2019 · ?: 1</title></rect><text x="184.0" y="248" text-anchor="middle" font-size="12" fill="var(--fg-muted)">2019</text><text x="184.0" y="218.15384615384616" text-anchor="middle" font-size="11" font-weight="700" fill="var(--fg)">2</text><rect x="238" y="227.07692307692307" width="80" height="2.9" fill="#6a3acb" opacity="0.92"><title>2020 · K3: 1</title></rect><rect x="238" y="224.15384615384613" width="80" height="2.9" fill="#1f7a4d" opacity="0.92"><title>2020 · K2: 1</title></rect><rect x="238" y="215.38461538461536" width="80" height="8.8" fill="#b8431f" opacity="0.92"><title>2020 · K1: 3</title></rect><rect x="238" y="203.69230769230768" width="80" height="11.7" fill="#999" opacity="0.92"><title>2020 · ?: 4</title></rect><text x="278.0" y="248" text-anchor="middle" font-size="12" fill="var(--fg-muted)">2020</text><text x="278.0" y="197.69230769230768" text-anchor="middle" font-size="11" font-weight="700" fill="var(--fg)">9</text><rect x="332" y="227.07692307692307" width="80" height="2.9" fill="#6a3acb" opacity="0.92"><title>2021 · K3: 1</title></rect><rect x="332" y="224.15384615384613" width="80" height="2.9" fill="#b8431f" opacity="0.92"><title>2021 · K1: 1</title></rect><rect x="332" y="218.3076923076923" width="80" height="5.8" fill="#999" opacity="0.92"><title>2021 · ?: 2</title></rect><text x="372.0" y="248" text-anchor="middle" font-size="12" fill="var(--fg-muted)">2021</text><text x="372.0" y="212.30769230769232" text-anchor="middle" font-size="11" font-weight="700" fill="var(--fg)">4</text><rect x="426" y="227.07692307692307" width="80" height="2.9" fill="#b8431f" opacity="0.92"><title>2022 · K1: 1</title></rect><rect x="426" y="215.38461538461536" width="80" height="11.7" fill="#999" opacity="0.92"><title>2022 · ?: 4</title></rect><text x="466.0" y="248" text-anchor="middle" font-size="12" fill="var(--fg-muted)">2022</text><text x="466.0" y="209.3846153846154" text-anchor="middle" font-size="11" font-weight="700" fill="var(--fg)">5</text><rect x="520" y="215.3846153846154" width="80" height="14.6" fill="#6a3acb" opacity="0.92"><title>2023 · K3: 5</title></rect><rect x="520" y="209.53846153846155" width="80" height="5.8" fill="#1f7a4d" opacity="0.92"><title>2023 · K2: 2</title></rect><rect x="520" y="192.0" width="80" height="17.5" fill="#b8431f" opacity="0.92"><title>2023 · K1: 6</title></rect><rect x="520" y="183.23076923076923" width="80" height="8.8" fill="#999" opacity="0.92"><title>2023 · ?: 3</title></rect><text x="560.0" y="248" text-anchor="middle" font-size="12" fill="var(--fg-muted)">2023</text><text x="560.0" y="177.23076923076923" text-anchor="middle" font-size="11" font-weight="700" fill="var(--fg)">16</text><rect x="614" y="218.30769230769232" width="80" height="11.7" fill="#6a3acb" opacity="0.92"><title>2024 · K3: 4</title></rect><rect x="614" y="206.61538461538464" width="80" height="11.7" fill="#1f7a4d" opacity="0.92"><title>2024 · K2: 4</title></rect><rect x="614" y="174.46153846153848" width="80" height="32.2" fill="#b8431f" opacity="0.92"><title>2024 · K1: 11</title></rect><rect x="614" y="154.00000000000003" width="80" height="20.5" fill="#999" opacity="0.92"><title>2024 · ?: 7</title></rect><text x="654.0" y="248" text-anchor="middle" font-size="12" fill="var(--fg-muted)">2024</text><text x="654.0" y="148.0" text-anchor="middle" font-size="11" font-weight="700" fill="var(--fg)">26</text><rect x="708" y="224.15384615384616" width="80" height="5.8" fill="#d4992a" opacity="0.92"><title>2025 · K4: 2</title></rect><rect x="708" y="194.92307692307693" width="80" height="29.2" fill="#6a3acb" opacity="0.92"><title>2025 · K3: 10</title></rect><rect x="708" y="168.6153846153846" width="80" height="26.3" fill="#1f7a4d" opacity="0.92"><title>2025 · K2: 9</title></rect><rect x="708" y="77.99999999999999" width="80" height="90.6" fill="#b8431f" opacity="0.92"><title>2025 · K1: 31</title></rect><rect x="708" y="39.999999999999986" width="80" height="38.0" fill="#999" opacity="0.92"><title>2025 · ?: 13</title></rect><text x="748.0" y="248" text-anchor="middle" font-size="12" fill="var(--fg-muted)">2025</text><text x="748.0" y="34.0" text-anchor="middle" font-size="11" font-weight="700" fill="var(--fg)">65</text><rect x="802" y="227.07692307692307" width="80" height="2.9" fill="#d4992a" opacity="0.92"><title>2026 · K4: 1</title></rect><rect x="802" y="221.23076923076923" width="80" height="5.8" fill="#6a3acb" opacity="0.92"><title>2026 · K3: 2</title></rect><rect x="802" y="212.46153846153845" width="80" height="8.8" fill="#1f7a4d" opacity="0.92"><title>2026 · K2: 3</title></rect><rect x="802" y="186.15384615384613" width="80" height="26.3" fill="#b8431f" opacity="0.92"><title>2026 · K1: 9</title></rect><rect x="802" y="165.69230769230768" width="80" height="20.5" fill="#999" opacity="0.92"><title>2026 · ?: 7</title></rect><text x="842.0" y="248" text-anchor="middle" font-size="12" fill="var(--fg-muted)">2026</text><text x="842.0" y="159.69230769230768" text-anchor="middle" font-size="11" font-weight="700" fill="var(--fg)">22</text></svg></div>
+    <p class="chart-legend"><span class="lg-chip" style="background:#b8431f;color:white">K1 Primary Lit</span><span class="lg-chip" style="background:#1f7a4d;color:white">K2 Curated KB</span><span class="lg-chip" style="background:#6a3acb;color:white">K3 Obs/Exp</span><span class="lg-chip" style="background:#d4992a;color:white">K4 Tacit</span></p>
+  </div>
+</section>
+
+<section id="kd" class="prose-section alt-bg">
+  <div class="wrap">
+    <h2 class="section-title">K × Domain — where each Knowledge Source lives</h2>
+    <p class="section-sub">
+      Medicine spans all four K tiers. Chemistry leans on K2 curated KBs. Physics is K1+K4 (institutional memory).
+      Earth science is K1-heavy. Cells link to a filtered Browse view.
+    </p>
+    <table class="kd-grid">
+      <thead><tr><th></th><th>🧬 Biology</th><th>⚗️ Chemistry</th><th>🩺 Medicine</th><th>🪨 Materials Science</th><th>⚛️ Physics</th><th>🌍 Earth Science</th><th>🔭 Astronomy</th></tr></thead>
+      <tbody><tr><th><span class="cell-axis">K1</span> Primary Literature</th><td style="background:var(--cell-high);color:var(--cell-high-fg);"><a href="browse.html?q=K1+Biology" class="kd-link" title="K1 × Biology: 26 entries">26</a></td><td style="background:var(--cell-mid);"><a href="browse.html?q=K1+Chemistry" class="kd-link" title="K1 × Chemistry: 13 entries">13</a></td><td style="background:var(--cell-high);color:var(--cell-high-fg);"><a href="browse.html?q=K1+Medicine" class="kd-link" title="K1 × Medicine: 27 entries">27</a></td><td style="background:var(--cell-low);"><a href="browse.html?q=K1+Materials+Science" class="kd-link" title="K1 × Materials Science: 6 entries">6</a></td><td style="background:var(--cell-high);color:var(--cell-high-fg);"><a href="browse.html?q=K1+Physics" class="kd-link" title="K1 × Physics: 18 entries">18</a></td><td style="background:var(--cell-high);color:var(--cell-high-fg);"><a href="browse.html?q=K1+Earth+Science" class="kd-link" title="K1 × Earth Science: 18 entries">18</a></td><td style="background:var(--cell-mid);"><a href="browse.html?q=K1+Astronomy" class="kd-link" title="K1 × Astronomy: 7 entries">7</a></td></tr>
+<tr><th><span class="cell-axis">K2</span> Curated Knowledge Base</th><td style="background:var(--cell-mid);"><a href="browse.html?q=K2+Biology" class="kd-link" title="K2 × Biology: 8 entries">8</a></td><td style="background:var(--cell-high);color:var(--cell-high-fg);"><a href="browse.html?q=K2+Chemistry" class="kd-link" title="K2 × Chemistry: 16 entries">16</a></td><td style="background:var(--cell-mid);"><a href="browse.html?q=K2+Medicine" class="kd-link" title="K2 × Medicine: 13 entries">13</a></td><td style="background:var(--cell-low);"><a href="browse.html?q=K2+Materials+Science" class="kd-link" title="K2 × Materials Science: 5 entries">5</a></td><td style="background:var(--cell-zero);color:var(--fg-faint);"><a href="browse.html?q=K2+Physics" class="kd-link" title="K2 × Physics: 0 entries">0</a></td><td style="background:var(--cell-zero);color:var(--fg-faint);"><a href="browse.html?q=K2+Earth+Science" class="kd-link" title="K2 × Earth Science: 0 entries">0</a></td><td style="background:var(--cell-zero);color:var(--fg-faint);"><a href="browse.html?q=K2+Astronomy" class="kd-link" title="K2 × Astronomy: 0 entries">0</a></td></tr>
+<tr><th><span class="cell-axis">K3</span> Observational &amp; Experimental</th><td style="background:var(--cell-low);"><a href="browse.html?q=K3+Biology" class="kd-link" title="K3 × Biology: 4 entries">4</a></td><td style="background:var(--cell-low);"><a href="browse.html?q=K3+Chemistry" class="kd-link" title="K3 × Chemistry: 1 entries">1</a></td><td style="background:var(--cell-high);color:var(--cell-high-fg);"><a href="browse.html?q=K3+Medicine" class="kd-link" title="K3 × Medicine: 21 entries">21</a></td><td style="background:var(--cell-zero);color:var(--fg-faint);"><a href="browse.html?q=K3+Materials+Science" class="kd-link" title="K3 × Materials Science: 0 entries">0</a></td><td style="background:var(--cell-zero);color:var(--fg-faint);"><a href="browse.html?q=K3+Physics" class="kd-link" title="K3 × Physics: 0 entries">0</a></td><td style="background:var(--cell-low);"><a href="browse.html?q=K3+Earth+Science" class="kd-link" title="K3 × Earth Science: 2 entries">2</a></td><td style="background:var(--cell-zero);color:var(--fg-faint);"><a href="browse.html?q=K3+Astronomy" class="kd-link" title="K3 × Astronomy: 0 entries">0</a></td></tr>
+<tr><th><span class="cell-axis">K4</span> Tacit Knowledge</th><td style="background:var(--cell-zero);color:var(--fg-faint);"><a href="browse.html?q=K4+Biology" class="kd-link" title="K4 × Biology: 0 entries">0</a></td><td style="background:var(--cell-low);"><a href="browse.html?q=K4+Chemistry" class="kd-link" title="K4 × Chemistry: 1 entries">1</a></td><td style="background:var(--cell-low);"><a href="browse.html?q=K4+Medicine" class="kd-link" title="K4 × Medicine: 1 entries">1</a></td><td style="background:var(--cell-low);"><a href="browse.html?q=K4+Materials+Science" class="kd-link" title="K4 × Materials Science: 2 entries">2</a></td><td style="background:var(--cell-low);"><a href="browse.html?q=K4+Physics" class="kd-link" title="K4 × Physics: 5 entries">5</a></td><td style="background:var(--cell-low);"><a href="browse.html?q=K4+Earth+Science" class="kd-link" title="K4 × Earth Science: 1 entries">1</a></td><td style="background:var(--cell-zero);color:var(--fg-faint);"><a href="browse.html?q=K4+Astronomy" class="kd-link" title="K4 × Astronomy: 0 entries">0</a></td></tr>
+</tbody>
+    </table>
+  </div>
+</section>
+
+<section id="bridges" class="prose-section">
+  <div class="wrap">
+    <h2 class="section-title">Cross-source bridges — papers that span multiple K tiers</h2>
+    <p class="section-sub">
+      <strong>19</strong> systems bridge multiple knowledge sources. The most ambitious — MedGraphRAG —
+      stitches K1 (MedC-K papers) + K2 (UMLS/ICD ontology) + K4 (MIMIC IV private EHR) in one pipeline.
+      These prove that the K axis is not a partition but a graph.
+    </p>
+    <div class="card-grid"><article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2601.22684" target="_blank" rel="noopener">BioModelsRAG: A Biological Modeling Assistant Using RAG (Retrieval Augmented Generation) ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">BioModels Custom QA</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">BioModelsRAG (2026, Bio). Cross-source K1+K2.</p>
+  <div class="card-tags"><a href="cell/K1.O3.html" class="tag tag-cell">K1.O3</a><a href="domain/bio.html" class="tag tag-domain">🧬Biology</a><a href="topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-xs">★ cross-source</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">CLADD: RAG-Enhanced Collaborative LLM Agents for Drug Discovery</h3>
+  <div class="card-meta"><span class="meta-method">CLADD</span> · <span class="meta-venue">AAAI</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">CLADD RAG-Enhanced Collaborative Drug Discovery (2026, Chem). Cross-source K2+K3.</p>
+  <div class="card-tags"><a href="cell/K2.O3.html" class="tag tag-cell">K2.O3</a><a href="domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-xs">★ cross-source</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">MITRA: Knowledge Retrieval over Physics Collaborations&#x27; Tacit Memory</h3>
+  <div class="card-meta"><span class="meta-method">MITRA</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">MITRA Physics Collaborations Knowledge Retrieval (2026, Phys). Strongest K4 example.</p>
+  <div class="card-tags"><a href="cell/K4.O1.html" class="tag tag-cell">K4.O1</a><a href="domain/physics.html" class="tag tag-domain">⚛️Physics</a><a href="topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-xs">★ cross-source</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">MatClaw: Autonomous Code-First Agent for Materials Science</h3>
+  <div class="card-meta"><span class="meta-method">MatClaw</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">MatClaw autonomous code-first agent (2026, Mat). Cross-source K1+K2.</p>
+  <div class="card-tags"><a href="cell/K2.O2.html" class="tag tag-cell">K2.O2</a><a href="cell/K4.O3.html" class="tag tag-cell">K4.O3</a><a href="domain/material.html" class="tag tag-domain">🪨Materials Science</a><a href="topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-xs">★ cross-source</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">Patho-AgenticRAG: Pathology Agentic RAG with Textbook-aligned Multimodal Knowledge</h3>
+  <div class="card-meta"><span class="meta-method">Patho-AgenticRAG</span> · <span class="meta-venue">AAAI</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">Patho-AgenticRAG pathology (2026, Med). Cross-source.</p>
+  <div class="card-tags"><a href="cell/K3.O1.html" class="tag tag-cell">K3.O1</a><a href="domain/medical.html" class="tag tag-domain">🩺Medicine</a><a href="topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-xs">★ cross-source</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">AI-Powered Assistant for Long-Term Access to RHIC Knowledge</h3>
+  <div class="card-meta"><span class="meta-method">RHIC DAPP</span> · <span class="meta-venue">New York Scientific Data Summit</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">★ FLAGSHIP K4 EXAMPLE. ~1 ExaByte institutional memory. MCP-RAG. Demonstrates commercial AI&#x27;s blindness to non-public scientific tacit knowledge.</p>
+  <div class="card-tags"><a href="cell/K4.O1.html" class="tag tag-cell">K4.O1</a><a href="domain/physics.html" class="tag tag-domain">⚛️Physics</a><a href="topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">Structured Table</span><span class="tag tag-xs">★ cross-source</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://openreview.net/forum?id=ctkVFKXDMX" target="_blank" rel="noopener">ChemisTRAG: Table-based Retrieval-Augmented Generation for Chemistry Question Answering ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">ChemisTRAG-QA</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">ChemisTRAG table-based RAG (Chem) [needs-fetch — table source ambiguous between K1 paper-tables vs K2 curated tables; provisional K2].</p>
+  <div class="card-tags"><a href="cell/K2.O1.html" class="tag tag-cell">K2.O1</a><a href="domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">Structured Table</span><span class="tag tag-mod">SMILES</span><span class="tag tag-xs">★ cross-source</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title">DUNE Knowledge Retrieval: Large-scale Indexing of Fermilab Collaboration Documents</h3>
+  <div class="card-meta"><span class="meta-method">DUNE-GPT</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">DUNE Knowledge Retrieval (2025, Phys). Borderline K4 (institutional memory) — primary tag K1, secondary K4.</p>
+  <div class="card-tags"><a href="cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="cell/K4.O1.html" class="tag tag-cell">K4.O1</a><a href="domain/physics.html" class="tag tag-domain">⚛️Physics</a><a href="topics/method.html" class="tag tag-type">Methods</a></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2509.09686v2" target="_blank" rel="noopener">GeoGPT-RAG Technical Report ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">GeoRAG-QA</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">GeoGPT-RAG (2025, Earth). Cross-source.</p>
+  <div class="card-tags"><a href="cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="domain/earth.html" class="tag tag-domain">🌍Earth Science</a><a href="topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-xs">★ cross-source</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://doi.org/10.1016/j.jag.2025.104712" target="_blank" rel="noopener">GeoGraphRAG: A graph-based retrieval-augmented generation approach for empowering large language models in automated geospatial modeling ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">GeoGraphRAG</span> · <span class="meta-venue">Int. J. Appl. Earth Obs. Geoinf. (JAG)</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">S-GMKG 그래프 RAG. ICL+그래프 탐색만으로 GEE 코드 생성. Execution-based 평가 미실시.</p>
+  <div class="card-tags"><a href="cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="domain/earth.html" class="tag tag-domain">🌍Earth Science</a><a href="topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">KG</span><span class="tag tag-xs">★ cross-source</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://arxiv.org/abs/2401.17244" target="_blank" rel="noopener">LLaMP: Large Language Model Made Powerful for High-fidelity Materials Knowledge Retrieval ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">LLaMP MP Property Benchmark</span> · <span class="meta-venue">EMNLP</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">LLaMP (2025, Mat). Listed K1.O1 (basic mode); see also K2.O1 for KB mode. Cross-source.</p>
+  <div class="card-tags"><a href="cell/K1.O1.html" class="tag tag-cell">K1.O1</a><a href="cell/K2.O1.html" class="tag tag-cell">K2.O1</a><a href="domain/material.html" class="tag tag-domain">🪨Materials Science</a><a href="domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">Structured Table</span><span class="tag tag-mod">3D Structure</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://doi.org/10.1021/acs.jcim.5c01941" target="_blank" rel="noopener">Materials Dual-Source Knowledge Retrieval-Augmented Generation for Local Large Language Models in Photocatalysts ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">MDSK-RAG</span> · <span class="meta-venue">J. Chem. Inf. Model.</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">CSV+PDF 이중 소스 오프라인 RAG. gemma-2-9b-it+RAG가 GPT-4o(no RAG)보다 우세 (0.71 vs 0.66).</p>
+  <div class="card-tags"><a href="cell/K2.O2.html" class="tag tag-cell">K2.O2</a><a href="cell/K4.O3.html" class="tag tag-cell">K4.O3</a><a href="domain/material.html" class="tag tag-domain">🪨Materials Science</a><a href="domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">CSV</span><span class="tag tag-xs">★ cross-source</span></div>
+</article>
+</div>
+    <p class="see-more"><a href="browse.html" class="btn btn-secondary">Browse all cross-source systems →</a></p>
+  </div>
+</section>
+
+<section id="frontiers" class="prose-section alt-bg">
+  <div class="wrap">
+    <h2 class="section-title">Frontier cells — where the white space is</h2>
+    <p class="section-sub">
+      The K×O grid surfaces two near-empty cells. Both involve the most ambitious operation (O3 Hypothesis)
+      paired with the harder-to-access sources (K3 raw modalities, K4 tacit knowledge).
+    </p>
+    <div class="frontier-pair">
+      <div class="frontier-col">
+        <h3><span class="cell-id-big">[K3.O3]</span> Observational × Hypothesis <span class="muted">(1 entry)</span></h3>
+        <p>Spectra → molecule, imaging → diagnosis-hypothesis, sequencing → mechanism. Today, only mass-spectrometry-to-molecule attempts exist.</p>
+        <div class="card-grid"><article class="card">
+  <h3 class="card-title"><a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/c6c31413d5c53b7d1c343c1498734b0f-Abstract-Datasets_and_Benchmarks_Track.html" target="_blank" rel="noopener">MassSpecGym: A benchmark for the discovery and identification of molecules ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">MassSpecGym</span> · <span class="meta-venue">NeurIPS</span> · <span class="meta-year">2024</span></div>
+  <p class="card-note">MassSpecGym discovery &amp; ID of molecules (2024, Chem). Spectra → molecule hypothesis.</p>
+  <div class="card-tags"><a href="cell/K3.O3.html" class="tag tag-cell">K3.O3</a><a href="domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="topics/benchmark.html" class="tag tag-type">Benchmarks</a><span class="tag tag-mod">SMILES</span><span class="tag tag-mod">Structured Table</span></div>
+</article>
+</div>
+      </div>
+      <div class="frontier-col">
+        <h3><span class="cell-id-big">[K4.O3]</span> Tacit × Hypothesis <span class="muted">(2 entries)</span></h3>
+        <p>Hypothesis generation grounded in lab logs, internal collaboration notes, or industry process databases. Nearly virgin territory.</p>
+        <div class="card-grid"><article class="card">
+  <h3 class="card-title">MatClaw: Autonomous Code-First Agent for Materials Science</h3>
+  <div class="card-meta"><span class="meta-method">MatClaw</span> · <span class="meta-venue">arXiv</span> · <span class="meta-year">2026</span></div>
+  <p class="card-note">MatClaw autonomous code-first agent (2026, Mat). Cross-source K1+K2.</p>
+  <div class="card-tags"><a href="cell/K2.O2.html" class="tag tag-cell">K2.O2</a><a href="cell/K4.O3.html" class="tag tag-cell">K4.O3</a><a href="domain/material.html" class="tag tag-domain">🪨Materials Science</a><a href="topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-xs">★ cross-source</span></div>
+</article>
+
+<article class="card">
+  <h3 class="card-title"><a href="https://doi.org/10.1021/acs.jcim.5c01941" target="_blank" rel="noopener">Materials Dual-Source Knowledge Retrieval-Augmented Generation for Local Large Language Models in Photocatalysts ↗</a></h3>
+  <div class="card-meta"><span class="meta-method">MDSK-RAG</span> · <span class="meta-venue">J. Chem. Inf. Model.</span> · <span class="meta-year">2025</span></div>
+  <p class="card-note">CSV+PDF 이중 소스 오프라인 RAG. gemma-2-9b-it+RAG가 GPT-4o(no RAG)보다 우세 (0.71 vs 0.66).</p>
+  <div class="card-tags"><a href="cell/K2.O2.html" class="tag tag-cell">K2.O2</a><a href="cell/K4.O3.html" class="tag tag-cell">K4.O3</a><a href="domain/material.html" class="tag tag-domain">🪨Materials Science</a><a href="domain/chem.html" class="tag tag-domain">⚗️Chemistry</a><a href="topics/method.html" class="tag tag-type">Methods</a><span class="tag tag-mod">CSV</span><span class="tag tag-xs">★ cross-source</span></div>
+</article>
+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="directions" class="prose-section">
+  <div class="wrap">
+    <h2 class="section-title">Seven directions for the next scientific RAG generation</h2>
+    <p class="section-sub">Each entry is a "From → To" transition the field is starting to make. Drawn from §11 of the survey.</p>
+    <div class="dir-grid">
+      <div class="dir-card">
+        <span class="dir-num">1</span>
+        <h3>Underutilized → Activated Authoritative Sources <span class="dir-star">★ main insight</span></h3>
+        <p>Dozens of authoritative DBs (Reaxys, Aspen, NIST Mass Spec, ChemProt) are <em>indexed nowhere</em> for RAG. Activating them is the single largest unclaimed win.</p>
+        <p class="dir-ev">RHIC DAPP · MITRA · DUNE-GPT show the playbook for physics; chemistry/materials lag.</p>
+      </div>
+      <div class="dir-card">
+        <span class="dir-num">2</span>
+        <h3>Primary Literature → Tacit Sources</h3>
+        <p>Most domains lack a single K4 system. The institutional memory of labs, collaborations, and industry holds 10×+ more knowledge than papers.</p>
+        <p class="dir-ev">K4 is ~9 papers today out of 138 — likely 50-65 once private datasets are surveyed.</p>
+      </div>
+      <div class="dir-card">
+        <span class="dir-num">3</span>
+        <h3>Ground → Hypothesis</h3>
+        <p>From "answer with citations" to "propose a molecule and have the docking score verify it." Generate-then-verify closed loops.</p>
+        <p class="dir-ev">f-RAG → Vina · Rag2Mol → docking · CLADD agent verifier · HEA → DFT.</p>
+      </div>
+      <div class="dir-card">
+        <span class="dir-num">4</span>
+        <h3>Closed → Sandboxed Sources</h3>
+        <p>HIPAA, IP, and security forbid sending corpora to commercial LLMs. On-prem RAG with 4-bit local models is the only path.</p>
+        <p class="dir-ev">MITRA 4-bit · DUNE-GPT Fermilab intranet · MedRAG-CPDD private EHR.</p>
+      </div>
+      <div class="dir-card">
+        <span class="dir-num">5</span>
+        <h3>Static → Streaming Living Sources</h3>
+        <p>PubMed adds 1M papers/year. Crystal structure DBs update daily. Indices must stream, not snapshot.</p>
+        <p class="dir-ev">BIORAG NCBI live API · OpenScholar Semantic Scholar live.</p>
+      </div>
+      <div class="dir-card">
+        <span class="dir-num">6</span>
+        <h3>Synthetic Contamination → Synthetic Grounding</h3>
+        <p>Generated content is poisoning future corpora. The defense: use synthetic data as <em>training scaffolding</em>, not retrieval ground truth.</p>
+        <p class="dir-ev">OpenScholar synthetic SFT (clean) · LitQA anti-contamination post-cutoff papers.</p>
+      </div>
+      <div class="dir-card">
+        <span class="dir-num">7</span>
+        <h3>Single-Modality → Multi-Modality Fusion</h3>
+        <p>Real scientific reasoning interleaves text, equations, structures, images. Multimodal retrieval over scientific media is the bottleneck.</p>
+        <p class="dir-ev">MMed-RAG · Patho-AgenticRAG · AlzheimerRAG · RS-RAG span the modality bridge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>
+      <strong>Scientific RAG Hub</strong> — companion catalog to the TPAMI 2026 survey
+      <em>"Scientific Retrieval-Augmented Generation: A Survey through Knowledge Source and Scientific Mission"</em>
+      by Oh et al. (Vision and Learning Lab, Seoul National University).
+    </p>
+    <p class="links">
+      <a href="llms.txt">llms.txt</a> ·
+      <a href="llms-full.txt">llms-full.txt</a> ·
+      <a href="data/papers.json">papers.json</a> ·
+      <a href="about.html">About</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

@@ -25,11 +25,11 @@ Knowledge Source and Scientific Mission" (Oh et al., Vision and Learning Lab, Se
 ## Browse by scientific domain
 
 - [/domain/bio.md](bio.md) — Biology (47 entries)
-- [/domain/chem.md](chem.md) — Chemistry (34 entries)
-- [/domain/medical.md](medical.md) — Medicine (86 entries)
-- [/domain/material.md](material.md) — Materials Science (12 entries)
-- [/domain/physics.md](physics.md) — Physics (23 entries)
-- [/domain/earth.md](earth.md) — Earth Science (22 entries)
+- [/domain/chem.md](chem.md) — Chemistry (36 entries)
+- [/domain/medical.md](medical.md) — Medicine (89 entries)
+- [/domain/material.md](material.md) — Materials Science (14 entries)
+- [/domain/physics.md](physics.md) — Physics (26 entries)
+- [/domain/earth.md](earth.md) — Earth Science (23 entries)
 - [/domain/astronomy.md](astronomy.md) — Astronomy (9 entries)
 - [/domain/Quantum.md](Quantum.md) — Quantum (2 entries)
 

@@ -1,6 +1,6 @@
 # Medicine
 
-_86 entries in the medicine domain._
+_89 entries in the medicine domain._
 
 ---
 
@@ -10,8 +10,10 @@ _86 entries in the medicine domain._
 - **OpenScholar: Synthesizing Scientific Literature with RAG LMs** — OpenScholar · Nature · 2026 — ★★ K1.O2 FLAGSHIP. Iterative self-feedback. 0% hallucination vs GPT-4o 78-90%. Experts prefer OpenScholar-GPT-4o over human 70%. Public demo 30K users  `[K1.O1, Biology, Medicine, Physics, Methods]`
 - **[Overview of TREC 2025 Biomedical Generative Retrieval (BioGen) Track](https://arxiv.org/abs/2603.21582)** — TREC 2025 BioGen · arXiv · 2026 — TREC 2025 BioGen Track (2026, Bio)  `[K1.O2, Biology, Medicine, Benchmarks]`
 - **Patho-AgenticRAG: Multimodal Agentic RAG for Pathology VLMs via RL** — Patho-AgenticRAG · AAAI · 2026 — GRPO-trained agentic router. 600 textbooks → 200K page-level multimodal KB. +38pp on MedXpertQA over Patho-R1 baseline. Private DB but textbook-derived  `[Medicine, Biology, Methods]`
+- **Patho-AgenticRAG: Pathology Agentic RAG with Textbook-aligned Multimodal Knowledge** — Patho-AgenticRAG · AAAI · 2026 — Patho-AgenticRAG pathology (2026, Med). Cross-source  `[K3.O1, Medicine, Methods]`
 - **[Synthesizing Scientific Literature with Retrieval-Augmented Language Models](https://doi.org/10.1038/s41586-025-10072-4)** — ScholarQABench · Nature · 2026 — OpenScholar의 다학제 장문 합성 벤치마크  `[K1.O1, Biology, Medicine, Physics, Benchmarks]`
 - **TaLiRAGen: target-aware ligand generation via RAG LLMs** — TaLiRAGen · Molecular Diversity · 2026 — ★ K2.O3 EXEMPLAR. No-training RAG+LLM SBDD. Evidence-theoretic norm metric  `[K2.O3, Chemistry, Biology, Medicine, Methods]`
+- **AP Lab Protocols: Anatomic Pathology RAG Benchmark** — AP Lab Protocols · arXiv · 2025 — AP Lab Protocols benchmark (2025, Sci) [bib only]  `[K4.O2, Medicine, Methods]`
 - **AlzheimerRAG: Multimodal RAG for Clinical Use Cases** — AlzheimerRAG · Mach. Learn. Knowl. Extr. · 2025 — Cross-modal fusion. 84% accuracy in clinical scenarios. 6% hallucination  `[Medicine, Methods]`
 - **[Benchmarking Large Language Models on Answering and Explaining Challenging Medical Questions](https://arxiv.org/abs/2402.18060)** — Medbullets · NAACL · 2025 — Benchmark LLM challenging medical Qs (2025, Med)  `[K1.O1, Medicine, Benchmarks]`
 - **[BiomedRAG: A Retrieval Augmented Large Language Model for Biomedicine](https://arxiv.org/abs/2405.00465)** — BiomedRAG · Journal of Biomedical Informatics · 2025 — Tailored Chunk Scorer로 LLM Perplexity 학습. GIT +22.43%p F1  `[K1.O2, Biology, Medicine, Methods]`
@@ -27,6 +29,7 @@ _86 entries in the medicine domain._
 - **MedGraphRAG: Evidence-based Medical LLM via Graph RAG** — MedGraphRAG · ACL · 2025 — ★★ K1+K2+K4 TRIPLE EXAMPLE. Hierarchical 3-tier graph. U-Retrieval. Strong evidence for §4.5 cross-source integration  `[Medicine, Methods]`
 - **[MedRAG: Enhancing Retrieval-augmented Generation with Knowledge Graph-Elicited Reasoning for Healthcare Copilot](https://arxiv.org/abs/2502.04413)** — MedRAG · arXiv · 2025 — EHR + 4계층 KG. 유사 증상 변별 + Proactive Questioning  `[K2.O1, Medicine, Methods]`
 - **[MedXpertQA: Benchmarking Expert-Level Medical Reasoning and Understanding](https://arxiv.org/abs/2501.18362)** — MedXpertQA · ICML · 2025 — 전문가 수준 의료 다단계 추론 MCQ 벤치마크. Patho-AgenticRAG에서 90문항 서브셋으로 평가. RAG 도입 시 +38%p Accuracy 향상  `[Medicine, Benchmarks]`
+- **Medical Graph RAG: Towards Safe Medical Large Language Model via Graph Retrieval-Augmented Generation** — MedGraphRAG · ACL · 2025 — Medical Graph RAG (2025, Med)  `[K2.O1, Medicine, Methods]`
 - **[PeerQA: A Scientific Question Answering Dataset from Peer Reviews](https://arxiv.org/abs/2502.13668)** — PeerQA Baselines · NAACL · 2025 — Peer review 질문+ 원 저자 답변. Long-context QA. 제목 prepend 검색 향상  `[K1.O1, Earth Science, Medicine, Datasets]`
 - **[Q-FSRU: Quantum-Augmented Frequency-Spectral Fusion for Medical Visual Question Answering](https://arxiv.org/abs/2508.12036)** — Q-FSRU · arXiv · 2025 — FFT 주파수 도메인 + Quantum Fidelity. VQA-RAD 91.6%. 양자 영감 메커니즘은 고전 근사  `[K3.O1, Medicine, Methods]`
 - **RAG for 10 LLMs in assessing medical fitness** — LLM-RAG pipeline for preoperative medicine · npj Digital Medicine · 2025 — GPT-4 RAG accuracy 96.4% > human MD avg 86.6%. K4 partial via local hospital protocols  `[Medicine, Methods]`

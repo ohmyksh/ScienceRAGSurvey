@@ -91,6 +91,7 @@ def page_head(title, base='', desc='Scientific RAG Hub — a curated catalog of 
     <nav class="nav">
       <a href="{base}index.html">Home</a>
       <a href="{base}browse.html">Browse</a>
+      <a href="{base}insights.html">Insights</a>
       <a href="{base}index.html#grid">K×O Grid</a>
       <a href="{base}index.html#domains">Domains</a>
       <a href="{base}about.html">About</a>
@@ -271,7 +272,34 @@ def render_index():
         parts.append(f'      <a href="topics/{t.lower()}.html" class="type-card"><strong>{esc(label)}</strong><span>{n}</span></a>\n')
     parts.append('    </div>\n  </div>\n</section>\n')
 
-    # Recent / featured
+    # Flagships strip
+    flagships_file = ROOT / 'build/flagships.json'
+    flagships = json.loads(flagships_file.read_text()).get('flagships', [])
+    by_bib = {p.get('bib_key'): p for p in papers}
+    parts.append('''
+<section class="flagship-section">
+  <div class="wrap">
+    <h2 class="section-title">Flagship systems — start here</h2>
+    <p class="section-sub">Nine papers that either set the modern bar (Nature, NeurIPS, AAAI) or open a structural gap. <a href="insights.html#flagships">See full Insights →</a></p>
+    <div class="flagship-strip">
+''')
+    for f in flagships:
+        p = by_bib.get(f['bib_key'], {})
+        url = p.get('paper_link') or ''
+        big = f['headline_stats'][0]
+        title = esc(p.get('title') or f['name'])
+        title_link = f'<a href="{esc(url)}" target="_blank" rel="noopener">{title}</a>' if url else title
+        parts.append(f'''      <article class="fl-mini">
+        <div class="fl-mini-big"><span class="fl-mini-num">{esc(big[0])}</span><span class="fl-mini-label">{esc(big[1])}</span></div>
+        <h3 class="fl-mini-name">{esc(f['name'])}</h3>
+        <p class="fl-mini-tag">{esc(f['tagline'])}</p>
+        <div class="fl-mini-meta"><a href="cell/{f['cell']}.html" class="tag tag-cell">{f['cell']}</a> <span class="muted">{esc(f['venue'])}</span></div>
+        <p class="fl-mini-cite">{title_link}</p>
+      </article>
+''')
+    parts.append('    </div>\n  </div>\n</section>\n')
+
+    # Recent additions
     recent = sorted([p for p in papers if str(p.get('year', '')).isdigit() and int(p['year']) >= 2025], key=year_sort)[:9]
     parts.append('''
 <section class="recent-section">
@@ -551,15 +579,309 @@ def render_type_pages():
         (ROOT / 'topics' / f'{t.lower()}.html').write_text(page_head(label, base='../') + body + PAGE_FOOT)
 
 
+# ---------- insights.html ----------
+def render_insights():
+    flagships_file = ROOT / 'build/flagships.json'
+    fdata = json.loads(flagships_file.read_text())
+    flagships = fdata['flagships']
+    paper_by_bib = {p.get('bib_key'): p for p in papers}
+
+    # K × Domain matrix
+    kd = defaultdict(int)
+    for p in papers:
+        for d in p.get('domain', []):
+            if not d:
+                continue
+            for c in p.get('ko_cells', []):
+                K = c.split('.')[0]
+                kd[(K, d)] += 1
+    domains_ordered = ['bio', 'chem', 'medical', 'material', 'physics', 'earth', 'astronomy']
+    max_kd = max(kd.values()) if kd else 1
+
+    def kd_heat_style(v, vmax):
+        if v == 0: return 'background:var(--cell-zero);color:var(--fg-faint);'
+        t = v / vmax
+        if t < .25: return 'background:var(--cell-low);'
+        if t < .55: return 'background:var(--cell-mid);'
+        return 'background:var(--cell-high);color:var(--cell-high-fg);'
+
+    kd_rows = ''
+    from urllib.parse import quote_plus
+    for K in ['K1', 'K2', 'K3', 'K4']:
+        kn = K_LABELS[K][0]
+        cells_html = ''
+        for d in domains_ordered:
+            v = kd.get((K, d), 0)
+            q = quote_plus(f'{K} {DOMAIN_LABELS.get(d, d)}')
+            cells_html += f'<td style="{kd_heat_style(v, max_kd)}"><a href="browse.html?q={q}" class="kd-link" title="{K} × {esc(DOMAIN_LABELS.get(d, d))}: {v} entries">{v}</a></td>'
+        kd_rows += f'<tr><th><span class="cell-axis">{K}</span> {esc(kn)}</th>{cells_html}</tr>\n'
+    kd_head = '<tr><th></th>' + ''.join(f'<th>{DOMAIN_EMOJI.get(d,"")} {esc(DOMAIN_LABELS[d])}</th>' for d in domains_ordered) + '</tr>'
+
+    # Yearly growth (stacked by primary K)
+    yc = defaultdict(lambda: defaultdict(int))  # year → K → count
+    for p in papers:
+        y = p.get('year')
+        if not str(y).isdigit():
+            continue
+        y = int(y)
+        if y < 2018:
+            continue
+        primary = p.get('ko_primary')
+        K = primary.split('.')[0] if primary else '?'
+        yc[y][K] += 1
+    years = sorted(yc)
+    max_year_total = max(sum(yc[y].values()) for y in years) if years else 1
+    bar_w = 80
+    gap = 14
+    chart_h = 260
+    chart_w = len(years) * (bar_w + gap) + 60
+    bars = []
+    K_COLORS = {'K1': '#b8431f', 'K2': '#1f7a4d', 'K3': '#6a3acb', 'K4': '#d4992a', '?': '#999'}
+    K_COLOR_LABELS = {'K1': 'Primary Lit', 'K2': 'Curated KB', 'K3': 'Obs/Exp', 'K4': 'Tacit', '?': 'Unassigned'}
+    x = 50
+    for y in years:
+        total = sum(yc[y].values())
+        # stack from bottom
+        cy = chart_h - 30
+        for K in ['K4', 'K3', 'K2', 'K1', '?']:
+            c = yc[y].get(K, 0)
+            if c == 0:
+                continue
+            h = (c / max_year_total) * (chart_h - 70)
+            cy -= h
+            bars.append(f'<rect x="{x}" y="{cy}" width="{bar_w}" height="{h:.1f}" fill="{K_COLORS[K]}" opacity="0.92"><title>{y} · {K}: {c}</title></rect>')
+        bars.append(f'<text x="{x+bar_w/2}" y="{chart_h-12}" text-anchor="middle" font-size="12" fill="var(--fg-muted)">{y}</text>')
+        bars.append(f'<text x="{x+bar_w/2}" y="{chart_h-30-(total/max_year_total)*(chart_h-70)-6}" text-anchor="middle" font-size="11" font-weight="700" fill="var(--fg)">{total}</text>')
+        x += bar_w + gap
+    legend = ''.join(f'<span class="lg-chip" style="background:{K_COLORS[k]};color:white">{k} {esc(K_COLOR_LABELS[k])}</span>' for k in ['K1','K2','K3','K4'] if any(yc[y].get(k,0) for y in years))
+    timeline_svg = f'<svg viewBox="0 0 {chart_w} {chart_h}" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Scientific RAG paper growth by year, stacked by Knowledge Source axis">{"".join(bars)}</svg>'
+
+    # Flagship cards
+    fl_cards = []
+    for f in flagships:
+        p = paper_by_bib.get(f['bib_key'], {})
+        url = p.get('paper_link') or ''
+        stats_html = ''.join(f'<div class="fl-stat"><span class="fl-num">{esc(s[0])}</span><span class="fl-label">{esc(s[1])}</span></div>' for s in f['headline_stats'])
+        title_link = f'<a href="{esc(url)}" target="_blank" rel="noopener">{esc(p.get("title","") or f["name"])} ↗</a>' if url else esc(p.get('title','') or f['name'])
+        cell = f['cell']
+        fl_cards.append(f'''
+        <article class="fl-card">
+          <div class="fl-head">
+            <h3 class="fl-name">{esc(f['name'])}</h3>
+            <a href="cell/{cell}.html" class="tag tag-cell">{cell}</a>
+          </div>
+          <p class="fl-tagline">{esc(f['tagline'])}</p>
+          <div class="fl-stats">{stats_html}</div>
+          <p class="fl-subtitle">{esc(f['subtitle'])}</p>
+          <p class="fl-why"><strong>Why it matters.</strong> {esc(f['why'])}</p>
+          <p class="fl-cite">{title_link} · <span class="muted">{esc(f['venue'])}</span></p>
+        </article>''')
+
+    # Cross-source papers
+    xs_papers = [p for p in papers if p.get('cross_source') or len(p.get('ko_cells', [])) > 1]
+    xs_cards = '\n'.join(paper_card(p) for p in xs_papers[:12])
+
+    # Frontier cells
+    frontier_K3O3 = by_cell.get('K3.O3', [])
+    frontier_K4O3 = by_cell.get('K4.O3', [])
+    f33 = '\n'.join(paper_card(p) for p in frontier_K3O3) or '<p class="empty">No verified entries — this cell is a structural gap.</p>'
+    f43 = '\n'.join(paper_card(p) for p in frontier_K4O3) or '<p class="empty">No verified entries — this cell is a structural gap.</p>'
+
+    body = f'''
+<section class="insights-hero">
+  <div class="wrap">
+    <p class="eyebrow">Insights · The shape of scientific RAG</p>
+    <h1>What the {len(papers)}-paper catalog reveals.</h1>
+    <p class="lede">
+      Six lenses on the field — flagship demonstrations, the unique requirements that distinguish
+      scientific from general RAG, where coverage is dense, where the white space is,
+      and the seven directions where the next breakthroughs are most likely.
+    </p>
+    <nav class="insights-toc">
+      <a href="#flagships">Flagships</a>
+      <a href="#requirements">5 Requirements</a>
+      <a href="#growth">Growth</a>
+      <a href="#kd">K×Domain</a>
+      <a href="#bridges">Cross-source</a>
+      <a href="#frontiers">Frontiers</a>
+      <a href="#directions">Future</a>
+    </nav>
+  </div>
+</section>
+
+<section id="flagships" class="prose-section">
+  <div class="wrap">
+    <h2 class="section-title">Flagships — papers that move the field</h2>
+    <p class="section-sub">Nine systems chosen for the largest measured gains or the clearest demonstration of a structural pattern.</p>
+    <div class="fl-grid">{''.join(fl_cards)}</div>
+  </div>
+</section>
+
+<section id="requirements" class="prose-section alt-bg">
+  <div class="wrap">
+    <h2 class="section-title">The 5 unique requirements of scientific RAG</h2>
+    <p class="section-sub">General-purpose RAG ranks by semantic proximity. Scientific RAG must obey stricter, often quantitative, demands.</p>
+    <div class="req-grid">
+      <div class="req-card req-1">
+        <div class="req-num">1</div>
+        <h3>Mandatory Claim Attribution</h3>
+        <p>Every claim traceable to a source unit — sentence-level, page-level, or claim-graph.</p>
+        <p class="req-evidence">OpenScholar 0% hallucination · PaperQA sentence-level citing · R2AG-Climate 4-dim faithfulness</p>
+      </div>
+      <div class="req-card req-2">
+        <div class="req-num">2</div>
+        <h3>Relational Knowledge Coupling</h3>
+        <p>Facts live in webs (PDB ↔ UniProt ↔ ChEMBL). Retrieval must traverse couplings, not just rank entities.</p>
+        <p class="req-evidence">CLADD 2-hop PrimeKG · MedGraphRAG 3-tier · BIORAG NCBI cross-DB</p>
+      </div>
+      <div class="req-card req-3">
+        <div class="req-num">3</div>
+        <h3>Source Reliability Tiering</h3>
+        <p>Papers, preprints, curated DBs, lab notes — each carries different epistemic weight. RAG must reflect this.</p>
+        <p class="req-evidence">MEDRAG RRF over 4 corpora · Rationale-Guided RAG balanced retrieval · MITRA 2-tier abstracts→full-text</p>
+      </div>
+      <div class="req-card req-4">
+        <div class="req-num">4</div>
+        <h3>Protocol-level Reproducibility</h3>
+        <p>Outputs must include enough method detail for an expert to reproduce — not just a summary.</p>
+        <p class="req-evidence">AP Lab Protocols · RHIC DAPP · MatClaw 99% API-call accuracy · MITRA full-method docs</p>
+      </div>
+      <div class="req-card req-5">
+        <div class="req-num">5</div>
+        <h3>Domain-Native Representations</h3>
+        <p>SMILES, InChI, FASTA, LaTeX, CIF, DICOM. No flattening to text — the chemistry of the structure matters.</p>
+        <p class="req-evidence">Rag2Mol/TaLiRAGen/f-RAG SMILES+3D · HoneyComb CIF · MMed-RAG DICOM</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="growth" class="prose-section">
+  <div class="wrap">
+    <h2 class="section-title">Growth by year, stacked by Knowledge Source</h2>
+    <p class="section-sub">
+      The 2024–2025 explosion is dominated by <strong style="color:#b8431f">K1 primary-literature</strong> systems
+      (medical QA, scientific synthesis). <strong style="color:#1f7a4d">K2 curated-KB</strong> work follows, while
+      <strong style="color:#d4992a">K4 tacit</strong> systems remain rare — most are 2025–2026 firsts.
+    </p>
+    <div class="chart-frame">{timeline_svg}</div>
+    <p class="chart-legend">{legend}</p>
+  </div>
+</section>
+
+<section id="kd" class="prose-section alt-bg">
+  <div class="wrap">
+    <h2 class="section-title">K × Domain — where each Knowledge Source lives</h2>
+    <p class="section-sub">
+      Medicine spans all four K tiers. Chemistry leans on K2 curated KBs. Physics is K1+K4 (institutional memory).
+      Earth science is K1-heavy. Cells link to a filtered Browse view.
+    </p>
+    <table class="kd-grid">
+      <thead>{kd_head}</thead>
+      <tbody>{kd_rows}</tbody>
+    </table>
+  </div>
+</section>
+
+<section id="bridges" class="prose-section">
+  <div class="wrap">
+    <h2 class="section-title">Cross-source bridges — papers that span multiple K tiers</h2>
+    <p class="section-sub">
+      <strong>{len(xs_papers)}</strong> systems bridge multiple knowledge sources. The most ambitious — MedGraphRAG —
+      stitches K1 (MedC-K papers) + K2 (UMLS/ICD ontology) + K4 (MIMIC IV private EHR) in one pipeline.
+      These prove that the K axis is not a partition but a graph.
+    </p>
+    <div class="card-grid">{xs_cards}</div>
+    <p class="see-more"><a href="browse.html" class="btn btn-secondary">Browse all cross-source systems →</a></p>
+  </div>
+</section>
+
+<section id="frontiers" class="prose-section alt-bg">
+  <div class="wrap">
+    <h2 class="section-title">Frontier cells — where the white space is</h2>
+    <p class="section-sub">
+      The K×O grid surfaces two near-empty cells. Both involve the most ambitious operation (O3 Hypothesis)
+      paired with the harder-to-access sources (K3 raw modalities, K4 tacit knowledge).
+    </p>
+    <div class="frontier-pair">
+      <div class="frontier-col">
+        <h3><span class="cell-id-big">[K3.O3]</span> Observational × Hypothesis <span class="muted">({len(frontier_K3O3)} entry)</span></h3>
+        <p>Spectra → molecule, imaging → diagnosis-hypothesis, sequencing → mechanism. Today, only mass-spectrometry-to-molecule attempts exist.</p>
+        <div class="card-grid">{f33}</div>
+      </div>
+      <div class="frontier-col">
+        <h3><span class="cell-id-big">[K4.O3]</span> Tacit × Hypothesis <span class="muted">({len(frontier_K4O3)} entries)</span></h3>
+        <p>Hypothesis generation grounded in lab logs, internal collaboration notes, or industry process databases. Nearly virgin territory.</p>
+        <div class="card-grid">{f43}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="directions" class="prose-section">
+  <div class="wrap">
+    <h2 class="section-title">Seven directions for the next scientific RAG generation</h2>
+    <p class="section-sub">Each entry is a "From → To" transition the field is starting to make. Drawn from §11 of the survey.</p>
+    <div class="dir-grid">
+      <div class="dir-card">
+        <span class="dir-num">1</span>
+        <h3>Underutilized → Activated Authoritative Sources <span class="dir-star">★ main insight</span></h3>
+        <p>Dozens of authoritative DBs (Reaxys, Aspen, NIST Mass Spec, ChemProt) are <em>indexed nowhere</em> for RAG. Activating them is the single largest unclaimed win.</p>
+        <p class="dir-ev">RHIC DAPP · MITRA · DUNE-GPT show the playbook for physics; chemistry/materials lag.</p>
+      </div>
+      <div class="dir-card">
+        <span class="dir-num">2</span>
+        <h3>Primary Literature → Tacit Sources</h3>
+        <p>Most domains lack a single K4 system. The institutional memory of labs, collaborations, and industry holds 10×+ more knowledge than papers.</p>
+        <p class="dir-ev">K4 is ~9 papers today out of 138 — likely 50-65 once private datasets are surveyed.</p>
+      </div>
+      <div class="dir-card">
+        <span class="dir-num">3</span>
+        <h3>Ground → Hypothesis</h3>
+        <p>From "answer with citations" to "propose a molecule and have the docking score verify it." Generate-then-verify closed loops.</p>
+        <p class="dir-ev">f-RAG → Vina · Rag2Mol → docking · CLADD agent verifier · HEA → DFT.</p>
+      </div>
+      <div class="dir-card">
+        <span class="dir-num">4</span>
+        <h3>Closed → Sandboxed Sources</h3>
+        <p>HIPAA, IP, and security forbid sending corpora to commercial LLMs. On-prem RAG with 4-bit local models is the only path.</p>
+        <p class="dir-ev">MITRA 4-bit · DUNE-GPT Fermilab intranet · MedRAG-CPDD private EHR.</p>
+      </div>
+      <div class="dir-card">
+        <span class="dir-num">5</span>
+        <h3>Static → Streaming Living Sources</h3>
+        <p>PubMed adds 1M papers/year. Crystal structure DBs update daily. Indices must stream, not snapshot.</p>
+        <p class="dir-ev">BIORAG NCBI live API · OpenScholar Semantic Scholar live.</p>
+      </div>
+      <div class="dir-card">
+        <span class="dir-num">6</span>
+        <h3>Synthetic Contamination → Synthetic Grounding</h3>
+        <p>Generated content is poisoning future corpora. The defense: use synthetic data as <em>training scaffolding</em>, not retrieval ground truth.</p>
+        <p class="dir-ev">OpenScholar synthetic SFT (clean) · LitQA anti-contamination post-cutoff papers.</p>
+      </div>
+      <div class="dir-card">
+        <span class="dir-num">7</span>
+        <h3>Single-Modality → Multi-Modality Fusion</h3>
+        <p>Real scientific reasoning interleaves text, equations, structures, images. Multimodal retrieval over scientific media is the bottleneck.</p>
+        <p class="dir-ev">MMed-RAG · Patho-AgenticRAG · AlzheimerRAG · RS-RAG span the modality bridge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+'''
+    (ROOT / 'insights.html').write_text(page_head('Insights', base='', desc='The five requirements of scientific RAG, K×Domain coverage map, paper growth timeline, cross-source bridges, and frontier opportunities.') + body + PAGE_FOOT)
+
+
 if __name__ == '__main__':
     render_index()
     render_about()
     render_browse()
+    render_insights()
     render_cell_pages()
     render_domain_pages()
     render_type_pages()
     print('Wrote all HTML pages.')
-    print(f'  index.html, about.html, browse.html')
+    print(f'  index.html, about.html, browse.html, insights.html')
     print(f'  cell/*.html ({len(by_cell)} cells)')
     print(f'  domain/*.html ({len([d for d in DOMAIN_LABELS if d in by_dom])} domains)')
     print(f'  topics/*.html ({len([t for t in TYPE_LABELS if t in by_type])} types)')

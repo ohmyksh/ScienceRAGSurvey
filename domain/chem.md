@@ -1,10 +1,11 @@
 # Chemistry
 
-_34 entries in the chemistry domain._
+_36 entries in the chemistry domain._
 
 ---
 
 - **CLADD: RAG-Enhanced Collaborative LLM Agents for Drug Discovery** — CLADD · AAAI · 2026 — ★ K2.O3 EXEMPLAR. Multi-agent (Planning/KG/MU/Prediction). Anchor drug technique extends KG to novel molecules. CLADD beats fine-tuned baselines without any fine-tuning  `[Biology, Medicine, Chemistry, Methods]`
+- **CLADD: RAG-Enhanced Collaborative LLM Agents for Drug Discovery** — CLADD · AAAI · 2026 — CLADD RAG-Enhanced Collaborative Drug Discovery (2026, Chem). Cross-source K2+K3  `[K2.O3, Chemistry, Methods]`
 - **OER-DFT (HEA) — LLM-Driven Discovery of High-Entropy Catalysts via RAG** — OER-DFT (HEA) · arXiv · 2026 — ★ K2.O3 + Materials. LLM+RAG generates catalysts; VASP PBE+U DFT verifies. Top: Fe0.2Co0.2Ni0.2Ir0.1Ru0.3 ηOER=0.285V (25% improvement over IrO2)  `[Materials Science, Chemistry, Benchmarks]`
 - **TaLiRAGen: target-aware ligand generation via RAG LLMs** — TaLiRAGen · Molecular Diversity · 2026 — ★ K2.O3 EXEMPLAR. No-training RAG+LLM SBDD. Evidence-theoretic norm metric  `[K2.O3, Chemistry, Biology, Medicine, Methods]`
 - **Benchmarking Retrieval-Augmented Generation for Chemistry** — ChemRAG (Bench + Toolkit) · COLM · 2025 — 화학 RAG 첫 대규모 벤치마크. 6 corpus × 5 retrievers × 8 LLMs. RAG +17.4% 평균 향상. ChemLLM은 RAG 효과 미미  `[K2.O1, Chemistry, Methods]`
@@ -26,6 +27,7 @@ _34 entries in the chemistry domain._
 - **[Leveraging Chemistry Foundation Models to Facilitate Structure Focused Retrieval Augmented Generation in Multi-Agent Workflows for Catalyst and Materials Design](https://arxiv.org/pdf/2408.11793)** — Hierarchical multi-agent adaptive self-reflective RAG · arXiv · 2024 — MoLFormer + OpenCLIP. 화학 멀티에이전트 RAG. IBM 특허  `[K2.O1, Chemistry, Materials Science, Methods]`
 - **[LitSearch: A Retrieval Benchmark for Scientific Literature Search](https://doi.org/10.18653/v1/2024.emnlp-main.840)** — LitSearch · EMNLP · 2024 — LitSearch (2024, Sci)  `[K1.O1, Biology, Chemistry, Physics, Benchmarks]`
 - **[MassSpecGym: A benchmark for the discovery and identification of molecules](https://proceedings.neurips.cc/paper_files/paper/2024/hash/c6c31413d5c53b7d1c343c1498734b0f-Abstract-Datasets_and_Benchmarks_Track.html)** — MassSpecGym · NeurIPS · 2024 — MassSpecGym discovery & ID of molecules (2024, Chem). Spectra → molecule hypothesis  `[K3.O3, Chemistry, Benchmarks]`
+- **Molecule Generation with Fragment Retrieval Augmentation** — f-RAG · NeurIPS · 2024 — Molecule Generation w/ Fragment Retrieval (2024, Chem)  `[K2.O3, Chemistry, Methods]`
 - **f-RAG: Molecule Generation with Fragment Retrieval Augmentation** — f-RAG · NeurIPS · 2024 — ★ K2.O3. First fragment-level RAG. Hard/Soft dual retrieval. SAFE-GPT + FIM (Linear, <4hr training)  `[Chemistry, Biology, Medicine, Methods]`
 - **[DS-1000: A Natural and Reliable Benchmark for Data Science Code Generation](https://arxiv.org/abs/2211.11501)** — DS-1000 · ICML · 2023  `[Chemistry, Benchmarks]`
 - **[Domain-specific chatbots for science using embeddings](https://doi.org/10.1039/d3dd00112a)** — Scientific Document Classification & Impact Sorting · Digital Discovery (RSC) · 2023 — 분류 81~99%, 임팩트 정렬 IF 유사  `[K1.O1, Materials Science, Chemistry, Physics, Benchmarks]`

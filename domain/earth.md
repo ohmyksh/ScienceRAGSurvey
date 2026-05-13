@@ -1,6 +1,6 @@
 # Earth Science
 
-_22 entries in the earth science domain._
+_23 entries in the earth science domain._
 
 ---
 
@@ -20,6 +20,7 @@ _22 entries in the earth science domain._
 - **[SciRerankBench: Benchmarking Rerankers Towards Scientific Retrieval-Augmented Generated LLMs](https://arxiv.org/abs/2508.08742)** — SciRerankBench · arXiv · 2025 — 과학 RAG Reranker 첫 평가 벤치마크. Reranker가 Top-10에 정답 올려도 LLM 추론 한계  `[K1.O1, Biology, Physics, Chemistry, Earth Science, Benchmarks]`
 - **[Spatial-RAG: Spatial Retrieval Augmented Generation for Real-World Geospatial Reasoning Questions](https://arxiv.org/abs/2502.18470)** — TourismQA · arXiv · 2025 — TripAdvisor 도시 관광 지리공간 추론. NYC + Miami  `[Earth Science, Benchmarks]`
 - **[SuperGPQA: Scaling LLM Evaluation Across 285 Graduate Disciplines](https://arxiv.org/abs/2502.14739)** — SuperGPQA · arXiv · 2025 — 13개 학문, 72개 분야, 285개 대학원 수준 세부 전공. Human-LLM Collaborative Filtering  `[K1.O1, Materials Science, Chemistry, Biology, Medicine, Physics, Earth Science, Astronomy, Quantum, Benchmarks]`
+- **WeQA: Wind Energy Question Answering** — WeQA · arXiv · 2025 — WeQA Wind Energy (2025, Earth)  `[K1.O1, K4.O2, Earth Science, Methods]`
 - **[WeatherArchive-Bench: Benchmarking Retrieval-Augmented Reasoning for Historical Weather Archives](https://arxiv.org/abs/2510.05336)** — WeatherArchive-Bench · arXiv · 2025 — 역사 날씨 아카이브 첫 대규모 RAG. dense 모델이 archaic language에서 BM25보다 저하  `[K1.O1, Earth Science, Benchmarks]`
 - **[ClimateGPT: Towards AI Synthesizing Interdisciplinary Research on Climate Change](https://arxiv.org/abs/2401.09646)** — ClimateGPT IFT Test Set · arXiv · 2024 — ClimateGPT (2024, Earth)  `[K1.O1, Earth Science, Benchmarks]`
 - **[RSWFormer: A multi-scale fusion network from local to global with multiple stages for regional geological mapping](https://doi.org/10.3390/rs16142548)** — Multi-GL9 · Remote Sensing · 2024 — GF-2 + Landsat 8 다중 해상도 지질 분류. Geo-MMRAG 79.7%  `[Earth Science, Benchmarks]`

@@ -111,6 +111,28 @@
     "cross_source": false
   },
   {
+    "bib_key": "DBLP:conf/aaai/LeeBHBPS26",
+    "title": "CLADD: RAG-Enhanced Collaborative LLM Agents for Drug Discovery",
+    "year": 2026,
+    "venue": "AAAI",
+    "method": "CLADD",
+    "domain": [
+      "chem"
+    ],
+    "paper_link": "",
+    "note": "CLADD RAG-Enhanced Collaborative Drug Discovery (2026, Chem). Cross-source K2+K3.",
+    "ko_cells": [
+      "K2.O3"
+    ],
+    "ko_primary": "K2.O3",
+    "ko_note": "CLADD RAG-Enhanced Collaborative Drug Discovery (2026, Chem). Cross-source K2+K3.",
+    "cross_source": true,
+    "type": "Method",
+    "bib_only": true,
+    "ko_secondary": "K3",
+    "flagship": true
+  },
+  {
     "title": "Grounded Multimodal Retrieval-Augmented Drafting of Radiology Impressions Using Case-Based Similarity",
     "year": 2026,
     "venue": "arXiv",
@@ -192,6 +214,28 @@
     "cross_source": false
   },
   {
+    "bib_key": "DBLP:journals/corr/abs-2603-09800",
+    "title": "MITRA: Knowledge Retrieval over Physics Collaborations' Tacit Memory",
+    "year": 2026,
+    "venue": "arXiv",
+    "method": "MITRA",
+    "domain": [
+      "physics"
+    ],
+    "paper_link": "",
+    "note": "MITRA Physics Collaborations Knowledge Retrieval (2026, Phys). Strongest K4 example.",
+    "ko_cells": [
+      "K4.O1"
+    ],
+    "ko_primary": "K4.O1",
+    "ko_note": "MITRA Physics Collaborations Knowledge Retrieval (2026, Phys). Strongest K4 example.",
+    "cross_source": true,
+    "type": "Method",
+    "bib_only": true,
+    "ko_secondary": "K1",
+    "flagship": true
+  },
+  {
     "title": "MatClaw RAG Benchmark (pymatgen/atomate2)",
     "year": 2026,
     "venue": "arXiv",
@@ -220,6 +264,28 @@
     "ko_primary": null,
     "ko_note": "",
     "cross_source": false
+  },
+  {
+    "bib_key": "zhang2026matclaw",
+    "title": "MatClaw: Autonomous Code-First Agent for Materials Science",
+    "year": 2026,
+    "venue": "arXiv",
+    "method": "MatClaw",
+    "domain": [
+      "material"
+    ],
+    "paper_link": "",
+    "note": "MatClaw autonomous code-first agent (2026, Mat). Cross-source K1+K2.",
+    "ko_cells": [
+      "K2.O2",
+      "K4.O3"
+    ],
+    "ko_primary": "K2.O2",
+    "ko_note": "MatClaw autonomous code-first agent (2026, Mat). Cross-source K1+K2.",
+    "cross_source": true,
+    "type": "Method",
+    "bib_only": true,
+    "ko_secondary": "K1"
   },
   {
     "title": "MedRAGChecker: Claim-Level Verification for Biomedical Retrieval-Augmented Generation",
@@ -344,7 +410,8 @@
     ],
     "ko_primary": "K1.O1",
     "ko_note": "OpenScholar (2024, Sci).",
-    "cross_source": false
+    "cross_source": false,
+    "flagship": true
   },
   {
     "title": "Overview of TREC 2025 Biomedical Generative Retrieval (BioGen) Track",
@@ -417,6 +484,28 @@
     "ko_primary": null,
     "ko_note": "",
     "cross_source": false
+  },
+  {
+    "bib_key": "DBLP:conf/aaai/ZhangGZZCZZYB26",
+    "title": "Patho-AgenticRAG: Pathology Agentic RAG with Textbook-aligned Multimodal Knowledge",
+    "year": 2026,
+    "venue": "AAAI",
+    "method": "Patho-AgenticRAG",
+    "domain": [
+      "medical"
+    ],
+    "paper_link": "",
+    "note": "Patho-AgenticRAG pathology (2026, Med). Cross-source.",
+    "ko_cells": [
+      "K3.O1"
+    ],
+    "ko_primary": "K3.O1",
+    "ko_note": "Patho-AgenticRAG pathology (2026, Med). Cross-source.",
+    "cross_source": true,
+    "type": "Method",
+    "bib_only": true,
+    "ko_secondary": "K2",
+    "flagship": true
   },
   {
     "title": "Polymer Literature Scholar (PHA Biodegradable Polymer Expert)",
@@ -763,6 +852,26 @@
     "ko_note": "RHIC AI-Powered Long-Term Access (2025, Phys). [in bib but not in Notion DB; explicit tacit/institutional memory.]",
     "cross_source": true,
     "ko_secondary": "K1"
+  },
+  {
+    "bib_key": "aplabprotocols2025",
+    "title": "AP Lab Protocols: Anatomic Pathology RAG Benchmark",
+    "year": 2025,
+    "venue": "arXiv",
+    "method": "AP Lab Protocols",
+    "domain": [
+      "medical"
+    ],
+    "paper_link": "",
+    "note": "AP Lab Protocols benchmark (2025, Sci) [bib only].",
+    "ko_cells": [
+      "K4.O2"
+    ],
+    "ko_primary": "K4.O2",
+    "ko_note": "AP Lab Protocols benchmark (2025, Sci) [bib only].",
+    "cross_source": false,
+    "type": "Method",
+    "bib_only": true
   },
   {
     "title": "AlzheimerRAG: Multimodal RAG for Clinical Use Cases",
@@ -1257,6 +1366,27 @@
     "cross_source": false
   },
   {
+    "bib_key": "rafique2025large",
+    "title": "DUNE Knowledge Retrieval: Large-scale Indexing of Fermilab Collaboration Documents",
+    "year": 2025,
+    "venue": "arXiv",
+    "method": "DUNE-GPT",
+    "domain": [
+      "physics"
+    ],
+    "paper_link": "",
+    "note": "DUNE Knowledge Retrieval (2025, Phys). Borderline K4 (institutional memory) — primary tag K1, secondary K4.",
+    "ko_cells": [
+      "K1.O1",
+      "K4.O1"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "DUNE Knowledge Retrieval (2025, Phys). Borderline K4 (institutional memory) — primary tag K1, secondary K4.",
+    "cross_source": false,
+    "type": "Method",
+    "bib_only": true
+  },
+  {
     "title": "DUNE-GPT (LLM Integration for DUNE Experiment)",
     "year": 2025,
     "venue": "Lepton Photon",
@@ -1706,7 +1836,8 @@
     ],
     "ko_primary": "K1.O1",
     "ko_note": "LLaMP (2025, Mat). Listed K1.O1 (basic mode); see also K2.O1 for KB mode. Cross-source.",
-    "cross_source": false
+    "cross_source": false,
+    "flagship": true
   },
   {
     "title": "LVLM-Aware Multimodal Retrieval for RAG-Based Medical Diagnosis with General-Purpose Models",
@@ -2115,6 +2246,27 @@
     "cross_source": false
   },
   {
+    "bib_key": "DBLP:conf/acl/WuZQCXMJG25",
+    "title": "Medical Graph RAG: Towards Safe Medical Large Language Model via Graph Retrieval-Augmented Generation",
+    "year": 2025,
+    "venue": "ACL",
+    "method": "MedGraphRAG",
+    "domain": [
+      "medical"
+    ],
+    "paper_link": "",
+    "note": "Medical Graph RAG (2025, Med).",
+    "ko_cells": [
+      "K2.O1"
+    ],
+    "ko_primary": "K2.O1",
+    "ko_note": "Medical Graph RAG (2025, Med).",
+    "cross_source": false,
+    "type": "Method",
+    "bib_only": true,
+    "flagship": true
+  },
+  {
     "title": "Neural Graph Matching Improves Retrieval Augmented Generation in Molecular Machine Learning",
     "year": 2025,
     "venue": "ICML",
@@ -2247,6 +2399,27 @@
     "ko_primary": "K1.O1",
     "ko_note": "PeerQA dataset (2025, Sci).",
     "cross_source": false
+  },
+  {
+    "bib_key": "taffese2025polymerexpert",
+    "title": "Polymer Expert: Literature-Derived Polymer Property Prediction with RAG",
+    "year": 2025,
+    "venue": "arXiv",
+    "method": "Polymer Expert",
+    "domain": [
+      "material"
+    ],
+    "paper_link": "",
+    "note": "Polymer Expert literature-derived (2025, Mat). Cross-source K1+K2.",
+    "ko_cells": [
+      "K1.O3"
+    ],
+    "ko_primary": "K1.O3",
+    "ko_note": "Polymer Expert literature-derived (2025, Mat). Cross-source K1+K2.",
+    "cross_source": true,
+    "type": "Method",
+    "bib_only": true,
+    "ko_secondary": "K2"
   },
   {
     "title": "Q-FSRU: Quantum-Augmented Frequency-Spectral Fusion for Medical Visual Question Answering",
@@ -2944,6 +3117,27 @@
     "cross_source": false
   },
   {
+    "bib_key": "meyur2025weqa",
+    "title": "WeQA: Wind Energy Question Answering",
+    "year": 2025,
+    "venue": "arXiv",
+    "method": "WeQA",
+    "domain": [
+      "earth"
+    ],
+    "paper_link": "",
+    "note": "WeQA Wind Energy (2025, Earth).",
+    "ko_cells": [
+      "K1.O1",
+      "K4.O2"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "WeQA Wind Energy (2025, Earth).",
+    "cross_source": false,
+    "type": "Method",
+    "bib_only": true
+  },
+  {
     "title": "WeatherArchive-Bench: Benchmarking Retrieval-Augmented Reasoning for Historical Weather Archives",
     "year": 2025,
     "venue": "arXiv",
@@ -3089,7 +3283,8 @@
     ],
     "ko_primary": "K1.O1",
     "ko_note": "MEDRAG (2024, Med). PubMed-grounded medical QA, the canonical K1.O1.",
-    "cross_source": false
+    "cross_source": false,
+    "flagship": true
   },
   {
     "title": "CLINFO.AI: AN OPEN-SOURCE RETRIEVAL-AUGMENTED LARGE LANGUAGE MODEL SYSTEM FOR ANSWERING MEDICAL QUESTIONS USING SCIENTIFIC LITERATURE",
@@ -3503,6 +3698,27 @@
     "cross_source": false
   },
   {
+    "bib_key": "DBLP:conf/nips/LeeKV0RPVN24",
+    "title": "Molecule Generation with Fragment Retrieval Augmentation",
+    "year": 2024,
+    "venue": "NeurIPS",
+    "method": "f-RAG",
+    "domain": [
+      "chem"
+    ],
+    "paper_link": "",
+    "note": "Molecule Generation w/ Fragment Retrieval (2024, Chem).",
+    "ko_cells": [
+      "K2.O3"
+    ],
+    "ko_primary": "K2.O3",
+    "ko_note": "Molecule Generation w/ Fragment Retrieval (2024, Chem).",
+    "cross_source": false,
+    "type": "Method",
+    "bib_only": true,
+    "flagship": true
+  },
+  {
     "title": "Multi-Agent System for Cosmological Parameter Analysis",
     "year": 2024,
     "venue": "arXiv",
@@ -3770,6 +3986,27 @@
     "ko_primary": null,
     "ko_note": "",
     "cross_source": false
+  },
+  {
+    "bib_key": "DBLP:journals/corr/abs-2403-15729",
+    "title": "Towards a RAG-based Summarization for the Electron-Ion Collider",
+    "year": 2024,
+    "venue": "arXiv",
+    "method": "EIC RAG",
+    "domain": [
+      "physics"
+    ],
+    "paper_link": "",
+    "note": "Towards a RAG-based Summarization for the Electron-Ion Collider (2024, Phys).",
+    "ko_cells": [
+      "K1.O1",
+      "K4.O2"
+    ],
+    "ko_primary": "K1.O1",
+    "ko_note": "Towards a RAG-based Summarization for the Electron-Ion Collider (2024, Phys).",
+    "cross_source": false,
+    "type": "Method",
+    "bib_only": true
   },
   {
     "title": "f-RAG: Molecule Generation with Fragment Retrieval Augmentation",
@@ -4135,7 +4372,8 @@
     ],
     "ko_primary": "K1.O1",
     "ko_note": "PaperQA (2023, Sci). Paper-grounded retrieval-cite-answer agent.",
-    "cross_source": false
+    "cross_source": false,
+    "flagship": true
   },
   {
     "title": "PeTailor: Improving Large Language Model by Tailored Chunk Scorer in Biomedical Triple Extraction",
@@ -5426,52 +5664,13 @@
     "cross_source": false
   },
   {
-    "bib_key": "DBLP:conf/aaai/LeeBHBPS26",
-    "title": "DBLP:conf/aaai/LeeBHBPS26",
-    "note": "CLADD RAG-Enhanced Collaborative Drug Discovery (2026, Chem). Cross-source K2+K3.",
-    "ko_cells": [
-      "K2.O3"
-    ],
-    "ko_primary": "K2.O3",
-    "ko_note": "CLADD RAG-Enhanced Collaborative Drug Discovery (2026, Chem). Cross-source K2+K3.",
-    "cross_source": true,
-    "type": "Method",
-    "domain": [],
-    "bib_only": true,
-    "ko_secondary": "K3"
-  },
-  {
-    "bib_key": "DBLP:conf/aaai/ZhangGZZCZZYB26",
-    "title": "DBLP:conf/aaai/ZhangGZZCZZYB26",
-    "note": "Patho-AgenticRAG pathology (2026, Med). Cross-source.",
-    "ko_cells": [
-      "K3.O1"
-    ],
-    "ko_primary": "K3.O1",
-    "ko_note": "Patho-AgenticRAG pathology (2026, Med). Cross-source.",
-    "cross_source": true,
-    "type": "Method",
-    "domain": [],
-    "bib_only": true,
-    "ko_secondary": "K2"
-  },
-  {
-    "bib_key": "DBLP:conf/acl/WuZQCXMJG25",
-    "title": "DBLP:conf/acl/WuZQCXMJG25",
-    "note": "Medical Graph RAG (2025, Med).",
-    "ko_cells": [
-      "K2.O1"
-    ],
-    "ko_primary": "K2.O1",
-    "ko_note": "Medical Graph RAG (2025, Med).",
-    "cross_source": false,
-    "type": "Method",
-    "domain": [],
-    "bib_only": true
-  },
-  {
     "bib_key": "DBLP:conf/bionlp/DeYoungLNMW20",
     "title": "DBLP:conf/bionlp/DeYoungLNMW20",
+    "year": null,
+    "venue": null,
+    "method": null,
+    "domain": [],
+    "paper_link": "",
     "note": "Evidence Inference 2.0 (2020, Bio).",
     "ko_cells": [
       "K1.O2"
@@ -5480,12 +5679,16 @@
     "ko_note": "Evidence Inference 2.0 (2020, Bio).",
     "cross_source": false,
     "type": "Method",
-    "domain": [],
     "bib_only": true
   },
   {
     "bib_key": "DBLP:conf/clef/AbachaHDLDM19",
     "title": "DBLP:conf/clef/AbachaHDLDM19",
+    "year": null,
+    "venue": null,
+    "method": null,
+    "domain": [],
+    "paper_link": "",
     "note": "VQA-Med 2019 (2019, Med).",
     "ko_cells": [
       "K3.O1"
@@ -5494,12 +5697,16 @@
     "ko_note": "VQA-Med 2019 (2019, Med).",
     "cross_source": false,
     "type": "Method",
-    "domain": [],
     "bib_only": true
   },
   {
     "bib_key": "DBLP:conf/emnlp/SinghSC24",
     "title": "DBLP:conf/emnlp/SinghSC24",
+    "year": null,
+    "venue": null,
+    "method": null,
+    "domain": [],
+    "paper_link": "",
     "note": "SCIDQA (2024, Sci).",
     "ko_cells": [
       "K1.O1"
@@ -5508,12 +5715,16 @@
     "ko_note": "SCIDQA (2024, Sci).",
     "cross_source": false,
     "type": "Method",
-    "domain": [],
     "bib_only": true
   },
   {
     "bib_key": "DBLP:conf/emnlp/ZhangSHML24",
     "title": "DBLP:conf/emnlp/ZhangSHML24",
+    "year": null,
+    "venue": null,
+    "method": null,
+    "domain": [],
+    "paper_link": "",
     "note": "HoneyComb Materials Science Agent (2024, Mat). Cross-source.",
     "ko_cells": [
       "K2.O1"
@@ -5522,13 +5733,17 @@
     "ko_note": "HoneyComb Materials Science Agent (2024, Mat). Cross-source.",
     "cross_source": true,
     "type": "Method",
-    "domain": [],
     "bib_only": true,
     "ko_secondary": "K1"
   },
   {
     "bib_key": "DBLP:conf/icml/LeeLPHKLL23",
     "title": "DBLP:conf/icml/LeeLPHKLL23",
+    "year": null,
+    "venue": null,
+    "method": null,
+    "domain": [],
+    "paper_link": "",
     "note": "QASA QA on Sci Articles (2023, Sci).",
     "ko_cells": [
       "K1.O1"
@@ -5537,12 +5752,16 @@
     "ko_note": "QASA QA on Sci Articles (2023, Sci).",
     "cross_source": false,
     "type": "Method",
-    "domain": [],
     "bib_only": true
   },
   {
     "bib_key": "DBLP:conf/medinfo/AbachaMSGSD19",
     "title": "DBLP:conf/medinfo/AbachaMSGSD19",
+    "year": null,
+    "venue": null,
+    "method": null,
+    "domain": [],
+    "paper_link": "",
     "note": "MedQuAD bridging consumer questions (2019, Med).",
     "ko_cells": [
       "K1.O1"
@@ -5551,26 +5770,16 @@
     "ko_note": "MedQuAD bridging consumer questions (2019, Med).",
     "cross_source": false,
     "type": "Method",
-    "domain": [],
-    "bib_only": true
-  },
-  {
-    "bib_key": "DBLP:conf/nips/LeeKV0RPVN24",
-    "title": "DBLP:conf/nips/LeeKV0RPVN24",
-    "note": "Molecule Generation w/ Fragment Retrieval (2024, Chem).",
-    "ko_cells": [
-      "K2.O3"
-    ],
-    "ko_primary": "K2.O3",
-    "ko_note": "Molecule Generation w/ Fragment Retrieval (2024, Chem).",
-    "cross_source": false,
-    "type": "Method",
-    "domain": [],
     "bib_only": true
   },
   {
     "bib_key": "DBLP:conf/pasc/GokdemirSBWHHSA25",
     "title": "DBLP:conf/pasc/GokdemirSBWHHSA25",
+    "year": null,
+    "venue": null,
+    "method": null,
+    "domain": [],
+    "paper_link": "",
     "note": "HiPerRAG High-Performance for Sci Insights (2025, Sci).",
     "ko_cells": [
       "K1.O2"
@@ -5579,12 +5788,16 @@
     "ko_note": "HiPerRAG High-Performance for Sci Insights (2025, Sci).",
     "cross_source": false,
     "type": "Method",
-    "domain": [],
     "bib_only": true
   },
   {
     "bib_key": "DBLP:journals/corr/abs-1901-08079",
     "title": "DBLP:journals/corr/abs-1901-08079",
+    "year": null,
+    "venue": null,
+    "method": null,
+    "domain": [],
+    "paper_link": "",
     "note": "Question-Entailment Approach (2019, Sci).",
     "ko_cells": [
       "K1.O1"
@@ -5593,27 +5806,16 @@
     "ko_note": "Question-Entailment Approach (2019, Sci).",
     "cross_source": false,
     "type": "Method",
-    "domain": [],
-    "bib_only": true
-  },
-  {
-    "bib_key": "DBLP:journals/corr/abs-2403-15729",
-    "title": "DBLP:journals/corr/abs-2403-15729",
-    "note": "Towards a RAG-based Summarization for the Electron-Ion Collider (2024, Phys).",
-    "ko_cells": [
-      "K1.O1",
-      "K4.O2"
-    ],
-    "ko_primary": "K1.O1",
-    "ko_note": "Towards a RAG-based Summarization for the Electron-Ion Collider (2024, Phys).",
-    "cross_source": false,
-    "type": "Method",
-    "domain": [],
     "bib_only": true
   },
   {
     "bib_key": "DBLP:journals/corr/abs-2408-01107",
     "title": "DBLP:journals/corr/abs-2408-01107",
+    "year": null,
+    "venue": null,
+    "method": null,
+    "domain": [],
+    "paper_link": "",
     "note": "BIORAG (2024, Bio).",
     "ko_cells": [
       "K1.O1"
@@ -5622,12 +5824,16 @@
     "ko_note": "BIORAG (2024, Bio).",
     "cross_source": false,
     "type": "Method",
-    "domain": [],
     "bib_only": true
   },
   {
     "bib_key": "DBLP:journals/corr/abs-2411-09213",
     "title": "DBLP:journals/corr/abs-2411-09213",
+    "year": null,
+    "venue": null,
+    "method": null,
+    "domain": [],
+    "paper_link": "",
     "note": "Comprehensive RAG Eval Medical (2024, Med).",
     "ko_cells": [
       "K1.O2"
@@ -5636,12 +5842,16 @@
     "ko_note": "Comprehensive RAG Eval Medical (2024, Med).",
     "cross_source": false,
     "type": "Method",
-    "domain": [],
     "bib_only": true
   },
   {
     "bib_key": "DBLP:journals/corr/abs-2504-04988",
     "title": "DBLP:journals/corr/abs-2504-04988",
+    "year": null,
+    "venue": null,
+    "method": null,
+    "domain": [],
+    "paper_link": "",
     "note": "Remote Sensing RAG (2025, Earth).",
     "ko_cells": [
       "K3.O1"
@@ -5650,12 +5860,16 @@
     "ko_note": "Remote Sensing RAG (2025, Earth).",
     "cross_source": false,
     "type": "Method",
-    "domain": [],
     "bib_only": true
   },
   {
     "bib_key": "DBLP:journals/corr/abs-2509-22713",
     "title": "DBLP:journals/corr/abs-2509-22713",
+    "year": null,
+    "venue": null,
+    "method": null,
+    "domain": [],
+    "paper_link": "",
     "note": "RAR2 Thought-Driven Retrieval (2025, Med).",
     "ko_cells": [
       "K1.O2"
@@ -5664,12 +5878,16 @@
     "ko_note": "RAR2 Thought-Driven Retrieval (2025, Med).",
     "cross_source": false,
     "type": "Method",
-    "domain": [],
     "bib_only": true
   },
   {
     "bib_key": "DBLP:journals/corr/abs-2512-10996",
     "title": "DBLP:journals/corr/abs-2512-10996",
+    "year": null,
+    "venue": null,
+    "method": null,
+    "domain": [],
+    "paper_link": "",
     "note": "MedBioRAG (2025, Med).",
     "ko_cells": [
       "K1.O2"
@@ -5678,27 +5896,16 @@
     "ko_note": "MedBioRAG (2025, Med).",
     "cross_source": false,
     "type": "Method",
-    "domain": [],
     "bib_only": true
-  },
-  {
-    "bib_key": "DBLP:journals/corr/abs-2603-09800",
-    "title": "DBLP:journals/corr/abs-2603-09800",
-    "note": "MITRA Physics Collaborations Knowledge Retrieval (2026, Phys). Strongest K4 example.",
-    "ko_cells": [
-      "K4.O1"
-    ],
-    "ko_primary": "K4.O1",
-    "ko_note": "MITRA Physics Collaborations Knowledge Retrieval (2026, Phys). Strongest K4 example.",
-    "cross_source": true,
-    "type": "Method",
-    "domain": [],
-    "bib_only": true,
-    "ko_secondary": "K1"
   },
   {
     "bib_key": "DBLP:journals/corr/abs-2603-15712",
     "title": "DBLP:journals/corr/abs-2603-15712",
+    "year": null,
+    "venue": null,
+    "method": null,
+    "domain": [],
+    "paper_link": "",
     "note": "High-Entropy Catalysts via RAG (2026, Mat).",
     "ko_cells": [
       "K2.O3"
@@ -5707,12 +5914,16 @@
     "ko_note": "High-Entropy Catalysts via RAG (2026, Mat).",
     "cross_source": false,
     "type": "Method",
-    "domain": [],
     "bib_only": true
   },
   {
     "bib_key": "DBLP:journals/jamia/ZhanWZDZ25",
     "title": "DBLP:journals/jamia/ZhanWZDZ25",
+    "year": null,
+    "venue": null,
+    "method": null,
+    "domain": [],
+    "paper_link": "",
     "note": "MMRAG biomedical (2025, Bio). Cross-source K1+K2.",
     "ko_cells": [
       "K1.O2",
@@ -5722,13 +5933,17 @@
     "ko_note": "MMRAG biomedical (2025, Bio). Cross-source K1+K2.",
     "cross_source": true,
     "type": "Method",
-    "domain": [],
     "bib_only": true,
     "ko_secondary": "K2"
   },
   {
     "bib_key": "DBLP:journals/make/LahiriH25",
     "title": "DBLP:journals/make/LahiriH25",
+    "year": null,
+    "venue": null,
+    "method": null,
+    "domain": [],
+    "paper_link": "",
     "note": "AlzheimerRAG multimodal (2025, Med). Cross-source.",
     "ko_cells": [
       "K3.O1"
@@ -5737,13 +5952,17 @@
     "ko_note": "AlzheimerRAG multimodal (2025, Med). Cross-source.",
     "cross_source": true,
     "type": "Method",
-    "domain": [],
     "bib_only": true,
     "ko_secondary": "K1"
   },
   {
     "bib_key": "DBLP:journals/npjdm/KeJEALSSTOKWKT25",
     "title": "DBLP:journals/npjdm/KeJEALSSTOKWKT25",
+    "year": null,
+    "venue": null,
+    "method": null,
+    "domain": [],
+    "paper_link": "",
     "note": "Generalizability of RAG across 10 LLMs (2025, Med).",
     "ko_cells": [
       "K1.O2"
@@ -5752,7 +5971,6 @@
     "ko_note": "Generalizability of RAG across 10 LLMs (2025, Med).",
     "cross_source": false,
     "type": "Method",
-    "domain": [],
     "bib_only": true
   },
   {
@@ -5778,80 +5996,5 @@
     "ko_primary": null,
     "ko_note": "",
     "cross_source": false
-  },
-  {
-    "bib_key": "aplabprotocols2025",
-    "title": "aplabprotocols2025",
-    "note": "AP Lab Protocols benchmark (2025, Sci) [bib only].",
-    "ko_cells": [
-      "K4.O2"
-    ],
-    "ko_primary": "K4.O2",
-    "ko_note": "AP Lab Protocols benchmark (2025, Sci) [bib only].",
-    "cross_source": false,
-    "type": "Method",
-    "domain": [],
-    "bib_only": true
-  },
-  {
-    "bib_key": "meyur2025weqa",
-    "title": "meyur2025weqa",
-    "note": "WeQA Wind Energy (2025, Earth).",
-    "ko_cells": [
-      "K1.O1",
-      "K4.O2"
-    ],
-    "ko_primary": "K1.O1",
-    "ko_note": "WeQA Wind Energy (2025, Earth).",
-    "cross_source": false,
-    "type": "Method",
-    "domain": [],
-    "bib_only": true
-  },
-  {
-    "bib_key": "rafique2025large",
-    "title": "rafique2025large",
-    "note": "DUNE Knowledge Retrieval (2025, Phys). Borderline K4 (institutional memory) — primary tag K1, secondary K4.",
-    "ko_cells": [
-      "K1.O1",
-      "K4.O1"
-    ],
-    "ko_primary": "K1.O1",
-    "ko_note": "DUNE Knowledge Retrieval (2025, Phys). Borderline K4 (institutional memory) — primary tag K1, secondary K4.",
-    "cross_source": false,
-    "type": "Method",
-    "domain": [],
-    "bib_only": true
-  },
-  {
-    "bib_key": "taffese2025polymerexpert",
-    "title": "taffese2025polymerexpert",
-    "note": "Polymer Expert literature-derived (2025, Mat). Cross-source K1+K2.",
-    "ko_cells": [
-      "K1.O3"
-    ],
-    "ko_primary": "K1.O3",
-    "ko_note": "Polymer Expert literature-derived (2025, Mat). Cross-source K1+K2.",
-    "cross_source": true,
-    "type": "Method",
-    "domain": [],
-    "bib_only": true,
-    "ko_secondary": "K2"
-  },
-  {
-    "bib_key": "zhang2026matclaw",
-    "title": "zhang2026matclaw",
-    "note": "MatClaw autonomous code-first agent (2026, Mat). Cross-source K1+K2.",
-    "ko_cells": [
-      "K2.O2",
-      "K4.O3"
-    ],
-    "ko_primary": "K2.O2",
-    "ko_note": "MatClaw autonomous code-first agent (2026, Mat). Cross-source K1+K2.",
-    "cross_source": true,
-    "type": "Method",
-    "domain": [],
-    "bib_only": true,
-    "ko_secondary": "K1"
   }
 ]

@@ -1,14 +1,16 @@
 # Physics
 
-_23 entries in the physics domain._
+_26 entries in the physics domain._
 
 ---
 
+- **MITRA: Knowledge Retrieval over Physics Collaborations' Tacit Memory** — MITRA · arXiv · 2026 — MITRA Physics Collaborations Knowledge Retrieval (2026, Phys). Strongest K4 example  `[K4.O1, Physics, Methods]`
 - **OpenScholar: Synthesizing Scientific Literature with RAG LMs** — OpenScholar · Nature · 2026 — ★★ K1.O2 FLAGSHIP. Iterative self-feedback. 0% hallucination vs GPT-4o 78-90%. Experts prefer OpenScholar-GPT-4o over human 70%. Public demo 30K users  `[K1.O1, Biology, Medicine, Physics, Methods]`
 - **[Retrieval-Augmented Question Answering over Scientific Literature for the Electron-Ion Collider](https://arxiv.org/abs/2604.02259)** — EIC RAG Q&A application · arXiv · 2026 — EIC 로컬 RAG. 청크 180+Cosine 최적  `[K1.O1, Physics, Methods]`
 - **[Synthesizing Scientific Literature with Retrieval-Augmented Language Models](https://doi.org/10.1038/s41586-025-10072-4)** — ScholarQABench · Nature · 2026 — OpenScholar의 다학제 장문 합성 벤치마크  `[K1.O1, Biology, Medicine, Physics, Benchmarks]`
 - **AI-Powered Assistant for Long-Term Access to RHIC Knowledge** — RHIC DAPP · New York Scientific Data Summit · 2025 — ★ FLAGSHIP K4 EXAMPLE. ~1 ExaByte institutional memory. MCP-RAG. Demonstrates commercial AI's blindness to non-public scientific tacit knowledge  `[K4.O1, Physics, Methods]`
 - **[Benchmarking Foundation Models with Retrieval-Augmented Generation in Olympic-Level Physics Problem Solving](https://aclanthology.org/2025.findings-emnlp.1196/)** — PhoPile RAG Framework · EMNLP (Findings) · 2025 — Physics Olympiad 멀티모달 RAG 첫 벤치마크. 4 retriever × 3 multimodal × 8 모델 비교. retrieval 노이즈 문제 존재  `[K1.O1, Physics, Methods]`
+- **DUNE Knowledge Retrieval: Large-scale Indexing of Fermilab Collaboration Documents** — DUNE-GPT · arXiv · 2025 — DUNE Knowledge Retrieval (2025, Phys). Borderline K4 (institutional memory) — primary tag K1, secondary K4  `[K1.O1, K4.O1, Physics, Methods]`
 - **DUNE-GPT (LLM Integration for DUNE Experiment)** — DUNE-GPT · Lepton Photon · 2025 — ★ K4: Private institutional memory. Fermilab/Argonne offline only. ~70% accuracy  `[Physics, Methods]`
 - **HiPerRAG: High-Performance RAG for Scientific Insights** — HiPerRAG · PASC · 2025 — HPC-scale (Polaris/Sunspot/Frontier). Oreo parser 4.5x faster. ProteinInteractionQA/FunctionQA/BioSynthQP self-made  `[Biology, Medicine, Chemistry, Physics, Methods]`
 - **MITRA: AI Assistant for Knowledge Retrieval in Physics Collaborations** — MITRA · ML4PS @ NeurIPS · 2025 — ★ K4: CMS Private. On-prem GPU. Two-tier DB prevents cross-analysis confusion. Set 2 paraphrase: P@1 0.13→0.75 vs BM25  `[Physics, Methods]`
@@ -21,6 +23,7 @@ _23 entries in the physics domain._
 - **[LitSearch: A Retrieval Benchmark for Scientific Literature Search](https://doi.org/10.18653/v1/2024.emnlp-main.840)** — LitSearch · EMNLP · 2024 — LitSearch (2024, Sci)  `[K1.O1, Biology, Chemistry, Physics, Benchmarks]`
 - **[Towards a RAG-based Summarization for the Electron Ion Collider](https://arxiv.org/abs/2403.15729)** — RAGS4EIC · JINST · 2024 — EIC RAG GPT-3.5. CAR 88.9%, HF 2.0%. LaTeX 취약  `[Physics, Methods]`
 - **[Towards a RAG-based Summarization for the Electron-Ion Collider](https://arxiv.org/abs/2403.15729)** — AI4EIC2023_DATASETS · JINST · 2024 — EIC 51 QA pairs. GPT-4 + 인간 전문가  `[Physics, Benchmarks]`
+- **Towards a RAG-based Summarization for the Electron-Ion Collider** — EIC RAG · arXiv · 2024 — Towards a RAG-based Summarization for the Electron-Ion Collider (2024, Phys)  `[K1.O1, K4.O2, Physics, Methods]`
 - **[Domain-specific chatbots for science using embeddings](https://doi.org/10.1039/d3dd00112a)** — Scientific Document Classification & Impact Sorting · Digital Discovery (RSC) · 2023 — 분류 81~99%, 임팩트 정렬 IF 유사  `[K1.O1, Materials Science, Chemistry, Physics, Benchmarks]`
 - **LitQA (PaperQA benchmark)** — LitQA · arXiv · 2023 — ★ Cross-domain (bio+chem+physics+medical). Anti-contamination via post-cutoff papers + 'Insufficient info' option  `[Biology, Chemistry, Physics, Medicine, Benchmarks]`
 - **[SciRepEval: A Multi-Format Benchmark for Scientific Document Representations](https://arxiv.org/abs/2211.13308)** — SciRepEval · EMNLP · 2023 — 4 포맷 24 태스크 SPECTER2  `[K1.O1, Chemistry, Biology, Medicine, Physics, Benchmarks]`

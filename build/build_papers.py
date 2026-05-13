@@ -88,27 +88,43 @@ for line in PROPS.read_text().splitlines():
 
 # Also include K×O-only bib_keys from ko_assignments that aren't in Notion (e.g., RHIC, AP Lab Protocols, aplabprotocols2025)
 notion_keys = {p['bib_key'] for p in papers if 'bib_key' in p}
+
+# Load flagship overrides and bib-only title enrichment
+FLAGSHIPS_FILE = ROOT / 'build/flagships.json'
+flagship_data = json.loads(FLAGSHIPS_FILE.read_text()) if FLAGSHIPS_FILE.exists() else {'bib_only_titles': {}}
+title_map = flagship_data.get('bib_only_titles', {})
+
 extra = 0
 for bk, a in ko.items():
     if bk in notion_keys:
         continue
-    # Try to infer title/note from the assignment note
+    enrich = title_map.get(bk, {})
     rec = {
         'bib_key': bk,
-        'title': bk,  # fallback; user can fix later
+        'title': enrich.get('title', bk),
+        'year': enrich.get('year'),
+        'venue': enrich.get('venue'),
+        'method': enrich.get('method'),
+        'domain': enrich.get('domain', []),
+        'paper_link': enrich.get('paper_link', ''),
         'note': a.get('note', ''),
         'ko_cells': a.get('cells', []),
         'ko_primary': a.get('cells', [None])[0] if a.get('cells') else None,
         'ko_note': a.get('note', ''),
         'cross_source': a.get('cross_source', False),
         'type': 'Method',
-        'domain': [],
         'bib_only': True,
     }
     if a.get('secondary'):
         rec['ko_secondary'] = a['secondary']
     papers.append(rec)
     extra += 1
+
+# Mark flagships
+flagship_keys = {f['bib_key'] for f in flagship_data.get('flagships', [])}
+for p in papers:
+    if p.get('bib_key') in flagship_keys:
+        p['flagship'] = True
 
 papers.sort(key=lambda p: (-int(p.get('year') or 0) if str(p.get('year', '')).isdigit() else 0, p.get('title', '')))
 
